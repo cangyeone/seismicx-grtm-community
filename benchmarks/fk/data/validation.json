@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-10-07T11:35:51.232533+00:00",
+  "fk_commit": "cde4086f8cb919983c4bcc88fb63b84c8ba24cb1",
+  "software_commit": "e7283a90092652f2037e779540d795edd3d404c5",
+  "timed_calls": 750,
+  "warmups": 300,
+  "bitwise_identical_serial_openmp_comparisons": 120,
+  "all_timed_output_hashes_stable": true,
+  "max_fk_grtm_channel_relative_l2": {
+    "signal": 5.53056693885674e-05,
+    "spectrum": 1.813623398641955e-05
+  },
+  "consistency_threshold_failures": [],
+  "plot_values_checked": 144,
+  "scope": "Adapted in-memory FK kernel timings with a separately declared OpenMP adaptation. Fixed-grid consistency does not establish discretisation convergence or universal performance superiority."
+}

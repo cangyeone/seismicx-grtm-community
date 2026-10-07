@@ -1,0 +1,20 @@
+{
+  "version": "0.5.1",
+  "python": "3.13.5",
+  "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.31",
+  "installed_from": "https://pypi.org/simple",
+  "backends": [
+    "cpu",
+    "cuda"
+  ],
+  "gpu_backend": "cuda",
+  "relative_spectral_l2_error": 4.69923944099758e-15,
+  "signal_shape": [
+    2,
+    32,
+    30
+  ],
+  "license": "LicenseRef-SeismicX-Research-NonCommercial",
+  "implementation": "compiled extension",
+  "status": "passed"
+}

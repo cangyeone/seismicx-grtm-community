@@ -1,0 +1,65 @@
+SeismicX GRTM Research and Noncommercial License 1.0
+SPDX-License-Identifier: LicenseRef-SeismicX-Research-NonCommercial
+
+Copyright (c) 2026 Yu Ziye. All rights reserved.
+
+1. Permission
+Subject to this license, you may download, install, run, and make backup copies
+of the released SeismicX GRTM binary distributions and documentation solely for
+noncommercial scientific research. You may publish and share the scientific
+results you generate. This license does not claim ownership of your input data,
+models, results, or publications. Acknowledging SeismicX GRTM and the version used
+in publications is requested but is not a condition of this license.
+
+2. Noncommercial scope
+Commercial use requires a separate written license from the copyright holder.
+Commercial use includes selling or licensing the software, providing paid
+computation or consulting services using it, embedding it in a commercial
+product or service, and using it for a business's commercial operations or
+commercial research and development. Noncommercial academic or public-interest
+research supported by public or charitable grants is permitted. Commercially
+sponsored work performed for a business's commercial benefit requires a
+separate written license.
+
+3. Binary redistribution
+You may share unmodified released binary distributions without charge for the
+permitted research use, provided that this license and all third-party notices
+remain included and recipients are informed of these terms. Distribution
+through the Python Package Index (PyPI), including its ordinary package
+delivery and caching services, is authorized. No right to sell, sublicense, or
+distribute modified versions is granted by this license.
+
+4. Source code and reserved rights
+Implementation source code is not provided under this license. No right to
+obtain source code, create derivative software, or remove proprietary notices
+is granted. You may not reverse engineer, decompile, or disassemble the
+software except to the extent that applicable law expressly permits despite
+this restriction. All rights not expressly granted are reserved. No trademark
+or endorsement rights are granted.
+
+5. Third-party components
+Third-party components remain subject to their own notices and licenses,
+included in NOTICE.md and the accompanying licenses directory. This license
+does not restrict rights independently granted by those licenses. NVIDIA CUDA
+runtime components, when included, may be used only as part of this application
+on systems with NVIDIA GPUs, subject to the accompanying NVIDIA license; they
+may not be extracted and redistributed as a separate product. Where terms
+conflict, the relevant third-party terms control for that component.
+
+6. Termination
+The permissions granted here terminate if you violate this license. Upon
+termination, stop using and distributing the software and delete your copies.
+Previously generated scientific results remain yours. Sections concerning
+reserved rights, third-party components, and disclaimer survive termination.
+
+7. Disclaimer
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+NONINFRINGEMENT. TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE COPYRIGHT HOLDERS
+AND CONTRIBUTORS ARE NOT LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY
+ARISING FROM THE SOFTWARE OR ITS USE. You are responsible for validating
+scientific results and determining whether the software meets your needs.
+
+This is a proprietary, noncommercial research license, not an open-source
+license or GPLv3. For additional permissions contact the project maintainer
+through https://github.com/cangyeone.

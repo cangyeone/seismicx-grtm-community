@@ -1,0 +1,64 @@
+{
+  "package_version": "0.5.1",
+  "python": "3.14.4",
+  "installation": "Previously validated installed PyPI release; no source-tree import",
+  "platform": "Apple M4 Max / macOS arm64",
+  "checks": [
+    {
+      "example": "README first calculation",
+      "passed": true,
+      "seconds": 0.006663333999313181
+    },
+    {
+      "example": "Quick start step 1",
+      "passed": true,
+      "seconds": 0.004424084000675066
+    },
+    {
+      "example": "Quick start step 2",
+      "passed": true,
+      "seconds": 0.007388957999864942
+    },
+    {
+      "example": "Quick start step 3",
+      "passed": true,
+      "seconds": 0.014122000000497792
+    },
+    {
+      "example": "Quick start step 4",
+      "passed": true,
+      "seconds": 0.06502141600049072
+    },
+    {
+      "example": "Quick start CLI output",
+      "passed": true,
+      "seconds": 0.0010493749996385304
+    },
+    {
+      "example": "RF H-kappa to inversion",
+      "passed": true,
+      "seconds": 0.44004383300034533
+    },
+    {
+      "example": "Apple Metal example 1",
+      "passed": true,
+      "seconds": 0.02285083299921098
+    },
+    {
+      "example": "Apple Metal example 2",
+      "passed": true,
+      "seconds": 0.4781680000005508
+    },
+    {
+      "example": "PyTorch forward and backward",
+      "passed": true,
+      "seconds": 0.0879516249997323
+    },
+    {
+      "example": "JAX jit and gradients",
+      "passed": true,
+      "seconds": 0.43629149999924266
+    }
+  ],
+  "scope": "Documentation example execution, not performance benchmarking or a new scientific validation campaign."
+}

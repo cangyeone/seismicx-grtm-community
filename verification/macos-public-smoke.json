@@ -1,0 +1,20 @@
+{
+  "version": "0.5.1",
+  "python": "3.14.4",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "installed_from": "https://pypi.org/simple",
+  "backends": [
+    "cpu",
+    "metal"
+  ],
+  "gpu_backend": "metal",
+  "relative_spectral_l2_error": 2.0904248338085302e-15,
+  "signal_shape": [
+    2,
+    32,
+    30
+  ],
+  "license": "LicenseRef-SeismicX-Research-NonCommercial",
+  "implementation": "compiled extension",
+  "status": "passed"
+}

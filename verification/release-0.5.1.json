@@ -1,0 +1,39 @@
+{
+  "version": "0.5.1",
+  "date": "2026-10-07",
+  "binary_wheels": 10,
+  "source_archives": 0,
+  "macos": {
+    "hardware": "Apple M4 Max",
+    "python": "3.14.4",
+    "passed": 32,
+    "skipped": 2,
+    "skip_reason": "CUDA tests",
+    "frameworks": "PyTorch CPU/MPS and JAX CPU callbacks"
+  },
+  "linux": {
+    "hardware": "RTX 5090, shared host",
+    "python": "3.13.5",
+    "passed": 29,
+    "skipped": 5,
+    "skip_reason": "Apple Metal tests",
+    "frameworks": "CPU PyTorch/JAX adapters; native CUDA separately verified"
+  },
+  "cpu_ci": {
+    "python_versions": [
+      "3.10",
+      "3.11",
+      "3.12",
+      "3.13",
+      "3.14"
+    ],
+    "platforms": [
+      "Apple Silicon macOS",
+      "manylinux_2_28 x86_64"
+    ],
+    "passed_per_wheel": 25,
+    "skipped_per_wheel": 9
+  },
+  "publication": "https://pypi.org/project/seismicx-grtm/0.5.1/",
+  "all_published_sha256_match": true
+}
