@@ -6,6 +6,20 @@
 程序用于层状介质格林函数计算，支持 CPU、CUDA 和 Apple Metal/MPS。
 仓库中的代码片段是公开接口的使用示例，不包含求解器实现源码或开发历史。
 
+## 0.6.0.dev1 研究预览版
+
+新增方向 JVP、原生反向 VJP、JAX 无完整 Jacobian 的反向模式，以及独立的
+Gauss/Levin/带保护 Shanks 波数积分。安装及详细示例见
+[预览版指南](docs/RESEARCH_PREVIEW.zh-CN.md) · [English](docs/RESEARCH_PREVIEW.md)。
+从 [GitHub 预览版](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev1)
+下载与你的 Python/平台匹配的 wheel；**PyPI 稳定版仍为 0.5.1**。
+
+结构导数和研究积分在 CPU 执行；自适应积分尚无框架 backward，也不认证完整原生积分误差。
+新的功能与固定网格导数的边界在指南中单独说明。旧 FK 数据仍对应原冻结实验。
+[预览版校验和](downloads/SHA256SUMS-0.6.0.dev1)与
+[验证记录](verification/preview-0.6.0.dev1.md)单独保存。
+发布包不包含求解器实现、论文源文件或未公开实验归档。
+
 ## 安装
 
 ```sh
@@ -51,7 +65,8 @@ print(result["displacement"].shape)  # (2, 64, 3)
 - [常见问题](docs/TROUBLESHOOTING.md)（英文）
 
 点源结构导数使用 CPU 切线计算；选择 CUDA/Metal 正演不意味着结构反向计算在 GPU 上。
-JAX 的导数回调构造稠密 Jacobian，PyTorch 使用流式 VJP。
+JAX 默认导数回调构造稠密 Jacobian，0.6 预览版另提供反向 VJP 模式；
+PyTorch 使用 VJP，预览版可显式选择原生反向路径。
 接收函数是独立的弹性平面波求解器，在 NumPy/CPU 上运行，结构反演使用差分导数。
 
 ## FK 对比和下载

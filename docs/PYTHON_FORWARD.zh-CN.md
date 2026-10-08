@@ -1,19 +1,24 @@
-# Python forward、批处理和导数接口（0.5.1）
+# Python forward、批处理和导数接口（0.4）
 
 [English](PYTHON_FORWARD.md) | 简体中文
 
-当前发行名为 `seismicx-grtm`（SeismicX GRTM），导入及命令行用 `grtm`。旧包迁移与安装见 [安装指南](INSTALLATION.zh-CN.md)。
+当前发行名为 `seismicx-grtm`（SeismicX GRTM），导入及命令行用 `grtm`。旧包迁移与安装见 [README](INSTALLATION.zh-CN.md)。
 
 ## 安装和后端
 
-```sh
-python -m pip install seismicx-grtm==0.5.1
-python -m pip install 'seismicx-grtm[torch,jax]==0.5.1'
+```bash
+pip install .                       # C / CPU；macOS 默认同时编入 Metal
+pip install '.[torch,jax]'           # 可选框架依赖
+pip install . -Ccmake.define.GRTM_ENABLE_CUDA=ON \
+  -Ccmake.define.CMAKE_CUDA_ARCHITECTURES=120
 ```
 
-Apple Silicon wheel 包含 CPU + Metal；Linux/WSL x86_64 wheel 包含 CPU + CUDA。
-安装不需要编译器。CUDA 需要兼容的 NVIDIA 驱动及计算能力 12.0（已测 RTX 5090）。
-默认使用 CPU。详见[安装](INSTALLATION.zh-CN.md)与[Apple Metal](APPLE_METAL.zh-CN.md)。
+CUDA 构建需要 NVIDIA CUDA toolkit。`Solver(backend="cuda")` 显式选择 GPU；
+CPU wheel 在无 GPU 的机器上独立使用。CUDA wheel 同时含 CPU 后端，GPU 错误会直接抛出。
+NumPy 是基本依赖，导入 `grtm` 不会导入 Torch/JAX。框架自身支持的 Python 版本由其发行版决定。
+远程 RTX 5090 对应 architecture 120；其他 GPU 应选择其实际架构。
+macOS 可选 `Solver(backend="metal")` 或 `"mps"`，二者选择同一个自定义混合 Metal 引擎。
+主机 FP64 层间传播与 GPU 浮点对积分的分工、PyTorch MPS 张量及实测见 [APPLE_METAL.md](APPLE_METAL.zh-CN.md)。
 
 ## 模型、震源、坐标与单位
 
@@ -131,9 +136,13 @@ layer_gradient, source_gradient = op.vjp(layers, mt, cotangent)
 默认 **`method="analytic"`**：从共享 C 数学核自动生成一阶切线代码，以链式法则传播
 模态平方根、复 Q 速度、Lamé 参数、界面反射透射、层间指数、震源项及积分的导数。
 这是数值波数积分 + 解析链式导数的半解析方法，求导过程不扰动模型、不依赖差分步长。
-每个选中的结构参数运行一次切线积分；矩张量的线性梯度复用基函数。
+`jacobian()` 中每个选中的结构参数运行一次切线积分；矩张量的线性梯度复用基函数。
 常规频率采用 double，准静态病态频率采用 long double；线程内复用工作区。
 应力梯度同时包含位移导数和接收层本构参数的直接导数。
+
+0.6.0.dev1 开发版还提供一次方向积分的 `jvp()`、`linearize()` 及 PTAM=0 时的
+原生反向 `vjp_method="adjoint"`，详见[预览版接口指南](RESEARCH_PREVIEW.zh-CN.md)。
+PyPI 0.5.1 仍使用原有逐参数切线 VJP；新版 `auto` 在支持时对至少 8 个所选参数使用反向算法。
 
 `method="finite_difference"` 是显式可选的中心差分方法，每个参数两次求解。
 `relative_step` 默认 1e-3，`absolute_step` 默认 0，h=max(|p| relative_step, absolute_step)。
@@ -154,9 +163,9 @@ y_minus = op(layers_minus, mt, grid=grid)
 界面深度与源/接收点重合时，相关深度导数拒绝计算；差分跨界也会拒绝。
 PTAM 的导数沿基础模型选定的极值/收敛分支传播，切换点不光滑，应做一致性检查。
 极端长周期的结构梯度尚未通过一致性验证，具体算例和诊断见
-[验证报告](NUMERICAL_NOTES.zh-CN.md)，不能仅靠启用扩展精度判断可靠性。
-只提供一阶导数。Jacobian 是稠密输出；VJP 逐参数收缩，避免保存完整结构 Jacobian。
-当前解析结构切线运行在 **CPU**，包括选择 CUDA 的 forward；GPU forward 仍在 GPU 计算。
+[验证报告](FORWARD_VERIFICATION.zh-CN.md)，不能仅靠启用扩展精度判断可靠性。
+只提供一阶导数。Jacobian 是稠密输出；切线 VJP 逐参数收缩，避免保存完整结构 Jacobian。
+解析结构切线与新版反向梯度都运行在 **CPU**，包括选择 CUDA/Metal 的 forward。
 矩张量导数是 NumPy 线性合成。不得将结构梯度计时称为 GPU 原生反向传播。
 
 ## PyTorch
@@ -180,7 +189,8 @@ loss.backward()
 `backend="cuda"` 是显式选择原 CUDA 求解器，张量与原生库之间存在 host 拷贝。
 `backend="mps"` 选择混合 Metal 求解器；PyTorch 的 MPS 张量使用 float32，复输出为 complex64。
 张量的 `device="mps"` 与求解器 `backend="mps"` 分别控制张量位置和原生计算引擎，需要分别设置。
-结构 backward 使用上述 CPU 切线 VJP；只对 `parameters` 中指定的列计算梯度。
+结构 backward 使用上述 CPU VJP；只对 `parameters` 中指定的列计算梯度。
+0.6 开发版可指定 `vjp_method="adjoint"`。
 本适配器支持普通 autograd 的一阶 backward，不支持高阶梯度、torch.compile 或 torch.func/vmap。
 
 ## JAX
@@ -200,8 +210,10 @@ grad_earth, grad_source = jax.grad(
 通过 `pure_callback` + `custom_jvp` 支持 jit、一阶 grad/JVP/jacfwd、顺序 callback 的 vmap
 和显式 Earth batch。`grtm.jax.strike_dip_rake` 保留角度梯度。
 这不是 XLA 原生求解器，也不支持高阶导数或对几何、dt、STF 配置自动求导。
-JAX 导数 callback 构造稠密 Jacobian，内存为 O(output_cells × L × 6)，未选列仍占据数组位置；
-很大的输出建议 NumPy/PyTorch 的 VJP。不要假设 JAX vmap 将模型融合成 GPU kernel。
+JAX 默认导数 callback 构造稠密 Jacobian，内存为 O(output_cells × L × 6)，未选列仍占据数组位置。
+0.6 开发版增加 `derivative_mode="vjp"`，提供无完整 Jacobian 的一阶反向模式；
+该模式不支持 `jvp`/`jacfwd`。固定优化网格的构造参数 `grid=` 见[新指南](RESEARCH_PREVIEW.zh-CN.md)。
+PyPI 0.5.1 中，很大的输出建议 NumPy/PyTorch 的 VJP。不要假设 JAX vmap 将模型融合成 GPU kernel。
 
 框架机制参考：[PyTorch 自定义 autograd](https://docs.pytorch.org/docs/stable/notes/extending.html)、
 [JAX callbacks](https://docs.jax.dev/en/latest/notebooks/external_callbacks.html)、

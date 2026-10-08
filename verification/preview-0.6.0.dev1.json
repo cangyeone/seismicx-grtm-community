@@ -1,0 +1,164 @@
+{
+  "version": "0.6.0.dev1",
+  "date": "2026-10-08",
+  "channel": "GitHub prerelease",
+  "pypi_upload": false,
+  "source_commit": "712ab70cf1ee1d9289be5a3f21d818a6d394dacc",
+  "solver_source_public": false,
+  "license": "LicenseRef-SeismicX-Research-NonCommercial",
+  "ci": {
+    "binary_workflow_run": 37738019858,
+    "all_ten_jobs": "success",
+    "macos_per_wheel": {
+      "run": 58,
+      "passed": 47,
+      "skipped": 11
+    },
+    "linux_per_wheel": {
+      "run": 58,
+      "passed": 46,
+      "skipped": 12
+    },
+    "private_source_ci_run": 37738018787,
+    "private_source_ci": "success"
+  },
+  "devices": {
+    "macos": {
+      "hardware": "Apple M4 Max",
+      "python": "3.14.4",
+      "core": {
+        "run": 58,
+        "passed": 51,
+        "skipped": 7
+      },
+      "additional_metal_suite": {
+        "run": 5,
+        "passed": 5,
+        "skipped": 0
+      },
+      "unique_tests_passed": 56,
+      "documented_python_blocks": 4
+    },
+    "linux": {
+      "hardware": "NVIDIA RTX 5090, WSL2",
+      "python": "3.13.5",
+      "suite": {
+        "run": 58,
+        "passed": 53,
+        "skipped": 5
+      },
+      "documented_python_blocks": 4
+    }
+  },
+  "packaging": {
+    "audited_wheels": 10,
+    "compiled_python_implementation_modules": 12,
+    "plain_python_files": [
+      "grtm/__init__.py",
+      "grtm/__main__.py"
+    ],
+    "implementation_sources_and_headers_in_wheels": false,
+    "manuscript_sources_in_wheels": false,
+    "unpublished_experiment_archives_in_wheels": false,
+    "documentation_policy": "explicit allowlist",
+    "private_paths_and_credential_markers": "audit passed"
+  },
+  "wheels": [
+    {
+      "file": "seismicx_grtm-0.6.0.dev1-cp310-cp310-macosx_11_0_arm64.whl",
+      "sha256": "89e31898c7745a891434cf2cb939d5a6186f485a686e58540c38087cc9d05c2b",
+      "bytes": 2317728,
+      "backends": [
+        "cpu",
+        "metal"
+      ]
+    },
+    {
+      "file": "seismicx_grtm-0.6.0.dev1-cp310-cp310-manylinux_2_28_x86_64.whl",
+      "sha256": "2bff11eac0f1bf171dba0008852816cc2192d54ba307ac32573182adcc1387da",
+      "bytes": 4459671,
+      "backends": [
+        "cpu",
+        "cuda"
+      ]
+    },
+    {
+      "file": "seismicx_grtm-0.6.0.dev1-cp311-cp311-macosx_11_0_arm64.whl",
+      "sha256": "55f793bcefc619b26ddfeb815934270fdc1833b5875a6156ec83a1b9177690bf",
+      "bytes": 2308065,
+      "backends": [
+        "cpu",
+        "metal"
+      ]
+    },
+    {
+      "file": "seismicx_grtm-0.6.0.dev1-cp311-cp311-manylinux_2_28_x86_64.whl",
+      "sha256": "29f302953d695b32ceed6d1cbd10fdbab3d19d22dbdc56aae5abf216c1624783",
+      "bytes": 4457169,
+      "backends": [
+        "cpu",
+        "cuda"
+      ]
+    },
+    {
+      "file": "seismicx_grtm-0.6.0.dev1-cp312-cp312-macosx_11_0_arm64.whl",
+      "sha256": "ee556fcb4d75b3183aea64129847db06729b6f0e0f51d4915b660346d5f11800",
+      "bytes": 2305284,
+      "backends": [
+        "cpu",
+        "metal"
+      ]
+    },
+    {
+      "file": "seismicx_grtm-0.6.0.dev1-cp312-cp312-manylinux_2_28_x86_64.whl",
+      "sha256": "d0cbdc051a86833f915c80c641a271a88f3e92690a939f27c97049a367443bb2",
+      "bytes": 4364232,
+      "backends": [
+        "cpu",
+        "cuda"
+      ]
+    },
+    {
+      "file": "seismicx_grtm-0.6.0.dev1-cp313-cp313-macosx_11_0_arm64.whl",
+      "sha256": "68e234909b10c122411b9faf97ff94df7ed3915842c0d903eaa652bcc58ea845",
+      "bytes": 2292908,
+      "backends": [
+        "cpu",
+        "metal"
+      ]
+    },
+    {
+      "file": "seismicx_grtm-0.6.0.dev1-cp313-cp313-manylinux_2_28_x86_64.whl",
+      "sha256": "2b09836eae2416f083a2aa1657513007e1b6d9234cd363ac97f433ab63519dc9",
+      "bytes": 4355166,
+      "backends": [
+        "cpu",
+        "cuda"
+      ]
+    },
+    {
+      "file": "seismicx_grtm-0.6.0.dev1-cp314-cp314-macosx_11_0_arm64.whl",
+      "sha256": "a90b939467d1360c1b1756b19e535e4b85baaab5d774a4f90507505d7e5831bc",
+      "bytes": 2296203,
+      "backends": [
+        "cpu",
+        "metal"
+      ]
+    },
+    {
+      "file": "seismicx_grtm-0.6.0.dev1-cp314-cp314-manylinux_2_28_x86_64.whl",
+      "sha256": "a96584348077f61e7e06d8efc4eb5a496c64ac0780d3f66fa372e010e42f2fb4",
+      "bytes": 4354071,
+      "backends": [
+        "cpu",
+        "cuda"
+      ]
+    }
+  ],
+  "limits": [
+    "Preview quadrature is CPU only and has no adaptive framework backward.",
+    "Native total integration error is not certified.",
+    "Fixed-grid adjoint structural derivatives require PTAM=0.",
+    "Existing FK timing data remain the historical frozen experiment."
+  ]
+}

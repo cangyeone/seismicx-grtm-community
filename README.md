@@ -21,7 +21,7 @@ python -m pip install 'seismicx-grtm[rf]'
 python -m pip install 'seismicx-grtm[torch,jax]'
 ```
 
-The current release is **0.5.1**, for CPython **3.10–3.14**. Import with
+The current stable release is **0.5.1**, for CPython **3.10–3.14**. Import with
 `import grtm`; the command-line program is `grtm`.
 
 | System | Included engines | Requirements |
@@ -33,6 +33,20 @@ The current release is **0.5.1**, for CPython **3.10–3.14**. Import with
 No compiler or CUDA toolkit is needed to install a wheel. Native Windows, Intel
 Mac, Linux ARM, and older NVIDIA GPU architectures have no matching GPU binary
 in this release. See [installation and troubleshooting](docs/INSTALLATION.md).
+
+## Research preview: 0.6.0.dev1
+
+The [binary prerelease](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev1)
+adds directional structural JVPs, node-local reverse VJPs, a JAX matrix-free
+reverse option and independent Gauss/Levin/guarded-Shanks quadrature.
+Read the [preview guide](docs/RESEARCH_PREVIEW.md) · [中文](docs/RESEARCH_PREVIEW.zh-CN.md)
+for installation, examples and guarantee limits. The stable PyPI version remains
+**0.5.1**; download and install a matching preview wheel explicitly.
+
+Structural derivatives and research quadrature execute on CPU. Fixed-grid
+operator derivatives and adaptive quadrature are separate APIs; adaptive
+quadrature has no framework backward adapter and does not certify a full
+native integral. The existing FK benchmark remains the older frozen experiment.
 
 ## First calculation
 
@@ -67,12 +81,14 @@ sufficient record length and check integration convergence for scientific use.
 | Apple GPU and PyTorch MPS selection | [Apple Metal](docs/APPLE_METAL.md) · [中文](docs/APPLE_METAL.zh-CN.md) |
 | H–κ initialization → RF waveform fitting → structural inversion | [Receiver functions](docs/RECEIVER_FUNCTIONS.md) · [中文](docs/RECEIVER_FUNCTIONS.zh-CN.md) |
 | Input/output and solver options at a glance | [API reference](docs/API_REFERENCE.md) |
+| Directional JVP, adjoint VJP, JAX reverse and new quadrature (0.6 preview) | [Preview API guide](docs/RESEARCH_PREVIEW.md) · [中文](docs/RESEARCH_PREVIEW.zh-CN.md) |
 | Precision, attenuation conventions, gradient limits | [Numerical notes](docs/NUMERICAL_NOTES.md) · [中文](docs/NUMERICAL_NOTES.zh-CN.md) |
 | Installation errors, unexpected amplitudes, memory and speed | [Troubleshooting](docs/TROUBLESHOOTING.md) |
 
 Point-source structural tangents run on the CPU even when CUDA/Metal performs
-the forward solve. JAX derivative callbacks construct dense Jacobians; PyTorch
-uses a streamed VJP. The separate elastic receiver-function solver runs in NumPy
+the forward solve. JAX defaults to dense-Jacobian callbacks; the 0.6 preview
+also offers matrix-free reverse mode. PyTorch uses a VJP, with native adjoint
+selection added in the preview. The separate elastic receiver-function solver runs in NumPy
 on CPU and uses finite differences for structural inversion.
 
 ## Performance against FK
@@ -102,6 +118,12 @@ The release passed installed-package checks across all ten wheels and applicable
 real-device tests on Apple M4 Max and RTX 5090. See
 [release verification](verification/README.md). Tests of specified models do not
 establish accuracy or performance for every Earth model.
+
+The [0.6.0.dev1 preview assets](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev1)
+have separate [checksums](downloads/SHA256SUMS-0.6.0.dev1) and
+[preview verification](verification/preview-0.6.0.dev1.md). They contain compiled
+solver modules and an explicit list of user guides. Solver implementation,
+manuscript sources and unpublished experiment archives are excluded.
 
 ## Developers
 

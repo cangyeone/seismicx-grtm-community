@@ -1,0 +1,16 @@
+{
+  "version": "0.6.0.dev1",
+  "python": "3.14.4",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "backends": [
+    "cpu",
+    "metal"
+  ],
+  "gpu_backend": "metal",
+  "relative_spectral_l2_error": 2.0904248338085302e-15,
+  "documentation_python_blocks": 4,
+  "guide_sha256": "c329d61ecf364acce9e477d510fdf3403092afa425cf546200d6b6882170ce9e",
+  "status": "passed",
+  "installed_from": "Validated GitHub Actions release-candidate wheel; source 712ab70",
+  "scope": "Installed interfaces, CPU/GPU consistency, framework and finite-quadrature examples; not a speed or total-integral accuracy certificate."
+}

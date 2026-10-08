@@ -17,10 +17,17 @@ CPU/GPU 一致不能独立验证某种衰减物理模型。`constitutive="elasti
 
 点源结构切线仅对冻结的局部积分网格与分支求导，不对层数、震源/接收点所属层变化、
 整数截断和 PTAM 极值选择求导。结构反向仍在 CPU 执行，只支持一阶导数。
-JAX 构造稠密 Jacobian；NumPy/PyTorch 可用 VJP 避免保存完整结构 Jacobian。
+JAX 默认构造稠密 Jacobian（0.6 预览版另可选择反向 VJP）；NumPy/PyTorch 可用 VJP 避免保存完整结构 Jacobian。
 
 接收函数是独立的弹性平面 P 波模型，忽略 Q；需统一符号、滤波、归一化和时间窗。
 反演使用结构参数差分导数。成功终止、满秩和很小的协方差标准差都不能证明地球模型正确；
 协方差仅代表固定假设下的名义局部尺度，不包含固定 Vp、地幔或模型失配的不确定性。
 
 详见[接收函数说明](RECEIVER_FUNCTIONS.zh-CN.md)和[FK 对比条件](../benchmarks/fk/README.zh-CN.md)。
+
+## 0.6.0.dev1 预览版的区别
+
+预览版增加原生反向 VJP、方向 JVP 与构造器 `grid=`，JAX 另可选择
+`derivative_mode="vjp"` 避免完整结构 Jacobian；默认路径仍使用稠密 Jacobian。
+自适应 Gauss/Levin/Shanks 不等于固定网格正演，也没有对应的框架 backward。
+所有原生积分仍未认证完整误差。详细条件见[预览版指南](RESEARCH_PREVIEW.zh-CN.md)。

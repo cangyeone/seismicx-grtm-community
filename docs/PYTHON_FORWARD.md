@@ -2,20 +2,20 @@
 
 English | [简体中文](PYTHON_FORWARD.zh-CN.md)
 
-Distribution: `seismicx-grtm`; import and CLI: `grtm`. See the [installation guide](INSTALLATION.md) for backend selection and migration from `grtm-green`.
+Distribution: `seismicx-grtm`; import and CLI: `grtm`. See the [installation guide](../README.md#installation) for backend selection and migration from `grtm-green`.
 
 ## Installation and backends
 
 ```sh
-python -m pip install seismicx-grtm==0.5.1
-python -m pip install 'seismicx-grtm[torch,jax]==0.5.1'
+pip install .                       # C; macOS also builds Metal
+pip install '.[torch,jax]'           # Optional framework dependencies
+pip install . -Ccmake.define.GRTM_ENABLE_CUDA=ON \
+  -Ccmake.define.CMAKE_CUDA_ARCHITECTURES=120
 ```
 
-The published wheel includes CPU + Metal on Apple Silicon, or CPU + CUDA on
-Linux/WSL x86_64. No compiler is required. CUDA execution needs a compatible
-NVIDIA driver and compute capability 12.0 (RTX 5090 tested). CPU is the default.
-See [installation](INSTALLATION.md) and [Apple Metal](APPLE_METAL.md).
-Importing `grtm` loads NumPy; optional Torch/JAX are imported by their adapters.
+CUDA needs an NVIDIA toolkit at build time. Select it with `Solver(backend="cuda")`; C-only wheels work without a GPU. CUDA wheels also include C and report GPU failures. Importing `grtm` needs NumPy and does not import Torch/JAX. Framework Python support follows their respective distributions. Architecture `120` is for RTX 5090.
+
+On macOS, `"metal"`, `"mps"`, and `"apple"` select the same custom hybrid engine. See [Apple Metal](APPLE_METAL.md) for precision, MPS tensors, and measurements.
 
 ## Models, sources, coordinates, and units
 
@@ -110,7 +110,13 @@ layer_gradient, source_gradient = op.vjp(layers, mt, cotangent)
 
 Default **`method="analytic"`** uses first-order tangent code generated from the shared C kernel. The chain rule propagates through modal square roots, complex Q velocities, Lamé parameters, interface reflection/transmission, layer exponentials, sources, and integration. This is numerical wavenumber integration with analytic chain derivatives: differentiation does not perturb models or depend on a finite-difference step.
 
-Each selected structural parameter runs one tangent integral. Linear moment-tensor derivatives reuse basis functions. Regular frequencies use double, ill-conditioned quasistatic frequencies use long double, and workspaces are reused within threads. Stress derivatives also include direct receiver-layer constitutive derivatives.
+For `jacobian()`, each selected structural parameter runs one tangent integral. Linear moment-tensor derivatives reuse basis functions. Regular frequencies use double, ill-conditioned quasistatic frequencies use long double, and workspaces are reused within threads. Stress derivatives also include direct receiver-layer constitutive derivatives.
+
+Development 0.6.0.dev1 also provides a single-integral directional `jvp()`,
+`linearize()`, and native reverse `vjp_method="adjoint"` for PTAM=0. See
+[the preview API guide](RESEARCH_PREVIEW.md). PyPI 0.5.1 uses the
+previous streamed tangent VJP; the new version's `auto` policy selects the
+adjoint for at least eight selected parameters when supported.
 
 Optional `method="finite_difference"` uses two solves per parameter. Default `relative_step=1e-3`, `absolute_step=0`, with h=max(|p| relative_step, absolute_step). `check_step=True` adds an independent h/2 central-difference check, incurring additional solves. `relative_change` measures consistency, not physical integration error. Analytic `steps` are zero. Unselected parameters and the fixed first interface depth return zero, indicating they were not differentiated.
 
@@ -124,7 +130,7 @@ y_minus = op(layers_minus, mt, grid=grid)
 
 Layer count, source/receiver layer membership, and numerical branch topology remain fixed. Integer step counts and PTAM extremum selection are not differentiated. Interface-depth derivatives are rejected where an interface coincides with the source or receiver; differences crossing interfaces are also rejected. PTAM derivatives follow the base extremum/convergence branch and may be nonsmooth at switches.
 
-Extreme long-period structural gradients remain unverified: see [numerical limits](NUMERICAL_NOTES.md). Extended precision alone does not establish reliability. Only first-order derivatives are supported. Jacobians are dense; VJP contracts each parameter without retaining the full structural Jacobian. Structural tangents execute on the **CPU**, including CUDA/Metal forward selection; source derivatives use NumPy linear synthesis. These are not GPU-native structural backward kernels.
+Extreme long-period structural gradients remain unverified: see [numerical limits](FORWARD_VERIFICATION.md). Extended precision alone does not establish reliability. Only first-order derivatives are supported. Jacobians are dense; the tangent VJP contracts each parameter without retaining the full structural Jacobian. Both tangent and reverse structural derivatives execute on the **CPU**, including CUDA/Metal forward selection; source derivatives use NumPy linear synthesis. These are not GPU-native structural backward kernels.
 
 ## PyTorch
 
@@ -144,7 +150,7 @@ loss.backward()
 
 `grtm.torch.strike_dip_rake()` preserves framework angle gradients. Batched layers, shared/per-model sources, and complex spectra are supported. Inputs need matching real floating dtype/device; output stays on that device. Use float64 on CPU/CUDA when practical.
 
-`backend="cuda"` selects the native CUDA solver and involves host transfers. `backend="mps"` selects the hybrid Metal engine; MPS tensors use float32 and complex outputs use complex64. Tensor `device="mps"` and solver `backend="mps"` control different things and must be set separately. Structural backward uses the CPU tangent VJP and computes only selected `parameters`. Ordinary first-order autograd is supported; higher derivatives, `torch.compile`, and `torch.func/vmap` are not.
+`backend="cuda"` selects the native CUDA solver and involves host transfers. `backend="mps"` selects the hybrid Metal engine; MPS tensors use float32 and complex outputs use complex64. Tensor `device="mps"` and solver `backend="mps"` control different things and must be set separately. Structural backward uses the CPU VJP and computes only selected `parameters`; development 0.6 supports `vjp_method="adjoint"`. Ordinary first-order autograd is supported; higher derivatives, `torch.compile`, and `torch.func/vmap` are not.
 
 ## JAX
 
@@ -162,6 +168,6 @@ grad_earth, grad_source = jax.grad(
 
 `pure_callback` + `custom_jvp` supports jit, first-order grad/JVP/jacfwd, sequential-callback vmap, and explicit Earth batches. `grtm.jax.strike_dip_rake()` preserves angle gradients. This is not an XLA-native solver and does not differentiate geometry, dt, STF configuration, or higher orders. The application controls JAX precision; the package does not change global settings.
 
-JAX derivative callbacks construct dense Jacobians with O(output_cells × L × 6) memory, including unselected column positions. Prefer NumPy/PyTorch VJP for large outputs. vmap does not fuse models into one GPU kernel.
+The default JAX derivative callbacks construct dense Jacobians with O(output_cells × L × 6) memory, including unselected column positions. Development 0.6 offers `derivative_mode="vjp"` for matrix-free first-order reverse mode, with no `jvp`/`jacfwd` support in that mode. Its [API guide](RESEARCH_PREVIEW.md) also explains constructor-level `grid=` for a fixed optimization map. In PyPI 0.5.1, prefer NumPy/PyTorch VJP for large outputs. vmap does not fuse models into one GPU kernel.
 
 References: [PyTorch custom autograd](https://docs.pytorch.org/docs/stable/notes/extending.html), [JAX callbacks](https://docs.jax.dev/en/latest/notebooks/external_callbacks.html), [custom JVP](https://docs.jax.dev/en/latest/301/custom-jvp-vjp.html), and [Pyrocko NED moment tensors](https://pyrocko.org/docs/current/library/examples/moment_tensor.html).

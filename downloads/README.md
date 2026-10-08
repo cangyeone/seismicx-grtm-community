@@ -33,3 +33,18 @@ and any optional dependencies.
 The GitHub release's automatic **Source code** ZIP/TAR links contain only this
 community repository's documentation and data. The solver binaries are the
 explicit `.whl` assets. No solver implementation source is included here.
+
+## Research preview 0.6.0.dev1
+
+The [GitHub prerelease](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev1)
+contains separate preview wheels. Use [preview checksums](SHA256SUMS-0.6.0.dev1)
+and read the [preview API guide](../docs/RESEARCH_PREVIEW.md) before upgrading.
+These files are not part of the stable 0.5.1 PyPI release described above.
+
+| Python | Apple Silicon: CPU + Metal | Linux/WSL x86_64: CPU + CUDA |
+|---|---|---|
+| 3.10 | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev1/seismicx_grtm-0.6.0.dev1-cp310-cp310-macosx_11_0_arm64.whl) | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev1/seismicx_grtm-0.6.0.dev1-cp310-cp310-manylinux_2_28_x86_64.whl) |
+| 3.11 | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev1/seismicx_grtm-0.6.0.dev1-cp311-cp311-macosx_11_0_arm64.whl) | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev1/seismicx_grtm-0.6.0.dev1-cp311-cp311-manylinux_2_28_x86_64.whl) |
+| 3.12 | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev1/seismicx_grtm-0.6.0.dev1-cp312-cp312-macosx_11_0_arm64.whl) | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev1/seismicx_grtm-0.6.0.dev1-cp312-cp312-manylinux_2_28_x86_64.whl) |
+| 3.13 | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev1/seismicx_grtm-0.6.0.dev1-cp313-cp313-macosx_11_0_arm64.whl) | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev1/seismicx_grtm-0.6.0.dev1-cp313-cp313-manylinux_2_28_x86_64.whl) |
+| 3.14 | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev1/seismicx_grtm-0.6.0.dev1-cp314-cp314-macosx_11_0_arm64.whl) | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev1/seismicx_grtm-0.6.0.dev1-cp314-cp314-manylinux_2_28_x86_64.whl) |

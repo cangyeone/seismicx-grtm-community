@@ -105,3 +105,8 @@ distribution first because it owns the same `grtm` import directory. Use one
 environment per application when dependency requirements differ.
 
 See [troubleshooting](TROUBLESHOOTING.md) if pip cannot find a matching wheel.
+
+## Research preview
+
+[0.6.0.dev1 installation and API guide](RESEARCH_PREVIEW.md). This GitHub
+prerelease is separate from the stable PyPI 0.5.1 installation above.

@@ -27,3 +27,8 @@ entry point. The eleven implementation modules are compiled extensions. Native
 implementation sources and headers are omitted; Metal shaders are precompiled.
 This prevents direct delivery of implementation source, but does not make
 machine code impossible to reverse engineer.
+
+## Research preview verification
+
+[0.6.0.dev1](preview-0.6.0.dev1.md) has its own binary-content audits and
+installed-package tests. The counts above remain the historical 0.5.1 results.

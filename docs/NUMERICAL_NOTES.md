@@ -56,8 +56,11 @@ unselected Jacobian column means “not differentiated”, not “physically irr
 Tangents execute on CPU even with CUDA/Metal forward selection. `check_step=True`
 adds an independent finite-difference comparison and additional solves; agreement
 there is not a measure of integration truncation error. Only first derivatives
-are supported. JAX callbacks materialize dense structural Jacobians; NumPy and
-PyTorch VJPs avoid retaining the full structural Jacobian.
+are supported. JAX defaults to dense structural Jacobians; the 0.6 preview adds
+optional matrix-free first-order reverse mode. NumPy and PyTorch VJPs avoid
+retaining the full structural Jacobian. See the [preview guide](RESEARCH_PREVIEW.md)
+for native adjoint selection, fixed optimization grids and separate adaptive
+quadrature limits.
 
 ## Receiver-function inversion
 

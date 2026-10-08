@@ -1,10 +1,17 @@
-# Public API reference — 0.5.1
+# Public API reference — stable 0.5.1 and preview additions
 
 [Home](../README.md) · [Worked examples](QUICKSTART.md) · [Forward guide](PYTHON_FORWARD.md)
 
 Install `seismicx-grtm`; import `grtm`. This is a compact reference to the binary
 release's public interfaces. NumPy is required. Torch, JAX and SciPy are optional
 and are loaded for their respective adapters or inversion functions.
+
+This page's original signatures describe stable **0.5.1**. Preview **0.6.0.dev1**
+adds `jvp()`, `linearize()`, constructor `grid=`, `vjp_method=`, JAX
+`derivative_mode="vjp"`, `wavenumber_kernel()`, `compute_quadrature()` and
+`forward_quadrature()`. See the [versioned preview guide](RESEARCH_PREVIEW.md)
+for complete examples, shape/unit conventions and restrictions. These new
+interfaces require an explicit preview wheel installation.
 
 ## Models and engine selection
 
@@ -121,6 +128,9 @@ VJP contracts parameter derivatives without retaining the full structural
 Jacobian. Only first-order derivatives are supported. Fixed topology and
 source/receiver layer membership are required; geometry, layer count and
 sampling configuration are not differentiable arguments.
+
+The following framework table describes stable 0.5.1; the preview adds optional
+native adjoint VJP and JAX matrix-free reverse paths as described above.
 
 | Interface | Forward | Structural backward | Derivative storage |
 |---|---|---|---|
