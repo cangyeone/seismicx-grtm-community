@@ -101,3 +101,9 @@ GitHub 自动显示的 “Source code” ZIP/TAR 只打包此文档和数据仓�
 第三方条款见 [NOTICE.md](NOTICE.md)。公开文档不代表求解器开源。
 FK 和外部 Fortran GRTM 分别来自 [Lupei Zhu 的 FK](https://github.com/rwalkerlewis/fk)
 与 [Yunyi Qian 的 GRTM](https://github.com/YunyiQian/grtm)，不作为本项目作者的作品发布。
+
+## CPU 可微 RF 预览版 0.6.0.dev2
+
+新增 CPU 可微接收函数和 HMC / DRAM 公开接口，支持 macOS arm64 / Python 3.12 与 Linux x86_64 / Python 3.13。旧稳定版及其许可证保持不变；仅在预览轮包中追加自己的 CPU RF / 贝叶斯二进制模块，不纳入开发目录中的其他改动，也不收录第三方作者程序。
+
+[英文说明](docs/DIFFERENTIABLE_RF_CPU.md) · [中文说明](docs/DIFFERENTIABLE_RF_CPU.zh-CN.md) · [下载](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev2) · [FlowRF 用户接口](https://github.com/cangyeone/flow-assisted-hmc-receiver-function-inversion)

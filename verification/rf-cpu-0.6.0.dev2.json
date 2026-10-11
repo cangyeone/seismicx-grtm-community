@@ -1,0 +1,37 @@
+{
+  "version": "0.6.0.dev2",
+  "scope": "Our compiled CPU-only RF/Bayesian modules appended to unchanged 0.6.0.dev1 binary bases; no third-party inversion implementation added",
+  "wheels": {
+    "seismicx_grtm-0.6.0.dev2-cp312-cp312-macosx_11_0_arm64.whl": "9623aaa1293b4e236a6d7eee43c6fefee4601d43074c7ac2474128af16f7d20e",
+    "seismicx_grtm-0.6.0.dev2-cp313-cp313-manylinux_2_28_x86_64.whl": "962f32f500c0970115258f10bece19424b8561fa3fc797c063223d456d485e10"
+  },
+  "macos": {
+    "python": "3.12.14",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "torch": "2.8.0",
+    "checks": [
+      "installed public-format wheel imports",
+      "finite elastic and constant-Q RF autograd",
+      "central finite-difference model gradients",
+      "known Gaussian HMC/DRAM moments",
+      "constant-chain diagnostics do not claim convergence"
+    ]
+  },
+  "linux": {
+    "python": "3.13.5",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "torch": "2.8.0",
+    "execution_device": "cpu",
+    "checks": [
+      "installed public-format wheel imports",
+      "finite CPU RF/gradient smoke"
+    ]
+  },
+  "limits": [
+    "only the listed Python/platform wheels exist in this preview",
+    "physical validation is numerical, not proof of geological accuracy",
+    "additional FlowRF package CI reports its own tests"
+  ]
+}

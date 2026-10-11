@@ -151,3 +151,11 @@ Neither reference implementation is included here or claimed as our work.
 When reporting results, identify **SeismicX GRTM**, the package version, backend,
 model/sampling settings and relevant integration checks. No article DOI is
 claimed by this repository.
+
+## CPU differentiable RF preview (0.6.0.dev2)
+
+[CPU RF instructions](docs/DIFFERENTIABLE_RF_CPU.md) · [中文](docs/DIFFERENTIABLE_RF_CPU.zh-CN.md) · [Release](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev2)
+
+A separate research preview adds CPU differentiable plane-P RFs and public HMC/DRAM interfaces. It provides macOS arm64/Python 3.12 and Linux x86_64/Python 3.13 wheels. The stable release remains unchanged; the new interfaces are not present in the older wheels. The existing solver binaries are preserved and only our CPU RF/Bayesian binary modules are added. The license remains research/noncommercial.
+
+The [FlowRF project](https://github.com/cangyeone/flow-assisted-hmc-receiver-function-inversion) provides a reusable flow-assisted inversion interface and model weights, using GRTM as an external dependency. No third-party authors' inversion source is redistributed in these new RF materials.
