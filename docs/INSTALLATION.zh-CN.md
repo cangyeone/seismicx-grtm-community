@@ -52,6 +52,8 @@ Apple wheel 内含预编译 Metal 库，安装使用不需要 Xcode 或 shader �
 GitHub 自动的 “Source code” ZIP/TAR 只有此仓库的文档和数据；安装请选择 `.whl`。
 没有源码自动构建回退。若之前安装过 `grtm-green`，先卸载旧发行包，避免同一导入目录冲突。
 
+新增面波、半解析核及整合 RF/HMC 接口请安装 [0.6.0.dev3 预览版](PREVIEW_0.6.0.dev3.zh-CN.md)。下方稳定版安装仍对应 0.5.1。
+
 ## 研究预览版
 
 [0.6.0.dev1 安装与接口指南](RESEARCH_PREVIEW.zh-CN.md)。该 GitHub 预览版

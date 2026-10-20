@@ -1,0 +1,75 @@
+{
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "device": "cuda:1",
+  "cpu": "x86_64",
+  "torch": "2.8.0+cu128",
+  "numpy": "2.4.6",
+  "cpu_baseline": "GRTM native CPU, identical semi-analytic mathematics and adaptive search grid, one C++ thread",
+  "protocol": "Prepared operators, both warmed; synchronized host wall time includes native root search and derivatives. Model transfer/operator setup reported separately. Numba compilation excluded when disba is used. Each repetition is a complete model batch.",
+  "periods": [
+    2.0,
+    2.679880638205677,
+    3.590880117514833,
+    4.811565050522864,
+    6.447210009181672,
+    8.638876637025906,
+    11.575579117706543,
+    15.51058517677986,
+    20.783258451246166,
+    27.848325961159556,
+    37.315094774876,
+    50.0
+  ],
+  "records": [
+    {
+      "layers": 32,
+      "batch": 16,
+      "kind": "phase",
+      "wave": "rayleigh",
+      "parameter": "velocity_s",
+      "period_count": 12,
+      "cpu_seconds": [
+        3.9699862429406494,
+        3.967621636809781
+      ],
+      "cuda_seconds": [
+        0.2630228139460087,
+        0.23277430306188762
+      ],
+      "cpu_median": 3.9688039398752153,
+      "cuda_median": 0.24789855850394815,
+      "speedup": 16.00979031030552,
+      "cpu_setup": 0.0006990861147642136,
+      "cuda_setup": 1.6079151171725243,
+      "kernel_difference_note": "Same mathematical implementation; CPU/CUDA numerical parity",
+      "baseline": "grtm",
+      "max_native_cpu_kernel_difference": 3.0785374249830966e-12
+    },
+    {
+      "layers": 32,
+      "batch": 16,
+      "kind": "group",
+      "wave": "rayleigh",
+      "parameter": "velocity_s",
+      "period_count": 12,
+      "cpu_seconds": [
+        9.116591534111649,
+        9.189229340991005
+      ],
+      "cuda_seconds": [
+        0.33246096898801625,
+        0.33168615493923426
+      ],
+      "cpu_median": 9.152910437551327,
+      "cuda_median": 0.33207356196362525,
+      "speedup": 27.562900170155434,
+      "cpu_setup": 9.791296906769276e-05,
+      "cuda_setup": 0.0017110500484704971,
+      "kernel_difference_note": "Same mathematical implementation; CPU/CUDA numerical parity",
+      "baseline": "grtm",
+      "max_native_cpu_kernel_difference": 5.245015387289609e-09
+    }
+  ],
+  "shared_hardware": true,
+  "cpu_hardware": "AMD Ryzen Threadripper PRO 3955WX, 16 physical / 32 logical; CPU baselines single-thread"
+}

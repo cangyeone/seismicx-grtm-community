@@ -2,6 +2,8 @@
 
 English | [简体中文](INSTALLATION.zh-CN.md) | [Home](../README.md)
 
+For new surface-wave, semi-analytic kernel and integrated RF/HMC interfaces, install the [0.6.0.dev3 preview](PREVIEW_0.6.0.dev3.md). The stable installation below remains 0.5.1.
+
 ## Install from PyPI
 
 Use a virtual environment with CPython 3.10–3.14:

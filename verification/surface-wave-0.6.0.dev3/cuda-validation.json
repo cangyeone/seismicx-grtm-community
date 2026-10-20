@@ -1,0 +1,82 @@
+{
+  "device": "cuda:1",
+  "seed": 20261020,
+  "models": 16,
+  "periods": [
+    1.5,
+    2.4384203895847474,
+    3.963929330895088,
+    6.443817402218407,
+    10.475157160220252,
+    17.02855786905715,
+    27.681855142088526,
+    45.0
+  ],
+  "dispersion_reference": "disba 0.7.0 default Dunkin, default dc=.005; higher modes compared at reference-returned periods; cutoff omissions retained",
+  "dispersion_comparisons": [
+    {
+      "wave": "rayleigh",
+      "mode": 0,
+      "compared": 128,
+      "max_absolute_velocity_error": 2.3277203413663017e-06
+    },
+    {
+      "wave": "rayleigh",
+      "mode": 1,
+      "compared": 70,
+      "max_absolute_velocity_error": 2.4278439050284817e-06
+    },
+    {
+      "wave": "love",
+      "mode": 0,
+      "compared": 128,
+      "max_absolute_velocity_error": 2.4346791502871667e-06
+    },
+    {
+      "wave": "love",
+      "mode": 1,
+      "compared": 68,
+      "max_absolute_velocity_error": 2.4251914152451093e-06
+    }
+  ],
+  "derivative_audits": [
+    {
+      "wave": "rayleigh",
+      "kind": "phase",
+      "finite_difference_step": "1e-4*max(1,parameter)",
+      "max_absolute_error": 2.506910623534253e-08,
+      "max_scaled_error": 2.506910623534253e-08,
+      "disba_default_max_absolute_error": 0.028103975548190163,
+      "baseline_note": "Disba default one-sided dp=.025; group also uses its default frequency difference dt=.025. Fixed seeded audit model, not a universal accuracy comparison."
+    },
+    {
+      "wave": "rayleigh",
+      "kind": "group",
+      "finite_difference_step": "1e-4*max(1,parameter)",
+      "max_absolute_error": 1.860557978516919e-08,
+      "max_scaled_error": 1.860557978516919e-08,
+      "disba_default_max_absolute_error": 0.0331463719054802,
+      "baseline_note": "Disba default one-sided dp=.025; group also uses its default frequency difference dt=.025. Fixed seeded audit model, not a universal accuracy comparison."
+    },
+    {
+      "wave": "love",
+      "kind": "phase",
+      "finite_difference_step": "1e-4*max(1,parameter)",
+      "max_absolute_error": 8.392874395468652e-09,
+      "max_scaled_error": 6.948833024936759e-09,
+      "disba_default_max_absolute_error": 0.029121958132888537,
+      "baseline_note": "Disba default one-sided dp=.025; group also uses its default frequency difference dt=.025. Fixed seeded audit model, not a universal accuracy comparison."
+    },
+    {
+      "wave": "love",
+      "kind": "group",
+      "finite_difference_step": "1e-4*max(1,parameter)",
+      "max_absolute_error": 1.2742487953687487e-08,
+      "max_scaled_error": 1.0749064634788373e-08,
+      "disba_default_max_absolute_error": 0.006322270453966494,
+      "baseline_note": "Disba default one-sided dp=.025; group also uses its default frequency difference dt=.025. Fixed seeded audit model, not a universal accuracy comparison."
+    }
+  ],
+  "seconds": 5.286341569852084,
+  "cpu_hardware": "AMD Ryzen Threadripper PRO 3955WX, 16 physical / 32 logical; CPU baselines single-thread"
+}

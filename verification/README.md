@@ -32,3 +32,7 @@ machine code impossible to reverse engineer.
 
 [0.6.0.dev1](preview-0.6.0.dev1.md) has its own binary-content audits and
 installed-package tests. The counts above remain the historical 0.5.1 results.
+
+## Complete-method preview 0.6.0.dev3
+
+Ten compiled wheels passed package audits and installed CPU CI tests. Actual-device checks cover Apple M4 Max and both RTX 5090 GPUs; exact counts and the resolved legacy-fixture rerun are recorded in the [release verification](preview-0.6.0.dev3.json). The [timing report](../docs/SURFACE_WAVE_BENCHMARKS.md) reports pure CPU and dispersion-only results separately from complete kernels.

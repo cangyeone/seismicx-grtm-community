@@ -1,0 +1,75 @@
+{
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "device": "cuda:1",
+  "cpu": "x86_64",
+  "torch": "2.8.0+cu128",
+  "numpy": "2.4.6",
+  "cpu_baseline": "disba 0.7.0, Dunkin, dc=.005, dp=.025, group dt=.025",
+  "protocol": "Prepared operators, both warmed; synchronized host wall time includes native root search and derivatives. Model transfer/operator setup reported separately. Numba compilation excluded when disba is used. Each repetition is a complete model batch.",
+  "periods": [
+    2.0,
+    2.679880638205677,
+    3.590880117514833,
+    4.811565050522864,
+    6.447210009181672,
+    8.638876637025906,
+    11.575579117706543,
+    15.51058517677986,
+    20.783258451246166,
+    27.848325961159556,
+    37.315094774876,
+    50.0
+  ],
+  "records": [
+    {
+      "layers": 32,
+      "batch": 16,
+      "kind": "phase",
+      "wave": "rayleigh",
+      "parameter": "velocity_s",
+      "period_count": 12,
+      "cpu_seconds": [
+        6.813474557828158,
+        6.794710231944919
+      ],
+      "cuda_seconds": [
+        0.259481922024861,
+        0.2368213669396937
+      ],
+      "cpu_median": 6.804092394886538,
+      "cuda_median": 0.24815164448227733,
+      "speedup": 27.419090488326294,
+      "cpu_setup": 0.00016579101793467999,
+      "cuda_setup": 1.6022970180492848,
+      "max_disba_kernel_difference": 0.008040419504101393,
+      "kernel_difference_note": "disba uses a one-sided 2.5% model perturbation; agreement with this approximation is not the derivative-accuracy test",
+      "baseline": "disba"
+    },
+    {
+      "layers": 32,
+      "batch": 16,
+      "kind": "group",
+      "wave": "rayleigh",
+      "parameter": "velocity_s",
+      "period_count": 12,
+      "cpu_seconds": [
+        13.661597984144464,
+        13.630371916107833
+      ],
+      "cuda_seconds": [
+        0.3231748880352825,
+        0.3403999269939959
+      ],
+      "cpu_median": 13.645984950126149,
+      "cuda_median": 0.3317874075146392,
+      "speedup": 41.1287006108695,
+      "cpu_setup": 0.00014154589734971523,
+      "cuda_setup": 0.0041271119844168425,
+      "max_disba_kernel_difference": 0.015136155897796877,
+      "kernel_difference_note": "disba uses a one-sided 2.5% model perturbation; agreement with this approximation is not the derivative-accuracy test",
+      "baseline": "disba"
+    }
+  ],
+  "shared_hardware": true,
+  "cpu_hardware": "AMD Ryzen Threadripper PRO 3955WX, 16 physical / 32 logical; CPU baselines single-thread"
+}

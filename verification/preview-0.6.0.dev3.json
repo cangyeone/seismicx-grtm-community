@@ -1,0 +1,199 @@
+{
+  "version": "0.6.0.dev3",
+  "date": "2026-10-20",
+  "release_url": "https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev3",
+  "source_commit": "5894c5db1e886dfc24d86a89fd2a3db6ab6f93e2",
+  "build_run": 39433098827,
+  "build_attempt": 2,
+  "license": "LicenseRef-SeismicX-Research-NonCommercial",
+  "distribution": "compiled implementation modules; no implementation source archive",
+  "platforms": [
+    "CPython 3.10–3.14, Apple Silicon macOS 11+ CPU/Metal",
+    "CPython 3.10–3.14, Linux/WSL x86_64 manylinux_2_28 CPU/CUDA"
+  ],
+  "audit": {
+    "wheels": 10,
+    "compiled_python_modules_per_wheel": 18,
+    "public_python_shims": [
+      "grtm/__init__.py",
+      "grtm/__main__.py"
+    ],
+    "source_audit_errors": 0,
+    "checks": [
+      "exact Python/platform set",
+      "RECORD integrity",
+      "selected implementation-source and build-path markers",
+      "licenses/notices",
+      "native surface CPU and CUDA/RF CUDA libraries",
+      "package metadata",
+      "twine check"
+    ]
+  },
+  "ci_installed_cpu_tests": [
+    {
+      "job": "macos (3.14)",
+      "tests": 102,
+      "passed": 62,
+      "skipped": 40,
+      "status": "passed"
+    },
+    {
+      "job": "linux (cp311-cp311)",
+      "tests": 102,
+      "passed": 61,
+      "skipped": 41,
+      "status": "passed"
+    },
+    {
+      "job": "linux (cp310-cp310)",
+      "tests": 102,
+      "passed": 61,
+      "skipped": 41,
+      "status": "passed"
+    },
+    {
+      "job": "macos (3.13)",
+      "tests": 102,
+      "passed": 62,
+      "skipped": 40,
+      "status": "passed"
+    },
+    {
+      "job": "linux (cp314-cp314)",
+      "tests": 102,
+      "passed": 61,
+      "skipped": 41,
+      "status": "passed"
+    },
+    {
+      "job": "linux (cp313-cp313)",
+      "tests": 102,
+      "passed": 61,
+      "skipped": 41,
+      "status": "passed"
+    },
+    {
+      "job": "macos (3.10)",
+      "tests": 102,
+      "passed": 62,
+      "skipped": 40,
+      "status": "passed"
+    },
+    {
+      "job": "macos (3.11)",
+      "tests": 102,
+      "passed": 62,
+      "skipped": 40,
+      "status": "passed"
+    },
+    {
+      "job": "macos (3.12)",
+      "tests": 102,
+      "passed": 62,
+      "skipped": 40,
+      "status": "passed"
+    },
+    {
+      "job": "linux (cp312-cp312)",
+      "tests": 102,
+      "passed": 61,
+      "skipped": 41,
+      "status": "passed"
+    }
+  ],
+  "actual_device_tests": {
+    "macos": {
+      "python": "3.12.14",
+      "hardware": "Apple M4 Max",
+      "torch": "2.8.0",
+      "tests": 102,
+      "passed": 87,
+      "skipped": 15,
+      "scope": "Installed CPython 3.12 wheel; CPU, Metal, PyTorch MPS, RF/HMC and semi-analytic surface-wave tests"
+    },
+    "linux": {
+      "python": "3.13.5",
+      "hardware": "Threadripper PRO 3955WX; 2 x RTX 5090",
+      "torch": "2.8.0+cu128",
+      "tests": 102,
+      "passed": 93,
+      "skipped": 9,
+      "scope": "Installed CPython 3.13 wheel; native CUDA, both GPUs/nondefault streams, model autograd, RF/HMC CUDA graphs and CPU regressions",
+      "fixture_note": "The 102-test run passed 92, skipped 9 and could not run one legacy source-checkout CLI test because its fixture was absent. After staging the unchanged legacy wrapper and required source fixture, that single test was rerun and passed. Counts combine that resolved rerun with the original suite; installed binaries were unchanged."
+    }
+  },
+  "precision_validation": "Numerical cohort and derivative audit in surface-wave-0.6.0.dev3/cuda-validation.json; not a geological inversion accuracy guarantee.",
+  "timing": "Separate dispersion-only, pure-CPU, and complete-kernel campaigns. Original disba 0.7.0 remains single-threaded and unchanged. Shared hardware. See docs/SURFACE_WAVE_BENCHMARKS.md.",
+  "wheels": [
+    {
+      "filename": "seismicx_grtm-0.6.0.dev3-cp310-cp310-macosx_11_0_arm64.whl",
+      "sha256": "8a098a8985a6c85024890e53ce4964372d3b932dd888e90f1ca6cb6629d12900",
+      "tags": [
+        "cp310-cp310-macosx_11_0_arm64"
+      ]
+    },
+    {
+      "filename": "seismicx_grtm-0.6.0.dev3-cp310-cp310-manylinux_2_28_x86_64.whl",
+      "sha256": "b46eef6d889e2030326339af6c8a3cd2d10f880a9299be32f426185385ade68c",
+      "tags": [
+        "cp310-cp310-manylinux_2_28_x86_64"
+      ]
+    },
+    {
+      "filename": "seismicx_grtm-0.6.0.dev3-cp311-cp311-macosx_11_0_arm64.whl",
+      "sha256": "e926d6b39cbb8f7c993f523aada13e73b21ae95b0cac70bbb0e00ed0dfe61cc5",
+      "tags": [
+        "cp311-cp311-macosx_11_0_arm64"
+      ]
+    },
+    {
+      "filename": "seismicx_grtm-0.6.0.dev3-cp311-cp311-manylinux_2_28_x86_64.whl",
+      "sha256": "80c8eb767a361188b062b6ea57e3f375c1ed357ebe690060ff4a872a6eaed4b9",
+      "tags": [
+        "cp311-cp311-manylinux_2_28_x86_64"
+      ]
+    },
+    {
+      "filename": "seismicx_grtm-0.6.0.dev3-cp312-cp312-macosx_11_0_arm64.whl",
+      "sha256": "4c96785d78408dcc3bc2a2b5d48133410fc8ac02dffde2324410cc6f7def61fb",
+      "tags": [
+        "cp312-cp312-macosx_11_0_arm64"
+      ]
+    },
+    {
+      "filename": "seismicx_grtm-0.6.0.dev3-cp312-cp312-manylinux_2_28_x86_64.whl",
+      "sha256": "3ea717929c8cab4c0b84d197199f3ce665f626231c94f4d2a50f93d3313f3b31",
+      "tags": [
+        "cp312-cp312-manylinux_2_28_x86_64"
+      ]
+    },
+    {
+      "filename": "seismicx_grtm-0.6.0.dev3-cp313-cp313-macosx_11_0_arm64.whl",
+      "sha256": "cfa12b9375c6bd211dd2b2affdf408ee5be3cd9ff50f26c573f10b3d5eba09a8",
+      "tags": [
+        "cp313-cp313-macosx_11_0_arm64"
+      ]
+    },
+    {
+      "filename": "seismicx_grtm-0.6.0.dev3-cp313-cp313-manylinux_2_28_x86_64.whl",
+      "sha256": "75f6d03ba276b2a9e281262c26321bc103330a2b6b37cdd495b4c8b593c0a8bb",
+      "tags": [
+        "cp313-cp313-manylinux_2_28_x86_64"
+      ]
+    },
+    {
+      "filename": "seismicx_grtm-0.6.0.dev3-cp314-cp314-macosx_11_0_arm64.whl",
+      "sha256": "2ae24be3adb8e5d4db868f1bf0156999865313e83043f12208ac634cbb5de02d",
+      "tags": [
+        "cp314-cp314-macosx_11_0_arm64"
+      ]
+    },
+    {
+      "filename": "seismicx_grtm-0.6.0.dev3-cp314-cp314-manylinux_2_28_x86_64.whl",
+      "sha256": "c01a39c0f8729d38cc8cd3c87ba76723e3e5023d352bd09ed08207cb16c2bd6f",
+      "tags": [
+        "cp314-cp314-manylinux_2_28_x86_64"
+      ]
+    }
+  ]
+}

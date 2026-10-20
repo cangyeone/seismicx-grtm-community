@@ -12,6 +12,17 @@ data; solver implementation source and development history are not distributed h
 [FK comparison](benchmarks/fk/README.md) ·
 [Report a problem](https://github.com/cangyeone/seismicx-grtm-community/issues)
 
+## Complete-method preview 0.6.0.dev3
+
+[Download compiled wheels](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev3) · [Installation and API](docs/PREVIEW_0.6.0.dev3.md) · [中文](docs/PREVIEW_0.6.0.dev3.zh-CN.md)
+
+Adds GRTM Rayleigh/Love dispersion, semi-analytic CPU/CUDA sensitivity kernels,
+model autograd, and integrates differentiable RF with HMC/DRAM. CPython 3.10–3.14,
+Apple Silicon and Linux/WSL x86_64. See the [separate dispersion/kernel and CPU/CUDA benchmarks](docs/SURFACE_WAVE_BENCHMARKS.md):
+complete CPU Vs kernels are faster, while dispersion alone currently remains slower than disba CPU.
+Stable PyPI is still 0.5.1; install a matching preview wheel explicitly.
+
+
 ## Installation
 
 ```sh

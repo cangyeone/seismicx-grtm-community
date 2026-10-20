@@ -6,6 +6,16 @@
 程序用于层状介质格林函数计算，支持 CPU、CUDA 和 Apple Metal/MPS。
 仓库中的代码片段是公开接口的使用示例，不包含求解器实现源码或开发历史。
 
+## 完整方法预览版 0.6.0.dev3
+
+[编译包下载](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev3) · [安装与调用](docs/PREVIEW_0.6.0.dev3.zh-CN.md) · [速度报告](docs/SURFACE_WAVE_BENCHMARKS.zh-CN.md)
+
+新增基于 GRTM 的 Rayleigh/Love 频散、半解析 CPU/CUDA 敏感核及模型自动微分，并整合可微 RF 与 HMC/DRAM。
+提供 CPython 3.10–3.14 的 Apple Silicon 和 Linux/WSL x86_64 编译包。
+速度报告分别给出纯频散、敏感核、纯 CPU 和 CUDA；当前纯频散仍慢于 disba CPU。
+稳定 PyPI 仍为 0.5.1，请显式安装匹配的预览 wheel。
+
+
 ## 0.6.0.dev1 研究预览版
 
 新增方向 JVP、原生反向 VJP、JAX 无完整 Jacobian 的反向模式，以及独立的
