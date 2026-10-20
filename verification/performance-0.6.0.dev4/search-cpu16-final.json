@@ -1,0 +1,240 @@
+{
+  "host": "DESKTOP-2SV89I8",
+  "cpu": "x86_64",
+  "disba": "0.7.0",
+  "precision": "FP64/complex128",
+  "periods": [
+    2.0,
+    2.679880638205677,
+    3.590880117514833,
+    4.811565050522864,
+    6.447210009181672,
+    8.638876637025906,
+    11.575579117706543,
+    15.51058517677986,
+    20.783258451246166,
+    27.848325961159556,
+    37.315094774876,
+    50.0
+  ],
+  "records": [
+    {
+      "layers": 8,
+      "batch": 16,
+      "period_count": 12,
+      "task": "dispersion",
+      "kind": "phase",
+      "wave": "rayleigh",
+      "disba_seconds": [
+        0.012178969103842974,
+        0.012303437106311321,
+        0.011813669931143522,
+        0.012597674038261175,
+        0.013409963110461831
+      ],
+      "grtm_cpu_seconds": [
+        0.004799154121428728,
+        0.0053721461445093155,
+        0.0052136259619146585,
+        0.0069028090219944715,
+        0.005741527071222663
+      ],
+      "disba_median": 0.012303437106311321,
+      "grtm_cpu_median": 0.0053721461445093155,
+      "speedup": 2.290227550657057,
+      "max_absolute_difference": 2.416428956042438e-06,
+      "difference_note": "Group disba has a frequency-difference approximation; its kernels also have a 2.5% one-sided model perturbation. These are not derivative-accuracy bounds."
+    },
+    {
+      "layers": 8,
+      "batch": 16,
+      "period_count": 12,
+      "task": "dispersion",
+      "kind": "group",
+      "wave": "rayleigh",
+      "disba_seconds": [
+        0.028478363063186407,
+        0.02508885716088116,
+        0.02654466382227838,
+        0.026264576939865947,
+        0.024706507101655006
+      ],
+      "grtm_cpu_seconds": [
+        0.006744713988155127,
+        0.008616733131930232,
+        0.007659371942281723,
+        0.007513802032917738,
+        0.005917625036090612
+      ],
+      "disba_median": 0.026264576939865947,
+      "grtm_cpu_median": 0.007513802032917738,
+      "speedup": 3.4955109044398074,
+      "max_absolute_difference": 0.00042679693872083035,
+      "difference_note": "Group disba has a frequency-difference approximation; its kernels also have a 2.5% one-sided model perturbation. These are not derivative-accuracy bounds."
+    },
+    {
+      "layers": 8,
+      "batch": 64,
+      "period_count": 12,
+      "task": "dispersion",
+      "kind": "phase",
+      "wave": "rayleigh",
+      "disba_seconds": [
+        0.04960199212655425,
+        0.050185728119686246,
+        0.05025279405526817,
+        0.05322394403629005,
+        0.05245185294188559
+      ],
+      "grtm_cpu_seconds": [
+        0.017304870067164302,
+        0.01632270193658769,
+        0.021148867905139923,
+        0.022055285051465034,
+        0.016660781810060143
+      ],
+      "disba_median": 0.05025279405526817,
+      "grtm_cpu_median": 0.017304870067164302,
+      "speedup": 2.90396829679883,
+      "max_absolute_difference": 2.4406044367708546e-06,
+      "difference_note": "Group disba has a frequency-difference approximation; its kernels also have a 2.5% one-sided model perturbation. These are not derivative-accuracy bounds."
+    },
+    {
+      "layers": 8,
+      "batch": 64,
+      "period_count": 12,
+      "task": "dispersion",
+      "kind": "group",
+      "wave": "rayleigh",
+      "disba_seconds": [
+        0.12324171187356114,
+        0.0926069999113679,
+        0.11260844301432371,
+        0.10533886402845383,
+        0.09712587506510317
+      ],
+      "grtm_cpu_seconds": [
+        0.01938397786580026,
+        0.02071287389844656,
+        0.017812768928706646,
+        0.021753130946308374,
+        0.021799047011882067
+      ],
+      "disba_median": 0.10533886402845383,
+      "grtm_cpu_median": 0.02071287389844656,
+      "speedup": 5.085671092525413,
+      "max_absolute_difference": 0.00043768279806943866,
+      "difference_note": "Group disba has a frequency-difference approximation; its kernels also have a 2.5% one-sided model perturbation. These are not derivative-accuracy bounds."
+    },
+    {
+      "layers": 32,
+      "batch": 16,
+      "period_count": 12,
+      "task": "dispersion",
+      "kind": "phase",
+      "wave": "rayleigh",
+      "disba_seconds": [
+        0.04175906302407384,
+        0.04358880105428398,
+        0.04126612306572497,
+        0.04711568006314337,
+        0.04860437987372279
+      ],
+      "grtm_cpu_seconds": [
+        0.021327561931684613,
+        0.017636356875300407,
+        0.022373890969902277,
+        0.0215453349519521,
+        0.02991139213554561
+      ],
+      "disba_median": 0.04358880105428398,
+      "grtm_cpu_median": 0.0215453349519521,
+      "speedup": 2.0231201395332516,
+      "max_absolute_difference": 2.4255222954572275e-06,
+      "difference_note": "Group disba has a frequency-difference approximation; its kernels also have a 2.5% one-sided model perturbation. These are not derivative-accuracy bounds."
+    },
+    {
+      "layers": 32,
+      "batch": 16,
+      "period_count": 12,
+      "task": "dispersion",
+      "kind": "group",
+      "wave": "rayleigh",
+      "disba_seconds": [
+        0.08630744996480644,
+        0.08413053094409406,
+        0.09266217006370425,
+        0.08607965288683772,
+        0.08258490008302033
+      ],
+      "grtm_cpu_seconds": [
+        0.03075020993128419,
+        0.01920737512409687,
+        0.019837131025269628,
+        0.019837531959638,
+        0.017977662151679397
+      ],
+      "disba_median": 0.08607965288683772,
+      "grtm_cpu_median": 0.019837131025269628,
+      "speedup": 4.339319671639247,
+      "max_absolute_difference": 0.00036997800300087036,
+      "difference_note": "Group disba has a frequency-difference approximation; its kernels also have a 2.5% one-sided model perturbation. These are not derivative-accuracy bounds."
+    },
+    {
+      "layers": 32,
+      "batch": 64,
+      "period_count": 12,
+      "task": "dispersion",
+      "kind": "phase",
+      "wave": "rayleigh",
+      "disba_seconds": [
+        0.16975752799771726,
+        0.16613297211006284,
+        0.1706839429680258,
+        0.16764888283796608,
+        0.16873565199784935
+      ],
+      "grtm_cpu_seconds": [
+        0.04711791197769344,
+        0.03761994792148471,
+        0.04896581405773759,
+        0.0442026408854872,
+        0.046852987026795745
+      ],
+      "disba_median": 0.16873565199784935,
+      "grtm_cpu_median": 0.046852987026795745,
+      "speedup": 3.6013851561128334,
+      "max_absolute_difference": 2.438708102125986e-06,
+      "difference_note": "Group disba has a frequency-difference approximation; its kernels also have a 2.5% one-sided model perturbation. These are not derivative-accuracy bounds."
+    },
+    {
+      "layers": 32,
+      "batch": 64,
+      "period_count": 12,
+      "task": "dispersion",
+      "kind": "group",
+      "wave": "rayleigh",
+      "disba_seconds": [
+        0.3560486619826406,
+        0.3416711559984833,
+        0.3309246099088341,
+        0.3394612609408796,
+        0.34322118503041565
+      ],
+      "grtm_cpu_seconds": [
+        0.04923613183200359,
+        0.05454625794664025,
+        0.047221034998074174,
+        0.05693568103015423,
+        0.05351779400371015
+      ],
+      "disba_median": 0.3416711559984833,
+      "grtm_cpu_median": 0.05351779400371015,
+      "speedup": 6.384253356459288,
+      "max_absolute_difference": 0.00040813206810774716,
+      "difference_note": "Group disba has a frequency-difference approximation; its kernels also have a 2.5% one-sided model perturbation. These are not derivative-accuracy bounds."
+    }
+  ],
+  "grtm_threads": 16,
+  "protocol": "Pure CPU; original disba single-threaded, GRTM requested native model workers 16. Warmed complete batches, median of repeated host wall times. Prepared operators, construction excluded. No CUDA calls, no model autograd. disba Dunkin, dc=.005, dp=.025, group dt=.025. GRTM analytic derivatives and adaptive global root search. Shared host, no other users jobs stopped."
+}

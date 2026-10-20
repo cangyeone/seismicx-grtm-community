@@ -1,0 +1,79 @@
+{
+  "host": "DESKTOP-2SV89I8",
+  "cpu": "x86_64",
+  "disba": "0.7.0",
+  "grtm": "0.6.0.dev4",
+  "precision": "FP64/complex128",
+  "periods": [
+    2.0,
+    2.679880638205677,
+    3.590880117514833,
+    4.811565050522864,
+    6.447210009181672,
+    8.638876637025906,
+    11.575579117706543,
+    15.51058517677986,
+    20.783258451246166,
+    27.848325961159556,
+    37.315094774876,
+    50.0
+  ],
+  "records": [
+    {
+      "layers": 32,
+      "batch": 16,
+      "period_count": 12,
+      "task": "sensitivity",
+      "kind": "phase",
+      "wave": "rayleigh",
+      "disba_seconds": [
+        6.940736867021769,
+        6.9574569400865585,
+        6.898300693836063,
+        6.9446971961297095,
+        6.990821928018704
+      ],
+      "grtm_cpu_seconds": [
+        0.5696422171313316,
+        0.5632298388518393,
+        0.5839739528018981,
+        0.5981737370602787,
+        0.571226648055017
+      ],
+      "disba_median": 6.9446971961297095,
+      "grtm_cpu_median": 0.571226648055017,
+      "speedup": 12.15751614490653,
+      "max_absolute_difference": 0.008040419508999364,
+      "difference_note": "Group disba has a frequency-difference approximation; its kernels also have a 2.5% one-sided model perturbation. These are not derivative-accuracy bounds."
+    },
+    {
+      "layers": 32,
+      "batch": 16,
+      "period_count": 12,
+      "task": "sensitivity",
+      "kind": "group",
+      "wave": "rayleigh",
+      "disba_seconds": [
+        13.675971298012882,
+        13.634332558140159,
+        13.62258596578613,
+        13.464565937872976,
+        13.656089785974473
+      ],
+      "grtm_cpu_seconds": [
+        3.9619399649091065,
+        3.9768160320818424,
+        3.909883663058281,
+        3.8973759941291064,
+        3.897828265093267
+      ],
+      "disba_median": 13.634332558140159,
+      "grtm_cpu_median": 3.909883663058281,
+      "speedup": 3.4871453304253786,
+      "max_absolute_difference": 0.015136140215145588,
+      "difference_note": "Group disba has a frequency-difference approximation; its kernels also have a 2.5% one-sided model perturbation. These are not derivative-accuracy bounds."
+    }
+  ],
+  "grtm_threads": 1,
+  "protocol": "Pure CPU; original disba single-threaded, GRTM requested native model workers 1. Warmed complete batches, median of repeated host wall times. Prepared operators, construction excluded. No CUDA calls, no model autograd. disba Dunkin, dc=.005, dp=.025, group dt=.025. GRTM analytic derivatives and search=auto, root tolerance 1e-10 km/s. Shared host, no other users jobs stopped."
+}

@@ -6,7 +6,7 @@
 
 ## 安装与最小调用
 
-[0.6.0.dev3 二进制预览版](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev3)
+[0.6.0.dev4 二进制预览版](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev4)
 提供预编译 wheel；稳定 PyPI 0.5.1 不含本功能。下载与 Python/平台匹配的文件后，
 执行 `python -m pip install /path/to/downloaded.whl`。
 CUDA 接口另需 `python -m pip install 'torch>=2.4'` 及兼容的 NVIDIA 驱动。
@@ -156,7 +156,7 @@ python examples/benchmark_surface_wave.py --device cuda:0 --output benchmark.jso
 
 初次本地验证使用 16 个六层模型（半数含低速层），与 disba 0.7.0 默认 Dunkin 比较 394 个基阶/第一高阶速度，最大绝对差约 $2.44\times10^{-6}$ km/s。一次全部参数的独立重寻根差分审计中，最大绝对核差约 $2.51\times10^{-8}$。这些数值仅描述该测试集合，不是对所有层状模型的误差界；disba 本身也有寻根误差。
 
-测速脚本比较完整的 **Vs 敏感核计算**，包含本方法的寻根与求导，并同步 GPU 计时。CPU 对照使用 disba 默认单边 2.5% 参数扰动；Numba 首次编译和算子构建与常态调用时间分开。单模型延迟、批量吞吐、相速度核与群速度核分别报告；结果保存在本工作区 `verification/surface-wave-0.6.0.dev3/`，不将正演吞吐直接当成反演加速比。
+测速脚本比较完整的 **Vs 敏感核计算**，包含本方法的寻根与求导，并同步 GPU 计时。CPU 对照使用 disba 默认单边 2.5% 参数扰动；Numba 首次编译和算子构建与常态调用时间分开。单模型延迟、批量吞吐、相速度核与群速度核分别报告；结果保存在本工作区 `optimization/surface-wave-20261020/`，不将正演吞吐直接当成反演加速比。
 
 ### 最终 CMake 构建实测
 
@@ -183,3 +183,12 @@ RTX 5090、Threadripper PRO 3955WX，32 层、12 周期、16 模型、Rayleigh �
 这张表只比较固定审计模型中的导数近似误差。disba 使用默认 2.5% 单边参数扰动，群速度还含默认频率差分；不把该结果当成所有模型的误差界，也不推断地质反演精度。数据见 `cuda-validation.json`。
 
 纯 CPU 和纯频散 CUDA 补测见[完整速度报告](SURFACE_WAVE_BENCHMARKS.zh-CN.md)，其中同时报告未提速的情况。
+
+## 0.6.0.dev4 寻根优化
+
+最新结果见[三类正演与微分的 CPU/CUDA 测试报告](PERFORMANCE_0.6.0.dev4.zh-CN.md)。
+上方 0.6.0.dev3 数据属于优化前的历史结果。
+
+`search="auto"` 从同一 GRTM 特征矩阵推导五分量实数试探算子，使用有括区保护的插值和原复数方程验证，保持原根容差。Rayleigh 变分下界用于跳过无根速度范围。CPU 续接仅用于温和、正常递增结构与密集周期；低速层、强突变、高阶模态和稀疏周期保留完整搜索。`search="scan"` 保留原复数全扫描，便于独立复核。
+
+群速度使用实数 GRTM 递推的解析 log-c/log-T 导数，不使用频率差分；病态状态回退到原复数实现。模型敏感核保留原复数双数/超双数实现。CPU 默认 `threads=1`，`threads=16` 并行不同模型及其核；CUDA 计算始终在 GPU 执行。

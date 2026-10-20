@@ -1,0 +1,182 @@
+{
+  "version": "0.6.0.dev4",
+  "date": "2026-10-20",
+  "release_url": "https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev4",
+  "source_commit": "fbf130f9ce259faa89df6557c002dfb16acc8230",
+  "build_run": 39447140720,
+  "build_attempt": 1,
+  "license": "LicenseRef-SeismicX-Research-NonCommercial",
+  "distribution": "compiled implementation modules; no implementation source archive",
+  "platforms": [
+    "CPython 3.10-3.14, Apple Silicon macOS 11+ CPU/Metal",
+    "CPython 3.10-3.14, Linux/WSL x86_64 manylinux_2_28 CPU/CUDA"
+  ],
+  "audit": {
+    "wheels": 10,
+    "compiled_python_modules_per_wheel": 18,
+    "public_python_shims": [
+      "grtm/__init__.py",
+      "grtm/__main__.py"
+    ],
+    "source_audit_errors": 0,
+    "twine_check": "all ten passed",
+    "checks": [
+      "exact Python/platform set",
+      "RECORD integrity",
+      "implementation source/private build-path marker scan",
+      "license/notices",
+      "native surface CPU/CUDA and RF CUDA libraries",
+      "package metadata"
+    ]
+  },
+  "ci_installed_cpu_tests": [
+    {
+      "job": "linux (cp310-cp310)",
+      "tests": 105,
+      "passed": 63,
+      "skipped": 42,
+      "status": "passed"
+    },
+    {
+      "job": "macos (3.10)",
+      "tests": 105,
+      "passed": 64,
+      "skipped": 41,
+      "status": "passed"
+    },
+    {
+      "job": "linux (cp313-cp313)",
+      "tests": 105,
+      "passed": 63,
+      "skipped": 42,
+      "status": "passed"
+    },
+    {
+      "job": "macos (3.13)",
+      "tests": 105,
+      "passed": 64,
+      "skipped": 41,
+      "status": "passed"
+    },
+    {
+      "job": "linux (cp311-cp311)",
+      "tests": 105,
+      "passed": 63,
+      "skipped": 42,
+      "status": "passed"
+    },
+    {
+      "job": "linux (cp312-cp312)",
+      "tests": 105,
+      "passed": 63,
+      "skipped": 42,
+      "status": "passed"
+    },
+    {
+      "job": "linux (cp314-cp314)",
+      "tests": 105,
+      "passed": 63,
+      "skipped": 42,
+      "status": "passed"
+    },
+    {
+      "job": "macos (3.12)",
+      "tests": 105,
+      "passed": 64,
+      "skipped": 41,
+      "status": "passed"
+    },
+    {
+      "job": "macos (3.14)",
+      "tests": 105,
+      "passed": 64,
+      "skipped": 41,
+      "status": "passed"
+    },
+    {
+      "job": "macos (3.11)",
+      "tests": 105,
+      "passed": 64,
+      "skipped": 41,
+      "status": "passed"
+    }
+  ],
+  "device_tests": [
+    {
+      "platform": "Apple M4 Max macOS arm64",
+      "python": "3.12.14",
+      "backends": [
+        "cpu",
+        "metal"
+      ],
+      "tests": 105,
+      "passed": 89,
+      "skipped": 16,
+      "status": "passed",
+      "seconds": 12.19
+    },
+    {
+      "platform": "Threadripper PRO 3955WX, RTX 5090, Linux/WSL x86_64",
+      "python": "3.13.5",
+      "torch": "2.8.0+cu128",
+      "backends": [
+        "cpu",
+        "cuda"
+      ],
+      "tests": 105,
+      "passed": 96,
+      "skipped": 9,
+      "status": "passed",
+      "seconds": 91.489
+    }
+  ],
+  "test_harness_note": "A pre-existing Metal concurrent-stress bitwise-equality assertion failed on 5.68e-14 to 1.14e-13 absolute roundoff (relative <=1.09e-14). The assertion now uses rtol=atol=5e-14; native mathematics/precision are unchanged. The complete installed-wheel suite then passed. This test-only adjustment is after the binary source commit.",
+  "surface_validation": {
+    "models": 129,
+    "modal_points": 4339,
+    "strict_original_scan_tolerance_km_s": 1e-12,
+    "max_auto_scan_difference_km_s": 1.7283952047364437e-12,
+    "mpmath_digits": 70,
+    "mpmath_cases": 48,
+    "disba_common_available_cases": 45,
+    "disba_unavailable": "One two-layer Love curve (3 periods); both default phase/group calls raise DispersionError; preserved in raw records"
+  },
+  "benchmarks": "See docs/PERFORMANCE_0.6.0.dev4.md and the accompanying raw JSON. Installed release wheel used for comprehensive forward/derivative measurements; separate surface search campaign used matching source/natives.",
+  "limitations": [
+    "Shared host/GPU, no unrelated jobs stopped",
+    "Default unchanged disba is not a tolerance-matched benchmark",
+    "Green structural JVP/VJP are CPU even with CUDA forward",
+    "No claim about posterior/geological inversion accuracy"
+  ],
+  "comprehensive_benchmark": {
+    "installed_version": "0.6.0.dev4",
+    "records": 44,
+    "warmup": 1,
+    "repetitions": 5,
+    "layers": [
+      8,
+      32
+    ],
+    "batches": [
+      1,
+      16
+    ],
+    "green_threads": [
+      1,
+      16
+    ],
+    "rf_torch_threads": [
+      1,
+      4
+    ],
+    "surface_threads": [
+      1,
+      16
+    ],
+    "gpu": "RTX 5090 cuda:1, shared",
+    "green_derivative_backend": "cpu",
+    "rf_derivative_backend": "cuda",
+    "surface_derivative_backend": "cuda",
+    "preliminary_rf16": "12 completed preliminary records retained; interrupted within the 8-layer/B16 case; no per-call timeout value inferred"
+  }
+}

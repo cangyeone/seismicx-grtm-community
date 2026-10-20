@@ -7,7 +7,7 @@ English | [简体中文](SURFACE_WAVES.zh-CN.md)
 ## Build and use
 
 This feature is available in the
-[0.6.0.dev3 binary preview](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev3),
+[0.6.0.dev4 binary preview](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev4),
 not in stable PyPI 0.5.1. Download the wheel matching your Python/platform and
 install that exact file with `python -m pip install /path/to/downloaded.whl`.
 CUDA calls require PyTorch (`python -m pip install 'torch>=2.4'`) and a compatible
@@ -97,7 +97,7 @@ Checks cover analytic half-space Rayleigh speed, an independent two-layer Love e
 
 An initial 16-model six-layer cohort (half with low-velocity layers) has maximum speed disagreement about 2.44e-6 km/s across 394 fundamental/first-overtone comparisons with disba 0.7.0's default Dunkin solver. A separate full-property FD audit has maximum absolute kernel disagreement about 2.51e-8. These are observed test errors, not universal error bounds.
 
-The benchmark measures complete Vs-kernel computation, including root search, derivatives and synchronization, against warmed disba CPU calls. Disba's default 2.5% one-sided parameter perturbation is an approximation, not derivative ground truth. Setup/JIT and steady calls are separated; single-model latency, batches, phase and group kernels are reported separately. Local evidence is in `verification/surface-wave-0.6.0.dev3/`.
+The benchmark measures complete Vs-kernel computation, including root search, derivatives and synchronization, against warmed disba CPU calls. Disba's default 2.5% one-sided parameter perturbation is an approximation, not derivative ground truth. Setup/JIT and steady calls are separated; single-model latency, batches, phase and group kernels are reported separately. Local evidence is in `optimization/surface-wave-20261020/`.
 
 ### Final CMake-library measurements
 
@@ -123,4 +123,11 @@ For the fixed seeded audit model, maximum absolute derivative discrepancies agai
 
 These compare derivative approximations for this one audit model in native units, not geological reconstruction accuracy or a universal bound. Disba uses its default 2.5% one-sided parameter perturbation and, for group kernels, its default frequency difference. Full evidence is in `cuda-validation.json`.
 
-See the [separate CPU and dispersion-only timing report](SURFACE_WAVE_BENCHMARKS.md), including cases without a speedup.
+See the [0.6.0.dev4 CPU/CUDA timing and accuracy report](PERFORMANCE_0.6.0.dev4.md).
+The [0.6.0.dev3 measurements](SURFACE_WAVE_BENCHMARKS.md) are historical results before the search optimization.
+
+## Optimized search (0.6.0.dev4)
+
+`search="auto"` derives a five-component real trial operator from the same GRTM eigenmatrix. Safeguarded interpolation is followed by an original complex sign bracket and residual check. The requested root tolerance is unchanged. A Rayleigh variational lower bound skips a root-free range. CPU continuation is restricted to moderate, normally graded profiles and dense periods; LVZs, strong jumps, higher modes and sparse periods retain full discovery. `search="scan"` retains the original complex full-scan reference.
+
+Group velocities use analytic log-c/log-T tangents through the real GRTM recurrence, with complex fallback for ill-conditioned states. Model kernels retain the original complex dual/hyper-dual implementation. CPU defaults to `threads=1`; `threads=16` parallelizes independent models and their kernels. CUDA work stays on the GPU.

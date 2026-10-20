@@ -12,14 +12,25 @@ data; solver implementation source and development history are not distributed h
 [FK comparison](benchmarks/fk/README.md) ·
 [Report a problem](https://github.com/cangyeone/seismicx-grtm-community/issues)
 
-## Complete-method preview 0.6.0.dev3
+## CPU/CUDA search and derivative preview 0.6.0.dev4
+
+[Compiled wheels](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev4) · [Install/API](docs/PREVIEW_0.6.0.dev4.md) · [CPU/CUDA performance and accuracy](docs/PERFORMANCE_0.6.0.dev4.md) · [中文](docs/PERFORMANCE_0.6.0.dev4.zh-CN.md)
+
+Optimized GRTM dispersion search preserves FP64 and root precision. The new
+report measures Green functions, RF and dispersion, including structural
+derivatives, on CPU and CUDA. CPU thread counts and hybrid execution are explicit:
+Green structural JVP/VJP remain CPU; RF and surface-wave CUDA derivatives run
+on GPU. Results include unchanged disba comparisons, small/batched cases,
+individual repetitions and independent precision audits. Stable PyPI is 0.5.1.
+
+## Complete-method preview 0.6.0.dev3 (historical)
 
 [Download compiled wheels](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev3) · [Installation and API](docs/PREVIEW_0.6.0.dev3.md) · [中文](docs/PREVIEW_0.6.0.dev3.zh-CN.md)
 
 Adds GRTM Rayleigh/Love dispersion, semi-analytic CPU/CUDA sensitivity kernels,
 model autograd, and integrates differentiable RF with HMC/DRAM. CPython 3.10–3.14,
 Apple Silicon and Linux/WSL x86_64. See the [separate dispersion/kernel and CPU/CUDA benchmarks](docs/SURFACE_WAVE_BENCHMARKS.md):
-complete CPU Vs kernels are faster, while dispersion alone currently remains slower than disba CPU.
+these measurements precede the dev4 root-search optimization above.
 Stable PyPI is still 0.5.1; install a matching preview wheel explicitly.
 
 

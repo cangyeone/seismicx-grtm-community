@@ -1,0 +1,2686 @@
+{
+  "version": "0.6.0.dev4",
+  "installed_package": "/home/yuzy/grtm-surface-release-20261020/env/lib/python3.13/site-packages/grtm/__init__.py",
+  "started_utc": "2026-10-20T15:30:09.488445+00:00",
+  "host": "DESKTOP-2SV89I8",
+  "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.31",
+  "cpu": "Architecture:                         x86_64\nCPU op-mode(s):                       32-bit, 64-bit\nByte Order:                           Little Endian\nAddress sizes:                        48 bits physical, 48 bits virtual\nCPU(s):                               32\nOn-line CPU(s) list:                  0-31\nThread(s) per core:                   2\nCore(s) per socket:                   16\nSocket(s):                            1\nVendor ID:                            AuthenticAMD\nCPU family:                           23\nModel:                                49\nModel name:                           AMD Ryzen Threadripper PRO 3955WX 16-Cores\nStepping:                             0\nCPU MHz:                              3892.683\nBogoMIPS:                             7785.36\nHypervisor vendor:                    Microsoft\nVirtualization type:                  full\nL1d cache:                            512 KiB\nL1i cache:                            512 KiB\nL2 cache:                             8 MiB\nL3 cache:                             16 MiB\nVulnerability Gather data sampling:   Not affected\nVulnerability Itlb multihit:          Not affected\nVulnerability L1tf:                   Not affected\nVulnerability Mds:                    Not affected\nVulnerability Meltdown:               Not affected\nVulnerability Mmio stale data:        Not affected\nVulnerability Reg file data sampling: Not affected\nVulnerability Retbleed:               Mitigation; untrained return thunk; SMT enabled with STIBP protection\nVulnerability Spec rstack overflow:   Mitigation; safe RET\nVulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl and seccomp\nVulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:             Mitigation; Retpolines; IBPB conditional; STIBP always-on; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected\nVulnerability Srbds:                  Not affected\nVulnerability Tsx async abort:        Not affected\nFlags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr virt_ssbd arat umip rdpid\n",
+  "torch": "2.8.0+cu128",
+  "numpy": "2.4.6",
+  "shared_hardware": true,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "protocol": "FP64/complex128. Prepared operators, one warmup, rotating operation order, whole-call host wall time and CUDA synchronization. Public validation included. Setup/model upload excluded and separately recorded. Green uses a fixed frequency-wavenumber grid and host NumPy I/O; RF/surface CUDA use resident tensors. vjp_only reuses the base linearization/graph, forward_vjp rebuilds it. No full dense Green/RF Jacobian is claimed.",
+  "arguments": {
+    "output": "comprehensive-rf-surface-dev4.json",
+    "device": "cuda:1",
+    "threads": [
+      1,
+      16
+    ],
+    "rf_threads": [
+      1,
+      4
+    ],
+    "layers": [
+      8,
+      32
+    ],
+    "batches": [
+      1,
+      16
+    ],
+    "repeat": 5,
+    "families": [
+      "green",
+      "rf",
+      "surface"
+    ]
+  },
+  "records": [
+    {
+      "family": "green",
+      "layers": 8,
+      "batch": 1,
+      "receivers": 4,
+      "samples": 64,
+      "structural_parameters": 16,
+      "parameter_names": [
+        "vp",
+        "vs"
+      ],
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 1,
+      "cuda_device": null,
+      "device_note": "native CPU",
+      "wavenumber_nodes": 10867,
+      "fixed_grid": true,
+      "setup_and_first_forward_seconds": 0.11799917509779334,
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "vjp_relative_cpu_error": 0.0,
+        "adjoint_identity_relative_error": 6.924848734606983e-12,
+        "jvp_central_difference_relative_error": 4.572462467817242e-07
+      },
+      "trials_seconds": {
+        "forward": [
+          0.11239750101231039,
+          0.11138816806487739,
+          0.11497638397850096,
+          0.12042743596248329,
+          0.10609442996792495
+        ],
+        "jvp_only": [
+          0.26333711110055447,
+          0.22980418289080262,
+          0.23628075700253248,
+          0.24407401005737484,
+          0.23374970303848386
+        ],
+        "vjp_only": [
+          1.059018902014941,
+          1.004433484049514,
+          1.0197838537860662,
+          0.9928929039742798,
+          1.010473591974005
+        ],
+        "forward_vjp": [
+          1.1423682619351894,
+          1.13269026693888,
+          1.105988698080182,
+          1.1099426611326635,
+          1.1256588480900973
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.11239750101231039,
+        "jvp_only": 0.23628075700253248,
+        "vjp_only": 1.010473591974005,
+        "forward_vjp": 1.1256588480900973
+      },
+      "field": "displacement",
+      "domain": "signal"
+    },
+    {
+      "family": "green",
+      "layers": 8,
+      "batch": 1,
+      "receivers": 4,
+      "samples": 64,
+      "structural_parameters": 16,
+      "parameter_names": [
+        "vp",
+        "vs"
+      ],
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 16,
+      "cuda_device": null,
+      "device_note": "native CPU",
+      "wavenumber_nodes": 10867,
+      "fixed_grid": true,
+      "setup_and_first_forward_seconds": 0.028743155067786574,
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "vjp_relative_cpu_error": 0.0,
+        "adjoint_identity_relative_error": 6.924848734606983e-12
+      },
+      "trials_seconds": {
+        "forward": [
+          0.02135292999446392,
+          0.02486052503809333,
+          0.027667338959872723,
+          0.02312987414188683,
+          0.031099359039217234
+        ],
+        "jvp_only": [
+          0.06840258417651057,
+          0.0602227330673486,
+          0.04453708091750741,
+          0.042432076996192336,
+          0.06770577095448971
+        ],
+        "vjp_only": [
+          0.17916715191677213,
+          0.1796966320835054,
+          0.1670041389297694,
+          0.2068875259719789,
+          0.1873399089090526
+        ],
+        "forward_vjp": [
+          0.2027763780206442,
+          0.17225925903767347,
+          0.20888998196460307,
+          0.20003432012163103,
+          0.16801054100506008
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.02486052503809333,
+        "jvp_only": 0.0602227330673486,
+        "vjp_only": 0.1796966320835054,
+        "forward_vjp": 0.20003432012163103
+      },
+      "field": "displacement",
+      "domain": "signal"
+    },
+    {
+      "family": "green",
+      "layers": 8,
+      "batch": 1,
+      "receivers": 4,
+      "samples": 64,
+      "structural_parameters": 16,
+      "parameter_names": [
+        "vp",
+        "vs"
+      ],
+      "forward_backend": "cuda",
+      "derivative_backend": "cpu",
+      "cpu_threads": 1,
+      "cuda_device": "cuda:1",
+      "device_note": "CUDA forward plus CPU JVP/VJP",
+      "wavenumber_nodes": 10867,
+      "fixed_grid": true,
+      "setup_and_first_forward_seconds": 0.2924442228395492,
+      "accuracy": {
+        "forward_relative_cpu_error": 3.752632616629441e-13,
+        "vjp_relative_cpu_error": 0.0,
+        "adjoint_identity_relative_error": 6.924848734606983e-12
+      },
+      "trials_seconds": {
+        "forward": [
+          0.13247249810956419,
+          0.13311763084493577,
+          0.13069652998819947,
+          0.1353452238254249,
+          0.1470251251012087
+        ],
+        "jvp_only": [
+          0.23454731819219887,
+          0.22746856999583542,
+          0.2313889570068568,
+          0.22601450188085437,
+          0.2316928890068084
+        ],
+        "vjp_only": [
+          0.9993795971386135,
+          1.0505738349165767,
+          1.0071949178818613,
+          1.0144493549596518,
+          0.9987757480703294
+        ],
+        "forward_vjp": [
+          1.1036310628987849,
+          1.03554192581214,
+          1.0316217839717865,
+          1.0155207829084247,
+          1.107314818073064
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.13311763084493577,
+        "jvp_only": 0.2313889570068568,
+        "vjp_only": 1.0071949178818613,
+        "forward_vjp": 1.03554192581214
+      },
+      "field": "displacement",
+      "domain": "signal"
+    },
+    {
+      "family": "green",
+      "layers": 8,
+      "batch": 1,
+      "receivers": 4,
+      "samples": 64,
+      "structural_parameters": 16,
+      "parameter_names": [
+        "vp",
+        "vs"
+      ],
+      "forward_backend": "cuda",
+      "derivative_backend": "cpu",
+      "cpu_threads": 16,
+      "cuda_device": "cuda:1",
+      "device_note": "CUDA forward plus CPU JVP/VJP",
+      "wavenumber_nodes": 10867,
+      "fixed_grid": true,
+      "setup_and_first_forward_seconds": 0.01922485511749983,
+      "accuracy": {
+        "forward_relative_cpu_error": 3.752632616629441e-13,
+        "vjp_relative_cpu_error": 0.0,
+        "adjoint_identity_relative_error": 6.924848734606983e-12
+      },
+      "trials_seconds": {
+        "forward": [
+          0.13982980698347092,
+          0.01944855786859989,
+          0.022545777028426528,
+          0.02502135094255209,
+          0.04151094797998667
+        ],
+        "jvp_only": [
+          0.04450214607641101,
+          0.04328903299756348,
+          0.04359219688922167,
+          0.043485892936587334,
+          0.04554118402302265
+        ],
+        "vjp_only": [
+          0.19576936005614698,
+          0.18963895901106298,
+          0.21245948621071875,
+          0.14711705897934735,
+          0.205613813130185
+        ],
+        "forward_vjp": [
+          0.23761439486406744,
+          0.3185802458319813,
+          0.22150223702192307,
+          0.20535834319889545,
+          0.20406780811026692
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.02502135094255209,
+        "jvp_only": 0.04359219688922167,
+        "vjp_only": 0.19576936005614698,
+        "forward_vjp": 0.22150223702192307
+      },
+      "field": "displacement",
+      "domain": "signal"
+    },
+    {
+      "family": "green",
+      "layers": 32,
+      "batch": 1,
+      "receivers": 4,
+      "samples": 64,
+      "structural_parameters": 64,
+      "parameter_names": [
+        "vp",
+        "vs"
+      ],
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 1,
+      "cuda_device": null,
+      "device_note": "native CPU",
+      "wavenumber_nodes": 20205,
+      "fixed_grid": true,
+      "setup_and_first_forward_seconds": 0.749839197145775,
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "vjp_relative_cpu_error": 0.0,
+        "adjoint_identity_relative_error": 1.1407398661496132e-13,
+        "jvp_central_difference_relative_error": 9.597428593527438e-08
+      },
+      "trials_seconds": {
+        "forward": [
+          0.7514660500455648,
+          0.7466003790032119,
+          0.7327599190175533,
+          0.7151472279801965,
+          0.7388554411008954
+        ],
+        "jvp_only": [
+          1.6597940300125629,
+          1.6533924730028957,
+          1.6902613688725978,
+          1.648475802037865,
+          1.6542111209128052
+        ],
+        "vjp_only": [
+          7.715533882146701,
+          7.799231290118769,
+          7.721161189023405,
+          7.84410012094304,
+          7.6345558350440115
+        ],
+        "forward_vjp": [
+          8.528671870939434,
+          8.49003869201988,
+          8.795965356053784,
+          8.537366488948464,
+          8.521374608855695
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.7388554411008954,
+        "jvp_only": 1.6542111209128052,
+        "vjp_only": 7.721161189023405,
+        "forward_vjp": 8.528671870939434
+      },
+      "field": "displacement",
+      "domain": "signal"
+    },
+    {
+      "family": "green",
+      "layers": 32,
+      "batch": 1,
+      "receivers": 4,
+      "samples": 64,
+      "structural_parameters": 64,
+      "parameter_names": [
+        "vp",
+        "vs"
+      ],
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 16,
+      "cuda_device": null,
+      "device_note": "native CPU",
+      "wavenumber_nodes": 20205,
+      "fixed_grid": true,
+      "setup_and_first_forward_seconds": 0.1842472560238093,
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "vjp_relative_cpu_error": 1.7236024007206013e-19,
+        "adjoint_identity_relative_error": 1.1407398661496132e-13
+      },
+      "trials_seconds": {
+        "forward": [
+          0.18344333884306252,
+          0.17691409005783498,
+          0.1784446567762643,
+          0.18997167702764273,
+          0.1772061879746616
+        ],
+        "jvp_only": [
+          0.469969951082021,
+          0.41586482198908925,
+          0.3856259351596236,
+          0.4040750169660896,
+          0.40732240304350853
+        ],
+        "vjp_only": [
+          1.4911234958563,
+          1.430158297996968,
+          1.348260809900239,
+          1.5949149171356112,
+          1.2783819979522377
+        ],
+        "forward_vjp": [
+          1.514676548074931,
+          1.4032202509697527,
+          1.3786542748566717,
+          1.5108501850627363,
+          1.3968473821878433
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.1784446567762643,
+        "jvp_only": 0.40732240304350853,
+        "vjp_only": 1.430158297996968,
+        "forward_vjp": 1.4032202509697527
+      },
+      "field": "displacement",
+      "domain": "signal"
+    },
+    {
+      "family": "green",
+      "layers": 32,
+      "batch": 1,
+      "receivers": 4,
+      "samples": 64,
+      "structural_parameters": 64,
+      "parameter_names": [
+        "vp",
+        "vs"
+      ],
+      "forward_backend": "cuda",
+      "derivative_backend": "cpu",
+      "cpu_threads": 1,
+      "cuda_device": "cuda:1",
+      "device_note": "CUDA forward plus CPU JVP/VJP",
+      "wavenumber_nodes": 20205,
+      "fixed_grid": true,
+      "setup_and_first_forward_seconds": 0.2641771328635514,
+      "accuracy": {
+        "forward_relative_cpu_error": 2.3439986383191815e-14,
+        "vjp_relative_cpu_error": 0.0,
+        "adjoint_identity_relative_error": 1.1407398661496132e-13
+      },
+      "trials_seconds": {
+        "forward": [
+          0.34530752594582736,
+          0.34155776211991906,
+          0.14755653007887304,
+          0.3667493420653045,
+          0.33925971295684576
+        ],
+        "jvp_only": [
+          1.6507485311012715,
+          1.6845676361117512,
+          1.6803841448854655,
+          1.6635492430068552,
+          1.6552029380109161
+        ],
+        "vjp_only": [
+          7.760587753960863,
+          7.741142286919057,
+          7.694446545094252,
+          7.815103391883895,
+          7.805872641969472
+        ],
+        "forward_vjp": [
+          8.018822588957846,
+          8.241164069855586,
+          7.9871060259174556,
+          8.02235654485412,
+          8.099758855067194
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.34155776211991906,
+        "jvp_only": 1.6635492430068552,
+        "vjp_only": 7.760587753960863,
+        "forward_vjp": 8.02235654485412
+      },
+      "field": "displacement",
+      "domain": "signal"
+    },
+    {
+      "family": "green",
+      "layers": 32,
+      "batch": 1,
+      "receivers": 4,
+      "samples": 64,
+      "structural_parameters": 64,
+      "parameter_names": [
+        "vp",
+        "vs"
+      ],
+      "forward_backend": "cuda",
+      "derivative_backend": "cpu",
+      "cpu_threads": 16,
+      "cuda_device": "cuda:1",
+      "device_note": "CUDA forward plus CPU JVP/VJP",
+      "wavenumber_nodes": 20205,
+      "fixed_grid": true,
+      "setup_and_first_forward_seconds": 0.17955423914827406,
+      "accuracy": {
+        "forward_relative_cpu_error": 2.3439986383191815e-14,
+        "vjp_relative_cpu_error": 1.7236024007206013e-19,
+        "adjoint_identity_relative_error": 1.1407398661496132e-13
+      },
+      "trials_seconds": {
+        "forward": [
+          0.3456895400304347,
+          0.3271042578853667,
+          0.14572583395056427,
+          0.36369362799450755,
+          0.3427387329284102
+        ],
+        "jvp_only": [
+          0.4296104428358376,
+          0.4385115900076926,
+          0.4291441610548645,
+          0.4120450238697231,
+          0.37720208801329136
+        ],
+        "vjp_only": [
+          1.2818683190271258,
+          1.5907642398960888,
+          1.2339782319031656,
+          1.3719836547970772,
+          1.256977119948715
+        ],
+        "forward_vjp": [
+          1.5398470398504287,
+          2.066348511027172,
+          1.4702314520254731,
+          1.8085364289581776,
+          1.7543492959812284
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.3427387329284102,
+        "jvp_only": 0.4291441610548645,
+        "vjp_only": 1.2818683190271258,
+        "forward_vjp": 1.7543492959812284
+      },
+      "field": "displacement",
+      "domain": "signal"
+    },
+    {
+      "family": "receiver_function",
+      "layers": 8,
+      "batch": 1,
+      "nfft": 2048,
+      "samples": 81,
+      "rays": 1,
+      "gaussians": 6,
+      "polarization_periods": 41,
+      "parameter_names": [
+        "top",
+        "vp",
+        "vs",
+        "rho"
+      ],
+      "objective": "fixed real cotangent on RF and apparent Vs",
+      "forward_backend": "torch-cpu",
+      "derivative_backend": "torch-cpu",
+      "cpu_threads": 1,
+      "cuda_device": null,
+      "setup_seconds": 0.0038749061059206724,
+      "accuracy": {
+        "rf_relative_cpu_error": 0.0,
+        "rf_max_abs_cpu_error": 0.0,
+        "vjp_relative_cpu_error": 0.0,
+        "directional_vjp_central_difference_relative_error": 3.5234757599287587e-09
+      },
+      "trials_seconds": {
+        "forward": [
+          0.013705041958019137,
+          0.012713774805888534,
+          0.01134148589335382,
+          0.014864315977320075,
+          0.012121321866288781
+        ],
+        "forward_vjp": [
+          0.05187439010478556,
+          0.04540202720090747,
+          0.04344462510198355,
+          0.04846877697855234,
+          0.05021903500892222
+        ],
+        "vjp_only": [
+          0.026746062096208334,
+          0.029818397015333176,
+          0.033882730873301625,
+          0.02515687607228756,
+          0.03291088901460171
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.012713774805888534,
+        "forward_vjp": 0.04846877697855234,
+        "vjp_only": 0.029818397015333176
+      }
+    },
+    {
+      "family": "receiver_function",
+      "layers": 8,
+      "batch": 1,
+      "nfft": 2048,
+      "samples": 81,
+      "rays": 1,
+      "gaussians": 6,
+      "polarization_periods": 41,
+      "parameter_names": [
+        "top",
+        "vp",
+        "vs",
+        "rho"
+      ],
+      "objective": "fixed real cotangent on RF and apparent Vs",
+      "forward_backend": "torch-cpu",
+      "derivative_backend": "torch-cpu",
+      "cpu_threads": 4,
+      "cuda_device": null,
+      "setup_seconds": 0.02324667200446129,
+      "accuracy": {
+        "rf_relative_cpu_error": 0.0,
+        "rf_max_abs_cpu_error": 0.0,
+        "vjp_relative_cpu_error": 1.9743421404798416e-16
+      },
+      "trials_seconds": {
+        "forward": [
+          0.01530613494105637,
+          0.012609907193109393,
+          0.011649782070890069,
+          0.015550659038126469,
+          0.010416732868179679
+        ],
+        "forward_vjp": [
+          0.040642498061060905,
+          0.04049424501135945,
+          0.04154952405951917,
+          0.046554727014154196,
+          0.04196735890582204
+        ],
+        "vjp_only": [
+          0.028748317854478955,
+          0.03797166794538498,
+          0.03733110195025802,
+          0.028388340026140213,
+          0.026349563850089908
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.012609907193109393,
+        "forward_vjp": 0.04154952405951917,
+        "vjp_only": 0.028748317854478955
+      }
+    },
+    {
+      "family": "receiver_function",
+      "layers": 8,
+      "batch": 1,
+      "nfft": 2048,
+      "samples": 81,
+      "rays": 1,
+      "gaussians": 6,
+      "polarization_periods": 41,
+      "parameter_names": [
+        "top",
+        "vp",
+        "vs",
+        "rho"
+      ],
+      "objective": "fixed real cotangent on RF and apparent Vs",
+      "forward_backend": "cuda",
+      "derivative_backend": "cuda",
+      "cpu_threads": 1,
+      "cuda_device": "cuda:1",
+      "setup_seconds": 0.5363124830182642,
+      "accuracy": {
+        "rf_relative_cpu_error": 4.937790708429676e-16,
+        "rf_max_abs_cpu_error": 2.220446049250313e-16,
+        "vjp_relative_cpu_error": 9.212574848085267e-16
+      },
+      "trials_seconds": {
+        "forward": [
+          0.02632112381979823,
+          0.022436038125306368,
+          0.023164858110249043,
+          0.02354006585665047,
+          0.011461558984592557
+        ],
+        "forward_vjp": [
+          0.05029160785488784,
+          0.05344402394257486,
+          0.05332302302122116,
+          0.047993439016863704,
+          0.044061156921088696
+        ],
+        "vjp_only": [
+          0.01989474892616272,
+          0.021944795036688447,
+          0.026966891018673778,
+          0.032156458124518394,
+          0.021611165022477508
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.023164858110249043,
+        "forward_vjp": 0.05029160785488784,
+        "vjp_only": 0.021944795036688447
+      }
+    },
+    {
+      "family": "receiver_function",
+      "layers": 8,
+      "batch": 16,
+      "nfft": 2048,
+      "samples": 81,
+      "rays": 1,
+      "gaussians": 6,
+      "polarization_periods": 41,
+      "parameter_names": [
+        "top",
+        "vp",
+        "vs",
+        "rho"
+      ],
+      "objective": "fixed real cotangent on RF and apparent Vs",
+      "forward_backend": "torch-cpu",
+      "derivative_backend": "torch-cpu",
+      "cpu_threads": 1,
+      "cuda_device": null,
+      "setup_seconds": 0.0007887301035225391,
+      "accuracy": {
+        "rf_relative_cpu_error": 0.0,
+        "rf_max_abs_cpu_error": 0.0,
+        "vjp_relative_cpu_error": 0.0,
+        "directional_vjp_central_difference_relative_error": 2.8068890138205685e-09
+      },
+      "trials_seconds": {
+        "forward": [
+          0.1007444690912962,
+          0.09512462583370507,
+          0.1254449738189578,
+          0.09783273190259933,
+          0.10323528712615371
+        ],
+        "forward_vjp": [
+          0.2332914329599589,
+          0.24708566791377962,
+          0.256736101815477,
+          0.2687357140239328,
+          0.2636175840161741
+        ],
+        "vjp_only": [
+          0.1461525729391724,
+          0.16642580111511052,
+          0.15527950995601714,
+          0.13036690396256745,
+          0.14002888998948038
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.1007444690912962,
+        "forward_vjp": 0.256736101815477,
+        "vjp_only": 0.1461525729391724
+      }
+    },
+    {
+      "family": "receiver_function",
+      "layers": 8,
+      "batch": 16,
+      "nfft": 2048,
+      "samples": 81,
+      "rays": 1,
+      "gaussians": 6,
+      "polarization_periods": 41,
+      "parameter_names": [
+        "top",
+        "vp",
+        "vs",
+        "rho"
+      ],
+      "objective": "fixed real cotangent on RF and apparent Vs",
+      "forward_backend": "torch-cpu",
+      "derivative_backend": "torch-cpu",
+      "cpu_threads": 4,
+      "cuda_device": null,
+      "setup_seconds": 0.0007744419854134321,
+      "accuracy": {
+        "rf_relative_cpu_error": 0.0,
+        "rf_max_abs_cpu_error": 0.0,
+        "vjp_relative_cpu_error": 2.757526529848098e-21
+      },
+      "trials_seconds": {
+        "forward": [
+          0.10234878095798194,
+          0.15103404712863266,
+          0.09954491909593344,
+          0.08744424185715616,
+          0.09640316478908062
+        ],
+        "forward_vjp": [
+          0.20869677304290235,
+          0.2460136238951236,
+          0.40136393113061786,
+          0.20612639910541475,
+          0.3157222180161625
+        ],
+        "vjp_only": [
+          0.21540331887081265,
+          0.1694606200326234,
+          0.13510770513676107,
+          0.11111374315805733,
+          0.15591364190913737
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.09954491909593344,
+        "forward_vjp": 0.2460136238951236,
+        "vjp_only": 0.15591364190913737
+      }
+    },
+    {
+      "family": "receiver_function",
+      "layers": 8,
+      "batch": 16,
+      "nfft": 2048,
+      "samples": 81,
+      "rays": 1,
+      "gaussians": 6,
+      "polarization_periods": 41,
+      "parameter_names": [
+        "top",
+        "vp",
+        "vs",
+        "rho"
+      ],
+      "objective": "fixed real cotangent on RF and apparent Vs",
+      "forward_backend": "cuda",
+      "derivative_backend": "cuda",
+      "cpu_threads": 1,
+      "cuda_device": "cuda:1",
+      "setup_seconds": 0.04092580801807344,
+      "accuracy": {
+        "rf_relative_cpu_error": 3.738826484030084e-16,
+        "rf_max_abs_cpu_error": 4.440892098500626e-16,
+        "vjp_relative_cpu_error": 1.0469969145021935e-15
+      },
+      "trials_seconds": {
+        "forward": [
+          0.004484392935410142,
+          0.02475886489264667,
+          0.03110474394634366,
+          0.008403558982536197,
+          0.00739434314891696
+        ],
+        "forward_vjp": [
+          0.0445253630168736,
+          0.06888851500116289,
+          0.07516883290372789,
+          0.05048958002589643,
+          0.029495771043002605
+        ],
+        "vjp_only": [
+          0.020822386955842376,
+          0.022849884117022157,
+          0.02689358894713223,
+          0.02316157892346382,
+          0.02544578700326383
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.008403558982536197,
+        "forward_vjp": 0.05048958002589643,
+        "vjp_only": 0.02316157892346382
+      }
+    },
+    {
+      "family": "receiver_function",
+      "layers": 32,
+      "batch": 1,
+      "nfft": 2048,
+      "samples": 81,
+      "rays": 1,
+      "gaussians": 6,
+      "polarization_periods": 41,
+      "parameter_names": [
+        "top",
+        "vp",
+        "vs",
+        "rho"
+      ],
+      "objective": "fixed real cotangent on RF and apparent Vs",
+      "forward_backend": "torch-cpu",
+      "derivative_backend": "torch-cpu",
+      "cpu_threads": 1,
+      "cuda_device": null,
+      "setup_seconds": 0.0008845601696521044,
+      "accuracy": {
+        "rf_relative_cpu_error": 0.0,
+        "rf_max_abs_cpu_error": 0.0,
+        "vjp_relative_cpu_error": 0.0,
+        "directional_vjp_central_difference_relative_error": 1.6866486521109502e-08
+      },
+      "trials_seconds": {
+        "forward": [
+          0.04151938809081912,
+          0.05749922804534435,
+          0.05110443499870598,
+          0.0564653838519007,
+          0.044085958041250706
+        ],
+        "forward_vjp": [
+          0.16771104908548295,
+          0.16785467183217406,
+          0.17106526694260538,
+          0.15730663109570742,
+          0.14723387290723622
+        ],
+        "vjp_only": [
+          0.11559982784092426,
+          0.11854038294404745,
+          0.11102142417803407,
+          0.11379813496023417,
+          0.1049076709896326
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.05110443499870598,
+        "forward_vjp": 0.16771104908548295,
+        "vjp_only": 0.11379813496023417
+      }
+    },
+    {
+      "family": "receiver_function",
+      "layers": 32,
+      "batch": 1,
+      "nfft": 2048,
+      "samples": 81,
+      "rays": 1,
+      "gaussians": 6,
+      "polarization_periods": 41,
+      "parameter_names": [
+        "top",
+        "vp",
+        "vs",
+        "rho"
+      ],
+      "objective": "fixed real cotangent on RF and apparent Vs",
+      "forward_backend": "torch-cpu",
+      "derivative_backend": "torch-cpu",
+      "cpu_threads": 4,
+      "cuda_device": null,
+      "setup_seconds": 0.0010426670778542757,
+      "accuracy": {
+        "rf_relative_cpu_error": 0.0,
+        "rf_max_abs_cpu_error": 0.0,
+        "vjp_relative_cpu_error": 4.167214224748167e-16
+      },
+      "trials_seconds": {
+        "forward": [
+          0.06220234907232225,
+          0.07957235909998417,
+          0.05416698707267642,
+          0.08191100601106882,
+          0.07841466693207622
+        ],
+        "forward_vjp": [
+          0.1810517110861838,
+          0.169248023070395,
+          0.1970655359327793,
+          0.20018538879230618,
+          0.29174688505008817
+        ],
+        "vjp_only": [
+          0.11081591784022748,
+          0.10866350191645324,
+          0.09698212705552578,
+          0.12945339898578823,
+          0.1288886300753802
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.07841466693207622,
+        "forward_vjp": 0.1970655359327793,
+        "vjp_only": 0.11081591784022748
+      }
+    },
+    {
+      "family": "receiver_function",
+      "layers": 32,
+      "batch": 1,
+      "nfft": 2048,
+      "samples": 81,
+      "rays": 1,
+      "gaussians": 6,
+      "polarization_periods": 41,
+      "parameter_names": [
+        "top",
+        "vp",
+        "vs",
+        "rho"
+      ],
+      "objective": "fixed real cotangent on RF and apparent Vs",
+      "forward_backend": "cuda",
+      "derivative_backend": "cuda",
+      "cpu_threads": 1,
+      "cuda_device": "cuda:1",
+      "setup_seconds": 0.003209581132978201,
+      "accuracy": {
+        "rf_relative_cpu_error": 1.15905181006373e-15,
+        "rf_max_abs_cpu_error": 4.579669976578771e-16,
+        "vjp_relative_cpu_error": 2.2111829722027628e-15
+      },
+      "trials_seconds": {
+        "forward": [
+          0.02502590697258711,
+          0.024813842959702015,
+          0.024752344004809856,
+          0.027810530038550496,
+          0.024827935034409165
+        ],
+        "forward_vjp": [
+          0.05416425899602473,
+          0.05736257112585008,
+          0.057450019055977464,
+          0.05998849309980869,
+          0.05293808504939079
+        ],
+        "vjp_only": [
+          0.019524755189195275,
+          0.01857136795297265,
+          0.020400719018653035,
+          0.018278497038409114,
+          0.02506983303464949
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.024827935034409165,
+        "forward_vjp": 0.05736257112585008,
+        "vjp_only": 0.019524755189195275
+      }
+    },
+    {
+      "family": "receiver_function",
+      "layers": 32,
+      "batch": 16,
+      "nfft": 2048,
+      "samples": 81,
+      "rays": 1,
+      "gaussians": 6,
+      "polarization_periods": 41,
+      "parameter_names": [
+        "top",
+        "vp",
+        "vs",
+        "rho"
+      ],
+      "objective": "fixed real cotangent on RF and apparent Vs",
+      "forward_backend": "torch-cpu",
+      "derivative_backend": "torch-cpu",
+      "cpu_threads": 1,
+      "cuda_device": null,
+      "setup_seconds": 0.0007584230042994022,
+      "accuracy": {
+        "rf_relative_cpu_error": 0.0,
+        "rf_max_abs_cpu_error": 0.0,
+        "vjp_relative_cpu_error": 0.0,
+        "directional_vjp_central_difference_relative_error": 2.1084064521876924e-09
+      },
+      "trials_seconds": {
+        "forward": [
+          0.442219760036096,
+          0.4518148379866034,
+          0.47892268910072744,
+          0.43987618014216423,
+          0.43571844208054245
+        ],
+        "forward_vjp": [
+          1.0941750740166754,
+          1.107060733018443,
+          1.0373891938943416,
+          1.04109544493258,
+          1.0852922948542982
+        ],
+        "vjp_only": [
+          0.6744020550977439,
+          0.702839083969593,
+          0.6465454511344433,
+          0.7062265921849757,
+          0.655886028893292
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.442219760036096,
+        "forward_vjp": 1.0852922948542982,
+        "vjp_only": 0.6744020550977439
+      }
+    },
+    {
+      "family": "receiver_function",
+      "layers": 32,
+      "batch": 16,
+      "nfft": 2048,
+      "samples": 81,
+      "rays": 1,
+      "gaussians": 6,
+      "polarization_periods": 41,
+      "parameter_names": [
+        "top",
+        "vp",
+        "vs",
+        "rho"
+      ],
+      "objective": "fixed real cotangent on RF and apparent Vs",
+      "forward_backend": "torch-cpu",
+      "derivative_backend": "torch-cpu",
+      "cpu_threads": 4,
+      "cuda_device": null,
+      "setup_seconds": 0.006340991007164121,
+      "accuracy": {
+        "rf_relative_cpu_error": 0.0,
+        "rf_max_abs_cpu_error": 0.0,
+        "vjp_relative_cpu_error": 1.2987777142475038e-20
+      },
+      "trials_seconds": {
+        "forward": [
+          0.42145544406957924,
+          0.26125224004499614,
+          0.439210593001917,
+          0.4057782480958849,
+          0.46861069509759545
+        ],
+        "forward_vjp": [
+          0.9749489880632609,
+          0.771233499981463,
+          1.3984338890295476,
+          1.1917236729059368,
+          1.1035589349921793
+        ],
+        "vjp_only": [
+          0.8352121410425752,
+          0.7413283449131995,
+          0.6279080850072205,
+          0.8242410980165005,
+          0.6915114000439644
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.42145544406957924,
+        "forward_vjp": 1.1035589349921793,
+        "vjp_only": 0.7413283449131995
+      }
+    },
+    {
+      "family": "receiver_function",
+      "layers": 32,
+      "batch": 16,
+      "nfft": 2048,
+      "samples": 81,
+      "rays": 1,
+      "gaussians": 6,
+      "polarization_periods": 41,
+      "parameter_names": [
+        "top",
+        "vp",
+        "vs",
+        "rho"
+      ],
+      "objective": "fixed real cotangent on RF and apparent Vs",
+      "forward_backend": "cuda",
+      "derivative_backend": "cuda",
+      "cpu_threads": 1,
+      "cuda_device": "cuda:1",
+      "setup_seconds": 0.003434903919696808,
+      "accuracy": {
+        "rf_relative_cpu_error": 8.179180809142348e-16,
+        "rf_max_abs_cpu_error": 5.204170427930421e-16,
+        "vjp_relative_cpu_error": 2.574528563020304e-15
+      },
+      "trials_seconds": {
+        "forward": [
+          0.02578052505850792,
+          0.024810564937070012,
+          0.02445740601979196,
+          0.02825984312221408,
+          0.02163589489646256
+        ],
+        "forward_vjp": [
+          0.04970957082696259,
+          0.04823780292645097,
+          0.05923545593395829,
+          0.052522191079333425,
+          0.058565210085362196
+        ],
+        "vjp_only": [
+          0.02110742498189211,
+          0.022936068940907717,
+          0.029306455980986357,
+          0.02347304206341505,
+          0.024203413166105747
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.024810564937070012,
+        "forward_vjp": 0.052522191079333425,
+        "vjp_only": 0.02347304206341505
+      }
+    },
+    {
+      "family": "dispersion",
+      "kind": "phase",
+      "wave": "rayleigh",
+      "mode": 0,
+      "layers": 8,
+      "batch": 1,
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "parameter_names": [
+        "velocity_s"
+      ],
+      "kernel_shape": [
+        1,
+        12,
+        8
+      ],
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 1,
+      "cuda_device": null,
+      "setup_seconds": 0.0005495909135788679,
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "forward_vs_kernel_relative_cpu_error": 0.0
+      },
+      "trials_seconds": {
+        "forward": [
+          0.0007080479990690947,
+          0.0009109489619731903,
+          0.0011535040102899075,
+          0.0007213430944830179,
+          0.0011306151282042265
+        ],
+        "forward_vs_kernel": [
+          0.0030177419539541006,
+          0.003425756935030222,
+          0.0030431889463216066,
+          0.0029336728621274233,
+          0.0030094648245722055
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.0009109489619731903,
+        "forward_vs_kernel": 0.0030177419539541006
+      }
+    },
+    {
+      "family": "dispersion",
+      "kind": "phase",
+      "wave": "rayleigh",
+      "mode": 0,
+      "layers": 8,
+      "batch": 1,
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "parameter_names": [
+        "velocity_s"
+      ],
+      "kernel_shape": [
+        1,
+        12,
+        8
+      ],
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 16,
+      "cuda_device": null,
+      "setup_seconds": 8.861604146659374e-05,
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "forward_vs_kernel_relative_cpu_error": 0.0
+      },
+      "trials_seconds": {
+        "forward": [
+          0.000709091080352664,
+          0.0007036000024527311,
+          0.0009368979372084141,
+          0.001055966131389141,
+          0.0004996669013053179
+        ],
+        "forward_vs_kernel": [
+          0.003325148019939661,
+          0.0028172750025987625,
+          0.003381710033863783,
+          0.002909483155235648,
+          0.003185305977240205
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.000709091080352664,
+        "forward_vs_kernel": 0.003185305977240205
+      }
+    },
+    {
+      "family": "dispersion",
+      "kind": "phase",
+      "wave": "rayleigh",
+      "mode": 0,
+      "layers": 8,
+      "batch": 1,
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "parameter_names": [
+        "velocity_s"
+      ],
+      "kernel_shape": [
+        1,
+        12,
+        8
+      ],
+      "forward_backend": "cuda",
+      "derivative_backend": "cuda",
+      "cpu_threads": 1,
+      "cuda_device": "cuda:1",
+      "setup_seconds": 0.010206808103248477,
+      "accuracy": {
+        "forward_relative_cpu_error": 1.2243702831941437e-16,
+        "forward_vs_kernel_relative_cpu_error": 3.1577429921339085e-13
+      },
+      "trials_seconds": {
+        "forward": [
+          0.021007987903431058,
+          0.01850917492993176,
+          0.016375717939808965,
+          0.01839942904189229,
+          0.016495491145178676
+        ],
+        "forward_vs_kernel": [
+          0.020014317939057946,
+          0.01994794886559248,
+          0.02438706299290061,
+          0.025106495013460517,
+          0.021582365036010742
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.01839942904189229,
+        "forward_vs_kernel": 0.021582365036010742
+      }
+    },
+    {
+      "family": "dispersion",
+      "kind": "group",
+      "wave": "rayleigh",
+      "mode": 0,
+      "layers": 8,
+      "batch": 1,
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "parameter_names": [
+        "velocity_s"
+      ],
+      "kernel_shape": [
+        1,
+        12,
+        8
+      ],
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 1,
+      "cuda_device": null,
+      "setup_seconds": 0.00033862493000924587,
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "forward_vs_kernel_relative_cpu_error": 0.0
+      },
+      "trials_seconds": {
+        "forward": [
+          0.0011784599628299475,
+          0.0009271488524973392,
+          0.0007409208919852972,
+          0.0009328708983957767,
+          0.0008218118455260992
+        ],
+        "forward_vs_kernel": [
+          0.018984461901709437,
+          0.017303577158600092,
+          0.018642811104655266,
+          0.017618678975850344,
+          0.01730402885004878
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.0009271488524973392,
+        "forward_vs_kernel": 0.017618678975850344
+      }
+    },
+    {
+      "family": "dispersion",
+      "kind": "group",
+      "wave": "rayleigh",
+      "mode": 0,
+      "layers": 8,
+      "batch": 1,
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "parameter_names": [
+        "velocity_s"
+      ],
+      "kernel_shape": [
+        1,
+        12,
+        8
+      ],
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 16,
+      "cuda_device": null,
+      "setup_seconds": 0.0001085831318050623,
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "forward_vs_kernel_relative_cpu_error": 0.0
+      },
+      "trials_seconds": {
+        "forward": [
+          0.0007934279274195433,
+          0.0013148270081728697,
+          0.001291452907025814,
+          0.0010687848553061485,
+          0.0008037278894335032
+        ],
+        "forward_vs_kernel": [
+          0.01705752103589475,
+          0.01667903200723231,
+          0.017402558121830225,
+          0.01759522594511509,
+          0.015528737101703882
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.0010687848553061485,
+        "forward_vs_kernel": 0.01705752103589475
+      }
+    },
+    {
+      "family": "dispersion",
+      "kind": "group",
+      "wave": "rayleigh",
+      "mode": 0,
+      "layers": 8,
+      "batch": 1,
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "parameter_names": [
+        "velocity_s"
+      ],
+      "kernel_shape": [
+        1,
+        12,
+        8
+      ],
+      "forward_backend": "cuda",
+      "derivative_backend": "cuda",
+      "cpu_threads": 1,
+      "cuda_device": "cuda:1",
+      "setup_seconds": 0.0010524590034037828,
+      "accuracy": {
+        "forward_relative_cpu_error": 3.7774189222539033e-16,
+        "forward_vs_kernel_relative_cpu_error": 2.083930441280203e-10
+      },
+      "trials_seconds": {
+        "forward": [
+          0.020100925117731094,
+          0.01827425416558981,
+          0.02027734206058085,
+          0.01983164600096643,
+          0.019151099026203156
+        ],
+        "forward_vs_kernel": [
+          0.03762042010203004,
+          0.036107802065089345,
+          0.04175789700821042,
+          0.03886571107432246,
+          0.03693284885957837
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.01983164600096643,
+        "forward_vs_kernel": 0.03762042010203004
+      }
+    },
+    {
+      "family": "dispersion",
+      "kind": "phase",
+      "wave": "rayleigh",
+      "mode": 0,
+      "layers": 8,
+      "batch": 16,
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "parameter_names": [
+        "velocity_s"
+      ],
+      "kernel_shape": [
+        16,
+        12,
+        8
+      ],
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 1,
+      "cuda_device": null,
+      "setup_seconds": 0.0001554421614855528,
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "forward_vs_kernel_relative_cpu_error": 0.0
+      },
+      "trials_seconds": {
+        "forward": [
+          0.012032834812998772,
+          0.013265125919133425,
+          0.010964380111545324,
+          0.01478286786004901,
+          0.01352739310823381
+        ],
+        "forward_vs_kernel": [
+          0.047388731967657804,
+          0.060249165166169405,
+          0.04658561502583325,
+          0.04730185493826866,
+          0.0547015150077641
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.013265125919133425,
+        "forward_vs_kernel": 0.047388731967657804
+      }
+    },
+    {
+      "family": "dispersion",
+      "kind": "phase",
+      "wave": "rayleigh",
+      "mode": 0,
+      "layers": 8,
+      "batch": 16,
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "parameter_names": [
+        "velocity_s"
+      ],
+      "kernel_shape": [
+        16,
+        12,
+        8
+      ],
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 16,
+      "cuda_device": null,
+      "setup_seconds": 0.00010112905874848366,
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "forward_vs_kernel_relative_cpu_error": 0.0
+      },
+      "trials_seconds": {
+        "forward": [
+          0.005693805869668722,
+          0.00389090902172029,
+          0.005335119087249041,
+          0.005826651118695736,
+          0.006824251962825656
+        ],
+        "forward_vs_kernel": [
+          0.01738043618388474,
+          0.017686496954411268,
+          0.021332124946638942,
+          0.019623015075922012,
+          0.023709615925326943
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.005693805869668722,
+        "forward_vs_kernel": 0.019623015075922012
+      }
+    },
+    {
+      "family": "dispersion",
+      "kind": "phase",
+      "wave": "rayleigh",
+      "mode": 0,
+      "layers": 8,
+      "batch": 16,
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "parameter_names": [
+        "velocity_s"
+      ],
+      "kernel_shape": [
+        16,
+        12,
+        8
+      ],
+      "forward_backend": "cuda",
+      "derivative_backend": "cuda",
+      "cpu_threads": 1,
+      "cuda_device": "cuda:1",
+      "setup_seconds": 0.012651599943637848,
+      "accuracy": {
+        "forward_relative_cpu_error": 3.45146230488634e-13,
+        "forward_vs_kernel_relative_cpu_error": 7.197477933223145e-12
+      },
+      "trials_seconds": {
+        "forward": [
+          0.026284802006557584,
+          0.02125628781504929,
+          0.02206102292984724,
+          0.023700759978964925,
+          0.022531345020979643
+        ],
+        "forward_vs_kernel": [
+          0.028835123870521784,
+          0.02480754186399281,
+          0.026250728871673346,
+          0.02720326604321599,
+          0.023776080925017595
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.022531345020979643,
+        "forward_vs_kernel": 0.026250728871673346
+      }
+    },
+    {
+      "family": "dispersion",
+      "kind": "group",
+      "wave": "rayleigh",
+      "mode": 0,
+      "layers": 8,
+      "batch": 16,
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "parameter_names": [
+        "velocity_s"
+      ],
+      "kernel_shape": [
+        16,
+        12,
+        8
+      ],
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 1,
+      "cuda_device": null,
+      "setup_seconds": 0.0002414030022919178,
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "forward_vs_kernel_relative_cpu_error": 0.0
+      },
+      "trials_seconds": {
+        "forward": [
+          0.010768864070996642,
+          0.01426082313992083,
+          0.01328006386756897,
+          0.013734227977693081,
+          0.013818028150126338
+        ],
+        "forward_vs_kernel": [
+          0.2743431890849024,
+          0.26743192598223686,
+          0.26255888608284295,
+          0.2650305721908808,
+          0.2598565509542823
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.013734227977693081,
+        "forward_vs_kernel": 0.2650305721908808
+      }
+    },
+    {
+      "family": "dispersion",
+      "kind": "group",
+      "wave": "rayleigh",
+      "mode": 0,
+      "layers": 8,
+      "batch": 16,
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "parameter_names": [
+        "velocity_s"
+      ],
+      "kernel_shape": [
+        16,
+        12,
+        8
+      ],
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 16,
+      "cuda_device": null,
+      "setup_seconds": 0.00014946982264518738,
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "forward_vs_kernel_relative_cpu_error": 0.0
+      },
+      "trials_seconds": {
+        "forward": [
+          0.007124646101146936,
+          0.011831867974251509,
+          0.008421273902058601,
+          0.007884055841714144,
+          0.009119000984355807
+        ],
+        "forward_vs_kernel": [
+          0.06422697915695608,
+          0.0559402690269053,
+          0.07909396989271045,
+          0.07082668296061456,
+          0.07543680700473487
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.008421273902058601,
+        "forward_vs_kernel": 0.07082668296061456
+      }
+    },
+    {
+      "family": "dispersion",
+      "kind": "group",
+      "wave": "rayleigh",
+      "mode": 0,
+      "layers": 8,
+      "batch": 16,
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "parameter_names": [
+        "velocity_s"
+      ],
+      "kernel_shape": [
+        16,
+        12,
+        8
+      ],
+      "forward_backend": "cuda",
+      "derivative_backend": "cuda",
+      "cpu_threads": 1,
+      "cuda_device": "cuda:1",
+      "setup_seconds": 0.0009252659510821104,
+      "accuracy": {
+        "forward_relative_cpu_error": 2.286709453369411e-12,
+        "forward_vs_kernel_relative_cpu_error": 2.370949578985322e-08
+      },
+      "trials_seconds": {
+        "forward": [
+          0.019243612186983228,
+          0.010138449957594275,
+          0.006984547944739461,
+          0.013028857996687293,
+          0.022235065000131726
+        ],
+        "forward_vs_kernel": [
+          0.03374727815389633,
+          0.02926480397582054,
+          0.031049513956531882,
+          0.029047563206404448,
+          0.03949944395571947
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.013028857996687293,
+        "forward_vs_kernel": 0.031049513956531882
+      }
+    },
+    {
+      "family": "dispersion",
+      "kind": "phase",
+      "wave": "rayleigh",
+      "mode": 0,
+      "layers": 32,
+      "batch": 1,
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "parameter_names": [
+        "velocity_s"
+      ],
+      "kernel_shape": [
+        1,
+        12,
+        32
+      ],
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 1,
+      "cuda_device": null,
+      "setup_seconds": 0.0001181410625576973,
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "forward_vs_kernel_relative_cpu_error": 0.0
+      },
+      "trials_seconds": {
+        "forward": [
+          0.004757214803248644,
+          0.0035253039095550776,
+          0.0033554728142917156,
+          0.0046488321386277676,
+          0.005173200974240899
+        ],
+        "forward_vs_kernel": [
+          0.03366092103533447,
+          0.0359580849763006,
+          0.03746298491023481,
+          0.03669866407290101,
+          0.03325692308135331
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.0046488321386277676,
+        "forward_vs_kernel": 0.0359580849763006
+      }
+    },
+    {
+      "family": "dispersion",
+      "kind": "phase",
+      "wave": "rayleigh",
+      "mode": 0,
+      "layers": 32,
+      "batch": 1,
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "parameter_names": [
+        "velocity_s"
+      ],
+      "kernel_shape": [
+        1,
+        12,
+        32
+      ],
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 16,
+      "cuda_device": null,
+      "setup_seconds": 0.00010357401333749294,
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "forward_vs_kernel_relative_cpu_error": 0.0
+      },
+      "trials_seconds": {
+        "forward": [
+          0.0034925120417028666,
+          0.003551061963662505,
+          0.003993480000644922,
+          0.0031246670987457037,
+          0.004621665924787521
+        ],
+        "forward_vs_kernel": [
+          0.0361257700715214,
+          0.0325387897901237,
+          0.0370875708758831,
+          0.03732473403215408,
+          0.03558385302312672
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.003551061963662505,
+        "forward_vs_kernel": 0.0361257700715214
+      }
+    },
+    {
+      "family": "dispersion",
+      "kind": "phase",
+      "wave": "rayleigh",
+      "mode": 0,
+      "layers": 32,
+      "batch": 1,
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "parameter_names": [
+        "velocity_s"
+      ],
+      "kernel_shape": [
+        1,
+        12,
+        32
+      ],
+      "forward_backend": "cuda",
+      "derivative_backend": "cuda",
+      "cpu_threads": 1,
+      "cuda_device": "cuda:1",
+      "setup_seconds": 0.003147775074467063,
+      "accuracy": {
+        "forward_relative_cpu_error": 5.193795887215011e-13,
+        "forward_vs_kernel_relative_cpu_error": 8.840081359393198e-12
+      },
+      "trials_seconds": {
+        "forward": [
+          0.03636824106797576,
+          0.0408138248603791,
+          0.040076060919091105,
+          0.03889912902377546,
+          0.03974745119921863
+        ],
+        "forward_vs_kernel": [
+          0.05270036496222019,
+          0.05655944487079978,
+          0.04640046088024974,
+          0.05463051097467542,
+          0.05251563782803714
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.03974745119921863,
+        "forward_vs_kernel": 0.05270036496222019
+      }
+    },
+    {
+      "family": "dispersion",
+      "kind": "group",
+      "wave": "rayleigh",
+      "mode": 0,
+      "layers": 32,
+      "batch": 1,
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "parameter_names": [
+        "velocity_s"
+      ],
+      "kernel_shape": [
+        1,
+        12,
+        32
+      ],
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 1,
+      "cuda_device": null,
+      "setup_seconds": 0.00013480312190949917,
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "forward_vs_kernel_relative_cpu_error": 0.0
+      },
+      "trials_seconds": {
+        "forward": [
+          0.004133482929319143,
+          0.004744592821225524,
+          0.0038020480424165726,
+          0.003049390157684684,
+          0.003203208791092038
+        ],
+        "forward_vs_kernel": [
+          0.24637816683389246,
+          0.2443847618997097,
+          0.25953471288084984,
+          0.24059606716036797,
+          0.24990405910648406
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.0038020480424165726,
+        "forward_vs_kernel": 0.24637816683389246
+      }
+    },
+    {
+      "family": "dispersion",
+      "kind": "group",
+      "wave": "rayleigh",
+      "mode": 0,
+      "layers": 32,
+      "batch": 1,
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "parameter_names": [
+        "velocity_s"
+      ],
+      "kernel_shape": [
+        1,
+        12,
+        32
+      ],
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 16,
+      "cuda_device": null,
+      "setup_seconds": 0.00010362500324845314,
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "forward_vs_kernel_relative_cpu_error": 0.0
+      },
+      "trials_seconds": {
+        "forward": [
+          0.007561095990240574,
+          0.0046453450340777636,
+          0.0048288339748978615,
+          0.0037965120282024145,
+          0.004627716960385442
+        ],
+        "forward_vs_kernel": [
+          0.2451765181031078,
+          0.23567199404351413,
+          0.2372914229054004,
+          0.23917038296349347,
+          0.24461483489722013
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.0046453450340777636,
+        "forward_vs_kernel": 0.23917038296349347
+      }
+    },
+    {
+      "family": "dispersion",
+      "kind": "group",
+      "wave": "rayleigh",
+      "mode": 0,
+      "layers": 32,
+      "batch": 1,
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "parameter_names": [
+        "velocity_s"
+      ],
+      "kernel_shape": [
+        1,
+        12,
+        32
+      ],
+      "forward_backend": "cuda",
+      "derivative_backend": "cuda",
+      "cpu_threads": 1,
+      "cuda_device": "cuda:1",
+      "setup_seconds": 0.0005743179935961962,
+      "accuracy": {
+        "forward_relative_cpu_error": 1.5456891523871148e-12,
+        "forward_vs_kernel_relative_cpu_error": 2.0336465268082392e-11
+      },
+      "trials_seconds": {
+        "forward": [
+          0.0268377719912678,
+          0.04145794897340238,
+          0.04417083691805601,
+          0.04565914999693632,
+          0.04299902496859431
+        ],
+        "forward_vs_kernel": [
+          0.09847848885692656,
+          0.09398787608370185,
+          0.10997200896963477,
+          0.11937332595698535,
+          0.1001959249842912
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.04299902496859431,
+        "forward_vs_kernel": 0.1001959249842912
+      }
+    },
+    {
+      "family": "dispersion",
+      "kind": "phase",
+      "wave": "rayleigh",
+      "mode": 0,
+      "layers": 32,
+      "batch": 16,
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "parameter_names": [
+        "velocity_s"
+      ],
+      "kernel_shape": [
+        16,
+        12,
+        32
+      ],
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 1,
+      "cuda_device": null,
+      "setup_seconds": 0.00013895099982619286,
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "forward_vs_kernel_relative_cpu_error": 0.0
+      },
+      "trials_seconds": {
+        "forward": [
+          0.0507024060934782,
+          0.06398739805445075,
+          0.05783131788484752,
+          0.051623785169795156,
+          0.056294301990419626
+        ],
+        "forward_vs_kernel": [
+          0.5499985809437931,
+          0.5612565150950104,
+          0.5737035281490535,
+          0.5441230519209057,
+          0.545442562783137
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.056294301990419626,
+        "forward_vs_kernel": 0.5499985809437931
+      }
+    },
+    {
+      "family": "dispersion",
+      "kind": "phase",
+      "wave": "rayleigh",
+      "mode": 0,
+      "layers": 32,
+      "batch": 16,
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "parameter_names": [
+        "velocity_s"
+      ],
+      "kernel_shape": [
+        16,
+        12,
+        32
+      ],
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 16,
+      "cuda_device": null,
+      "setup_seconds": 0.00011178990826010704,
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "forward_vs_kernel_relative_cpu_error": 0.0
+      },
+      "trials_seconds": {
+        "forward": [
+          0.014110937947407365,
+          0.020983446156606078,
+          0.016664671013131738,
+          0.014683827990666032,
+          0.014905611984431744
+        ],
+        "forward_vs_kernel": [
+          0.10003596008755267,
+          0.09555615996941924,
+          0.13205211400054395,
+          0.1233032769523561,
+          0.12023494695313275
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.014905611984431744,
+        "forward_vs_kernel": 0.12023494695313275
+      }
+    },
+    {
+      "family": "dispersion",
+      "kind": "phase",
+      "wave": "rayleigh",
+      "mode": 0,
+      "layers": 32,
+      "batch": 16,
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "parameter_names": [
+        "velocity_s"
+      ],
+      "kernel_shape": [
+        16,
+        12,
+        32
+      ],
+      "forward_backend": "cuda",
+      "derivative_backend": "cuda",
+      "cpu_threads": 1,
+      "cuda_device": "cuda:1",
+      "setup_seconds": 0.008921157103031874,
+      "accuracy": {
+        "forward_relative_cpu_error": 4.3336491841942623e-13,
+        "forward_vs_kernel_relative_cpu_error": 3.6793236176691915e-11
+      },
+      "trials_seconds": {
+        "forward": [
+          0.04364996217191219,
+          0.043138451874256134,
+          0.03936843783594668,
+          0.03874739888124168,
+          0.03173250309191644
+        ],
+        "forward_vs_kernel": [
+          0.0612578559666872,
+          0.06188836391083896,
+          0.06083101499825716,
+          0.05851325998082757,
+          0.049871127121150494
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.03936843783594668,
+        "forward_vs_kernel": 0.06083101499825716
+      }
+    },
+    {
+      "family": "dispersion",
+      "kind": "group",
+      "wave": "rayleigh",
+      "mode": 0,
+      "layers": 32,
+      "batch": 16,
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "parameter_names": [
+        "velocity_s"
+      ],
+      "kernel_shape": [
+        16,
+        12,
+        32
+      ],
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 1,
+      "cuda_device": null,
+      "setup_seconds": 0.00019659800454974174,
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "forward_vs_kernel_relative_cpu_error": 0.0
+      },
+      "trials_seconds": {
+        "forward": [
+          0.06379081099294126,
+          0.05811306904070079,
+          0.05591819784604013,
+          0.06337924511171877,
+          0.06405510706827044
+        ],
+        "forward_vs_kernel": [
+          3.920579093042761,
+          4.180074312957004,
+          3.895181968109682,
+          3.9023943881038576,
+          3.849441736936569
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.06337924511171877,
+        "forward_vs_kernel": 3.9023943881038576
+      }
+    },
+    {
+      "family": "dispersion",
+      "kind": "group",
+      "wave": "rayleigh",
+      "mode": 0,
+      "layers": 32,
+      "batch": 16,
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "parameter_names": [
+        "velocity_s"
+      ],
+      "kernel_shape": [
+        16,
+        12,
+        32
+      ],
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 16,
+      "cuda_device": null,
+      "setup_seconds": 0.00019208109006285667,
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "forward_vs_kernel_relative_cpu_error": 0.0
+      },
+      "trials_seconds": {
+        "forward": [
+          0.02110326592810452,
+          0.01935857511125505,
+          0.022005966864526272,
+          0.019523422932252288,
+          0.018506029155105352
+        ],
+        "forward_vs_kernel": [
+          0.5161651668604463,
+          0.5572655817959458,
+          0.5740300940815359,
+          0.5007614330388606,
+          0.5666219450067729
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.019523422932252288,
+        "forward_vs_kernel": 0.5572655817959458
+      }
+    },
+    {
+      "family": "dispersion",
+      "kind": "group",
+      "wave": "rayleigh",
+      "mode": 0,
+      "layers": 32,
+      "batch": 16,
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "parameter_names": [
+        "velocity_s"
+      ],
+      "kernel_shape": [
+        16,
+        12,
+        32
+      ],
+      "forward_backend": "cuda",
+      "derivative_backend": "cuda",
+      "cpu_threads": 1,
+      "cuda_device": "cuda:1",
+      "setup_seconds": 0.0009542298503220081,
+      "accuracy": {
+        "forward_relative_cpu_error": 2.117792052662746e-11,
+        "forward_vs_kernel_relative_cpu_error": 2.282809485387378e-09
+      },
+      "trials_seconds": {
+        "forward": [
+          0.0434484479483217,
+          0.04769934597425163,
+          0.03990797000005841,
+          0.02867100411094725,
+          0.035463951993733644
+        ],
+        "forward_vs_kernel": [
+          0.14856217405758798,
+          0.14862188580445945,
+          0.1309108689893037,
+          0.13823865982703865,
+          0.15377465402707458
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.03990797000005841,
+        "forward_vs_kernel": 0.14856217405758798
+      }
+    }
+  ],
+  "completed_utc": "2026-10-20T15:41:10.738019+00:00",
+  "runs": [
+    {
+      "records": "Green results from comprehensive-preliminary-rf16.json",
+      "started_utc": "2026-10-20T15:30:09.488445+00:00",
+      "arguments": {
+        "output": "comprehensive-dev4.json",
+        "device": "cuda:1",
+        "threads": [
+          1,
+          16
+        ],
+        "layers": [
+          8,
+          32
+        ],
+        "batches": [
+          1,
+          16
+        ],
+        "repeat": 5,
+        "families": [
+          "green",
+          "rf",
+          "surface"
+        ]
+      }
+    },
+    {
+      "records": "RF and surface results from comprehensive-rf-surface-dev4.json",
+      "completed_utc": "2026-10-20T15:41:10.738019+00:00",
+      "arguments": {
+        "output": "comprehensive-rf-surface-dev4.json",
+        "device": "cuda:1",
+        "threads": [
+          1,
+          16
+        ],
+        "rf_threads": [
+          1,
+          4
+        ],
+        "layers": [
+          8,
+          32
+        ],
+        "batches": [
+          1,
+          16
+        ],
+        "repeat": 5,
+        "families": [
+          "rf",
+          "surface"
+        ]
+      }
+    }
+  ],
+  "rf_thread_note": "RF uses Torch CPU threads 1 and 4. Initial Torch16 run was interrupted after several minutes within the 8-layer, batch16 case; completed preliminary records are preserved separately. No per-call time or speedup inferred from cumulative waiting."
+}

@@ -1,0 +1,87 @@
+{
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "device": "cuda:1",
+  "cpu": "x86_64",
+  "host": "DESKTOP-2SV89I8",
+  "torch": "2.8.0+cu128",
+  "numpy": "2.4.6",
+  "cpu_baseline": "disba 0.7.0, Dunkin, dc=.005, dp=.025, group dt=.025",
+  "protocol": "Prepared operators, both warmed; synchronized host wall time includes native root search and derivatives. Model transfer/operator setup reported separately. Numba compilation excluded when disba is used. Each repetition is a complete model batch.",
+  "periods": [
+    2.0,
+    2.679880638205677,
+    3.590880117514833,
+    4.811565050522864,
+    6.447210009181672,
+    8.638876637025906,
+    11.575579117706543,
+    15.51058517677986,
+    20.783258451246166,
+    27.848325961159556,
+    37.315094774876,
+    50.0
+  ],
+  "records": [
+    {
+      "layers": 32,
+      "batch": 16,
+      "kind": "phase",
+      "wave": "rayleigh",
+      "parameter": "velocity_s",
+      "period_count": 12,
+      "cpu_seconds": [
+        6.850183103932068,
+        6.920264790067449,
+        6.928252495126799,
+        6.763458173023537,
+        6.831476423889399
+      ],
+      "cuda_seconds": [
+        0.05904553201980889,
+        0.052390011958777905,
+        0.059626291040331125,
+        0.040574675891548395,
+        0.046359824016690254
+      ],
+      "cpu_median": 6.850183103932068,
+      "cuda_median": 0.052390011958777905,
+      "speedup": 130.75360832751872,
+      "cpu_setup": 0.00018992600962519646,
+      "cuda_setup": 1.3296775710768998,
+      "max_disba_kernel_difference": 0.008040419508990038,
+      "kernel_difference_note": "disba uses a one-sided 2.5% model perturbation; agreement with this approximation is not the derivative-accuracy test",
+      "baseline": "disba"
+    },
+    {
+      "layers": 32,
+      "batch": 16,
+      "kind": "group",
+      "wave": "rayleigh",
+      "parameter": "velocity_s",
+      "period_count": 12,
+      "cpu_seconds": [
+        13.720543181989342,
+        13.604794312035665,
+        13.76865316205658,
+        13.556133341044188,
+        13.643345560180023
+      ],
+      "cuda_seconds": [
+        0.13478326704353094,
+        0.13499020296148956,
+        0.13146820990368724,
+        0.14501976408064365,
+        0.130980608984828
+      ],
+      "cpu_median": 13.643345560180023,
+      "cuda_median": 0.13478326704353094,
+      "speedup": 101.22432746621013,
+      "cpu_setup": 0.0001681949943304062,
+      "cuda_setup": 0.004969974048435688,
+      "max_disba_kernel_difference": 0.015136143411765057,
+      "kernel_difference_note": "disba uses a one-sided 2.5% model perturbation; agreement with this approximation is not the derivative-accuracy test",
+      "baseline": "disba"
+    }
+  ],
+  "shared_hardware": true
+}

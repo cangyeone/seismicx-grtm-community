@@ -1,4 +1,10 @@
-# Release 0.5.1 verification
+# Release verification
+
+Latest preview: [0.6.0.dev4 binary/device checks](preview-0.6.0.dev4.json),
+[forward and derivative measurements](performance-0.6.0.dev4/), and the
+[CPU/CUDA report](../docs/PERFORMANCE_0.6.0.dev4.md).
+
+## Stable release 0.5.1
 
 All ten CPython 3.10–3.14 wheels passed package-content, license, checksum and
 metadata checks, plus CPU interface/numerical regression tests. Every wheel had

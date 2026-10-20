@@ -1,0 +1,749 @@
+{
+  "version": "0.6.0.dev4",
+  "installed_package": "/home/yuzy/grtm-surface-release-20261020/env/lib/python3.13/site-packages/grtm/__init__.py",
+  "started_utc": "2026-10-20T15:30:09.488445+00:00",
+  "host": "DESKTOP-2SV89I8",
+  "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.31",
+  "cpu": "Architecture:                         x86_64\nCPU op-mode(s):                       32-bit, 64-bit\nByte Order:                           Little Endian\nAddress sizes:                        48 bits physical, 48 bits virtual\nCPU(s):                               32\nOn-line CPU(s) list:                  0-31\nThread(s) per core:                   2\nCore(s) per socket:                   16\nSocket(s):                            1\nVendor ID:                            AuthenticAMD\nCPU family:                           23\nModel:                                49\nModel name:                           AMD Ryzen Threadripper PRO 3955WX 16-Cores\nStepping:                             0\nCPU MHz:                              3892.683\nBogoMIPS:                             7785.36\nHypervisor vendor:                    Microsoft\nVirtualization type:                  full\nL1d cache:                            512 KiB\nL1i cache:                            512 KiB\nL2 cache:                             8 MiB\nL3 cache:                             16 MiB\nVulnerability Gather data sampling:   Not affected\nVulnerability Itlb multihit:          Not affected\nVulnerability L1tf:                   Not affected\nVulnerability Mds:                    Not affected\nVulnerability Meltdown:               Not affected\nVulnerability Mmio stale data:        Not affected\nVulnerability Reg file data sampling: Not affected\nVulnerability Retbleed:               Mitigation; untrained return thunk; SMT enabled with STIBP protection\nVulnerability Spec rstack overflow:   Mitigation; safe RET\nVulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl and seccomp\nVulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:             Mitigation; Retpolines; IBPB conditional; STIBP always-on; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected\nVulnerability Srbds:                  Not affected\nVulnerability Tsx async abort:        Not affected\nFlags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr virt_ssbd arat umip rdpid\n",
+  "torch": "2.8.0+cu128",
+  "numpy": "2.4.6",
+  "shared_hardware": true,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "protocol": "FP64/complex128. Prepared operators, one warmup, rotating operation order, whole-call host wall time and CUDA synchronization. Public validation included. Setup/model upload excluded and separately recorded. Green uses a fixed frequency-wavenumber grid and host NumPy I/O; RF/surface CUDA use resident tensors. vjp_only reuses the base linearization/graph, forward_vjp rebuilds it. No full dense Green/RF Jacobian is claimed.",
+  "arguments": {
+    "output": "comprehensive-dev4.json",
+    "device": "cuda:1",
+    "threads": [
+      1,
+      16
+    ],
+    "layers": [
+      8,
+      32
+    ],
+    "batches": [
+      1,
+      16
+    ],
+    "repeat": 5,
+    "families": [
+      "green",
+      "rf",
+      "surface"
+    ]
+  },
+  "records": [
+    {
+      "family": "green",
+      "layers": 8,
+      "batch": 1,
+      "receivers": 4,
+      "samples": 64,
+      "structural_parameters": 16,
+      "parameter_names": [
+        "vp",
+        "vs"
+      ],
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 1,
+      "cuda_device": null,
+      "device_note": "native CPU",
+      "wavenumber_nodes": 10867,
+      "fixed_grid": true,
+      "setup_and_first_forward_seconds": 0.11799917509779334,
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "vjp_relative_cpu_error": 0.0,
+        "adjoint_identity_relative_error": 6.924848734606983e-12,
+        "jvp_central_difference_relative_error": 4.572462467817242e-07
+      },
+      "trials_seconds": {
+        "forward": [
+          0.11239750101231039,
+          0.11138816806487739,
+          0.11497638397850096,
+          0.12042743596248329,
+          0.10609442996792495
+        ],
+        "jvp_only": [
+          0.26333711110055447,
+          0.22980418289080262,
+          0.23628075700253248,
+          0.24407401005737484,
+          0.23374970303848386
+        ],
+        "vjp_only": [
+          1.059018902014941,
+          1.004433484049514,
+          1.0197838537860662,
+          0.9928929039742798,
+          1.010473591974005
+        ],
+        "forward_vjp": [
+          1.1423682619351894,
+          1.13269026693888,
+          1.105988698080182,
+          1.1099426611326635,
+          1.1256588480900973
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.11239750101231039,
+        "jvp_only": 0.23628075700253248,
+        "vjp_only": 1.010473591974005,
+        "forward_vjp": 1.1256588480900973
+      }
+    },
+    {
+      "family": "green",
+      "layers": 8,
+      "batch": 1,
+      "receivers": 4,
+      "samples": 64,
+      "structural_parameters": 16,
+      "parameter_names": [
+        "vp",
+        "vs"
+      ],
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 16,
+      "cuda_device": null,
+      "device_note": "native CPU",
+      "wavenumber_nodes": 10867,
+      "fixed_grid": true,
+      "setup_and_first_forward_seconds": 0.028743155067786574,
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "vjp_relative_cpu_error": 0.0,
+        "adjoint_identity_relative_error": 6.924848734606983e-12
+      },
+      "trials_seconds": {
+        "forward": [
+          0.02135292999446392,
+          0.02486052503809333,
+          0.027667338959872723,
+          0.02312987414188683,
+          0.031099359039217234
+        ],
+        "jvp_only": [
+          0.06840258417651057,
+          0.0602227330673486,
+          0.04453708091750741,
+          0.042432076996192336,
+          0.06770577095448971
+        ],
+        "vjp_only": [
+          0.17916715191677213,
+          0.1796966320835054,
+          0.1670041389297694,
+          0.2068875259719789,
+          0.1873399089090526
+        ],
+        "forward_vjp": [
+          0.2027763780206442,
+          0.17225925903767347,
+          0.20888998196460307,
+          0.20003432012163103,
+          0.16801054100506008
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.02486052503809333,
+        "jvp_only": 0.0602227330673486,
+        "vjp_only": 0.1796966320835054,
+        "forward_vjp": 0.20003432012163103
+      }
+    },
+    {
+      "family": "green",
+      "layers": 8,
+      "batch": 1,
+      "receivers": 4,
+      "samples": 64,
+      "structural_parameters": 16,
+      "parameter_names": [
+        "vp",
+        "vs"
+      ],
+      "forward_backend": "cuda",
+      "derivative_backend": "cpu",
+      "cpu_threads": 1,
+      "cuda_device": "cuda:1",
+      "device_note": "CUDA forward plus CPU JVP/VJP",
+      "wavenumber_nodes": 10867,
+      "fixed_grid": true,
+      "setup_and_first_forward_seconds": 0.2924442228395492,
+      "accuracy": {
+        "forward_relative_cpu_error": 3.752632616629441e-13,
+        "vjp_relative_cpu_error": 0.0,
+        "adjoint_identity_relative_error": 6.924848734606983e-12
+      },
+      "trials_seconds": {
+        "forward": [
+          0.13247249810956419,
+          0.13311763084493577,
+          0.13069652998819947,
+          0.1353452238254249,
+          0.1470251251012087
+        ],
+        "jvp_only": [
+          0.23454731819219887,
+          0.22746856999583542,
+          0.2313889570068568,
+          0.22601450188085437,
+          0.2316928890068084
+        ],
+        "vjp_only": [
+          0.9993795971386135,
+          1.0505738349165767,
+          1.0071949178818613,
+          1.0144493549596518,
+          0.9987757480703294
+        ],
+        "forward_vjp": [
+          1.1036310628987849,
+          1.03554192581214,
+          1.0316217839717865,
+          1.0155207829084247,
+          1.107314818073064
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.13311763084493577,
+        "jvp_only": 0.2313889570068568,
+        "vjp_only": 1.0071949178818613,
+        "forward_vjp": 1.03554192581214
+      }
+    },
+    {
+      "family": "green",
+      "layers": 8,
+      "batch": 1,
+      "receivers": 4,
+      "samples": 64,
+      "structural_parameters": 16,
+      "parameter_names": [
+        "vp",
+        "vs"
+      ],
+      "forward_backend": "cuda",
+      "derivative_backend": "cpu",
+      "cpu_threads": 16,
+      "cuda_device": "cuda:1",
+      "device_note": "CUDA forward plus CPU JVP/VJP",
+      "wavenumber_nodes": 10867,
+      "fixed_grid": true,
+      "setup_and_first_forward_seconds": 0.01922485511749983,
+      "accuracy": {
+        "forward_relative_cpu_error": 3.752632616629441e-13,
+        "vjp_relative_cpu_error": 0.0,
+        "adjoint_identity_relative_error": 6.924848734606983e-12
+      },
+      "trials_seconds": {
+        "forward": [
+          0.13982980698347092,
+          0.01944855786859989,
+          0.022545777028426528,
+          0.02502135094255209,
+          0.04151094797998667
+        ],
+        "jvp_only": [
+          0.04450214607641101,
+          0.04328903299756348,
+          0.04359219688922167,
+          0.043485892936587334,
+          0.04554118402302265
+        ],
+        "vjp_only": [
+          0.19576936005614698,
+          0.18963895901106298,
+          0.21245948621071875,
+          0.14711705897934735,
+          0.205613813130185
+        ],
+        "forward_vjp": [
+          0.23761439486406744,
+          0.3185802458319813,
+          0.22150223702192307,
+          0.20535834319889545,
+          0.20406780811026692
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.02502135094255209,
+        "jvp_only": 0.04359219688922167,
+        "vjp_only": 0.19576936005614698,
+        "forward_vjp": 0.22150223702192307
+      }
+    },
+    {
+      "family": "green",
+      "layers": 32,
+      "batch": 1,
+      "receivers": 4,
+      "samples": 64,
+      "structural_parameters": 64,
+      "parameter_names": [
+        "vp",
+        "vs"
+      ],
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 1,
+      "cuda_device": null,
+      "device_note": "native CPU",
+      "wavenumber_nodes": 20205,
+      "fixed_grid": true,
+      "setup_and_first_forward_seconds": 0.749839197145775,
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "vjp_relative_cpu_error": 0.0,
+        "adjoint_identity_relative_error": 1.1407398661496132e-13,
+        "jvp_central_difference_relative_error": 9.597428593527438e-08
+      },
+      "trials_seconds": {
+        "forward": [
+          0.7514660500455648,
+          0.7466003790032119,
+          0.7327599190175533,
+          0.7151472279801965,
+          0.7388554411008954
+        ],
+        "jvp_only": [
+          1.6597940300125629,
+          1.6533924730028957,
+          1.6902613688725978,
+          1.648475802037865,
+          1.6542111209128052
+        ],
+        "vjp_only": [
+          7.715533882146701,
+          7.799231290118769,
+          7.721161189023405,
+          7.84410012094304,
+          7.6345558350440115
+        ],
+        "forward_vjp": [
+          8.528671870939434,
+          8.49003869201988,
+          8.795965356053784,
+          8.537366488948464,
+          8.521374608855695
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.7388554411008954,
+        "jvp_only": 1.6542111209128052,
+        "vjp_only": 7.721161189023405,
+        "forward_vjp": 8.528671870939434
+      }
+    },
+    {
+      "family": "green",
+      "layers": 32,
+      "batch": 1,
+      "receivers": 4,
+      "samples": 64,
+      "structural_parameters": 64,
+      "parameter_names": [
+        "vp",
+        "vs"
+      ],
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 16,
+      "cuda_device": null,
+      "device_note": "native CPU",
+      "wavenumber_nodes": 20205,
+      "fixed_grid": true,
+      "setup_and_first_forward_seconds": 0.1842472560238093,
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "vjp_relative_cpu_error": 1.7236024007206013e-19,
+        "adjoint_identity_relative_error": 1.1407398661496132e-13
+      },
+      "trials_seconds": {
+        "forward": [
+          0.18344333884306252,
+          0.17691409005783498,
+          0.1784446567762643,
+          0.18997167702764273,
+          0.1772061879746616
+        ],
+        "jvp_only": [
+          0.469969951082021,
+          0.41586482198908925,
+          0.3856259351596236,
+          0.4040750169660896,
+          0.40732240304350853
+        ],
+        "vjp_only": [
+          1.4911234958563,
+          1.430158297996968,
+          1.348260809900239,
+          1.5949149171356112,
+          1.2783819979522377
+        ],
+        "forward_vjp": [
+          1.514676548074931,
+          1.4032202509697527,
+          1.3786542748566717,
+          1.5108501850627363,
+          1.3968473821878433
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.1784446567762643,
+        "jvp_only": 0.40732240304350853,
+        "vjp_only": 1.430158297996968,
+        "forward_vjp": 1.4032202509697527
+      }
+    },
+    {
+      "family": "green",
+      "layers": 32,
+      "batch": 1,
+      "receivers": 4,
+      "samples": 64,
+      "structural_parameters": 64,
+      "parameter_names": [
+        "vp",
+        "vs"
+      ],
+      "forward_backend": "cuda",
+      "derivative_backend": "cpu",
+      "cpu_threads": 1,
+      "cuda_device": "cuda:1",
+      "device_note": "CUDA forward plus CPU JVP/VJP",
+      "wavenumber_nodes": 20205,
+      "fixed_grid": true,
+      "setup_and_first_forward_seconds": 0.2641771328635514,
+      "accuracy": {
+        "forward_relative_cpu_error": 2.3439986383191815e-14,
+        "vjp_relative_cpu_error": 0.0,
+        "adjoint_identity_relative_error": 1.1407398661496132e-13
+      },
+      "trials_seconds": {
+        "forward": [
+          0.34530752594582736,
+          0.34155776211991906,
+          0.14755653007887304,
+          0.3667493420653045,
+          0.33925971295684576
+        ],
+        "jvp_only": [
+          1.6507485311012715,
+          1.6845676361117512,
+          1.6803841448854655,
+          1.6635492430068552,
+          1.6552029380109161
+        ],
+        "vjp_only": [
+          7.760587753960863,
+          7.741142286919057,
+          7.694446545094252,
+          7.815103391883895,
+          7.805872641969472
+        ],
+        "forward_vjp": [
+          8.018822588957846,
+          8.241164069855586,
+          7.9871060259174556,
+          8.02235654485412,
+          8.099758855067194
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.34155776211991906,
+        "jvp_only": 1.6635492430068552,
+        "vjp_only": 7.760587753960863,
+        "forward_vjp": 8.02235654485412
+      }
+    },
+    {
+      "family": "green",
+      "layers": 32,
+      "batch": 1,
+      "receivers": 4,
+      "samples": 64,
+      "structural_parameters": 64,
+      "parameter_names": [
+        "vp",
+        "vs"
+      ],
+      "forward_backend": "cuda",
+      "derivative_backend": "cpu",
+      "cpu_threads": 16,
+      "cuda_device": "cuda:1",
+      "device_note": "CUDA forward plus CPU JVP/VJP",
+      "wavenumber_nodes": 20205,
+      "fixed_grid": true,
+      "setup_and_first_forward_seconds": 0.17955423914827406,
+      "accuracy": {
+        "forward_relative_cpu_error": 2.3439986383191815e-14,
+        "vjp_relative_cpu_error": 1.7236024007206013e-19,
+        "adjoint_identity_relative_error": 1.1407398661496132e-13
+      },
+      "trials_seconds": {
+        "forward": [
+          0.3456895400304347,
+          0.3271042578853667,
+          0.14572583395056427,
+          0.36369362799450755,
+          0.3427387329284102
+        ],
+        "jvp_only": [
+          0.4296104428358376,
+          0.4385115900076926,
+          0.4291441610548645,
+          0.4120450238697231,
+          0.37720208801329136
+        ],
+        "vjp_only": [
+          1.2818683190271258,
+          1.5907642398960888,
+          1.2339782319031656,
+          1.3719836547970772,
+          1.256977119948715
+        ],
+        "forward_vjp": [
+          1.5398470398504287,
+          2.066348511027172,
+          1.4702314520254731,
+          1.8085364289581776,
+          1.7543492959812284
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.3427387329284102,
+        "jvp_only": 0.4291441610548645,
+        "vjp_only": 1.2818683190271258,
+        "forward_vjp": 1.7543492959812284
+      }
+    },
+    {
+      "family": "receiver_function",
+      "layers": 8,
+      "batch": 1,
+      "nfft": 2048,
+      "samples": 81,
+      "rays": 1,
+      "gaussians": 6,
+      "polarization_periods": 41,
+      "parameter_names": [
+        "top",
+        "vp",
+        "vs",
+        "rho"
+      ],
+      "objective": "fixed real cotangent on RF and apparent Vs",
+      "forward_backend": "torch-cpu",
+      "derivative_backend": "torch-cpu",
+      "cpu_threads": 1,
+      "cuda_device": null,
+      "setup_seconds": 0.003147674957290292,
+      "accuracy": {
+        "rf_relative_cpu_error": 0.0,
+        "rf_max_abs_cpu_error": 0.0,
+        "vjp_relative_cpu_error": 0.0,
+        "directional_vjp_central_difference_relative_error": 3.5234757599287587e-09
+      },
+      "trials_seconds": {
+        "forward": [
+          0.013118798146024346,
+          0.010312226135283709,
+          0.012035048799589276,
+          0.01344109303317964,
+          0.010370845207944512
+        ],
+        "forward_vjp": [
+          0.04694456188008189,
+          0.03452307311818004,
+          0.04074948886409402,
+          0.048491214169189334,
+          0.033868543803691864
+        ],
+        "vjp_only": [
+          0.027919304091483355,
+          0.022077220026403666,
+          0.0263413661159575,
+          0.02265493990853429,
+          0.03999497904442251
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.012035048799589276,
+        "forward_vjp": 0.04074948886409402,
+        "vjp_only": 0.0263413661159575
+      }
+    },
+    {
+      "family": "receiver_function",
+      "layers": 8,
+      "batch": 1,
+      "nfft": 2048,
+      "samples": 81,
+      "rays": 1,
+      "gaussians": 6,
+      "polarization_periods": 41,
+      "parameter_names": [
+        "top",
+        "vp",
+        "vs",
+        "rho"
+      ],
+      "objective": "fixed real cotangent on RF and apparent Vs",
+      "forward_backend": "torch-cpu",
+      "derivative_backend": "torch-cpu",
+      "cpu_threads": 16,
+      "cuda_device": null,
+      "setup_seconds": 0.03414318012073636,
+      "accuracy": {
+        "rf_relative_cpu_error": 0.0,
+        "rf_max_abs_cpu_error": 0.0,
+        "vjp_relative_cpu_error": 1.1171352904068593e-16
+      },
+      "trials_seconds": {
+        "forward": [
+          0.7369173930492252,
+          0.7268501908984035,
+          0.7062284669373184,
+          0.7011662139557302,
+          0.7737670401111245
+        ],
+        "forward_vjp": [
+          1.1655205099377781,
+          1.2785899750888348,
+          1.0108501801732928,
+          0.9495366669725627,
+          1.162360806018114
+        ],
+        "vjp_only": [
+          0.3539152229204774,
+          0.32371741998940706,
+          0.29261371516622603,
+          0.3155612638220191,
+          0.27921499498188496
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.7268501908984035,
+        "forward_vjp": 1.162360806018114,
+        "vjp_only": 0.3155612638220191
+      }
+    },
+    {
+      "family": "receiver_function",
+      "layers": 8,
+      "batch": 1,
+      "nfft": 2048,
+      "samples": 81,
+      "rays": 1,
+      "gaussians": 6,
+      "polarization_periods": 41,
+      "parameter_names": [
+        "top",
+        "vp",
+        "vs",
+        "rho"
+      ],
+      "objective": "fixed real cotangent on RF and apparent Vs",
+      "forward_backend": "cuda",
+      "derivative_backend": "cuda",
+      "cpu_threads": 1,
+      "cuda_device": "cuda:1",
+      "setup_seconds": 0.2991157069336623,
+      "accuracy": {
+        "rf_relative_cpu_error": 4.937790708429676e-16,
+        "rf_max_abs_cpu_error": 2.220446049250313e-16,
+        "vjp_relative_cpu_error": 9.212574848085267e-16
+      },
+      "trials_seconds": {
+        "forward": [
+          0.021962350932881236,
+          0.02363201999105513,
+          0.022843255195766687,
+          0.028115893015637994,
+          0.023952327203005552
+        ],
+        "forward_vjp": [
+          0.05389359500259161,
+          0.05856040399521589,
+          0.05152173200622201,
+          0.05042585893534124,
+          0.05056419316679239
+        ],
+        "vjp_only": [
+          0.01969946688041091,
+          0.023413040908053517,
+          0.019468362908810377,
+          0.01700845593586564,
+          0.021708355052396655
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.02363201999105513,
+        "forward_vjp": 0.05152173200622201,
+        "vjp_only": 0.01969946688041091
+      }
+    },
+    {
+      "family": "receiver_function",
+      "layers": 8,
+      "batch": 16,
+      "nfft": 2048,
+      "samples": 81,
+      "rays": 1,
+      "gaussians": 6,
+      "polarization_periods": 41,
+      "parameter_names": [
+        "top",
+        "vp",
+        "vs",
+        "rho"
+      ],
+      "objective": "fixed real cotangent on RF and apparent Vs",
+      "forward_backend": "torch-cpu",
+      "derivative_backend": "torch-cpu",
+      "cpu_threads": 1,
+      "cuda_device": null,
+      "setup_seconds": 0.0007315718103200197,
+      "accuracy": {
+        "rf_relative_cpu_error": 0.0,
+        "rf_max_abs_cpu_error": 0.0,
+        "vjp_relative_cpu_error": 0.0,
+        "directional_vjp_central_difference_relative_error": 2.8068890138205685e-09
+      },
+      "trials_seconds": {
+        "forward": [
+          0.12197865080088377,
+          0.08535811700858176,
+          0.0980243559461087,
+          0.11890988005325198,
+          0.10009782202541828
+        ],
+        "forward_vjp": [
+          0.29115047701634467,
+          0.25015102000907063,
+          0.26164909987710416,
+          0.2640156499110162,
+          0.2511494420468807
+        ],
+        "vjp_only": [
+          0.1667905410286039,
+          0.13940917397849262,
+          0.14867241610772908,
+          0.17930680909194052,
+          0.13162980182096362
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.10009782202541828,
+        "forward_vjp": 0.26164909987710416,
+        "vjp_only": 0.14867241610772908
+      }
+    }
+  ]
+}

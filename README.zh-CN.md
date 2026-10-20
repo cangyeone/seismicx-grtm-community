@@ -6,13 +6,21 @@
 程序用于层状介质格林函数计算，支持 CPU、CUDA 和 Apple Metal/MPS。
 仓库中的代码片段是公开接口的使用示例，不包含求解器实现源码或开发历史。
 
-## 完整方法预览版 0.6.0.dev3
+## CPU/CUDA 寻根与微分预览版 0.6.0.dev4
+
+[编译包下载](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev4) · [安装与调用](docs/PREVIEW_0.6.0.dev4.zh-CN.md) · [三类正演与微分测试报告](docs/PERFORMANCE_0.6.0.dev4.zh-CN.md)
+
+优化 GRTM 频散寻根，保留 FP64 和原精度要求。报告统一测试格林函数、接收函数、频散及其结构微分的 CPU/CUDA 效率，
+明确线程数与实际执行设备：格林函数结构 JVP/VJP 仍在 CPU，接收函数与频散的 CUDA 微分在 GPU。
+提供原始 disba 对照、单模型/批处理、逐次计时和独立精度审计。稳定 PyPI 仍为 0.5.1。
+
+## 完整方法预览版 0.6.0.dev3（历史）
 
 [编译包下载](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev3) · [安装与调用](docs/PREVIEW_0.6.0.dev3.zh-CN.md) · [速度报告](docs/SURFACE_WAVE_BENCHMARKS.zh-CN.md)
 
 新增基于 GRTM 的 Rayleigh/Love 频散、半解析 CPU/CUDA 敏感核及模型自动微分，并整合可微 RF 与 HMC/DRAM。
 提供 CPython 3.10–3.14 的 Apple Silicon 和 Linux/WSL x86_64 编译包。
-速度报告分别给出纯频散、敏感核、纯 CPU 和 CUDA；当前纯频散仍慢于 disba CPU。
+该版速度报告为寻根优化前的数据，最新结果见上方 dev4 报告。
 稳定 PyPI 仍为 0.5.1，请显式安装匹配的预览 wheel。
 
 
