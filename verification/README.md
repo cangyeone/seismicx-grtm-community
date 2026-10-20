@@ -3,6 +3,8 @@
 Latest preview: [0.6.0.dev4 binary/device checks](preview-0.6.0.dev4.json),
 [forward and derivative measurements](performance-0.6.0.dev4/), and the
 [CPU/CUDA report](../docs/PERFORMANCE_0.6.0.dev4.md).
+All 13 published dev4 assets match the audited file sizes and SHA-256 digests;
+see [publication verification](performance-0.6.0.dev4/publication.json).
 
 ## Stable release 0.5.1
 
