@@ -1,0 +1,95 @@
+{
+  "version": "0.6.0.dev7",
+  "release_url": "https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev7",
+  "release_id": 419812636,
+  "published_at": "2026-10-21T16:50:42Z",
+  "verified_at": "2026-10-21T16:51:06.608501+00:00",
+  "draft": false,
+  "prerelease": true,
+  "source_binary_commit": "4a3ac138bd0fbf0b05e5b841effd524654bfbeda",
+  "source_report_commit": "ea6b80a1252ab4ce55e635eb2d1305c58bf2c578",
+  "community_report_commit": "f72174745d562ce3fe0bc2787383ea8276d19cf5",
+  "binary_build_run": 39636134429,
+  "verified_asset_count": 13,
+  "verification": "Every asset name, uploaded state, size and SHA-256 digest matches the audited local file.",
+  "assets": [
+    {
+      "name": "seismicx_grtm-0.6.0.dev7-cp310-cp310-macosx_11_0_arm64.whl",
+      "size": 3282432,
+      "sha256": "fab6f2418e5842fba23d505495c48a42d3e784e2fa1877397ee831a371c440e6",
+      "github_digest": "sha256:fab6f2418e5842fba23d505495c48a42d3e784e2fa1877397ee831a371c440e6"
+    },
+    {
+      "name": "seismicx_grtm-0.6.0.dev7-cp310-cp310-manylinux_2_28_x86_64.whl",
+      "size": 11551584,
+      "sha256": "b5b325a7411dc9f0fcfc99ae58780ec116c16801b78a944bae639aee50e2ca5c",
+      "github_digest": "sha256:b5b325a7411dc9f0fcfc99ae58780ec116c16801b78a944bae639aee50e2ca5c"
+    },
+    {
+      "name": "seismicx_grtm-0.6.0.dev7-cp311-cp311-macosx_11_0_arm64.whl",
+      "size": 3266583,
+      "sha256": "21ad020d3eb8eedbf04f17da6259f2861eb3c422fbd8b3adcaa59cc23f676145",
+      "github_digest": "sha256:21ad020d3eb8eedbf04f17da6259f2861eb3c422fbd8b3adcaa59cc23f676145"
+    },
+    {
+      "name": "seismicx_grtm-0.6.0.dev7-cp311-cp311-manylinux_2_28_x86_64.whl",
+      "size": 11544308,
+      "sha256": "6fbb419326b809e09d2caee0c57d1cd4b0cda0dd446f0197e6c9dd7e6480ce21",
+      "github_digest": "sha256:6fbb419326b809e09d2caee0c57d1cd4b0cda0dd446f0197e6c9dd7e6480ce21"
+    },
+    {
+      "name": "seismicx_grtm-0.6.0.dev7-cp312-cp312-macosx_11_0_arm64.whl",
+      "size": 3249040,
+      "sha256": "2e2c7f9dcc354c26a1f3c3695f8fc5d78e4fdc4af08b13693fed76704310ec54",
+      "github_digest": "sha256:2e2c7f9dcc354c26a1f3c3695f8fc5d78e4fdc4af08b13693fed76704310ec54"
+    },
+    {
+      "name": "seismicx_grtm-0.6.0.dev7-cp312-cp312-manylinux_2_28_x86_64.whl",
+      "size": 11387719,
+      "sha256": "dcec8a518183d408a12df06c5485ae8128b4821c58f977cbbb6935bcf6bbe024",
+      "github_digest": "sha256:dcec8a518183d408a12df06c5485ae8128b4821c58f977cbbb6935bcf6bbe024"
+    },
+    {
+      "name": "seismicx_grtm-0.6.0.dev7-cp313-cp313-macosx_11_0_arm64.whl",
+      "size": 3231546,
+      "sha256": "77dad73be3de27cab3d584fd5d0614b43b98b6ddaf4fe8aefc14cd7da70f3c71",
+      "github_digest": "sha256:77dad73be3de27cab3d584fd5d0614b43b98b6ddaf4fe8aefc14cd7da70f3c71"
+    },
+    {
+      "name": "seismicx_grtm-0.6.0.dev7-cp313-cp313-manylinux_2_28_x86_64.whl",
+      "size": 11367702,
+      "sha256": "b603948f72c32522912dc54f597c85fd1644d29385e9f3ef11f4110947a9d125",
+      "github_digest": "sha256:b603948f72c32522912dc54f597c85fd1644d29385e9f3ef11f4110947a9d125"
+    },
+    {
+      "name": "seismicx_grtm-0.6.0.dev7-cp314-cp314-macosx_11_0_arm64.whl",
+      "size": 3237340,
+      "sha256": "6aa54791606db0a01b94550f9958a3f9fc22484fcae35add6b20a693b0b539ad",
+      "github_digest": "sha256:6aa54791606db0a01b94550f9958a3f9fc22484fcae35add6b20a693b0b539ad"
+    },
+    {
+      "name": "seismicx_grtm-0.6.0.dev7-cp314-cp314-manylinux_2_28_x86_64.whl",
+      "size": 11367284,
+      "sha256": "bb70645ccff57797747bad5ff23f09faf5f5a024374a2c6a2b9f4a63742a9458",
+      "github_digest": "sha256:bb70645ccff57797747bad5ff23f09faf5f5a024374a2c6a2b9f4a63742a9458"
+    },
+    {
+      "name": "SHA256SUMS-0.6.0.dev7",
+      "size": 1440,
+      "sha256": "bd037a1e9d9f35b69cb94a8506c193694359402af3bb400cdf08bcdf51ec0387",
+      "github_digest": "sha256:bd037a1e9d9f35b69cb94a8506c193694359402af3bb400cdf08bcdf51ec0387"
+    },
+    {
+      "name": "verification.json",
+      "size": 7850,
+      "sha256": "320cab3933c881859aa8a11f0ae4ee4a39a81354a5d034776389c9df8b8f97e9",
+      "github_digest": "sha256:320cab3933c881859aa8a11f0ae4ee4a39a81354a5d034776389c9df8b8f97e9"
+    },
+    {
+      "name": "wheel-manifest.json",
+      "size": 37308,
+      "sha256": "a27f01bf5488cfd3cf765e3f72dd6d5f589bca965f5df0682cd6af05cc55eed3",
+      "github_digest": "sha256:a27f01bf5488cfd3cf765e3f72dd6d5f589bca965f5df0682cd6af05cc55eed3"
+    }
+  ]
+}
