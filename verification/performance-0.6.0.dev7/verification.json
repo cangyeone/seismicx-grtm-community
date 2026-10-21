@@ -1,0 +1,218 @@
+{
+  "version": "0.6.0.dev7",
+  "date": "2026-10-22",
+  "source_commit": "4a3ac138bd0fbf0b05e5b841effd524654bfbeda",
+  "build_run": 39636134429,
+  "license": "LicenseRef-SeismicX-Research-NonCommercial",
+  "distribution": "compiled implementation modules; no solver implementation source archive",
+  "audit": {
+    "wheels": 10,
+    "source_audit_errors": 0,
+    "checks": [
+      "exact Python/platform set",
+      "RECORD integrity",
+      "implementation source/private build-path marker scan",
+      "license/notices",
+      "compiled torch_device module",
+      "native CPU/CUDA/Metal libraries",
+      "package metadata"
+    ]
+  },
+  "ci_jobs": [
+    {
+      "name": "macos (3.11)",
+      "conclusion": "success",
+      "url": "https://github.com/cangyeone/seismicx-grtm/actions/runs/39636134429/job/119347006544"
+    },
+    {
+      "name": "linux (cp313-cp313)",
+      "conclusion": "success",
+      "url": "https://github.com/cangyeone/seismicx-grtm/actions/runs/39636134429/job/119347006900"
+    },
+    {
+      "name": "linux (cp312-cp312)",
+      "conclusion": "success",
+      "url": "https://github.com/cangyeone/seismicx-grtm/actions/runs/39636134429/job/119347006999"
+    },
+    {
+      "name": "macos (3.13)",
+      "conclusion": "success",
+      "url": "https://github.com/cangyeone/seismicx-grtm/actions/runs/39636134429/job/119347007022"
+    },
+    {
+      "name": "linux (cp310-cp310)",
+      "conclusion": "success",
+      "url": "https://github.com/cangyeone/seismicx-grtm/actions/runs/39636134429/job/119347007038"
+    },
+    {
+      "name": "macos (3.10)",
+      "conclusion": "success",
+      "url": "https://github.com/cangyeone/seismicx-grtm/actions/runs/39636134429/job/119347007098"
+    },
+    {
+      "name": "macos (3.14)",
+      "conclusion": "success",
+      "url": "https://github.com/cangyeone/seismicx-grtm/actions/runs/39636134429/job/119347007105"
+    },
+    {
+      "name": "linux (cp311-cp311)",
+      "conclusion": "success",
+      "url": "https://github.com/cangyeone/seismicx-grtm/actions/runs/39636134429/job/119347007123"
+    },
+    {
+      "name": "linux (cp314-cp314)",
+      "conclusion": "success",
+      "url": "https://github.com/cangyeone/seismicx-grtm/actions/runs/39636134429/job/119347007128"
+    },
+    {
+      "name": "macos (3.12)",
+      "conclusion": "success",
+      "url": "https://github.com/cangyeone/seismicx-grtm/actions/runs/39636134429/job/119347007278"
+    }
+  ],
+  "device_tests": [
+    {
+      "platform": "Apple M4 Max; CPython 3.12; CPU/Metal/MPS; GRTM_TEST_METAL=1",
+      "tests": 123,
+      "passed": 103,
+      "skipped": 20,
+      "seconds": 17.433,
+      "status": "passed",
+      "log": "binary-tests-apple-metal.log",
+      "sha256": "e581b81672765bdf4e5be5aa0cb48edb0a3c6009ba4bf08608f851166a40c7c7"
+    },
+    {
+      "platform": "Threadripper PRO 3955WX / RTX 5090; CPython 3.13; Torch 2.8.0+cu128; GRTM_TEST_CUDA=1",
+      "tests": 123,
+      "passed": 112,
+      "skipped": 11,
+      "seconds": 48.412,
+      "status": "passed",
+      "log": "binary-tests-cuda.log",
+      "sha256": "c005d2297cb7f0c7f73d0b2ec1b0c3ddde822c46a5cb77ad06327247ebc42e6b"
+    }
+  ],
+  "documentation_examples": [
+    {
+      "version": "0.6.0.dev7",
+      "device": "cpu",
+      "finite": {
+        "waveform": true,
+        "gradient": true,
+        "rf_gradient": true,
+        "levin_jvp": true
+      },
+      "shapes": {
+        "waveform": [
+          1,
+          32,
+          3
+        ],
+        "gradient": [
+          4,
+          6
+        ],
+        "rf_gradient": [
+          3,
+          4
+        ],
+        "levin_jvp": [
+          1,
+          32,
+          3
+        ]
+      },
+      "stats": {},
+      "compiled_modules": {
+        "api": true,
+        "rf_cuda": true,
+        "surface_wave": true,
+        "torch_device": true
+      }
+    },
+    {
+      "version": "0.6.0.dev7",
+      "device": "cuda:0",
+      "finite": {
+        "waveform": true,
+        "gradient": true,
+        "rf_gradient": true,
+        "levin_jvp": true
+      },
+      "shapes": {
+        "waveform": [
+          1,
+          32,
+          3
+        ],
+        "gradient": [
+          4,
+          6
+        ],
+        "rf_gradient": [
+          3,
+          4
+        ],
+        "levin_jvp": [
+          1,
+          32,
+          3
+        ]
+      },
+      "stats": {
+        "kind": "last_structural_derivative",
+        "cuda_frequencies": 16,
+        "cpu_frequencies": 0,
+        "directions": 0,
+        "parameters": 12,
+        "maximum_tape_nodes": 1804,
+        "method": "FP64 CUDA analytic reverse AD; device tape and ordered VJP reduction; long-double CPU quasistatic exception",
+        "fft_device": "cuda:0",
+        "synthesis_device": "cuda:0",
+        "gradient_device": "cuda:0",
+        "scope": "most recent model backward"
+      },
+      "compiled_modules": {
+        "api": true,
+        "rf_cuda": true,
+        "surface_wave": true,
+        "torch_device": true
+      }
+    }
+  ],
+  "benchmarks": {
+    "summary.json": "4ccb0c1f647a80baa64f85a7321b633000fc52daa46af480f67cae2da903b362",
+    "before-apple-final.json": "8790148a1d869c669d07cb35606625516ece69a25ac3d6bb2b11669f419e3877",
+    "before-apple-final.npz": "d14564e8cb88f3020bbba5aee4a25610a6fd81d88aab729ef014509fe8921d65",
+    "before-cuda-final.npz": "cdb337241dd3f7a6f3e3211484d815d527ae4f88385e28c73bbe7cad15b918b8",
+    "before-cuda-large.json": "3ab2796801e50abfd9d3d4be67b0a16bda6e8fd7529a5ec3f46c5691d56ab15e",
+    "after-cuda-final.npz": "d9a126d6696a0d36e43319d6391e1bc63b1d941ecb5f429aecf0b4f866762f38",
+    "after-cuda-final.json": "ba0cd7c3bd67047101d8f887136558e9465f04a925313069c29883f58ab8db81",
+    "before-cuda-large.npz": "e8a0ea745b64ad1dc44b8ec486d671e0039d6aab2577240b9485bfca7d3ea90e",
+    "after-cuda-large.npz": "540f65d4f5d46f9b8c1fd1b501854f817f8db6141afd9325d17bc6b4e088c482",
+    "before-cuda-final.json": "64e4da61c67d306786d9f805b7a59ece9a1a961a7b987f7de45eff682cef90cb",
+    "after-cuda-large.json": "0959672bb754f4fa7d9c54d92a0fbb7d00f0824694f01c9b808ab725406eb403",
+    "after-apple-final.npz": "e0779ed9768e01d9e84eb65c6db6ba10a853ea15d427c61878b7ec902a784c53",
+    "after-apple-final.json": "c56b372ff7a11a2b2dc734b7baf6e69b8f99a878b91de140fdae4fbf5d5278c5"
+  },
+  "retained_build_failure": {
+    "run": 39633334029,
+    "cause": "nvcc cicc terminated by signal 9 while inlining the complete reverse propagation graph on standard build runners",
+    "resolution": "bounded device-function inlining and serial Linux compiler jobs; FP64 formulas unchanged; complete rebuild, audits and device tests rerun",
+    "native_rebuild_peak_kib": 4914876
+  },
+  "negative_view_regression": {
+    "before": "Native RF cotangents with lazy negative view bits had the wrong sign; reproduced normalized error 2.0 in the old binary",
+    "after": "Both conjugate and negative view bits are materialized at RF/Green native pointer boundaries; regression tests pass on final binaries"
+  },
+  "limitations": [
+    "Adaptive Levin/Gauss and joint physical waveform JVP are CPU-only with explicit finite cutoffs; no infinite-tail certificate",
+    "Levin is applied to Green wavenumber integration, not to RF FFT or dispersion roots; no new Filon implementation claimed",
+    "CUDA tensor Green spectra/FFT/synthesis/reverse stay on device except small host model/topology planning and protected quasistatic bins",
+    "Green model batching dispatches individual models rather than fusing the model axis",
+    "Surface critical modal coordinates retain the slower original analytic path; small workloads can be slower",
+    "MPS RF/surface remains an explicit CPU FP64 bridge",
+    "Native custom backward interfaces support first-order derivatives only",
+    "Higher-mode disba sensitivities are not ground truth; agreement with old derivatives is not an inversion-accuracy claim"
+  ]
+}

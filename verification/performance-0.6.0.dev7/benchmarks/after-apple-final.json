@@ -1,0 +1,728 @@
+{
+  "version": "0.6.0.dev7",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "torch": "2.8.0",
+  "protocol": "Same models, FP64, fixed Green grid; 2 warmups and synchronized wall-time median. Complete forward/forward+VJP calls. CPU thread budget recorded; no numerical result cache.",
+  "records": [
+    {
+      "family": "surface",
+      "batch": 1,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "phase_kernels",
+      "seconds": 0.0009155418956652284,
+      "samples": [
+        0.0009155418956652284,
+        0.0009339579846709967,
+        0.0009730829624459147,
+        0.0009147500386461616,
+        0.0009115410503000021
+      ],
+      "array": "r0",
+      "shape": [
+        1,
+        8,
+        8,
+        4
+      ],
+      "sha256": "d78e15b1cb40eb04738804c30315f3f04c2b5184ff8d19141fa3ecc41f533258"
+    },
+    {
+      "family": "surface",
+      "batch": 1,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "group_kernels",
+      "seconds": 0.001212208066135645,
+      "samples": [
+        0.001212208066135645,
+        0.0012574580032378435,
+        0.0011980000417679548,
+        0.0012083329493179917,
+        0.0012277920031920075
+      ],
+      "array": "r1",
+      "shape": [
+        1,
+        8,
+        8,
+        4
+      ],
+      "sha256": "24630415d5e91dbef8d6f5cb5d825824c2903d6b6b86ffaad5ab510e3bf8d668"
+    },
+    {
+      "family": "rf",
+      "batch": 1,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward",
+      "seconds": 0.00023995805531740189,
+      "samples": [
+        0.00024562503676861525,
+        0.00023995805531740189,
+        0.000245374976657331,
+        0.00023416709154844284,
+        0.00023900007363408804
+      ],
+      "array": "r2",
+      "shape": [
+        1,
+        2,
+        6,
+        81
+      ],
+      "sha256": "8f63c88a1eba41ca17bc834cea08804a1e9fa5f559dd4a901bf8fdccf9182678"
+    },
+    {
+      "family": "rf",
+      "batch": 1,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward_vjp",
+      "seconds": 0.0008044579299166799,
+      "samples": [
+        0.0007482500514015555,
+        0.0008843339746817946,
+        0.0008044579299166799,
+        0.0007924999808892608,
+        0.0009566660737618804
+      ],
+      "array": "r3",
+      "shape": [
+        1,
+        8,
+        4
+      ],
+      "sha256": "300f79698a4bbd07dee8be574708e9888157d75fbb2f1352cc92c2ad043565c5"
+    },
+    {
+      "family": "surface",
+      "batch": 1,
+      "layers": 32,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "phase_kernels",
+      "seconds": 0.0028195419581606984,
+      "samples": [
+        0.0028674169443547726,
+        0.002791041973978281,
+        0.002780082984827459,
+        0.0028195419581606984,
+        0.0028913330752402544
+      ],
+      "array": "r4",
+      "shape": [
+        1,
+        8,
+        32,
+        4
+      ],
+      "sha256": "7f0f7eeed682bbb47c366aa514efb51451100a5006c402d75b2cff9f53310e35"
+    },
+    {
+      "family": "surface",
+      "batch": 1,
+      "layers": 32,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "group_kernels",
+      "seconds": 0.02425174997188151,
+      "samples": [
+        0.02434366603847593,
+        0.024175000027753413,
+        0.024060958065092564,
+        0.024327708990313113,
+        0.02425174997188151
+      ],
+      "array": "r5",
+      "shape": [
+        1,
+        8,
+        32,
+        4
+      ],
+      "sha256": "9974a07fb41b50daeb6676b4ca97a042ffd6b24e2efbe7c47e8980b6f902ddaa"
+    },
+    {
+      "family": "rf",
+      "batch": 1,
+      "layers": 32,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward",
+      "seconds": 0.0004709159256890416,
+      "samples": [
+        0.0004883329384028912,
+        0.0005154999671503901,
+        0.0004709159256890416,
+        0.0004313749959692359,
+        0.000415292102843523
+      ],
+      "array": "r6",
+      "shape": [
+        1,
+        2,
+        6,
+        81
+      ],
+      "sha256": "4ba05c2faff1e08098d5433df654290f8a3b12fcc656a744b96b633d5559d600"
+    },
+    {
+      "family": "rf",
+      "batch": 1,
+      "layers": 32,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward_vjp",
+      "seconds": 0.0012676670448854566,
+      "samples": [
+        0.0012811669148504734,
+        0.0012676670448854566,
+        0.0012601669877767563,
+        0.0012432909570634365,
+        0.001324458047747612
+      ],
+      "array": "r7",
+      "shape": [
+        1,
+        32,
+        4
+      ],
+      "sha256": "6a8dee01bb73c628e0cb791f34a0b45fffc0f73730804574759d94e293b7862c"
+    },
+    {
+      "family": "green",
+      "batch": 1,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward",
+      "seconds": 0.0012207499239593744,
+      "samples": [
+        0.0012525420170277357,
+        0.0011608749628067017,
+        0.0011795000173151493,
+        0.0012323749251663685,
+        0.0012207499239593744
+      ],
+      "array": "r8",
+      "shape": [
+        1,
+        2,
+        32,
+        3
+      ],
+      "sha256": "bf7462e8a9a9613dfb7fd2c2fe5889794bdb8928c4425ad0360ce436e4f9f1e7"
+    },
+    {
+      "family": "green",
+      "batch": 1,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward_vjp",
+      "seconds": 0.014073458034545183,
+      "samples": [
+        0.014156625024043024,
+        0.013957042014226317,
+        0.014039875008165836,
+        0.014073458034545183,
+        0.014076416962780058
+      ],
+      "grid_steps": 64,
+      "log2_samples": 5,
+      "array": "r9",
+      "shape": [
+        1,
+        8,
+        6
+      ],
+      "sha256": "9e3a4ce2729bc66e247bd406efa0acfabc178ccdda7c976a2cc352fd7aa05d96"
+    },
+    {
+      "family": "surface",
+      "batch": 8,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "phase_kernels",
+      "seconds": 0.0029933330370113254,
+      "samples": [
+        0.0029588749166578054,
+        0.0029635420069098473,
+        0.0030460829148069024,
+        0.0030094579560682178,
+        0.0029933330370113254
+      ],
+      "array": "r10",
+      "shape": [
+        8,
+        8,
+        8,
+        4
+      ],
+      "sha256": "254bc802f9638f28c135ddd1f73b88a392f260d61a0fce33dd90961c48b72faa"
+    },
+    {
+      "family": "surface",
+      "batch": 8,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "group_kernels",
+      "seconds": 0.006615292048081756,
+      "samples": [
+        0.006536667002364993,
+        0.006662542000412941,
+        0.006715250085107982,
+        0.006615292048081756,
+        0.006526084034703672
+      ],
+      "array": "r11",
+      "shape": [
+        8,
+        8,
+        8,
+        4
+      ],
+      "sha256": "ada416bc07fbc52b833bd334bad819bf4cbf21fb0949fe9aa6f3d66000fa2b62"
+    },
+    {
+      "family": "rf",
+      "batch": 8,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward",
+      "seconds": 0.0008171669906005263,
+      "samples": [
+        0.0008704999927431345,
+        0.0008526250021532178,
+        0.0008171669906005263,
+        0.0007770420052111149,
+        0.000757833942770958
+      ],
+      "array": "r12",
+      "shape": [
+        8,
+        2,
+        6,
+        81
+      ],
+      "sha256": "25a31cd751a3b1464279c8b3cfce9f2ce1904be41ab1b152dbb5bf0114531b58"
+    },
+    {
+      "family": "rf",
+      "batch": 8,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward_vjp",
+      "seconds": 0.002401749952696264,
+      "samples": [
+        0.0024372079642489552,
+        0.0022755409590899944,
+        0.002401749952696264,
+        0.0024383750278502703,
+        0.0023161249700933695
+      ],
+      "array": "r13",
+      "shape": [
+        8,
+        8,
+        4
+      ],
+      "sha256": "34e2bf071e4dfb819ef68fd6c21b4c40a77ecaf80c7fd0e6bea8017b1565a140"
+    },
+    {
+      "family": "surface",
+      "batch": 8,
+      "layers": 32,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "phase_kernels",
+      "seconds": 0.011021042009815574,
+      "samples": [
+        0.010959792067296803,
+        0.011100291972979903,
+        0.010947957984171808,
+        0.011021042009815574,
+        0.011109542101621628
+      ],
+      "array": "r14",
+      "shape": [
+        8,
+        8,
+        32,
+        4
+      ],
+      "sha256": "63413766fa4d60675c6f7581ab3efa9acf03846a3c0c3329c3b964a7d5f782e1"
+    },
+    {
+      "family": "surface",
+      "batch": 8,
+      "layers": 32,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "group_kernels",
+      "seconds": 0.18194812501315027,
+      "samples": [
+        0.18302870797924697,
+        0.18178858305327594,
+        0.18262058298569173,
+        0.18194812501315027,
+        0.1819480829872191
+      ],
+      "array": "r15",
+      "shape": [
+        8,
+        8,
+        32,
+        4
+      ],
+      "sha256": "4a6d0c64277de9652941d89f1132f2f12d99cc93271c833a0f24fa9afcfafac6"
+    },
+    {
+      "family": "rf",
+      "batch": 8,
+      "layers": 32,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward",
+      "seconds": 0.0021329999435693026,
+      "samples": [
+        0.002141249948181212,
+        0.002144875004887581,
+        0.002126000006683171,
+        0.0021277080522850156,
+        0.0021329999435693026
+      ],
+      "array": "r16",
+      "shape": [
+        8,
+        2,
+        6,
+        81
+      ],
+      "sha256": "3249387fd4ce7d9ac2479754b764795075679b409d9aaf41b0a8ce912fac835a"
+    },
+    {
+      "family": "rf",
+      "batch": 8,
+      "layers": 32,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward_vjp",
+      "seconds": 0.007121708011254668,
+      "samples": [
+        0.0071200840175151825,
+        0.00715508300345391,
+        0.007111625047400594,
+        0.007141208974644542,
+        0.007121708011254668
+      ],
+      "array": "r17",
+      "shape": [
+        8,
+        32,
+        4
+      ],
+      "sha256": "a184c96adc5bc1eda10cc1b1ff0f0de8e1a009895e60ecf479820fc52db21e39"
+    },
+    {
+      "family": "green",
+      "batch": 8,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward",
+      "seconds": 0.008977208053693175,
+      "samples": [
+        0.009427124983631074,
+        0.008960000006482005,
+        0.009321416029706597,
+        0.00867512496188283,
+        0.008977208053693175
+      ],
+      "array": "r18",
+      "shape": [
+        8,
+        2,
+        32,
+        3
+      ],
+      "sha256": "0a8af820b2e54cf29ece0b9c45c90b92945fd53d819b71022c2f78e3d4c66a8c"
+    },
+    {
+      "family": "green",
+      "batch": 8,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward_vjp",
+      "seconds": 0.11184962501283735,
+      "samples": [
+        0.11184962501283735,
+        0.1117881250102073,
+        0.11251841706689447,
+        0.11171670898329467,
+        0.11202154203783721
+      ],
+      "grid_steps": 64,
+      "log2_samples": 5,
+      "array": "r19",
+      "shape": [
+        8,
+        8,
+        6
+      ],
+      "sha256": "d484bc13b8b2712588dfbb7adf737bcf77d52e386be9cb0e8f2f109a153a8744"
+    },
+    {
+      "family": "surface",
+      "batch": 32,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "phase_kernels",
+      "seconds": 0.011614124989137053,
+      "samples": [
+        0.011614124989137053,
+        0.011616959003731608,
+        0.011634250055067241,
+        0.011525625013746321,
+        0.011589333997108042
+      ],
+      "array": "r20",
+      "shape": [
+        32,
+        8,
+        8,
+        4
+      ],
+      "sha256": "59911b24d56f07543ad8ef8be57ee73109d00ea35f32897b9ed228a07aad21aa"
+    },
+    {
+      "family": "surface",
+      "batch": 32,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "group_kernels",
+      "seconds": 0.026714334031566978,
+      "samples": [
+        0.026714334031566978,
+        0.026758500025607646,
+        0.02670225000474602,
+        0.026819749968126416,
+        0.026638749986886978
+      ],
+      "array": "r21",
+      "shape": [
+        32,
+        8,
+        8,
+        4
+      ],
+      "sha256": "0b8ba69caec2af39215c3671862583f76c2065c6ae52c0341ce5d293f4de6e66"
+    },
+    {
+      "family": "rf",
+      "batch": 32,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward",
+      "seconds": 0.0026392919244244695,
+      "samples": [
+        0.0026392919244244695,
+        0.0026801249478012323,
+        0.0026534999487921596,
+        0.0026237500132992864,
+        0.002622624975629151
+      ],
+      "array": "r22",
+      "shape": [
+        32,
+        2,
+        6,
+        81
+      ],
+      "sha256": "a3edfef8ffb156df29f37763c4b32b98fe4ac8e1a28a07cf72f9299c85862778"
+    },
+    {
+      "family": "rf",
+      "batch": 32,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward_vjp",
+      "seconds": 0.008341000066138804,
+      "samples": [
+        0.00844424997922033,
+        0.008111665956676006,
+        0.008235541987232864,
+        0.008341124979779124,
+        0.008341000066138804
+      ],
+      "array": "r23",
+      "shape": [
+        32,
+        8,
+        4
+      ],
+      "sha256": "fd6ffe9e39d3e2baa93ab92150fae0494f2c58fd294c6ff5c60d308c24b98769"
+    },
+    {
+      "family": "surface",
+      "batch": 32,
+      "layers": 32,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "phase_kernels",
+      "seconds": 0.043468291987665,
+      "samples": [
+        0.043418750050477684,
+        0.04356583300977945,
+        0.04348712507635355,
+        0.043468291987665,
+        0.04341024998575449
+      ],
+      "array": "r24",
+      "shape": [
+        32,
+        8,
+        32,
+        4
+      ],
+      "sha256": "19b4e46d822b79b30107feb0c63e3be525d20ae773680a76b9d72070ccc7053a"
+    },
+    {
+      "family": "surface",
+      "batch": 32,
+      "layers": 32,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "group_kernels",
+      "seconds": 0.7288475829409435,
+      "samples": [
+        0.7288475829409435,
+        0.7286083339713514,
+        0.7306837090291083,
+        0.7301026249770075,
+        0.7283530420390889
+      ],
+      "array": "r25",
+      "shape": [
+        32,
+        8,
+        32,
+        4
+      ],
+      "sha256": "98c4b2214728366528d7c718983399f021dfe79f95b0021ffd196dac64be829d"
+    },
+    {
+      "family": "rf",
+      "batch": 32,
+      "layers": 32,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward",
+      "seconds": 0.007978250039741397,
+      "samples": [
+        0.007905834005214274,
+        0.007945333025418222,
+        0.007978250039741397,
+        0.008301292080432177,
+        0.008183415979146957
+      ],
+      "array": "r26",
+      "shape": [
+        32,
+        2,
+        6,
+        81
+      ],
+      "sha256": "541dc3bf3fe2aefcd080e64fe3c5dad479733d2864a834c6923eadd8d13f985d"
+    },
+    {
+      "family": "rf",
+      "batch": 32,
+      "layers": 32,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward_vjp",
+      "seconds": 0.027386417030356824,
+      "samples": [
+        0.027064458001405,
+        0.027417375007644296,
+        0.027386417030356824,
+        0.027234500041231513,
+        0.02742987498641014
+      ],
+      "array": "r27",
+      "shape": [
+        32,
+        32,
+        4
+      ],
+      "sha256": "28c55cad1a1e2800a50db6b5c1c760fb80e8e917267409fd7295c967a42d23f3"
+    },
+    {
+      "family": "green",
+      "batch": 32,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward",
+      "seconds": 0.03508812503423542,
+      "samples": [
+        0.03608616709243506,
+        0.0354251250391826,
+        0.03508812503423542,
+        0.03486779099330306,
+        0.034711417043581605
+      ],
+      "array": "r28",
+      "shape": [
+        32,
+        2,
+        32,
+        3
+      ],
+      "sha256": "874c2bf82f55df2b8850106600921b1ac951190a52f1bdf76343bd17c8c113c2"
+    },
+    {
+      "family": "green",
+      "batch": 32,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward_vjp",
+      "seconds": 0.46204358304385096,
+      "samples": [
+        0.44525987503584474,
+        0.46427562495227903,
+        0.46204358304385096,
+        0.45432241703383625,
+        0.46933033398818225
+      ],
+      "grid_steps": 64,
+      "log2_samples": 5,
+      "array": "r29",
+      "shape": [
+        32,
+        8,
+        6
+      ],
+      "sha256": "f7fd0bdd1ede0c09b62e4c475ee735ced1dd39ee7d956025798d1125f6f4e0dc"
+    }
+  ],
+  "completed": true,
+  "array_archive": "after-apple-final.npz",
+  "array_archive_sha256": "e0779ed9768e01d9e84eb65c6db6ba10a853ea15d427c61878b7ec902a784c53"
+}

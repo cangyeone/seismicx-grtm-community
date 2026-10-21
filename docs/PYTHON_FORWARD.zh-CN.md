@@ -1,12 +1,15 @@
 # Python 正演、批处理与结构微分接口
 
+dev7 的解析伴随、CUDA 反向 AD/FFT 和 Levin 联合波形/JVP 更新见[算法说明](ANALYTIC_METHODS.zh-CN.md)与[设备边界](DEVICE_EXECUTION.zh-CN.md)。下述历史报告中的旧性能不代表 dev7。
+
+
 [English](PYTHON_FORWARD.md) | 简体中文
 
 批量执行方式及 CUDA/CPU 微分边界见[模型批量指南](BATCH_EXECUTION.zh-CN.md)，
 并附 [B1/16/64/256 吞吐报告](BATCH_SCALING_20261021.zh-CN.md)。
 格林函数 `forward_batch` 和 dev5 `ForwardOperator` 批量调用均支持主机工作线程，CUDA 结构积分/收缩与主机边界见[设备指南](DEVICE_EXECUTION.zh-CN.md)。
 
-当前发行名为 `seismicx-grtm`（SeismicX GRTM），导入及命令行用 `grtm`。旧包迁移与安装见 [README](INSTALLATION.zh-CN.md)。
+当前发行名为 `seismicx-grtm`（SeismicX GRTM），导入及命令行用 `grtm`。旧包迁移与安装见 [README](../README.zh-CN.md#pip-安装)。
 
 ## 安装和后端
 
@@ -169,9 +172,7 @@ PTAM 的导数沿基础模型选定的极值/收敛分支传播，切换点不�
 极端长周期的结构梯度尚未通过一致性验证，具体算例和诊断见
 [验证报告](FORWARD_VERIFICATION.zh-CN.md)，不能仅靠启用扩展精度判断可靠性。
 只提供一阶导数。Jacobian 是稠密输出；切线 VJP 逐参数收缩，避免保存完整结构 Jacobian。
-dev5 的 CUDA 结构微分积分/收缩在 GPU，低频 long double 和 PTAM 切线除外。
-CPU/Metal 保留主机结构 AD；矩张量合成和 FFT 仍在主机。CUDA VJP 是解析方向收缩，
-不是反向 tape，详见[设备边界](DEVICE_EXECUTION.zh-CN.md)。
+dev7 CUDA VJP 使用真正反向 AD；CUDA 张量接口可在 GPU 做物理合成和 FFT，低频扩展精度与 PTAM 限制详见[设备边界](DEVICE_EXECUTION.zh-CN.md)。
 
 ## PyTorch
 
@@ -191,10 +192,10 @@ loss.backward()
 `grtm.torch.strike_dip_rake` 保留框架原生角度梯度。
 支持 `[B,L,6]`、共享/逐模型震源，以及复频谱输出。
 输入需要相同实浮点 dtype/device，输出留在输入 device；CPU/CUDA 建议 float64。
-`backend="cuda"` 是显式选择原 CUDA 求解器，张量与原生库之间存在 host 拷贝。
+`backend="cuda"` 显式选择 CUDA 求解器；默认 CUDA 张量路径保留 GPU 频谱/合成/FFT，仅模型规划及受保护频点涉及主机。
 `backend="mps"` 选择混合 Metal 求解器；PyTorch 的 MPS 张量使用 float32，复输出为 complex64。
 张量的 `device="mps"` 与求解器 `backend="mps"` 分别控制张量位置和原生计算引擎，需要分别设置。
-结构 backward 只对 `parameters` 中指定的列求导；dev5 CUDA 使用原生方向收缩，CPU/Metal 使用主机 VJP。
+结构 backward 只对 `parameters` 中指定的列求导；dev7 CUDA 使用原生反向 AD，CPU/Metal 使用主机 VJP。
 0.6 开发版可指定 `vjp_method="adjoint"`。
 本适配器支持普通 autograd 的一阶 backward，不支持高阶梯度、torch.compile 或 torch.func/vmap。
 

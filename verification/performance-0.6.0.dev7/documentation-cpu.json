@@ -1,0 +1,37 @@
+{
+  "version": "0.6.0.dev7",
+  "device": "cpu",
+  "finite": {
+    "waveform": true,
+    "gradient": true,
+    "rf_gradient": true,
+    "levin_jvp": true
+  },
+  "shapes": {
+    "waveform": [
+      1,
+      32,
+      3
+    ],
+    "gradient": [
+      4,
+      6
+    ],
+    "rf_gradient": [
+      3,
+      4
+    ],
+    "levin_jvp": [
+      1,
+      32,
+      3
+    ]
+  },
+  "stats": {},
+  "compiled_modules": {
+    "api": true,
+    "rf_cuda": true,
+    "surface_wave": true,
+    "torch_device": true
+  }
+}

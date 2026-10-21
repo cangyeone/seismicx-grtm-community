@@ -1,5 +1,8 @@
 # GRTM 面波频散与半解析敏感核
 
+dev7 的解析伴随、CUDA 反向 AD/FFT 和 Levin 联合波形/JVP 更新见[算法说明](ANALYTIC_METHODS.zh-CN.md)与[设备边界](DEVICE_EXECUTION.zh-CN.md)。下述历史报告中的旧性能不代表 dev7。
+
+
 > dev5：设备边界和 MPS CPU-FP64 兼容模式见[统一接口指南](DEVICE_EXECUTION.zh-CN.md)；[当前性能测试](PERFORMANCE_0.6.0.dev5.zh-CN.md)。下文已有性能表保留其原版本日期。
 
 [English](SURFACE_WAVES.md) | 简体中文
@@ -151,7 +154,7 @@ print(m.grad)  # [layer, top/Vp/Vs/rho]
 python -m pip install disba==0.7.0 pytest  # 仅验证/测速需要
 python -m pytest tests/test_surface_wave.py -q
 python examples/validate_surface_wave.py --device cuda:0 --output validation.json
-python benchmarks/surface-wave/benchmark_surface_wave.py --device cuda:0 --output benchmark.json
+python examples/benchmark_surface_wave.py --device cuda:0 --output benchmark.json
 ```
 
 测试包括均匀半空间 Rayleigh 解析解、两层 Love 独立频散方程、厚层短周期漏模态案例、相/群速度所有参数的独立重寻根差分审计、密度整体缩放不变性、层厚—周期缩放关系、SI/原生单位一致性、批量模型、顶深梯度、多 GPU/非默认 stream 及 autograd。

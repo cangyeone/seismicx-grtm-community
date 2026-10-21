@@ -1,0 +1,191 @@
+{
+  "version": "0.6.0.dev7",
+  "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.31",
+  "torch": "2.8.0+cu128",
+  "protocol": "Same models, FP64, fixed Green grid; 2 warmups and synchronized wall-time median. Complete forward/forward+VJP calls. CPU thread budget recorded; no numerical result cache.",
+  "records": [
+    {
+      "family": "green",
+      "batch": 1,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward",
+      "seconds": 0.0682356699835509,
+      "samples": [
+        0.0678080830257386,
+        0.0682356699835509,
+        0.07607134594582021
+      ],
+      "array": "r0",
+      "shape": [
+        1,
+        2,
+        128,
+        3
+      ],
+      "sha256": "38865495c83f28c1ce7530b3be5e5a0228ec4b9b31ed97eeea18ddce241b2ebb"
+    },
+    {
+      "family": "green",
+      "batch": 1,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward_vjp",
+      "seconds": 0.6874253889545798,
+      "samples": [
+        0.6874253889545798,
+        0.809604057110846,
+        0.6190709699876606
+      ],
+      "grid_steps": 512,
+      "log2_samples": 7,
+      "array": "r1",
+      "shape": [
+        1,
+        8,
+        6
+      ],
+      "sha256": "8c9fd4541d1426db086f4002d0b77821abce600a9c7f02554671e327259fab52"
+    },
+    {
+      "family": "green",
+      "batch": 1,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward",
+      "seconds": 0.036145636811852455,
+      "samples": [
+        0.03641491197049618,
+        0.036145636811852455,
+        0.03589592804200947
+      ],
+      "array": "r2",
+      "shape": [
+        1,
+        2,
+        128,
+        3
+      ],
+      "sha256": "e82b9caef1916c25f5472c4ae6c647a6fbcd7e0815620732647912a5a69c2f3a"
+    },
+    {
+      "family": "green",
+      "batch": 1,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward_vjp",
+      "seconds": 0.45324959815479815,
+      "samples": [
+        0.5308135990053415,
+        0.4523590730968863,
+        0.45324959815479815
+      ],
+      "grid_steps": 512,
+      "log2_samples": 7,
+      "array": "r3",
+      "shape": [
+        1,
+        8,
+        6
+      ],
+      "sha256": "fe4c62622179e0b417824ebccebd01a62b84d13af41410e76374ff79ff923dbd"
+    },
+    {
+      "family": "green",
+      "batch": 4,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward",
+      "seconds": 0.27382964082062244,
+      "samples": [
+        0.27382964082062244,
+        0.27240429702214897,
+        0.28138143918477
+      ],
+      "array": "r4",
+      "shape": [
+        4,
+        2,
+        128,
+        3
+      ],
+      "sha256": "a3e14c9424c220935f72c83314136a2a3d39603cb15c5b0256e07ecaef8cd054"
+    },
+    {
+      "family": "green",
+      "batch": 4,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward_vjp",
+      "seconds": 2.7606213439721614,
+      "samples": [
+        2.746701435884461,
+        2.7606213439721614,
+        3.288199041970074
+      ],
+      "grid_steps": 512,
+      "log2_samples": 7,
+      "array": "r5",
+      "shape": [
+        4,
+        8,
+        6
+      ],
+      "sha256": "ba77a1c8b247a45b365b46b786e45a039c659c3a7f7271df70fc818259a1ee19"
+    },
+    {
+      "family": "green",
+      "batch": 4,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward",
+      "seconds": 0.1464364759158343,
+      "samples": [
+        0.1464364759158343,
+        0.14702480495907366,
+        0.14495947514660656
+      ],
+      "array": "r6",
+      "shape": [
+        4,
+        2,
+        128,
+        3
+      ],
+      "sha256": "8e90e0887c5a62ce33fc68be31cc8c96474eaee5fc5c51bbfb6754283003ff97"
+    },
+    {
+      "family": "green",
+      "batch": 4,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward_vjp",
+      "seconds": 1.810758613049984,
+      "samples": [
+        1.8098793330136687,
+        1.810758613049984,
+        1.8206129490863532
+      ],
+      "grid_steps": 512,
+      "log2_samples": 7,
+      "array": "r7",
+      "shape": [
+        4,
+        8,
+        6
+      ],
+      "sha256": "9669a9d6d0c1dc30db8fa2fb02f1a1b1f75eff5fb5f713fa47cb2b2a0cc7d2b0"
+    }
+  ],
+  "completed": true,
+  "array_archive": "after-cuda-large.npz",
+  "array_archive_sha256": "540f65d4f5d46f9b8c1fd1b501854f817f8db6141afd9325d17bc6b4e088c482"
+}

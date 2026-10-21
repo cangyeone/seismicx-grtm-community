@@ -1,4 +1,4 @@
-# 计算设备与批量接口 — 0.6.0.dev5
+# 计算设备与批量接口 — 0.6.0.dev7
 
 [English](DEVICE_EXECUTION.md) | 简体中文
 
@@ -8,10 +8,10 @@
 
 | 类型 | CPU | CUDA | Apple / MPS |
 |---|---|---|---|
-| 点源格林函数正演 | 原生 FP64，低频 long double | GPU FP64 积分；主机精度保护、FFT/物理合成 | 现有混合算法：主机 FP64 传播，Metal 补偿 float-pair 接收端积分 |
-| 格林函数结构微分 | 原生切线 / 节点局部反向 AD | 原生解析切线积分和 GPU VJP 收缩；低频主机保护 | CPU 结构 AD |
-| 联合 RF 正演与 VJP | 共享原生 complex128 核，Torch 准备/FFT | 原生 complex128 核及 Torch 准备/FFT 都在 CUDA | 显式 CPU FP64 桥接；实数输出 MPS float32，复频谱留在 CPU complex128 |
-| 面波相/群速度与敏感核 | 原生 FP64 dual/hyper-dual | CUDA 原生 FP64 dual/hyper-dual、搜索和寻根 | 显式 CPU FP64 桥接；输出 MPS float32 |
+| 点源格林函数正演 | 原生 FP64，低频 long double | GPU FP64 积分；Torch CUDA 的 FFT/物理合成在 GPU，低频保护在主机 | 现有混合算法：主机 FP64 传播，Metal 补偿 float-pair 接收端积分 |
+| 格林函数结构微分 | 原生切线 / 节点局部反向 AD | 原生解析切线与真正反向 AD；低频主机保护 | CPU 结构 AD |
+| 联合 RF 正演与 VJP | 共享原生 complex128 准备、传播及材料伴随，Torch FFT | 原生 complex128 准备、传播、材料伴随及 Torch FFT 都在 CUDA | 显式 CPU FP64 桥接；实数输出 MPS float32，复频谱留在 CPU complex128 |
+| 面波相/群速度与敏感核 | 原生 FP64 特征方程伴随及 dual/hyper-dual | CUDA 原生 FP64 特征方程伴随及 dual/hyper-dual、搜索和寻根 | 显式 CPU FP64 桥接；输出 MPS float32 |
 
 MPS 的 RF/面波支持是兼容接口，**不代表原生 GPU 加速**。选用时会警告，并标注
 `backend='mps-cpu-fp64'` 和 CPU 计算设备。MPS 输入的 float32 舍入和输出转换仍然存在；
@@ -20,7 +20,7 @@ MPS 的 RF/面波支持是兼容接口，**不代表原生 GPU 加速**。选用
 
 ## 最简正演和梯度调用
 
-安装 [dev5 二进制预览](PREVIEW_0.6.0.dev5.zh-CN.md)、NumPy 和适配设备的 Torch。
+安装 [dev7 二进制预览](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev7)、NumPy 和适配设备的 Torch。
 RF/面波四列为层顶深度 km、Vp/Vs km/s、密度 g/cm³；Green `Forward` 使用 SI，
 六列还包含 Qp/Qs。
 
@@ -62,31 +62,24 @@ Green 构造器的 `device=0` 是原生 CUDA 卡号，应与张量设备一致�
 
 ## 同设备计算的具体边界
 
-Green CUDA JVP 沿原 GRTM 方程传播链式导数。CUDA VJP 对所选参数方向做解析积分，
-在 GPU 收缩频谱余切，每个方向仅回传一个标量，避免保存完整波形 Jacobian，也避免
-逐参数回传导数频谱。它**不是 CUDA 反向 tape**，计算量仍随所选参数数量增长。
-CPU 的 `vjp_method='adjoint'` 使用节点局部反向 AD；CUDA 的同名选项使用原生方向
-收缩，支持时 `auto` 自动选择该路径。反演应只选需要求导的参数。
+Green CUDA JVP 沿原 GRTM 方程传播解析导数。`vjp_method='adjoint'` 现在使用真正的 CUDA 反向 AD：每个波数/频率建立共享计算图，一次反向计算全部所选结构参数，避免逐参数重跑正演。`auto` 在支持时选择该路径。CPU 保留原生反向 AD。
 
-原准静态判据 `omega < 3e-3 * vmax * nk * dk` 触发的频点保留 CPU long double
-消去误差保护。PTAM JVP 也保留在主机；原生 CUDA VJP 要求 PTAM=0。几何/网格规划、
-结果数组、FFT、物理场和震源合成仍通过主机接口，所以 Green 还不是全流程 GPU 常驻。
-在同一调用线程执行结构微分后，`Solver.backend_stats()` 会报告 CUDA/CPU 频点数和
-所选方向数；工作线程的统计暂不汇总到主线程。极端长周期仍需单独检查梯度收敛性。
+CUDA 张量、解析导数、PTAM=0 时，`grtm.torch.Forward` 默认将频谱、FFT、辐射合成、应变/应力及源梯度保留在 GPU。模型拓扑/固定网格规划仍在主机。`device_pipeline=False` 保留旧的主机合成接口；NumPy/JAX 回调也仍有主机数组边界。PTAM JVP 在主机，原生 CUDA VJP 要求 PTAM=0。
+
+统一的 `|omega| < 5e-3 * vmax * nk * dk` 准静态判据保留主机扩展精度，正演、JVP 与伴随使用相同条件；CUDA 反向仅回传这些受保护频点的余切。阈值由 dev6 的 3e-3 加严，避免低频转换区的导数舍入误差。`Forward.execution_stats()` 从自动微分工作线程捕获最近一个模型的 GPU/CPU 频点数、参数数及 tape 大小；`Solver.backend_stats()` 仍是调用线程的原生统计。固定算例通过验证不等于所有极端长周期模型都已验证。
 
 RF 默认改为原生 CPU 核；`kernel='torch'` 保留独立 CPU/CUDA Torch 对照。
-`threads` 约束原生 CPU 工作线程，Torch 准备阶段另由 `torch.set_num_threads()` 控制。
+准备阶段使用原生解析材料伴随；`threads` 约束原生 CPU 工作线程，Torch FFT 等另由 `torch.set_num_threads()` 控制。
 旧 NumPy `synthetic_rf` 是独立接口。CUDA RF 先在 warp 内归约频率余切再写梯度临时量，
 `gi`/`gbc` 的频率行数约降至 1/32；这不意味着 forward tape 或总显存也下降 32 倍。
 
-面波 CPU 的基础量和敏感核按模型 × 周期并行，寻根仍保留受限的逐模型续接。
+面波默认 `differentiation="adjoint"` 复用左右传播状态；`"forward"` 保留原解析参考。群速度核使用解析混合导数，临界坐标保留原解析路径。CPU 的基础量和敏感核按模型 × 周期并行，寻根仍保留受限的逐模型续接。
 默认根容差保持 1e-10 km/s。CUDA 数值寻根和微分在 GPU，少量输入检查/搜索网格准备
 在主机。生产路径不引入有限差分，也不依赖 disba。
 
 ## 批处理与内存
 
-RF、面波具有原生 CUDA 模型批处理。Green 使用有序主机模型工作线程，现已覆盖
-PyTorch 批量 backward，但没有把模型维度融合成一个 GPU kernel。
+RF、面波具有原生 CUDA 模型批处理。Green CUDA 张量路径顺序派发模型并在 GPU 堆叠结果；旧回调路径使用有序主机模型工作线程。两者均未将模型维度融合成一个 GPU kernel。
 `workers=4, threads=4` 约束原生主机部分为 16 线程预算，共享震源梯度按模型顺序归约。
 `workers=1` 不启动主机线程池。Green CUDA 按主机工作线程复用缓冲区与独立 stream。
 每个工作区的 tile 临时量目标为 512 MiB；已保留的峰值缓冲区、其他入口缓存和输出
@@ -94,3 +87,5 @@ PyTorch 批量 backward，但没有把模型维度融合成一个 GPU kernel。
 
 见[速度与精度报告](PERFORMANCE_0.6.0.dev5.zh-CN.md)，包含原始 disba/pyfk 对照，
 以及[批量计时定义](BATCH_EXECUTION.zh-CN.md)。旧 dev4 报告保留为历史结果。
+
+解析公式、CPU Levin 联合波形/JVP 及验证范围见[算法说明](ANALYTIC_METHODS.zh-CN.md)。

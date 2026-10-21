@@ -1,6 +1,6 @@
 # Binary downloads
 
-Latest research preview: [0.6.0.dev6](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev6), with [installation/device boundaries](../docs/PREVIEW_0.6.0.dev6.md), [checksums](SHA256SUMS-0.6.0.dev6) and [verification](../verification/performance-0.6.0.dev6/verification.json). Stable PyPI remains 0.5.1.
+Latest research preview: [0.6.0.dev7](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev7), with [installation/device boundaries](../docs/PREVIEW_0.6.0.dev7.md), [checksums](SHA256SUMS-0.6.0.dev7) and [verification](../verification/performance-0.6.0.dev7/verification.json). Stable PyPI remains 0.5.1.
 
 The files below are the **same ten wheels published on PyPI**, with identical
 SHA-256 hashes. Select the Python version and operating system matching your
@@ -95,3 +95,13 @@ Optimized GRTM dispersion roots and comprehensive Green/RF/dispersion derivative
 | 3.12 | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev6/seismicx_grtm-0.6.0.dev6-cp312-cp312-macosx_11_0_arm64.whl) | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev6/seismicx_grtm-0.6.0.dev6-cp312-cp312-manylinux_2_28_x86_64.whl) |
 | 3.13 | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev6/seismicx_grtm-0.6.0.dev6-cp313-cp313-macosx_11_0_arm64.whl) | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev6/seismicx_grtm-0.6.0.dev6-cp313-cp313-manylinux_2_28_x86_64.whl) |
 | 3.14 | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev6/seismicx_grtm-0.6.0.dev6-cp314-cp314-macosx_11_0_arm64.whl) | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev6/seismicx_grtm-0.6.0.dev6-cp314-cp314-manylinux_2_28_x86_64.whl) |
+
+## Analytic adjoints preview 0.6.0.dev7
+
+| Python | Apple Silicon: CPU + Metal | Linux/WSL x86_64: CPU + CUDA |
+|---|---|---|
+| 3.10 | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev7/seismicx_grtm-0.6.0.dev7-cp310-cp310-macosx_11_0_arm64.whl) | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev7/seismicx_grtm-0.6.0.dev7-cp310-cp310-manylinux_2_28_x86_64.whl) |
+| 3.11 | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev7/seismicx_grtm-0.6.0.dev7-cp311-cp311-macosx_11_0_arm64.whl) | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev7/seismicx_grtm-0.6.0.dev7-cp311-cp311-manylinux_2_28_x86_64.whl) |
+| 3.12 | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev7/seismicx_grtm-0.6.0.dev7-cp312-cp312-macosx_11_0_arm64.whl) | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev7/seismicx_grtm-0.6.0.dev7-cp312-cp312-manylinux_2_28_x86_64.whl) |
+| 3.13 | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev7/seismicx_grtm-0.6.0.dev7-cp313-cp313-macosx_11_0_arm64.whl) | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev7/seismicx_grtm-0.6.0.dev7-cp313-cp313-manylinux_2_28_x86_64.whl) |
+| 3.14 | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev7/seismicx_grtm-0.6.0.dev7-cp314-cp314-macosx_11_0_arm64.whl) | [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev7/seismicx_grtm-0.6.0.dev7-cp314-cp314-manylinux_2_28_x86_64.whl) |

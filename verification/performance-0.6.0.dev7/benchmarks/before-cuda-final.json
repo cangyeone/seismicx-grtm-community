@@ -1,0 +1,1439 @@
+{
+  "version": "0.6.0.dev6",
+  "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.31",
+  "torch": "2.8.0+cu128",
+  "protocol": "Same models, FP64, fixed Green grid; 2 warmups and synchronized wall-time median. Complete forward/forward+VJP calls. CPU thread budget recorded; no numerical result cache.",
+  "records": [
+    {
+      "family": "surface",
+      "batch": 1,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "phase_kernels",
+      "seconds": 0.0033746189437806606,
+      "samples": [
+        0.0033746189437806606,
+        0.005107712000608444,
+        0.003212546929717064,
+        0.003761416068300605,
+        0.003020026022568345
+      ],
+      "array": "r0",
+      "shape": [
+        1,
+        8,
+        8,
+        4
+      ],
+      "sha256": "05165743040a0dba5b3d032c4b22dca1add50336d1bdfeece2c0382e2bb39742"
+    },
+    {
+      "family": "surface",
+      "batch": 1,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "group_kernels",
+      "seconds": 0.009563561994582415,
+      "samples": [
+        0.009563561994582415,
+        0.01195789291523397,
+        0.008658583974465728,
+        0.00964783993549645,
+        0.008804494049400091
+      ],
+      "array": "r1",
+      "shape": [
+        1,
+        8,
+        8,
+        4
+      ],
+      "sha256": "208df16b5d19880953ec8edc97f1ed2ff9fb3fb23410545a4334db3c4ddf09f8"
+    },
+    {
+      "family": "rf",
+      "batch": 1,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward",
+      "seconds": 0.0015565799549221992,
+      "samples": [
+        0.0016697230748832226,
+        0.0015523519832640886,
+        0.001474306220188737,
+        0.0016205499414354563,
+        0.0015565799549221992
+      ],
+      "array": "r2",
+      "shape": [
+        1,
+        2,
+        6,
+        81
+      ],
+      "sha256": "ac75538012a14eedfac5b06fd92db6c7c5367cdba60645313edf5070edd3c1d3"
+    },
+    {
+      "family": "rf",
+      "batch": 1,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward_vjp",
+      "seconds": 0.0048770790454000235,
+      "samples": [
+        0.004871927900239825,
+        0.0050711731892079115,
+        0.004930309951305389,
+        0.0048770790454000235,
+        0.004779597045853734
+      ],
+      "array": "r3",
+      "shape": [
+        1,
+        8,
+        4
+      ],
+      "sha256": "685886d101bed31c5e20c293a342507fc26d235514cfa76076bd8c4ba429cc54"
+    },
+    {
+      "family": "surface",
+      "batch": 1,
+      "layers": 32,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "phase_kernels",
+      "seconds": 0.023876980878412724,
+      "samples": [
+        0.023876980878412724,
+        0.023596018087118864,
+        0.022867866791784763,
+        0.030290833907201886,
+        0.029283546842634678
+      ],
+      "array": "r4",
+      "shape": [
+        1,
+        8,
+        32,
+        4
+      ],
+      "sha256": "95ba0d4cb79e958ed7df53b7c5721bc1a52cba12225f4b1b05ddf332b9ef2efd"
+    },
+    {
+      "family": "surface",
+      "batch": 1,
+      "layers": 32,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "group_kernels",
+      "seconds": 0.10544016398489475,
+      "samples": [
+        0.10467381007038057,
+        0.1053988910280168,
+        0.10544016398489475,
+        0.1078184510115534,
+        0.16532084019854665
+      ],
+      "array": "r5",
+      "shape": [
+        1,
+        8,
+        32,
+        4
+      ],
+      "sha256": "f7182037dcd0722d60b24979218b4e9e2b4e92a179bd42b07e0a9975394e79b8"
+    },
+    {
+      "family": "rf",
+      "batch": 1,
+      "layers": 32,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward",
+      "seconds": 0.0014885179698467255,
+      "samples": [
+        0.0014885179698467255,
+        0.0018778678495436907,
+        0.001453933073207736,
+        0.0013406698126345873,
+        0.0014914518687874079
+      ],
+      "array": "r6",
+      "shape": [
+        1,
+        2,
+        6,
+        81
+      ],
+      "sha256": "a6c9f6b9e78b371ca6615feaae657beb60171a2575c47736311773639f8708e1"
+    },
+    {
+      "family": "rf",
+      "batch": 1,
+      "layers": 32,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward_vjp",
+      "seconds": 0.006363367894664407,
+      "samples": [
+        0.006384517997503281,
+        0.006317581981420517,
+        0.0060432180762290955,
+        0.006421227008104324,
+        0.006363367894664407
+      ],
+      "array": "r7",
+      "shape": [
+        1,
+        32,
+        4
+      ],
+      "sha256": "4c5dbbeec3757cb2305f6094e42abbfb873a7a154b04d4a59641d0e8690329f8"
+    },
+    {
+      "family": "green",
+      "batch": 1,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward",
+      "seconds": 0.0026357851456850767,
+      "samples": [
+        0.0026010950095951557,
+        0.00274090189486742,
+        0.002620846964418888,
+        0.0026456729974597692,
+        0.0026357851456850767
+      ],
+      "array": "r8",
+      "shape": [
+        1,
+        2,
+        32,
+        3
+      ],
+      "sha256": "41e7c9d5aaa0a5007e1389c53edf2a269a943758032159af3650d4c45df81785"
+    },
+    {
+      "family": "green",
+      "batch": 1,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward_vjp",
+      "seconds": 0.01888436800800264,
+      "samples": [
+        0.018928006989881396,
+        0.019140738993883133,
+        0.018852624110877514,
+        0.01888436800800264,
+        0.01877560093998909
+      ],
+      "grid_steps": 64,
+      "array": "r9",
+      "shape": [
+        1,
+        8,
+        6
+      ],
+      "sha256": "04b56aa6b974146f8fab9081baf82d92a998e99c1fc1fad8cfa4e396974305b1"
+    },
+    {
+      "family": "surface",
+      "batch": 1,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "phase_kernels",
+      "seconds": 0.003180806990712881,
+      "samples": [
+        0.0032564899884164333,
+        0.003136745188385248,
+        0.0031720709521323442,
+        0.0033491230569779873,
+        0.003180806990712881
+      ],
+      "array": "r10",
+      "shape": [
+        1,
+        8,
+        8,
+        4
+      ],
+      "sha256": "2570704aee35acd942b7f4fc42353db3b7e54e70fd018a7f5de14cbd40994c0e"
+    },
+    {
+      "family": "surface",
+      "batch": 1,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "group_kernels",
+      "seconds": 0.0110634109005332,
+      "samples": [
+        0.011109740007668734,
+        0.01106131193228066,
+        0.0110863889567554,
+        0.0110634109005332,
+        0.011056793155148625
+      ],
+      "array": "r11",
+      "shape": [
+        1,
+        8,
+        8,
+        4
+      ],
+      "sha256": "ff2f09e274e2234cbaa197a1845a1d4826d6b465be853a22d9227192fa56fcd9"
+    },
+    {
+      "family": "rf",
+      "batch": 1,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward",
+      "seconds": 0.0018916588742285967,
+      "samples": [
+        0.0018675432074815035,
+        0.0019672310445457697,
+        0.0018916588742285967,
+        0.0018628551624715328,
+        0.0019517620094120502
+      ],
+      "array": "r12",
+      "shape": [
+        1,
+        2,
+        6,
+        81
+      ],
+      "sha256": "e02031844e912818b18415c020d07792fbfc31b3680a2d4cdf8f41925bedf128"
+    },
+    {
+      "family": "rf",
+      "batch": 1,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward_vjp",
+      "seconds": 0.012077518040314317,
+      "samples": [
+        0.012149042915552855,
+        0.012077518040314317,
+        0.012082704110071063,
+        0.011961719952523708,
+        0.012023736955597997
+      ],
+      "array": "r13",
+      "shape": [
+        1,
+        8,
+        4
+      ],
+      "sha256": "959b6513e9fbc200cf5a1d17c38552f7032c7e671616bd84a8341a2e8a6529f5"
+    },
+    {
+      "family": "surface",
+      "batch": 1,
+      "layers": 32,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "phase_kernels",
+      "seconds": 0.011255857069045305,
+      "samples": [
+        0.011255857069045305,
+        0.011248401831835508,
+        0.011276293080300093,
+        0.0112528579775244,
+        0.011264493223279715
+      ],
+      "array": "r14",
+      "shape": [
+        1,
+        8,
+        32,
+        4
+      ],
+      "sha256": "ec8737f05d92966ff050a0084515337c47ff4f1ebfebe15b79019ffe3efeca40"
+    },
+    {
+      "family": "surface",
+      "batch": 1,
+      "layers": 32,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "group_kernels",
+      "seconds": 0.043898832984268665,
+      "samples": [
+        0.04394210292957723,
+        0.04395514796487987,
+        0.043879506178200245,
+        0.043898832984268665,
+        0.04387937602587044
+      ],
+      "array": "r15",
+      "shape": [
+        1,
+        8,
+        32,
+        4
+      ],
+      "sha256": "9be61d34055426360b9606eaf1c5e62850ce7fa8410550f418d708a5b93e22a6"
+    },
+    {
+      "family": "rf",
+      "batch": 1,
+      "layers": 32,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward",
+      "seconds": 0.001944216899573803,
+      "samples": [
+        0.001925092190504074,
+        0.0019935090094804764,
+        0.0020153599325567484,
+        0.001944216899573803,
+        0.0019248099997639656
+      ],
+      "array": "r16",
+      "shape": [
+        1,
+        2,
+        6,
+        81
+      ],
+      "sha256": "fe8f4271419fe86958714292b23bcac5ef0a9015b6b673c074e85f355bf10f38"
+    },
+    {
+      "family": "rf",
+      "batch": 1,
+      "layers": 32,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward_vjp",
+      "seconds": 0.0120933479629457,
+      "samples": [
+        0.012195429997518659,
+        0.012025270145386457,
+        0.0120933479629457,
+        0.012235875939950347,
+        0.012080540182068944
+      ],
+      "array": "r17",
+      "shape": [
+        1,
+        32,
+        4
+      ],
+      "sha256": "00e37646ccdb37fea8e7734d3a4afd25f83dd15ed5e2827f218585b608584fa3"
+    },
+    {
+      "family": "green",
+      "batch": 1,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward",
+      "seconds": 0.0025015620049089193,
+      "samples": [
+        0.002487827790901065,
+        0.002449495019391179,
+        0.0025015620049089193,
+        0.002525166142731905,
+        0.002601268934085965
+      ],
+      "array": "r18",
+      "shape": [
+        1,
+        2,
+        32,
+        3
+      ],
+      "sha256": "12e949b4ff3d2a27e27e3ad35864054a924ff5736d9ddbe87b45e5f667efcf48"
+    },
+    {
+      "family": "green",
+      "batch": 1,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward_vjp",
+      "seconds": 0.1182566040661186,
+      "samples": [
+        0.11852834396995604,
+        0.1182566040661186,
+        0.1185093189124018,
+        0.11790813412517309,
+        0.11809378792531788
+      ],
+      "grid_steps": 64,
+      "array": "r19",
+      "shape": [
+        1,
+        8,
+        6
+      ],
+      "sha256": "b1495d3f4bf8516a7f4a7b664b2bdd1fda243c9ea5c4c1b2d949b4597f493195"
+    },
+    {
+      "family": "surface",
+      "batch": 8,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "phase_kernels",
+      "seconds": 0.013469378929585218,
+      "samples": [
+        0.013815728016197681,
+        0.013469378929585218,
+        0.01213450194336474,
+        0.012714822078123689,
+        0.015222077956423163
+      ],
+      "array": "r20",
+      "shape": [
+        8,
+        8,
+        8,
+        4
+      ],
+      "sha256": "08639033e9348573ed0cf98a0406179005f684341c400622f63a46dd0d6dacce"
+    },
+    {
+      "family": "surface",
+      "batch": 8,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "group_kernels",
+      "seconds": 0.061214438173919916,
+      "samples": [
+        0.061214438173919916,
+        0.08341531315818429,
+        0.05336012318730354,
+        0.05365812708623707,
+        0.08342250995337963
+      ],
+      "array": "r21",
+      "shape": [
+        8,
+        8,
+        8,
+        4
+      ],
+      "sha256": "246c06f4282b86663eab799b5baca1bb1aa9f63b1664ebe4edbb7d214621b2a4"
+    },
+    {
+      "family": "rf",
+      "batch": 8,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward",
+      "seconds": 0.0021069629583507776,
+      "samples": [
+        0.0019684929866343737,
+        0.0018875410314649343,
+        0.002166123129427433,
+        0.002195629058405757,
+        0.0021069629583507776
+      ],
+      "array": "r22",
+      "shape": [
+        8,
+        2,
+        6,
+        81
+      ],
+      "sha256": "926b4674019865e4ae4abd1d6059878d48a4790dac8e36162dd7e8851023bf4b"
+    },
+    {
+      "family": "rf",
+      "batch": 8,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward_vjp",
+      "seconds": 0.008287217002362013,
+      "samples": [
+        0.008444943930953741,
+        0.008166760904714465,
+        0.008287217002362013,
+        0.008751395856961608,
+        0.00803506188094616
+      ],
+      "array": "r23",
+      "shape": [
+        8,
+        8,
+        4
+      ],
+      "sha256": "12cf4628d6b67fbe2170869ab80b40cbbfd5d0043ee00fcbbcd0f45c00273dc9"
+    },
+    {
+      "family": "surface",
+      "batch": 8,
+      "layers": 32,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "phase_kernels",
+      "seconds": 0.13427214487455785,
+      "samples": [
+        0.13506738212890923,
+        0.13422288792207837,
+        0.13410100899636745,
+        0.13427214487455785,
+        0.13517185184173286
+      ],
+      "array": "r24",
+      "shape": [
+        8,
+        8,
+        32,
+        4
+      ],
+      "sha256": "524144efe661fa330730c68d4ee63cbcaedce0819c8178f288b7e21f81849cb7"
+    },
+    {
+      "family": "surface",
+      "batch": 8,
+      "layers": 32,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "group_kernels",
+      "seconds": 0.8075396409258246,
+      "samples": [
+        0.8045282179955393,
+        0.8064602229278535,
+        0.8075396409258246,
+        0.8111266000196338,
+        0.8116617158520967
+      ],
+      "array": "r25",
+      "shape": [
+        8,
+        8,
+        32,
+        4
+      ],
+      "sha256": "6976abb17470026c179d6ca9d4eeed2a100323845f703870d5dbefd021ef54e2"
+    },
+    {
+      "family": "rf",
+      "batch": 8,
+      "layers": 32,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward",
+      "seconds": 0.005471404874697328,
+      "samples": [
+        0.0056175789795815945,
+        0.00486376415938139,
+        0.00597761501558125,
+        0.005471404874697328,
+        0.0052764988504350185
+      ],
+      "array": "r26",
+      "shape": [
+        8,
+        2,
+        6,
+        81
+      ],
+      "sha256": "ec9db034c60a00ca8ec501d16fce910668d148215ba067a84b3a49bd0d2bb940"
+    },
+    {
+      "family": "rf",
+      "batch": 8,
+      "layers": 32,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward_vjp",
+      "seconds": 0.018998256884515285,
+      "samples": [
+        0.020339434035122395,
+        0.01942293904721737,
+        0.01851551397703588,
+        0.018423080909997225,
+        0.018998256884515285
+      ],
+      "array": "r27",
+      "shape": [
+        8,
+        32,
+        4
+      ],
+      "sha256": "228610a99a3ac190c41419162c40c837a3aa969d48a14f83e039e243ad8287f6"
+    },
+    {
+      "family": "green",
+      "batch": 8,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward",
+      "seconds": 0.021722892066463828,
+      "samples": [
+        0.02145013678818941,
+        0.020796163007616997,
+        0.021722892066463828,
+        0.021948236972093582,
+        0.022007653024047613
+      ],
+      "array": "r28",
+      "shape": [
+        8,
+        2,
+        32,
+        3
+      ],
+      "sha256": "a36fb481ef4355a35895586f13ff18ae2b4d2e16cf3e6e698f7c3a95f44b00ec"
+    },
+    {
+      "family": "green",
+      "batch": 8,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward_vjp",
+      "seconds": 0.16192551888525486,
+      "samples": [
+        0.18365832790732384,
+        0.16603282606229186,
+        0.14934613998048007,
+        0.15934006497263908,
+        0.16192551888525486
+      ],
+      "grid_steps": 64,
+      "array": "r29",
+      "shape": [
+        8,
+        8,
+        6
+      ],
+      "sha256": "a2c28c2df28a040ee00f098aa20857542307b57ad8a4e45c7da137cedd41eefc"
+    },
+    {
+      "family": "surface",
+      "batch": 8,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "phase_kernels",
+      "seconds": 0.003584345104172826,
+      "samples": [
+        0.0036507989279925823,
+        0.003584345104172826,
+        0.003687859047204256,
+        0.003557453863322735,
+        0.0035410739947110415
+      ],
+      "array": "r30",
+      "shape": [
+        8,
+        8,
+        8,
+        4
+      ],
+      "sha256": "dd1555deaf418259feb10f085c96fbf117b2a25fab7d2e7864857ae08b26770c"
+    },
+    {
+      "family": "surface",
+      "batch": 8,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "group_kernels",
+      "seconds": 0.01176749705336988,
+      "samples": [
+        0.011799768079072237,
+        0.011953560868278146,
+        0.01176749705336988,
+        0.011578352190554142,
+        0.011361745186150074
+      ],
+      "array": "r31",
+      "shape": [
+        8,
+        8,
+        8,
+        4
+      ],
+      "sha256": "5846a410073390fdfeb74654f98dad7c0f71d1233b01b291dde70ad166cf7371"
+    },
+    {
+      "family": "rf",
+      "batch": 8,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward",
+      "seconds": 0.001953445142135024,
+      "samples": [
+        0.0020253690890967846,
+        0.0018942041788250208,
+        0.0019431451801210642,
+        0.001953445142135024,
+        0.0020402169320732355
+      ],
+      "array": "r32",
+      "shape": [
+        8,
+        2,
+        6,
+        81
+      ],
+      "sha256": "fc7bdf5d3e553e70c6fdca19af27cfa853d5b8cf3ae3c2768761b2d3c410e990"
+    },
+    {
+      "family": "rf",
+      "batch": 8,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward_vjp",
+      "seconds": 0.011821091873571277,
+      "samples": [
+        0.011727408971637487,
+        0.011821091873571277,
+        0.012098497012630105,
+        0.011863624909892678,
+        0.011812844080850482
+      ],
+      "array": "r33",
+      "shape": [
+        8,
+        8,
+        4
+      ],
+      "sha256": "303d2c1d7fd635d100848121f129e897c483bd05273eaf338de908bd37b904d6"
+    },
+    {
+      "family": "surface",
+      "batch": 8,
+      "layers": 32,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "phase_kernels",
+      "seconds": 0.011600367957726121,
+      "samples": [
+        0.011586598120629787,
+        0.011741328053176403,
+        0.011752397986128926,
+        0.011600367957726121,
+        0.011556781828403473
+      ],
+      "array": "r34",
+      "shape": [
+        8,
+        8,
+        32,
+        4
+      ],
+      "sha256": "c489ff1e4b2f9b141c8bff0b2e43322bd9a31023f9ed659c5653cf2dc4a8dc8c"
+    },
+    {
+      "family": "surface",
+      "batch": 8,
+      "layers": 32,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "group_kernels",
+      "seconds": 0.04459536005742848,
+      "samples": [
+        0.04470267100259662,
+        0.04458210407756269,
+        0.04459536005742848,
+        0.04496095492504537,
+        0.0444805440492928
+      ],
+      "array": "r35",
+      "shape": [
+        8,
+        8,
+        32,
+        4
+      ],
+      "sha256": "6dfeb2a04db8c38071d828c277ccdeef1f0e54d9069b35eb5468956412ccb62e"
+    },
+    {
+      "family": "rf",
+      "batch": 8,
+      "layers": 32,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward",
+      "seconds": 0.0018999050371348858,
+      "samples": [
+        0.0019247208256274462,
+        0.0019669400062412024,
+        0.001897068927064538,
+        0.0018926509656012058,
+        0.0018999050371348858
+      ],
+      "array": "r36",
+      "shape": [
+        8,
+        2,
+        6,
+        81
+      ],
+      "sha256": "87caef3f57a092839ac303640ec655bf54a3cd2d84201ea43299b398c50d008e"
+    },
+    {
+      "family": "rf",
+      "batch": 8,
+      "layers": 32,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward_vjp",
+      "seconds": 0.011881730984896421,
+      "samples": [
+        0.011913978029042482,
+        0.012057169107720256,
+        0.011881730984896421,
+        0.011810567928478122,
+        0.011657936032861471
+      ],
+      "array": "r37",
+      "shape": [
+        8,
+        32,
+        4
+      ],
+      "sha256": "a6860d8091975ee9cfb1c0b9f5909b061c4ed3ea6ff4ccdcef40ad7ef9c50cce"
+    },
+    {
+      "family": "green",
+      "batch": 8,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward",
+      "seconds": 0.018722312059253454,
+      "samples": [
+        0.0179780179169029,
+        0.018456541001796722,
+        0.018967404030263424,
+        0.01873748004436493,
+        0.018722312059253454
+      ],
+      "array": "r38",
+      "shape": [
+        8,
+        2,
+        32,
+        3
+      ],
+      "sha256": "49544005250abd7525ce5afac84e79274fb483dbaebdc1ed9e74b706d66b37ec"
+    },
+    {
+      "family": "green",
+      "batch": 8,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward_vjp",
+      "seconds": 0.9397632488980889,
+      "samples": [
+        0.9397632488980889,
+        0.9400460638571531,
+        0.9382812778931111,
+        0.9385634618811309,
+        0.9428663200233132
+      ],
+      "grid_steps": 64,
+      "array": "r39",
+      "shape": [
+        8,
+        8,
+        6
+      ],
+      "sha256": "07022bf0bc8ff014ba5ef76ed46665b7fc805180bd5fc643a391006b9a72738e"
+    },
+    {
+      "family": "surface",
+      "batch": 32,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "phase_kernels",
+      "seconds": 0.04994815215468407,
+      "samples": [
+        0.04994815215468407,
+        0.04863490699790418,
+        0.05130888591520488,
+        0.04941720608621836,
+        0.05061273113824427
+      ],
+      "array": "r40",
+      "shape": [
+        32,
+        8,
+        8,
+        4
+      ],
+      "sha256": "ad2f9806ef314480c069dba914048416df5c03e7bccb75ddc6192e53f6ea0cfd"
+    },
+    {
+      "family": "surface",
+      "batch": 32,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "group_kernels",
+      "seconds": 0.21749762305989861,
+      "samples": [
+        0.21288142283447087,
+        0.21749762305989861,
+        0.30560921877622604,
+        0.21416514599695802,
+        0.3219305039383471
+      ],
+      "array": "r41",
+      "shape": [
+        32,
+        8,
+        8,
+        4
+      ],
+      "sha256": "71ca4f8583f301f4d7ff683d0b3b5dc3a6d5f3505ac99745a404052ff51227b3"
+    },
+    {
+      "family": "rf",
+      "batch": 32,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward",
+      "seconds": 0.006036555161699653,
+      "samples": [
+        0.006036555161699653,
+        0.005166973918676376,
+        0.005740540102124214,
+        0.006135981995612383,
+        0.006105884909629822
+      ],
+      "array": "r42",
+      "shape": [
+        32,
+        2,
+        6,
+        81
+      ],
+      "sha256": "6aa304acc414c45a0eb11a20d79e39638414e2efe47f438060e2e361e7767349"
+    },
+    {
+      "family": "rf",
+      "batch": 32,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward_vjp",
+      "seconds": 0.022362651070579886,
+      "samples": [
+        0.022362651070579886,
+        0.0235370269510895,
+        0.02134516090154648,
+        0.021663571940734982,
+        0.028507697163149714
+      ],
+      "array": "r43",
+      "shape": [
+        32,
+        8,
+        4
+      ],
+      "sha256": "481b29192c8cd7f443a54f7436c6d6d3b3cb41fa24c98e6240d5b1698dd68f86"
+    },
+    {
+      "family": "surface",
+      "batch": 32,
+      "layers": 32,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "phase_kernels",
+      "seconds": 0.5397961589042097,
+      "samples": [
+        0.6481585521250963,
+        0.5358011000789702,
+        0.534240507055074,
+        0.5397961589042097,
+        0.542035591090098
+      ],
+      "array": "r44",
+      "shape": [
+        32,
+        8,
+        32,
+        4
+      ],
+      "sha256": "84cc509e6df41ac399dff9bf6aff1badcb140c2c616766355d72dc4433c4ceee"
+    },
+    {
+      "family": "surface",
+      "batch": 32,
+      "layers": 32,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "group_kernels",
+      "seconds": 3.25786094693467,
+      "samples": [
+        3.697838068008423,
+        3.303023940883577,
+        3.2172998660244048,
+        3.2231822551693767,
+        3.25786094693467
+      ],
+      "array": "r45",
+      "shape": [
+        32,
+        8,
+        32,
+        4
+      ],
+      "sha256": "29996c6c9f9bed0a6375d64b8dc4429827de91a12d86fb34caa54a3f034c3159"
+    },
+    {
+      "family": "rf",
+      "batch": 32,
+      "layers": 32,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward",
+      "seconds": 0.018141714856028557,
+      "samples": [
+        0.020729355048388243,
+        0.018141714856028557,
+        0.017101482953876257,
+        0.01845959690399468,
+        0.017500821966677904
+      ],
+      "array": "r46",
+      "shape": [
+        32,
+        2,
+        6,
+        81
+      ],
+      "sha256": "4f190bdfd5b535af8b5f915dcae860ac6fc1b90187227620679f6f9de1e14f88"
+    },
+    {
+      "family": "rf",
+      "batch": 32,
+      "layers": 32,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward_vjp",
+      "seconds": 0.06009493302553892,
+      "samples": [
+        0.06009493302553892,
+        0.06105601089075208,
+        0.05806289613246918,
+        0.06188173498958349,
+        0.058486961061134934
+      ],
+      "array": "r47",
+      "shape": [
+        32,
+        32,
+        4
+      ],
+      "sha256": "1478a1514dfe8c8d319acc3d2a740ca46fa3bc8058d66ecc665c78af22cea763"
+    },
+    {
+      "family": "green",
+      "batch": 32,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward",
+      "seconds": 0.08682461990974844,
+      "samples": [
+        0.08894362999126315,
+        0.08664710610173643,
+        0.08774837898090482,
+        0.08682461990974844,
+        0.08522587013430893
+      ],
+      "array": "r48",
+      "shape": [
+        32,
+        2,
+        32,
+        3
+      ],
+      "sha256": "b4b2967a8f920044173d20bbe2d6f8bc7442aa19da2c45602a963054c9dcc8d1"
+    },
+    {
+      "family": "green",
+      "batch": 32,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward_vjp",
+      "seconds": 0.6410016540903598,
+      "samples": [
+        0.6406473428942263,
+        0.6410016540903598,
+        0.6293451401870698,
+        0.6447050960268825,
+        0.7176584280095994
+      ],
+      "grid_steps": 64,
+      "array": "r49",
+      "shape": [
+        32,
+        8,
+        6
+      ],
+      "sha256": "2309ef6ce40d5e4db0f4a32192a7f5e84e0ed751cb8d244ba0165cac7292d336"
+    },
+    {
+      "family": "surface",
+      "batch": 32,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "phase_kernels",
+      "seconds": 0.004084079992026091,
+      "samples": [
+        0.003941123839467764,
+        0.0039902550633996725,
+        0.004084079992026091,
+        0.004144072998315096,
+        0.0044367441441863775
+      ],
+      "array": "r50",
+      "shape": [
+        32,
+        8,
+        8,
+        4
+      ],
+      "sha256": "da23160e7167a8d0d49dba606cb8b42e0016b9b49d13ce6fddb9b358708b2a53"
+    },
+    {
+      "family": "surface",
+      "batch": 32,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "group_kernels",
+      "seconds": 0.012286240002140403,
+      "samples": [
+        0.012305052019655704,
+        0.012393428944051266,
+        0.012230725027620792,
+        0.012286240002140403,
+        0.012196338968351483
+      ],
+      "array": "r51",
+      "shape": [
+        32,
+        8,
+        8,
+        4
+      ],
+      "sha256": "69d46ed35250db90f2899e790228c6121942cbd1765b63a79df7ef9741d1369d"
+    },
+    {
+      "family": "rf",
+      "batch": 32,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward",
+      "seconds": 0.0019379460718482733,
+      "samples": [
+        0.0019056249875575304,
+        0.0019667299930006266,
+        0.001911065075546503,
+        0.0019609788432717323,
+        0.0019379460718482733
+      ],
+      "array": "r52",
+      "shape": [
+        32,
+        2,
+        6,
+        81
+      ],
+      "sha256": "4280accb4b3ded9728068c34d22a67bf2106e0d46f740c47d5566e87de4bb823"
+    },
+    {
+      "family": "rf",
+      "batch": 32,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward_vjp",
+      "seconds": 0.011846875073388219,
+      "samples": [
+        0.012100040912628174,
+        0.012370551005005836,
+        0.011707466095685959,
+        0.011768775060772896,
+        0.011846875073388219
+      ],
+      "array": "r53",
+      "shape": [
+        32,
+        8,
+        4
+      ],
+      "sha256": "31f43b5ea0e982fee4c184c52193835edc2c81a21173cea9a850c0790e40cef4"
+    },
+    {
+      "family": "surface",
+      "batch": 32,
+      "layers": 32,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "phase_kernels",
+      "seconds": 0.017723317025229335,
+      "samples": [
+        0.017875083023682237,
+        0.017844876972958446,
+        0.0176144118886441,
+        0.017603756161406636,
+        0.017723317025229335
+      ],
+      "array": "r54",
+      "shape": [
+        32,
+        8,
+        32,
+        4
+      ],
+      "sha256": "ca694519756fef7a65f091cfaf1a5fed45757ab516af6ea04556291a94148917"
+    },
+    {
+      "family": "surface",
+      "batch": 32,
+      "layers": 32,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "group_kernels",
+      "seconds": 0.06990081793628633,
+      "samples": [
+        0.0698803011327982,
+        0.07000152091495693,
+        0.06990668317303061,
+        0.06982428813353181,
+        0.06990081793628633
+      ],
+      "array": "r55",
+      "shape": [
+        32,
+        8,
+        32,
+        4
+      ],
+      "sha256": "855eb025c246ed90fe6d5a5ab19356031ae35aa16d9fe536003d5bebd37311e3"
+    },
+    {
+      "family": "rf",
+      "batch": 32,
+      "layers": 32,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward",
+      "seconds": 0.0018706689588725567,
+      "samples": [
+        0.001844331156462431,
+        0.001880417112261057,
+        0.0018892241641879082,
+        0.0018706689588725567,
+        0.0018234499730169773
+      ],
+      "array": "r56",
+      "shape": [
+        32,
+        2,
+        6,
+        81
+      ],
+      "sha256": "ea2e11c4914332e6eb602a273be6fc5d5d2db0c18afd9bc69199337d605cc2a0"
+    },
+    {
+      "family": "rf",
+      "batch": 32,
+      "layers": 32,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward_vjp",
+      "seconds": 0.011797017185017467,
+      "samples": [
+        0.011837306898087263,
+        0.011797017185017467,
+        0.011740240035578609,
+        0.011583923129364848,
+        0.011797112179920077
+      ],
+      "array": "r57",
+      "shape": [
+        32,
+        32,
+        4
+      ],
+      "sha256": "a249de8828877504c02241f40ed5e2088ebc633d676b0c3795eedb7964ace120"
+    },
+    {
+      "family": "green",
+      "batch": 32,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward",
+      "seconds": 0.0738276019692421,
+      "samples": [
+        0.07418156415224075,
+        0.07392293587327003,
+        0.073445811169222,
+        0.0738276019692421,
+        0.07375840819440782
+      ],
+      "array": "r58",
+      "shape": [
+        32,
+        2,
+        32,
+        3
+      ],
+      "sha256": "c37b6fabdccd1cdfd01835f09485b6b12da0a46f0563bde3db6e34e39e9585aa"
+    },
+    {
+      "family": "green",
+      "batch": 32,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward_vjp",
+      "seconds": 3.7654347599018365,
+      "samples": [
+        3.7685114310588688,
+        3.7654347599018365,
+        3.7635193441528827,
+        3.8152917770203203,
+        3.7633000970818102
+      ],
+      "grid_steps": 64,
+      "array": "r59",
+      "shape": [
+        32,
+        8,
+        6
+      ],
+      "sha256": "19606a803f52916f2ba35b35684a332b78b9c4fa6440867e7d3aed873ad242fb"
+    }
+  ],
+  "completed": true,
+  "array_archive": "before-cuda-final.npz",
+  "array_archive_sha256": "cdb337241dd3f7a6f3e3211484d815d527ae4f88385e28c73bbe7cad15b918b8"
+}

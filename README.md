@@ -12,6 +12,12 @@ data; solver implementation source and development history are not distributed h
 [FK comparison](benchmarks/fk/README.md) ·
 [Report a problem](https://github.com/cangyeone/seismicx-grtm-community/issues)
 
+## Analytic adjoints and CUDA reverse AD preview 0.6.0.dev7
+
+[Compiled wheels](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev7) · [Install](docs/PREVIEW_0.6.0.dev7.md) · [Methods](docs/ANALYTIC_METHODS.md) · [Performance](docs/PERFORMANCE_0.6.0.dev7.md)
+
+Characteristic surface-wave adjoints, native RF material adjoints, Green CUDA reverse AD with GPU synthesis/FFT, and CPU Levin waveform/JVPs. Analytic differentiation and precision guards are retained. Single/batch, CPU/CUDA and old/new comparisons are separate, including workloads that did not improve.
+
 ## Phase/group velocity and quadrature preview 0.6.0.dev6
 
 [Compiled wheels](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev6) · [Install](docs/PREVIEW_0.6.0.dev6.md) · [Dispersion evidence](docs/PERFORMANCE_0.6.0.dev6.md) · [Oscillatory quadrature](docs/QUADRATURE_0.6.0.dev6.md)

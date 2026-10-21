@@ -1,5 +1,8 @@
 # Python forward, batch, and sensitivity API
 
+For dev7 analytic adjoints, CUDA reverse AD/FFT and joint Levin waveform/JVP updates, see [methods](ANALYTIC_METHODS.md) and [device boundaries](DEVICE_EXECUTION.md). Historical timing reports below describe their original versions.
+
+
 English | [简体中文](PYTHON_FORWARD.zh-CN.md)
 
 Updated batch semantics and CUDA/CPU derivative boundaries are in the
@@ -154,7 +157,7 @@ loss.backward()
 
 `grtm.torch.strike_dip_rake()` preserves framework angle gradients. Batched layers, shared/per-model sources, and complex spectra are supported. Inputs need matching real floating dtype/device; output stays on that device. Use float64 on CPU/CUDA when practical.
 
-`backend="cuda"` selects the native CUDA solver and involves host transfers. `backend="mps"` selects the hybrid Metal engine; MPS tensors use float32 and complex outputs use complex64. Tensor `device="mps"` and solver `backend="mps"` control different things and must be set separately. Structural backward computes only selected `parameters`; dev5 CUDA uses native directional contractions, while CPU/Metal use host VJP. Development 0.6 supports `vjp_method="adjoint"`. Ordinary first-order autograd is supported; higher derivatives, `torch.compile`, and `torch.func/vmap` are not.
+`backend="cuda"` selects the native CUDA solver; the default CUDA tensor path keeps spectra/synthesis/FFT on GPU with explicit host model-planning and precision exceptions. `backend="mps"` selects the hybrid Metal engine; MPS tensors use float32 and complex outputs use complex64. Tensor `device="mps"` and solver `backend="mps"` control different things and must be set separately. Structural backward computes only selected `parameters`; dev7 CUDA uses native reverse AD, while CPU/Metal use host VJP. Development 0.6 supports `vjp_method="adjoint"`. Ordinary first-order autograd is supported; higher derivatives, `torch.compile`, and `torch.func/vmap` are not.
 
 ## JAX
 

@@ -1,0 +1,191 @@
+{
+  "version": "0.6.0.dev6",
+  "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.31",
+  "torch": "2.8.0+cu128",
+  "protocol": "Same models, FP64, fixed Green grid; 2 warmups and synchronized wall-time median. Complete forward/forward+VJP calls. CPU thread budget recorded; no numerical result cache.",
+  "records": [
+    {
+      "family": "green",
+      "batch": 1,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward",
+      "seconds": 0.0755066720303148,
+      "samples": [
+        0.0755066720303148,
+        0.07598462793976068,
+        0.06694343592971563
+      ],
+      "array": "r0",
+      "shape": [
+        1,
+        2,
+        128,
+        3
+      ],
+      "sha256": "d5d03a033afb0576eb00e278a9b9cd3fdd8f77aeaae07b153af88f1dc08ebaeb"
+    },
+    {
+      "family": "green",
+      "batch": 1,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward_vjp",
+      "seconds": 0.631075904937461,
+      "samples": [
+        0.6173103540204465,
+        0.6841628400143236,
+        0.631075904937461
+      ],
+      "grid_steps": 512,
+      "log2_samples": 7,
+      "array": "r1",
+      "shape": [
+        1,
+        8,
+        6
+      ],
+      "sha256": "786c01a9f246026a99f5f7e43aef0ae3d3b688d2d729c334437a3b85b5caaecb"
+    },
+    {
+      "family": "green",
+      "batch": 1,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward",
+      "seconds": 0.02050695801153779,
+      "samples": [
+        0.020367465913295746,
+        0.02071545389480889,
+        0.02050695801153779
+      ],
+      "array": "r2",
+      "shape": [
+        1,
+        2,
+        128,
+        3
+      ],
+      "sha256": "4e1771292d3e7668d225eb677ec9c4f5a9e4da9b61b69e3b5d9c0232a6cde43b"
+    },
+    {
+      "family": "green",
+      "batch": 1,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward_vjp",
+      "seconds": 3.7175879441201687,
+      "samples": [
+        3.7185834490228444,
+        3.7175879441201687,
+        3.712601477978751
+      ],
+      "grid_steps": 512,
+      "log2_samples": 7,
+      "array": "r3",
+      "shape": [
+        1,
+        8,
+        6
+      ],
+      "sha256": "56c4c0cae57ed8ebd0e6414c7ed798f32a6d9f2621bc7dadc140ca297c6260be"
+    },
+    {
+      "family": "green",
+      "batch": 4,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward",
+      "seconds": 0.2775008240714669,
+      "samples": [
+        0.28054795507341623,
+        0.2775008240714669,
+        0.2697252510115504
+      ],
+      "array": "r4",
+      "shape": [
+        4,
+        2,
+        128,
+        3
+      ],
+      "sha256": "a9ae2429a2727af8a77bfae1fd225072d984c5590daef0ed99c221f9a309dde2"
+    },
+    {
+      "family": "green",
+      "batch": 4,
+      "layers": 8,
+      "device": "cpu",
+      "threads": 4,
+      "operation": "forward_vjp",
+      "seconds": 2.559848934877664,
+      "samples": [
+        2.497350350022316,
+        2.637233277084306,
+        2.559848934877664
+      ],
+      "grid_steps": 512,
+      "log2_samples": 7,
+      "array": "r5",
+      "shape": [
+        4,
+        8,
+        6
+      ],
+      "sha256": "79052c612d5874b4c65c2b87f8b3f5fc57f743a767f642e9ac66ad16a0a9bf66"
+    },
+    {
+      "family": "green",
+      "batch": 4,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward",
+      "seconds": 0.0796942429151386,
+      "samples": [
+        0.0796942429151386,
+        0.07959936489351094,
+        0.07997465902008116
+      ],
+      "array": "r6",
+      "shape": [
+        4,
+        2,
+        128,
+        3
+      ],
+      "sha256": "caa4061e190decc8947449551fa2b0d271a19e07cbe289c0fbf5ceca6843c6d1"
+    },
+    {
+      "family": "green",
+      "batch": 4,
+      "layers": 8,
+      "device": "cuda:1",
+      "threads": 1,
+      "operation": "forward_vjp",
+      "seconds": 14.89244756102562,
+      "samples": [
+        14.884751586942002,
+        14.895191373070702,
+        14.89244756102562
+      ],
+      "grid_steps": 512,
+      "log2_samples": 7,
+      "array": "r7",
+      "shape": [
+        4,
+        8,
+        6
+      ],
+      "sha256": "170a608f9684ef347c993afa833073738464f82ba932550dea83e7934e87d5d3"
+    }
+  ],
+  "completed": true,
+  "array_archive": "before-cuda-large.npz",
+  "array_archive_sha256": "e8a0ea745b64ad1dc44b8ec486d671e0039d6aab2577240b9485bfca7d3ea90e"
+}

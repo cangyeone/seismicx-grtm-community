@@ -1,0 +1,49 @@
+{
+  "version": "0.6.0.dev7",
+  "device": "cuda:0",
+  "finite": {
+    "waveform": true,
+    "gradient": true,
+    "rf_gradient": true,
+    "levin_jvp": true
+  },
+  "shapes": {
+    "waveform": [
+      1,
+      32,
+      3
+    ],
+    "gradient": [
+      4,
+      6
+    ],
+    "rf_gradient": [
+      3,
+      4
+    ],
+    "levin_jvp": [
+      1,
+      32,
+      3
+    ]
+  },
+  "stats": {
+    "kind": "last_structural_derivative",
+    "cuda_frequencies": 16,
+    "cpu_frequencies": 0,
+    "directions": 0,
+    "parameters": 12,
+    "maximum_tape_nodes": 1804,
+    "method": "FP64 CUDA analytic reverse AD; device tape and ordered VJP reduction; long-double CPU quasistatic exception",
+    "fft_device": "cuda:0",
+    "synthesis_device": "cuda:0",
+    "gradient_device": "cuda:0",
+    "scope": "most recent model backward"
+  },
+  "compiled_modules": {
+    "api": true,
+    "rf_cuda": true,
+    "surface_wave": true,
+    "torch_device": true
+  }
+}

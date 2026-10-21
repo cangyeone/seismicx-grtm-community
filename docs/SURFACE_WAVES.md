@@ -1,5 +1,8 @@
 # GRTM surface waves and semi-analytic sensitivity kernels
 
+For dev7 analytic adjoints, CUDA reverse AD/FFT and joint Levin waveform/JVP updates, see [methods](ANALYTIC_METHODS.md) and [device boundaries](DEVICE_EXECUTION.md). Historical timing reports below describe their original versions.
+
+
 > dev5: see the [device guide](DEVICE_EXECUTION.md) for native CPU/CUDA and explicit MPS CPU-FP64 compatibility, and the [current measurements](PERFORMANCE_0.6.0.dev5.md). Older tables below retain their original version/date.
 
 English | [简体中文](SURFACE_WAVES.zh-CN.md)
@@ -92,7 +95,7 @@ Halve dc to inspect close higher modes and check continuity under model changes.
 python -m pip install disba==0.7.0 pytest  # validation/benchmark only
 python -m pytest tests/test_surface_wave.py -q
 python examples/validate_surface_wave.py --device cuda:0 --output validation.json
-python benchmarks/surface-wave/benchmark_surface_wave.py --device cuda:0 --output benchmark.json
+python examples/benchmark_surface_wave.py --device cuda:0 --output benchmark.json
 ```
 
 Checks cover analytic half-space Rayleigh speed, an independent two-layer Love equation, a thick-layer/short-period missed-mode case, independent re-solved-model FD audits of every phase/group property, density scaling, layer-thickness/period scaling, SI/native units, batches, top-depth derivatives, both GPU devices, non-default streams and autograd.

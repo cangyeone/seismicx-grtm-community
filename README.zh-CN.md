@@ -6,6 +6,12 @@
 程序用于层状介质格林函数计算，支持 CPU、CUDA 和 Apple Metal/MPS。
 仓库中的代码片段是公开接口的使用示例，不包含求解器实现源码或开发历史。
 
+## 解析伴随与 CUDA 反向 AD 预览版 0.6.0.dev7
+
+[Compiled wheels](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev7) · [Install](docs/PREVIEW_0.6.0.dev7.zh-CN.md) · [Methods](docs/ANALYTIC_METHODS.zh-CN.md) · [Performance](docs/PERFORMANCE_0.6.0.dev7.zh-CN.md)
+
+频散特征方程伴随、RF 原生材料伴随、Green CUDA 反向 AD 与 GPU 合成/FFT，以及 CPU Levin 联合波形/JVP。保持解析微分与精度保护。单模型、批量、CPU/CUDA、旧版/新版分开测量；报告同时列出未提速项。
+
 ## 相速度、群速度与振荡积分预览版 0.6.0.dev6
 
 [二进制](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev6) · [安装](docs/PREVIEW_0.6.0.dev6.zh-CN.md) · [频散速度/精度](docs/PERFORMANCE_0.6.0.dev6.zh-CN.md) · [振荡积分](docs/QUADRATURE_0.6.0.dev6.zh-CN.md)
