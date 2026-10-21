@@ -1,0 +1,86 @@
+{
+  "version": "0.6.0.dev4",
+  "device": "cuda:1",
+  "precision": "FP64/complex128",
+  "scope": "RF batch16 versus separate GPU calls; surface batch256 thread selector versus single-model warp selector; Green concurrent versus serial CPU adjoints. Representative models, not a universal bound.",
+  "records": [
+    {
+      "family": "receiver_function",
+      "batch": 16,
+      "model": 0,
+      "forward_relative_error": 0.0,
+      "vjp_relative_error": 1.3460267707572707e-15
+    },
+    {
+      "family": "receiver_function",
+      "batch": 16,
+      "model": 8,
+      "forward_relative_error": 0.0,
+      "vjp_relative_error": 9.57647524859575e-16
+    },
+    {
+      "family": "receiver_function",
+      "batch": 16,
+      "model": 15,
+      "forward_relative_error": 0.0,
+      "vjp_relative_error": 9.8064160926166e-16
+    },
+    {
+      "family": "dispersion",
+      "kind": "phase",
+      "batch": 256,
+      "model": 0,
+      "forward_relative_error": 6.687094323635685e-13,
+      "kernel_relative_error": 2.0788910630968687e-11
+    },
+    {
+      "family": "dispersion",
+      "kind": "phase",
+      "batch": 256,
+      "model": 128,
+      "forward_relative_error": 6.886846889389644e-13,
+      "kernel_relative_error": 4.1502358822709e-11
+    },
+    {
+      "family": "dispersion",
+      "kind": "phase",
+      "batch": 256,
+      "model": 255,
+      "forward_relative_error": 0.0,
+      "kernel_relative_error": 0.0
+    },
+    {
+      "family": "dispersion",
+      "kind": "group",
+      "batch": 256,
+      "model": 0,
+      "forward_relative_error": 1.3350843910806144e-11,
+      "kernel_relative_error": 4.299350936304028e-10
+    },
+    {
+      "family": "dispersion",
+      "kind": "group",
+      "batch": 256,
+      "model": 128,
+      "forward_relative_error": 2.2392003654031415e-11,
+      "kernel_relative_error": 2.936348065119163e-09
+    },
+    {
+      "family": "dispersion",
+      "kind": "group",
+      "batch": 256,
+      "model": 255,
+      "forward_relative_error": 0.0,
+      "kernel_relative_error": 0.0
+    },
+    {
+      "family": "green",
+      "models": 3,
+      "serial_threads": 16,
+      "model_workers": 4,
+      "native_threads_per_worker": 4,
+      "derivative_backend": "cpu",
+      "vjp_relative_error": 4.3089977386026296e-19
+    }
+  ]
+}

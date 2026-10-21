@@ -2,6 +2,10 @@
 
 English | [简体中文](PYTHON_FORWARD.zh-CN.md)
 
+Updated batch semantics and CUDA/CPU derivative boundaries are in the
+[model-batch guide](BATCH_EXECUTION.md), with a [B1/16/64/256 throughput report](BATCH_SCALING_20261021.md).
+Green `forward_batch` uses host workers; batched `ForwardOperator` calls remain sequential.
+
 Distribution: `seismicx-grtm`; import and CLI: `grtm`. See the [installation guide](../README.md#installation) for backend selection and migration from `grtm-green`.
 
 ## Installation and backends

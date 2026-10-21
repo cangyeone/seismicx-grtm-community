@@ -1,5 +1,10 @@
 # Release verification
 
+Latest measurements (2026-10-21): [batch latency/throughput report](../docs/BATCH_SCALING_20261021.md),
+[raw results and representative batch-versus-single checks](batch-scaling-20261021/),
+and [executed English/Chinese batch-guide examples](batch-scaling-20261021/documentation-examples-20261021.json).
+These use the unchanged dev4 binary.
+
 Latest preview: [0.6.0.dev4 binary/device checks](preview-0.6.0.dev4.json),
 [forward and derivative measurements](performance-0.6.0.dev4/), and the
 [CPU/CUDA report](../docs/PERFORMANCE_0.6.0.dev4.md).

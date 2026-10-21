@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-21",
+  "installed_version": "0.6.0.dev4",
+  "release_url": "https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev4",
+  "implementation_base_commit": "f3c4277",
+  "numerical_implementation_changed": false,
+  "report": "docs/BATCH_SCALING_20261021.md",
+  "batch_api_guide": "docs/BATCH_EXECUTION.md",
+  "warmups": 1,
+  "repetitions": 3,
+  "backend_batch_records": 34,
+  "batch_consistency_checks": 10,
+  "executed_guide_examples": 4,
+  "notes": [
+    "CPU and CUDA same model batch; explicitly recorded CPU budgets",
+    "Native RF/surface CUDA batching; Green host pool and CPU adjoint",
+    "New sweep started at sampled GPU utilization 0%; do not mix with older shared-load campaign"
+  ],
+  "public_api_drivers": {
+    "benchmark_batch_scaling.py": "f2ee8e7ac232d8b38d34772549618fd61c619cade8ae3ada425856a508cc2afb",
+    "validate_batch_scaling.py": "1abbd6427ff1db41cc14f74985ad60e49dc557d6db4a98a930006f6cc360a6f6",
+    "benchmark_forward_derivatives.py": "4e509acaa913d1d97624ad66987a0e7c960f6022fb819b8a235f32004988ff62"
+  }
+}

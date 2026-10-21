@@ -149,7 +149,7 @@ print(m.grad)  # [layer, top/Vp/Vs/rho]
 python -m pip install disba==0.7.0 pytest  # 仅验证/测速需要
 python -m pytest tests/test_surface_wave.py -q
 python examples/validate_surface_wave.py --device cuda:0 --output validation.json
-python examples/benchmark_surface_wave.py --device cuda:0 --output benchmark.json
+python benchmarks/surface-wave/benchmark_surface_wave.py --device cuda:0 --output benchmark.json
 ```
 
 测试包括均匀半空间 Rayleigh 解析解、两层 Love 独立频散方程、厚层短周期漏模态案例、相/群速度所有参数的独立重寻根差分审计、密度整体缩放不变性、层厚—周期缩放关系、SI/原生单位一致性、批量模型、顶深梯度、多 GPU/非默认 stream 及 autograd。
@@ -185,6 +185,10 @@ RTX 5090、Threadripper PRO 3955WX，32 层、12 周期、16 模型、Rayleigh �
 纯 CPU 和纯频散 CUDA 补测见[完整速度报告](SURFACE_WAVE_BENCHMARKS.zh-CN.md)，其中同时报告未提速的情况。
 
 ## 0.6.0.dev4 寻根优化
+
+新增 [B1/16/64/256 吞吐扩展测试](BATCH_SCALING_20261021.zh-CN.md)
+和[模型批量调用与计时口径](BATCH_EXECUTION.zh-CN.md)。面波已有原生 CUDA 模型批量；
+吞吐提升、单次延迟与相对 CPU 模型工作线程的加速比分别统计。
 
 最新结果见[三类正演与微分的 CPU/CUDA 测试报告](PERFORMANCE_0.6.0.dev4.zh-CN.md)。
 上方 0.6.0.dev3 数据属于优化前的历史结果。

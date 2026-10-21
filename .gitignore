@@ -4,6 +4,8 @@ __pycache__/
 *.pyc
 *.py
 !benchmarks/forward-derivatives/benchmark_forward_derivatives.py
+!benchmarks/forward-derivatives/benchmark_batch_scaling.py
+!benchmarks/forward-derivatives/validate_batch_scaling.py
 !benchmarks/surface-wave/benchmark_surface_cpu.py
 !benchmarks/surface-wave/benchmark_surface_dispersion.py
 !benchmarks/surface-wave/benchmark_surface_wave.py

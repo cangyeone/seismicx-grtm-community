@@ -1,0 +1,33 @@
+{
+  "version": "0.6.0.dev4",
+  "installed_package": "/home/yuzy/grtm-surface-release-20261020/env/lib/python3.13/site-packages/grtm/__init__.py",
+  "device": "cuda:0",
+  "guide": "BATCH_EXECUTION.md",
+  "paired_language_check": "English/Chinese Python ASTs identical",
+  "records": [
+    {
+      "block": 0,
+      "sha256": "7e68ddf2da2d55e8fd3f728d71d14be370d0e0ee066aef21bb2fc820222ff423",
+      "seconds": 0.933757393155247,
+      "passed": true
+    },
+    {
+      "block": 1,
+      "sha256": "b518e360344420fc6654c30dc0f6e83d73a011a264a7681005f4e6e6675796b8",
+      "seconds": 0.4060165339615196,
+      "passed": true
+    },
+    {
+      "block": 2,
+      "sha256": "f44bfb6191f875ddea553e446be5cb5ae3f0e08dd5903310f44c06c84c6da389",
+      "seconds": 0.2706781718879938,
+      "passed": true
+    },
+    {
+      "block": 3,
+      "sha256": "61ab1d5effceb0f59916e9f748eb5469e7c10b6606689f9f4d36b9d5cf1cd698",
+      "seconds": 0.018275053007528186,
+      "passed": true
+    }
+  ]
+}

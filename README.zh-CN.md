@@ -14,6 +14,10 @@
 明确线程数与实际执行设备：格林函数结构 JVP/VJP 仍在 CPU，接收函数与频散的 CUDA 微分在 GPU。
 提供原始 disba 对照、单模型/批处理、逐次计时和独立精度审计。稳定 PyPI 仍为 0.5.1。
 
+**模型批量（2026-10-21）：**新增[批量扩展报告](docs/BATCH_SCALING_20261021.zh-CN.md)
+和[接口与示例](docs/BATCH_EXECUTION.zh-CN.md)，给出 B=1/16/64/256 的每模型耗时与每秒模型数，
+区分 RF/面波原生 CUDA 批量与格林函数主机调度；格林函数结构微分仍在 CPU。
+
 ## 完整方法预览版 0.6.0.dev3（历史）
 
 [编译包下载](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev3) · [安装与调用](docs/PREVIEW_0.6.0.dev3.zh-CN.md) · [速度报告](docs/SURFACE_WAVE_BENCHMARKS.zh-CN.md)

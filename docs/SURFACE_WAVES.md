@@ -90,7 +90,7 @@ Halve dc to inspect close higher modes and check continuity under model changes.
 python -m pip install disba==0.7.0 pytest  # validation/benchmark only
 python -m pytest tests/test_surface_wave.py -q
 python examples/validate_surface_wave.py --device cuda:0 --output validation.json
-python examples/benchmark_surface_wave.py --device cuda:0 --output benchmark.json
+python benchmarks/surface-wave/benchmark_surface_wave.py --device cuda:0 --output benchmark.json
 ```
 
 Checks cover analytic half-space Rayleigh speed, an independent two-layer Love equation, a thick-layer/short-period missed-mode case, independent re-solved-model FD audits of every phase/group property, density scaling, layer-thickness/period scaling, SI/native units, batches, top-depth derivatives, both GPU devices, non-default streams and autograd.
@@ -127,6 +127,11 @@ See the [0.6.0.dev4 CPU/CUDA timing and accuracy report](PERFORMANCE_0.6.0.dev4.
 The [0.6.0.dev3 measurements](SURFACE_WAVE_BENCHMARKS.md) are historical results before the search optimization.
 
 ## Optimized search (0.6.0.dev4)
+
+See the [B1/16/64/256 scaling sweep](BATCH_SCALING_20261021.md) and
+[model-batch examples and timing definitions](BATCH_EXECUTION.md).
+`SurfaceWave` has native CUDA model batching; its throughput ratios differ
+from both single-call latency and acceleration against CPU model workers.
 
 `search="auto"` derives a five-component real trial operator from the same GRTM eigenmatrix. Safeguarded interpolation is followed by an original complex sign bracket and residual check. The requested root tolerance is unchanged. A Rayleigh variational lower bound skips a root-free range. CPU continuation is restricted to moderate, normally graded profiles and dense periods; LVZs, strong jumps, higher modes and sparse periods retain full discovery. `search="scan"` retains the original complex full-scan reference.
 

@@ -1,5 +1,10 @@
 # Differentiable receiver functions on CPU (0.6.0.dev2 preview)
 
+**Historical dev2 documentation.** The current [dev4 preview](PREVIEW_0.6.0.dev4.md)
+also supports native CUDA forward/VJP. Read the [current batch examples and execution guide](BATCH_EXECUTION.md)
+and [2026-10-21 throughput measurements](BATCH_SCALING_20261021.md). CPU-only restrictions
+below describe dev2, not dev4.
+
 This preview adds the public CPU interfaces `JointRFForward`, `joint_receiver_forward`, `hmc_sample`, `rank_diagnostics`, `dram_sample`, `chain_diagnostics`, `ShallowCrustModel`, and `JointRFProblem`. The previous published wheel did not expose the project's differentiable RF/HMC implementation.
 
 The RF interface uses CPU PyTorch float64/complex128 scattering and FFT operations. Ordinary first-order PyTorch autograd differentiates model depths, velocities, density and finite Q. Production HMC uses first derivatives; the preview does not claim higher-order derivative certification or universal model accuracy. The existing Green-function binaries from 0.6.0.dev1 remain unchanged. The newly added RF modules contain no accelerator execution path and reject devices other than CPU.

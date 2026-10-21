@@ -66,6 +66,10 @@ Download the exact Python/platform wheel; these files are not on stable PyPI.
 
 ## CPU/CUDA search and derivative preview 0.6.0.dev4
 
+The [batch API guide](../docs/BATCH_EXECUTION.md) and
+[2026-10-21 scaling sweep](../docs/BATCH_SCALING_20261021.md) use these same wheels.
+No binary upgrade is needed for the new model-batch examples or benchmarks.
+
 [Install/API](../docs/PREVIEW_0.6.0.dev4.md) · [中文](../docs/PREVIEW_0.6.0.dev4.zh-CN.md) · [CPU/CUDA report](../docs/PERFORMANCE_0.6.0.dev4.md) · [Checksums](SHA256SUMS-0.6.0.dev4)
 
 Optimized GRTM dispersion roots and comprehensive Green/RF/dispersion derivative benchmarks. Stable PyPI remains 0.5.1.

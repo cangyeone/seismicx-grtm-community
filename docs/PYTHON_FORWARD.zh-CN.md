@@ -1,6 +1,10 @@
-# Python forward、批处理和导数接口（0.4）
+# Python 正演、批处理与结构微分接口
 
 [English](PYTHON_FORWARD.md) | 简体中文
+
+批量执行方式及 CUDA/CPU 微分边界见[模型批量指南](BATCH_EXECUTION.zh-CN.md)，
+并附 [B1/16/64/256 吞吐报告](BATCH_SCALING_20261021.zh-CN.md)。
+格林函数 `forward_batch` 使用主机工作线程；`ForwardOperator` 的批量调用目前顺序遍历。
 
 当前发行名为 `seismicx-grtm`（SeismicX GRTM），导入及命令行用 `grtm`。旧包迁移与安装见 [README](INSTALLATION.zh-CN.md)。
 

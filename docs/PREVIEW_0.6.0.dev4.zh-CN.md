@@ -5,6 +5,9 @@
 本版优化 GRTM 面波寻根与群速度解析切线，并统一测试格林函数、接收函数、频散及其结构微分。
 具体速度和精度见[完整测试报告](PERFORMANCE_0.6.0.dev4.zh-CN.md)。稳定 PyPI 仍为 0.5.1。
 
+[批量接口指南](BATCH_EXECUTION.zh-CN.md)与 [2026-10-21 批量扩展测试](BATCH_SCALING_20261021.zh-CN.md)
+补充每模型耗时、每秒模型数及真实执行设备。这些测试使用同一编译包，无需升级版本。
+
 从[二进制发布页](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev4)
 下载与 Python、平台匹配的 wheel，校验发布页中的 SHA-256，再安装实际文件：
 

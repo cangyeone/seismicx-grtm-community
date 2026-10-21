@@ -1,0 +1,590 @@
+{
+  "version": "0.6.0.dev4",
+  "installed_package": "/home/yuzy/grtm-surface-release-20261020/env/lib/python3.13/site-packages/grtm/__init__.py",
+  "started_utc": "2026-10-21T02:21:54.051832+00:00",
+  "host": "DESKTOP-2SV89I8",
+  "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.31",
+  "cpu": "Architecture:                         x86_64\nCPU op-mode(s):                       32-bit, 64-bit\nByte Order:                           Little Endian\nAddress sizes:                        48 bits physical, 48 bits virtual\nCPU(s):                               32\nOn-line CPU(s) list:                  0-31\nThread(s) per core:                   2\nCore(s) per socket:                   16\nSocket(s):                            1\nVendor ID:                            AuthenticAMD\nCPU family:                           23\nModel:                                49\nModel name:                           AMD Ryzen Threadripper PRO 3955WX 16-Cores\nStepping:                             0\nCPU MHz:                              3892.683\nBogoMIPS:                             7785.36\nHypervisor vendor:                    Microsoft\nVirtualization type:                  full\nL1d cache:                            512 KiB\nL1i cache:                            512 KiB\nL2 cache:                             8 MiB\nL3 cache:                             16 MiB\nVulnerability Gather data sampling:   Not affected\nVulnerability Itlb multihit:          Not affected\nVulnerability L1tf:                   Not affected\nVulnerability Mds:                    Not affected\nVulnerability Meltdown:               Not affected\nVulnerability Mmio stale data:        Not affected\nVulnerability Reg file data sampling: Not affected\nVulnerability Retbleed:               Mitigation; untrained return thunk; SMT enabled with STIBP protection\nVulnerability Spec rstack overflow:   Mitigation; safe RET\nVulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl and seccomp\nVulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:             Mitigation; Retpolines; IBPB conditional; STIBP always-on; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected\nVulnerability Srbds:                  Not affected\nVulnerability Tsx async abort:        Not affected\nFlags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr virt_ssbd arat umip rdpid\n",
+  "torch": "2.8.0+cu128",
+  "numpy": "2.4.6",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "gpu_state_start": [
+    "0, NVIDIA GeForce RTX 5090, 576.88, 0 %, 52 MiB, 32607 MiB",
+    "1, NVIDIA GeForce RTX 5090, 576.88, 8 %, 1517 MiB, 32607 MiB"
+  ],
+  "arguments": {
+    "output": "batch-smoke-20261021.json",
+    "device": "cuda:1",
+    "layers": 8,
+    "batches": [
+      1
+    ],
+    "families": [
+      "rf",
+      "surface",
+      "green"
+    ],
+    "rf_threads": [
+      1,
+      4
+    ],
+    "surface_threads": [
+      16
+    ],
+    "green_batches": [
+      1
+    ],
+    "green_gradient_batches": [
+      1
+    ],
+    "green_workers": 4,
+    "green_threads": 16,
+    "repeat": 1
+  },
+  "precision": "FP64/complex128; unchanged root tolerance 1e-10 km/s",
+  "protocol": "Fixed model cohort, prefix batches. One warmup per operation/backend; rotating backends and operation order; synchronized host wall time. Setup excluded. RF/surface use resident model inputs, public checks included. Green includes host I/O/transfer and uses a host model thread pool, not fused CUDA models. CPU budgets are stated. Peak Torch allocation excludes native CUDA malloc. No unrelated jobs stopped.",
+  "records": [
+    {
+      "family": "receiver_function",
+      "kind": null,
+      "layers": 8,
+      "batch": 1,
+      "backend": "cpu1",
+      "cuda_device": null,
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 1,
+      "torch_threads": 1,
+      "cuda_model_fusion": false,
+      "trials_seconds": {
+        "forward": [
+          0.007469443138688803
+        ],
+        "forward_derivative": [
+          0.024943891912698746
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.007469443138688803,
+        "forward_derivative": 0.024943891912698746
+      },
+      "models_per_second": {
+        "forward": 133.87878874402162,
+        "forward_derivative": 40.08997487240183
+      },
+      "milliseconds_per_model": {
+        "forward": 7.469443138688803,
+        "forward_derivative": 24.943891912698746
+      },
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "forward_derivative_relative_cpu_error": 0.0
+      },
+      "gpu_state_before": [
+        "0, NVIDIA GeForce RTX 5090, 576.88, 0 %, 52 MiB, 32607 MiB",
+        "1, NVIDIA GeForce RTX 5090, 576.88, 2 %, 1617 MiB, 32607 MiB"
+      ],
+      "gpu_state_after": [
+        "0, NVIDIA GeForce RTX 5090, 576.88, 0 %, 52 MiB, 32607 MiB",
+        "1, NVIDIA GeForce RTX 5090, 576.88, 2 %, 1749 MiB, 32607 MiB"
+      ],
+      "torch_peak_allocated_bytes_for_whole_case": 22859264,
+      "model_input": "resident tensor",
+      "sampling": {
+        "nfft": 2048,
+        "samples": 81,
+        "gaussians": 6,
+        "rays": 1,
+        "polarization_periods": 41
+      },
+      "derivative_task": "scalar VJP for top/Vp/Vs/rho; fixed RF/apparent-Vs cotangents; first top fixed"
+    },
+    {
+      "family": "receiver_function",
+      "kind": null,
+      "layers": 8,
+      "batch": 1,
+      "backend": "cpu4",
+      "cuda_device": null,
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 4,
+      "torch_threads": 4,
+      "cuda_model_fusion": false,
+      "trials_seconds": {
+        "forward": [
+          0.0064429170452058315
+        ],
+        "forward_derivative": [
+          0.021899743005633354
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.0064429170452058315,
+        "forward_derivative": 0.021899743005633354
+      },
+      "models_per_second": {
+        "forward": 155.20919996076918,
+        "forward_derivative": 45.662636303209865
+      },
+      "milliseconds_per_model": {
+        "forward": 6.4429170452058315,
+        "forward_derivative": 21.899743005633354
+      },
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "forward_derivative_relative_cpu_error": 4.937029059611225e-16
+      },
+      "gpu_state_before": [
+        "0, NVIDIA GeForce RTX 5090, 576.88, 0 %, 52 MiB, 32607 MiB",
+        "1, NVIDIA GeForce RTX 5090, 576.88, 2 %, 1617 MiB, 32607 MiB"
+      ],
+      "gpu_state_after": [
+        "0, NVIDIA GeForce RTX 5090, 576.88, 0 %, 52 MiB, 32607 MiB",
+        "1, NVIDIA GeForce RTX 5090, 576.88, 2 %, 1749 MiB, 32607 MiB"
+      ],
+      "torch_peak_allocated_bytes_for_whole_case": 22859264,
+      "model_input": "resident tensor",
+      "sampling": {
+        "nfft": 2048,
+        "samples": 81,
+        "gaussians": 6,
+        "rays": 1,
+        "polarization_periods": 41
+      },
+      "derivative_task": "scalar VJP for top/Vp/Vs/rho; fixed RF/apparent-Vs cotangents; first top fixed"
+    },
+    {
+      "family": "receiver_function",
+      "kind": null,
+      "layers": 8,
+      "batch": 1,
+      "backend": "cuda",
+      "cuda_device": "cuda:1",
+      "forward_backend": "cuda",
+      "derivative_backend": "cuda",
+      "cpu_threads": 1,
+      "torch_threads": 1,
+      "cuda_model_fusion": true,
+      "trials_seconds": {
+        "forward": [
+          0.0022818988654762506
+        ],
+        "forward_derivative": [
+          0.011524059111252427
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.0022818988654762506,
+        "forward_derivative": 0.011524059111252427
+      },
+      "models_per_second": {
+        "forward": 438.2315163609549,
+        "forward_derivative": 86.77498009564798
+      },
+      "milliseconds_per_model": {
+        "forward": 2.2818988654762506,
+        "forward_derivative": 11.524059111252427
+      },
+      "accuracy": {
+        "forward_relative_cpu_error": 4.937790708429676e-16,
+        "forward_derivative_relative_cpu_error": 1.5959116481117007e-15
+      },
+      "gpu_state_before": [
+        "0, NVIDIA GeForce RTX 5090, 576.88, 0 %, 52 MiB, 32607 MiB",
+        "1, NVIDIA GeForce RTX 5090, 576.88, 2 %, 1617 MiB, 32607 MiB"
+      ],
+      "gpu_state_after": [
+        "0, NVIDIA GeForce RTX 5090, 576.88, 0 %, 52 MiB, 32607 MiB",
+        "1, NVIDIA GeForce RTX 5090, 576.88, 2 %, 1749 MiB, 32607 MiB"
+      ],
+      "torch_peak_allocated_bytes_for_whole_case": 22859264,
+      "model_input": "resident tensor",
+      "sampling": {
+        "nfft": 2048,
+        "samples": 81,
+        "gaussians": 6,
+        "rays": 1,
+        "polarization_periods": 41
+      },
+      "derivative_task": "scalar VJP for top/Vp/Vs/rho; fixed RF/apparent-Vs cotangents; first top fixed"
+    },
+    {
+      "family": "dispersion",
+      "kind": "phase",
+      "layers": 8,
+      "batch": 1,
+      "backend": "cpu16",
+      "cuda_device": null,
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 16,
+      "torch_threads": 1,
+      "cuda_model_fusion": false,
+      "trials_seconds": {
+        "forward": [
+          0.0011821570806205273
+        ],
+        "forward_derivative": [
+          0.001869116211310029
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.0011821570806205273,
+        "forward_derivative": 0.001869116211310029
+      },
+      "models_per_second": {
+        "forward": 845.9112721932765,
+        "forward_derivative": 535.0122126965656
+      },
+      "milliseconds_per_model": {
+        "forward": 1.1821570806205273,
+        "forward_derivative": 1.869116211310029
+      },
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "forward_derivative_relative_cpu_error": 0.0
+      },
+      "gpu_state_before": [
+        "0, NVIDIA GeForce RTX 5090, 576.88, 0 %, 52 MiB, 32607 MiB",
+        "1, NVIDIA GeForce RTX 5090, 576.88, 1 %, 1727 MiB, 32607 MiB"
+      ],
+      "gpu_state_after": [
+        "0, NVIDIA GeForce RTX 5090, 576.88, 0 %, 52 MiB, 32607 MiB",
+        "1, NVIDIA GeForce RTX 5090, 576.88, 14 %, 2795 MiB, 32607 MiB"
+      ],
+      "torch_peak_allocated_bytes_for_whole_case": 17128448,
+      "model_input": "resident model, cached search mesh",
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "root_tolerance_km_s": 1e-10,
+      "derivative_task": "all-layer Vs kernel, including roots",
+      "wave": "rayleigh",
+      "mode": 0
+    },
+    {
+      "family": "dispersion",
+      "kind": "phase",
+      "layers": 8,
+      "batch": 1,
+      "backend": "cuda",
+      "cuda_device": "cuda:1",
+      "forward_backend": "cuda",
+      "derivative_backend": "cuda",
+      "cpu_threads": 1,
+      "torch_threads": 1,
+      "cuda_model_fusion": true,
+      "trials_seconds": {
+        "forward": [
+          0.0017302248161286116
+        ],
+        "forward_derivative": [
+          0.003482593223452568
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.0017302248161286116,
+        "forward_derivative": 0.003482593223452568
+      },
+      "models_per_second": {
+        "forward": 577.959575355939,
+        "forward_derivative": 287.14234934639353
+      },
+      "milliseconds_per_model": {
+        "forward": 1.7302248161286116,
+        "forward_derivative": 3.482593223452568
+      },
+      "accuracy": {
+        "forward_relative_cpu_error": 1.2243702831941437e-16,
+        "forward_derivative_relative_cpu_error": 3.1577429921339085e-13
+      },
+      "gpu_state_before": [
+        "0, NVIDIA GeForce RTX 5090, 576.88, 0 %, 52 MiB, 32607 MiB",
+        "1, NVIDIA GeForce RTX 5090, 576.88, 1 %, 1727 MiB, 32607 MiB"
+      ],
+      "gpu_state_after": [
+        "0, NVIDIA GeForce RTX 5090, 576.88, 0 %, 52 MiB, 32607 MiB",
+        "1, NVIDIA GeForce RTX 5090, 576.88, 14 %, 2795 MiB, 32607 MiB"
+      ],
+      "torch_peak_allocated_bytes_for_whole_case": 17128448,
+      "model_input": "resident model, cached search mesh",
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "root_tolerance_km_s": 1e-10,
+      "derivative_task": "all-layer Vs kernel, including roots",
+      "wave": "rayleigh",
+      "mode": 0
+    },
+    {
+      "family": "dispersion",
+      "kind": "group",
+      "layers": 8,
+      "batch": 1,
+      "backend": "cpu16",
+      "cuda_device": null,
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 16,
+      "torch_threads": 1,
+      "cuda_model_fusion": false,
+      "trials_seconds": {
+        "forward": [
+          0.0006031719967722893
+        ],
+        "forward_derivative": [
+          0.010340407956391573
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.0006031719967722893,
+        "forward_derivative": 0.010340407956391573
+      },
+      "models_per_second": {
+        "forward": 1657.9019008694497,
+        "forward_derivative": 96.70798330368424
+      },
+      "milliseconds_per_model": {
+        "forward": 0.6031719967722893,
+        "forward_derivative": 10.340407956391573
+      },
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "forward_derivative_relative_cpu_error": 0.0
+      },
+      "gpu_state_before": [
+        "0, NVIDIA GeForce RTX 5090, 576.88, 0 %, 52 MiB, 32607 MiB",
+        "1, NVIDIA GeForce RTX 5090, 576.88, 14 %, 2795 MiB, 32607 MiB"
+      ],
+      "gpu_state_after": [
+        "0, NVIDIA GeForce RTX 5090, 576.88, 0 %, 52 MiB, 32607 MiB",
+        "1, NVIDIA GeForce RTX 5090, 576.88, 3 %, 2797 MiB, 32607 MiB"
+      ],
+      "torch_peak_allocated_bytes_for_whole_case": 17128448,
+      "model_input": "resident model, cached search mesh",
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "root_tolerance_km_s": 1e-10,
+      "derivative_task": "all-layer Vs kernel, including roots",
+      "wave": "rayleigh",
+      "mode": 0
+    },
+    {
+      "family": "dispersion",
+      "kind": "group",
+      "layers": 8,
+      "batch": 1,
+      "backend": "cuda",
+      "cuda_device": "cuda:1",
+      "forward_backend": "cuda",
+      "derivative_backend": "cuda",
+      "cpu_threads": 1,
+      "torch_threads": 1,
+      "cuda_model_fusion": true,
+      "trials_seconds": {
+        "forward": [
+          0.0020465690176934004
+        ],
+        "forward_derivative": [
+          0.011283786036074162
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.0020465690176934004,
+        "forward_derivative": 0.011283786036074162
+      },
+      "models_per_second": {
+        "forward": 488.6226613198009,
+        "forward_derivative": 88.62273680154951
+      },
+      "milliseconds_per_model": {
+        "forward": 2.0465690176934004,
+        "forward_derivative": 11.283786036074162
+      },
+      "accuracy": {
+        "forward_relative_cpu_error": 3.7774189222539033e-16,
+        "forward_derivative_relative_cpu_error": 2.083930441280203e-10
+      },
+      "gpu_state_before": [
+        "0, NVIDIA GeForce RTX 5090, 576.88, 0 %, 52 MiB, 32607 MiB",
+        "1, NVIDIA GeForce RTX 5090, 576.88, 14 %, 2795 MiB, 32607 MiB"
+      ],
+      "gpu_state_after": [
+        "0, NVIDIA GeForce RTX 5090, 576.88, 0 %, 52 MiB, 32607 MiB",
+        "1, NVIDIA GeForce RTX 5090, 576.88, 3 %, 2797 MiB, 32607 MiB"
+      ],
+      "torch_peak_allocated_bytes_for_whole_case": 17128448,
+      "model_input": "resident model, cached search mesh",
+      "periods": [
+        2.0,
+        2.679880638205677,
+        3.590880117514833,
+        4.811565050522864,
+        6.447210009181672,
+        8.638876637025906,
+        11.575579117706543,
+        15.51058517677986,
+        20.783258451246166,
+        27.848325961159556,
+        37.315094774876,
+        50.0
+      ],
+      "root_tolerance_km_s": 1e-10,
+      "derivative_task": "all-layer Vs kernel, including roots",
+      "wave": "rayleigh",
+      "mode": 0
+    },
+    {
+      "family": "green",
+      "kind": null,
+      "layers": 8,
+      "batch": 1,
+      "backend": "cpu",
+      "cuda_device": null,
+      "forward_backend": "cpu",
+      "derivative_backend": "cpu",
+      "cpu_threads": 16,
+      "torch_threads": 1,
+      "cuda_model_fusion": false,
+      "trials_seconds": {
+        "forward": [
+          0.00867853220552206
+        ],
+        "forward_derivative": [
+          0.06504217395558953
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.00867853220552206,
+        "forward_derivative": 0.06504217395558953
+      },
+      "models_per_second": {
+        "forward": 115.22685821960889,
+        "forward_derivative": 15.374639855715692
+      },
+      "milliseconds_per_model": {
+        "forward": 8.67853220552206,
+        "forward_derivative": 65.04217395558953
+      },
+      "accuracy": {
+        "forward_relative_cpu_error": 0.0,
+        "forward_derivative_relative_cpu_error": 0.0
+      },
+      "gpu_state_before": [
+        "0, NVIDIA GeForce RTX 5090, 576.88, 0 %, 52 MiB, 32607 MiB",
+        "1, NVIDIA GeForce RTX 5090, 576.88, 3 %, 2797 MiB, 32607 MiB"
+      ],
+      "gpu_state_after": [
+        "0, NVIDIA GeForce RTX 5090, 576.88, 0 %, 52 MiB, 32607 MiB",
+        "1, NVIDIA GeForce RTX 5090, 576.88, 3 %, 2801 MiB, 32607 MiB"
+      ],
+      "torch_peak_allocated_bytes_for_whole_case": 17039360,
+      "host_model_workers": 1,
+      "native_threads_per_worker": 16,
+      "batch_execution": "host thread pool of separate model calls; no fused CUDA model axis",
+      "model_input": "host NumPy, native input/output and transfer included",
+      "derivative_task": "Vp/Vs scalar VJP on CPU, including base forward",
+      "field": "displacement",
+      "samples": 64,
+      "receivers": 4,
+      "fixed_grid": true,
+      "wavenumber_nodes": 10867
+    },
+    {
+      "family": "green",
+      "kind": null,
+      "layers": 8,
+      "batch": 1,
+      "backend": "cuda",
+      "cuda_device": "cuda:1",
+      "forward_backend": "cuda",
+      "derivative_backend": "cpu",
+      "cpu_threads": 16,
+      "torch_threads": 1,
+      "cuda_model_fusion": false,
+      "trials_seconds": {
+        "forward": [
+          0.00843156804330647
+        ],
+        "forward_derivative": [
+          0.07644073897972703
+        ]
+      },
+      "median_seconds": {
+        "forward": 0.00843156804330647,
+        "forward_derivative": 0.07644073897972703
+      },
+      "models_per_second": {
+        "forward": 118.60190119604923,
+        "forward_derivative": 13.082029469458838
+      },
+      "milliseconds_per_model": {
+        "forward": 8.43156804330647,
+        "forward_derivative": 76.44073897972703
+      },
+      "accuracy": {
+        "forward_relative_cpu_error": 7.986083944133537e-13,
+        "forward_derivative_relative_cpu_error": 0.0
+      },
+      "gpu_state_before": [
+        "0, NVIDIA GeForce RTX 5090, 576.88, 0 %, 52 MiB, 32607 MiB",
+        "1, NVIDIA GeForce RTX 5090, 576.88, 3 %, 2797 MiB, 32607 MiB"
+      ],
+      "gpu_state_after": [
+        "0, NVIDIA GeForce RTX 5090, 576.88, 0 %, 52 MiB, 32607 MiB",
+        "1, NVIDIA GeForce RTX 5090, 576.88, 2 %, 2801 MiB, 32607 MiB"
+      ],
+      "torch_peak_allocated_bytes_for_whole_case": 17039360,
+      "host_model_workers": 1,
+      "native_threads_per_worker": 16,
+      "batch_execution": "host thread pool of separate model calls; no fused CUDA model axis",
+      "model_input": "host NumPy, native input/output and transfer included",
+      "derivative_task": "Vp/Vs scalar VJP on CPU, including base forward",
+      "field": "displacement",
+      "samples": 64,
+      "receivers": 4,
+      "fixed_grid": true,
+      "wavenumber_nodes": 10867
+    }
+  ],
+  "gpu_state_end": [
+    "0, NVIDIA GeForce RTX 5090, 576.88, 0 %, 52 MiB, 32607 MiB",
+    "1, NVIDIA GeForce RTX 5090, 576.88, 2 %, 2801 MiB, 32607 MiB"
+  ],
+  "completed_utc": "2026-10-21T02:21:56.947927+00:00"
+}

@@ -1,5 +1,9 @@
 # CPU 可微接收函数预览版 0.6.0.dev2
 
+**以下为 dev2 历史说明。**当前 [dev4 预览版](PREVIEW_0.6.0.dev4.zh-CN.md)已支持原生 CUDA 正演/VJP。
+最新[批量示例与执行指南](BATCH_EXECUTION.zh-CN.md)及 [2026-10-21 吞吐测试](BATCH_SCALING_20261021.zh-CN.md)
+说明现有接口；下文“仅支持 CPU”的限制属于 dev2，不适用于 dev4。
+
 新增公开接口 `JointRFForward`、`joint_receiver_forward`、`hmc_sample`、`dram_sample`、`rank_diagnostics` 及浅部控制点模型/联合反演问题。旧公开版没有提供项目中可微 RF / HMC 接口，此次补入自己的 CPU 实现。
 
 发布二进制轮包：macOS Apple Silicon / Python 3.12、Linux x86_64 / Python 3.13（manylinux_2_28）。请从 [v0.6.0.dev2](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev2) 下载匹配包，并检查 SHA-256；安装 NumPy、SciPy、PyTorch 后通过 pip 安装。Linux 可先从官方 CPU 源安装 PyTorch。

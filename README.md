@@ -23,6 +23,11 @@ Green structural JVP/VJP remain CPU; RF and surface-wave CUDA derivatives run
 on GPU. Results include unchanged disba comparisons, small/batched cases,
 individual repetitions and independent precision audits. Stable PyPI is 0.5.1.
 
+**Model batches (2026-10-21):** [batch-scaling report](docs/BATCH_SCALING_20261021.md)
+and [API/examples](docs/BATCH_EXECUTION.md) add models/s and per-model latency
+for B=1/16/64/256. Native RF/surface CUDA batching and host-scheduled Green
+calls are distinguished; Green structural AD remains CPU.
+
 ## Complete-method preview 0.6.0.dev3 (historical)
 
 [Download compiled wheels](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev3) · [Installation and API](docs/PREVIEW_0.6.0.dev3.md) · [中文](docs/PREVIEW_0.6.0.dev3.zh-CN.md)

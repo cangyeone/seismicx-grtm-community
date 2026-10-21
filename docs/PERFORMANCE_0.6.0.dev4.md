@@ -2,6 +2,11 @@
 
 English | [简体中文](PERFORMANCE_0.6.0.dev4.zh-CN.md)
 
+New: [2026-10-21 batch scaling](BATCH_SCALING_20261021.md) and
+[model-batch API guide](BATCH_EXECUTION.md). The dated measurements below are
+retained; the new sweep uses different sampled hardware load and is not mixed
+into these timing ratios.
+
 The optimized GRTM search preserves the requested precision. Batched dispersion
 is substantially faster than the previous GRTM implementation; CPU threading
 and CUDA have different break-even points. **Green structural differentiation

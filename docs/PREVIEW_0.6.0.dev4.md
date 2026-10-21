@@ -7,6 +7,10 @@ tangents, and measures Green functions, receiver functions and dispersion with
 their structural derivatives. Read the [complete timing and accuracy report](PERFORMANCE_0.6.0.dev4.md).
 Stable PyPI remains 0.5.1.
 
+The [batch API guide](BATCH_EXECUTION.md) and [2026-10-21 scaling sweep](BATCH_SCALING_20261021.md)
+add per-model latency/models-per-second and explain which model batches are
+native CUDA work. They use these same binaries; no version upgrade is required.
+
 Download the matching CPython/platform wheel from the
 [binary release](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev4)
 and install its actual filename:
