@@ -6,6 +6,12 @@
 程序用于层状介质格林函数计算，支持 CPU、CUDA 和 Apple Metal/MPS。
 仓库中的代码片段是公开接口的使用示例，不包含求解器实现源码或开发历史。
 
+## 相速度、群速度与振荡积分预览版 0.6.0.dev6
+
+[二进制](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev6) · [安装](docs/PREVIEW_0.6.0.dev6.zh-CN.md) · [频散速度/精度](docs/PERFORMANCE_0.6.0.dev6.zh-CN.md) · [振荡积分](docs/QUADRATURE_0.6.0.dev6.zh-CN.md)
+
+CUDA 32 层 B=256 相/群速度比 dev5 快 2.49×/2.43×。CPU Levin 比原实现快 3.1–3.2×，支持正演/解析结构 JVP 联合积分和可选自动方法选择；近场仍可选批量 Gauss。自适应积分仍在 CPU，CPU/CUDA 比值与 PTAM 对照的误差范围分别列出。
+
 ## 设备与结构微分预览 0.6.0.dev5
 
 [Compiled wheels](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev5) · [接口 / APIs](docs/DEVICE_EXECUTION.zh-CN.md) · [速度与精度 / Evidence](docs/PERFORMANCE_0.6.0.dev5.zh-CN.md) · [Install](docs/PREVIEW_0.6.0.dev5.zh-CN.md)

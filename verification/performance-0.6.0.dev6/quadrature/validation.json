@@ -1,0 +1,18 @@
+{
+  "installed_source_tests": {
+    "total": 116,
+    "passed": 96,
+    "skipped": 20,
+    "failed": 0,
+    "platform": "Apple M4 Max, CPU source wheel"
+  },
+  "source_sha256": {
+    "python/grtm/quadrature.py": "fee2829512e98e72f027539c6fc802ee9f95cbe33472ed4c1183c6b2e28af278",
+    "tests/test_quadrature.py": "4689dd453810c235bc188c9b166a436e2115f07b554649c470b2f5aa7b74989f",
+    "tests/test_continuous_jvp.py": "b9963891bb4bd5e79b0f0c42a4040ecd118719c2dc99061c6c48c25e16201929",
+    "optimization/quadrature-next-20261021/measure.py": "d4d0cbf56ae44a00fa8322d8b860aa061f5827ac537f612efc92dd3157848f51",
+    "optimization/quadrature-next-20261021/ptam_check.py": "7378429987c2547b5c886c5e2e8145c4f7fba370c3cea82a47585620870b013d",
+    "optimization/quadrature-next-20261021/report.py": "241f46464631ffe077c60b3af8239c43880ebcfae073ce7a081ad2776f02ad27"
+  },
+  "scope": "Source-installed package; final compiled binary wheels are verified separately."
+}

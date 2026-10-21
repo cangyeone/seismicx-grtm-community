@@ -12,6 +12,12 @@ data; solver implementation source and development history are not distributed h
 [FK comparison](benchmarks/fk/README.md) ·
 [Report a problem](https://github.com/cangyeone/seismicx-grtm-community/issues)
 
+## Phase/group velocity and quadrature preview 0.6.0.dev6
+
+[Compiled wheels](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev6) · [Install](docs/PREVIEW_0.6.0.dev6.md) · [Dispersion evidence](docs/PERFORMANCE_0.6.0.dev6.md) · [Oscillatory quadrature](docs/QUADRATURE_0.6.0.dev6.md)
+
+For 32 layers and B=256, CUDA phase/group velocity is 2.49×/2.43× faster than dev5. CPU Levin is 3.1–3.2× faster than its prior implementation, with joint field/analytic structural-JVP integration and optional method selection; near-field work can use batched Gauss. Adaptive quadrature remains CPU-only. CPU/CUDA ratios and PTAM accuracy scopes are reported separately.
+
 ## Device execution and structural derivatives preview 0.6.0.dev5
 
 [Compiled wheels](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev5) · [接口 / APIs](docs/DEVICE_EXECUTION.md) · [速度与精度 / Evidence](docs/PERFORMANCE_0.6.0.dev5.md) · [Install](docs/PREVIEW_0.6.0.dev5.md)
