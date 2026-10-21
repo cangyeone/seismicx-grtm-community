@@ -4,7 +4,7 @@ English | [简体中文](PYTHON_FORWARD.zh-CN.md)
 
 Updated batch semantics and CUDA/CPU derivative boundaries are in the
 [model-batch guide](BATCH_EXECUTION.md), with a [B1/16/64/256 throughput report](BATCH_SCALING_20261021.md).
-Green `forward_batch` uses host workers; batched `ForwardOperator` calls remain sequential.
+Green `forward_batch` and dev5 batched `ForwardOperator` use ordered host workers; see the [device execution guide](DEVICE_EXECUTION.md) for CUDA structural integration and host boundaries.
 
 Distribution: `seismicx-grtm`; import and CLI: `grtm`. See the [installation guide](../README.md#installation) for backend selection and migration from `grtm-green`.
 
@@ -134,7 +134,7 @@ y_minus = op(layers_minus, mt, grid=grid)
 
 Layer count, source/receiver layer membership, and numerical branch topology remain fixed. Integer step counts and PTAM extremum selection are not differentiated. Interface-depth derivatives are rejected where an interface coincides with the source or receiver; differences crossing interfaces are also rejected. PTAM derivatives follow the base extremum/convergence branch and may be nonsmooth at switches.
 
-Extreme long-period structural gradients remain unverified: see [numerical limits](FORWARD_VERIFICATION.md). Extended precision alone does not establish reliability. Only first-order derivatives are supported. Jacobians are dense; the tangent VJP contracts each parameter without retaining the full structural Jacobian. Both tangent and reverse structural derivatives execute on the **CPU**, including CUDA/Metal forward selection; source derivatives use NumPy linear synthesis. These are not GPU-native structural backward kernels.
+Extreme long-period structural gradients remain unverified: see [numerical limits](FORWARD_VERIFICATION.md). Extended precision alone does not establish reliability. Only first-order derivatives are supported. Jacobians are dense; the tangent VJP contracts each parameter without retaining the full structural Jacobian. In dev5, CUDA structural integrals/contractions run on CUDA except low-frequency long-double and PTAM tangent paths. CPU/Metal retain host structural AD; source synthesis and FFT remain on the host. CUDA VJP uses selected analytic directions, not a reverse tape. See [device execution](DEVICE_EXECUTION.md).
 
 ## PyTorch
 
@@ -154,7 +154,7 @@ loss.backward()
 
 `grtm.torch.strike_dip_rake()` preserves framework angle gradients. Batched layers, shared/per-model sources, and complex spectra are supported. Inputs need matching real floating dtype/device; output stays on that device. Use float64 on CPU/CUDA when practical.
 
-`backend="cuda"` selects the native CUDA solver and involves host transfers. `backend="mps"` selects the hybrid Metal engine; MPS tensors use float32 and complex outputs use complex64. Tensor `device="mps"` and solver `backend="mps"` control different things and must be set separately. Structural backward uses the CPU VJP and computes only selected `parameters`; development 0.6 supports `vjp_method="adjoint"`. Ordinary first-order autograd is supported; higher derivatives, `torch.compile`, and `torch.func/vmap` are not.
+`backend="cuda"` selects the native CUDA solver and involves host transfers. `backend="mps"` selects the hybrid Metal engine; MPS tensors use float32 and complex outputs use complex64. Tensor `device="mps"` and solver `backend="mps"` control different things and must be set separately. Structural backward computes only selected `parameters`; dev5 CUDA uses native directional contractions, while CPU/Metal use host VJP. Development 0.6 supports `vjp_method="adjoint"`. Ordinary first-order autograd is supported; higher derivatives, `torch.compile`, and `torch.func/vmap` are not.
 
 ## JAX
 

@@ -2,16 +2,16 @@
 
 English | [简体中文](BATCH_EXECUTION.zh-CN.md)
 
-These interfaces are in the [0.6.0.dev4 compiled preview](PREVIEW_0.6.0.dev4.md).
+Updated for [0.6.0.dev5](PREVIEW_0.6.0.dev5.md). See the [device execution matrix](DEVICE_EXECUTION.md).
 Stable PyPI is 0.5.1. Read the [batch-scaling measurements](BATCH_SCALING_20261021.md)
 for model counts, CPU budgets, latency, models/s and numerical checks.
 
 | Interface | Meaning of a model batch | Structural derivatives |
 |---|---|---|
-| `JointRFForward` | Native CUDA model × ray × frequency work | Native CUDA VJP plus Torch CUDA preparation/FFT; CPU Torch reference available |
-| `SurfaceWave` | Native CUDA model/period/search/parameter tasks | Native CUDA dual/hyper-dual kernels; CPU model workers via `threads` |
-| `Solver.forward_batch` | Host pool schedules separate Green-function calls | Each model retains its own forward allocation and transfer |
-| `ForwardOperator` batched input | Sequential independent model calls | Green JVP/VJP remains CPU, including CUDA-base pipelines |
+| `JointRFForward` | Native CUDA model × ray × frequency work | Native CPU/CUDA VJP plus same-device Torch preparation/FFT; Torch reference available |
+| `SurfaceWave` | Native CUDA model/period/search/parameter tasks | Native CUDA dual/hyper-dual kernels; CPU model/period workers via `threads` |
+| `Solver.forward_batch` | Host pool schedules separate Green-function calls | Host result I/O; CUDA scratch reused per worker |
+| `ForwardOperator` batched input | Ordered host model workers | CUDA analytic integrals/contractions with precision exceptions; CPU/Metal host AD |
 
 The Green solver does parallelize frequencies/wavenumbers/receivers inside one
 model. The additional model batch is not fused into a single CUDA launch.
@@ -67,7 +67,7 @@ gradient = torch.autograd.grad(rf.square().mean(), earth)[0]  # [64,3,4]
 
 Columns are top depth, Vp, Vs, density in native km/km/s/g/cm³; the first top is
 fixed and the final layer is a halfspace. CUDA propagation/backward and Torch
-preparation/FFT remain on GPU. `device='cpu'` selects the CPU Torch reference;
+preparation/FFT remain on GPU. `device='cpu'` selects shared native CPU kernels; `kernel='torch'` selects the reference;
 set its global Torch thread count explicitly when benchmarking. CPU 4 threads
 and CPU 16 model workers in other interfaces are different resource settings.
 The legacy NumPy `synthetic_rf` API is a separate CPU interface.
@@ -92,18 +92,18 @@ out = solver.forward_batch(models, moment_tensor=moment,
                            fields=('displacement',), workers=4, threads=4, device=0)
 print(out['displacement'].shape)  # [16,2,64,3]
 
-# The base forward is CUDA; this structural VJP is CPU.
-op = solver.operator(model, parameters=['vp','vs'], threads=16,
+# CUDA forward and native structural integrals; host precision/FFT boundaries remain.
+op = solver.operator(model, parameters=['vp','vs'], threads=4, workers=4,
                      device=0, vjp_method='adjoint')
 linear = op.linearize(base, moment)
 gradient, _ = linear.vjp(np.ones_like(linear.value), moment_gradient=False)
 ```
 
 Here 4 host model workers × 4 native CPU threads give a 16-thread CPU budget.
-Model I/O and GPU allocations/transfers remain per call. Calling
-`op(earth_batch, moment)` accepts a batch but currently loops models sequentially;
-it does not use `forward_batch`'s worker pool. Structural VJP does not gain a
-CUDA model axis from either interface. See the [forward/derivative guide](PYTHON_FORWARD.md).
+Model I/O and transfers remain per call; native CUDA buffers are reused per host worker.
+`op(earth_batch, moment)` uses the operator's `workers` setting, including PyTorch backward.
+The Green model axis remains host scheduling. CUDA VJP uses analytic directional
+contractions, not a reverse tape; see the [device guide](DEVICE_EXECUTION.md).
 
 ## Measure latency and throughput
 
@@ -144,6 +144,6 @@ count, layers and FFT frequencies; choose batch size from measured throughput
 and memory rather than assuming the largest batch is fastest. Batch size never
 changes the advertised precision or the current CPU/GPU derivative boundary.
 
-The four Python examples above were executed on an installed dev4 wheel and
+The original dev4 form of these examples was executed on an installed dev4 wheel and
 RTX 5090 on 2026-10-21; English/Chinese Python syntax trees match. See the
 [execution record](../verification/batch-scaling-20261021/documentation-examples-20261021.json).

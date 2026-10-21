@@ -4,7 +4,7 @@
 
 批量执行方式及 CUDA/CPU 微分边界见[模型批量指南](BATCH_EXECUTION.zh-CN.md)，
 并附 [B1/16/64/256 吞吐报告](BATCH_SCALING_20261021.zh-CN.md)。
-格林函数 `forward_batch` 使用主机工作线程；`ForwardOperator` 的批量调用目前顺序遍历。
+格林函数 `forward_batch` 和 dev5 `ForwardOperator` 批量调用均支持主机工作线程，CUDA 结构积分/收缩与主机边界见[设备指南](DEVICE_EXECUTION.zh-CN.md)。
 
 当前发行名为 `seismicx-grtm`（SeismicX GRTM），导入及命令行用 `grtm`。旧包迁移与安装见 [README](INSTALLATION.zh-CN.md)。
 
@@ -169,8 +169,9 @@ PTAM 的导数沿基础模型选定的极值/收敛分支传播，切换点不�
 极端长周期的结构梯度尚未通过一致性验证，具体算例和诊断见
 [验证报告](FORWARD_VERIFICATION.zh-CN.md)，不能仅靠启用扩展精度判断可靠性。
 只提供一阶导数。Jacobian 是稠密输出；切线 VJP 逐参数收缩，避免保存完整结构 Jacobian。
-解析结构切线与新版反向梯度都运行在 **CPU**，包括选择 CUDA/Metal 的 forward。
-矩张量导数是 NumPy 线性合成。不得将结构梯度计时称为 GPU 原生反向传播。
+dev5 的 CUDA 结构微分积分/收缩在 GPU，低频 long double 和 PTAM 切线除外。
+CPU/Metal 保留主机结构 AD；矩张量合成和 FFT 仍在主机。CUDA VJP 是解析方向收缩，
+不是反向 tape，详见[设备边界](DEVICE_EXECUTION.zh-CN.md)。
 
 ## PyTorch
 
@@ -193,7 +194,7 @@ loss.backward()
 `backend="cuda"` 是显式选择原 CUDA 求解器，张量与原生库之间存在 host 拷贝。
 `backend="mps"` 选择混合 Metal 求解器；PyTorch 的 MPS 张量使用 float32，复输出为 complex64。
 张量的 `device="mps"` 与求解器 `backend="mps"` 分别控制张量位置和原生计算引擎，需要分别设置。
-结构 backward 使用上述 CPU VJP；只对 `parameters` 中指定的列计算梯度。
+结构 backward 只对 `parameters` 中指定的列求导；dev5 CUDA 使用原生方向收缩，CPU/Metal 使用主机 VJP。
 0.6 开发版可指定 `vjp_method="adjoint"`。
 本适配器支持普通 autograd 的一阶 backward，不支持高阶梯度、torch.compile 或 torch.func/vmap。
 

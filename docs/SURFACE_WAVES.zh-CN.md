@@ -1,5 +1,7 @@
 # GRTM 面波频散与半解析敏感核
 
+> dev5：设备边界和 MPS CPU-FP64 兼容模式见[统一接口指南](DEVICE_EXECUTION.zh-CN.md)；[当前性能测试](PERFORMANCE_0.6.0.dev5.zh-CN.md)。下文已有性能表保留其原版本日期。
+
 [English](SURFACE_WAVES.md) | 简体中文
 
 此接口从本项目的层状介质 GRTM 数学核扩展得到，计算 Rayleigh / Love 波的相速度、群速度和逐层敏感核。CPU 与原生 CUDA 共用 FP64 / complex128 数学实现。**生产计算不调用 disba，不扰动每个模型参数后重新寻根。** disba 只用于独立对照和测速。

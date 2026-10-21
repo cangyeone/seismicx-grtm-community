@@ -1,0 +1,1536 @@
+{
+  "version": "0.6.0.dev5",
+  "python": "3.13.5",
+  "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.31",
+  "device": "cuda:1",
+  "arguments": {
+    "device": "cuda:1",
+    "output": "backends-cuda.json",
+    "families": [
+      "rf",
+      "surface",
+      "green"
+    ],
+    "batches": [
+      1,
+      16,
+      64,
+      256
+    ],
+    "layers": 32,
+    "repeat": 3,
+    "threads": 16,
+    "disba": true,
+    "green_layers": 8,
+    "green_max_batch": 16
+  },
+  "records": [
+    {
+      "family": "rf",
+      "operation": "forward",
+      "layers": 32,
+      "batch": 1,
+      "backend": "cpu",
+      "kernel": "torch",
+      "threads": 4,
+      "nfft": 2048,
+      "error": 0.0,
+      "compute_device": "cpu",
+      "peak_torch_bytes": null,
+      "seconds": 0.025763070909306407,
+      "trials": [
+        0.02700559701770544,
+        0.025763070909306407,
+        0.025712096830829978
+      ],
+      "models_per_second": 38.815248520655565
+    },
+    {
+      "family": "rf",
+      "operation": "forward_vjp",
+      "layers": 32,
+      "batch": 1,
+      "backend": "cpu",
+      "kernel": "torch",
+      "threads": 4,
+      "nfft": 2048,
+      "error": 0.0,
+      "compute_device": "cpu",
+      "peak_torch_bytes": null,
+      "seconds": 0.10084844008088112,
+      "trials": [
+        0.10094789206050336,
+        0.10080257314257324,
+        0.10084844008088112
+      ],
+      "models_per_second": 9.915869786364503
+    },
+    {
+      "family": "rf",
+      "operation": "forward",
+      "layers": 32,
+      "batch": 1,
+      "backend": "cpu",
+      "kernel": "native",
+      "threads": 4,
+      "nfft": 2048,
+      "error": 5.950224267803007e-16,
+      "compute_device": "cpu",
+      "peak_torch_bytes": null,
+      "seconds": 0.0031452709808945656,
+      "trials": [
+        0.0031452709808945656,
+        0.0032447369303554296,
+        0.0031272859778255224
+      ],
+      "models_per_second": 317.93762956334655
+    },
+    {
+      "family": "rf",
+      "operation": "forward_vjp",
+      "layers": 32,
+      "batch": 1,
+      "backend": "cpu",
+      "kernel": "native",
+      "threads": 4,
+      "nfft": 2048,
+      "error": 2.0196594245075633e-15,
+      "compute_device": "cpu",
+      "peak_torch_bytes": null,
+      "seconds": 0.012392346048727632,
+      "trials": [
+        0.013252181932330132,
+        0.011873644078150392,
+        0.012392346048727632
+      ],
+      "models_per_second": 80.69497059458517
+    },
+    {
+      "family": "rf",
+      "operation": "forward",
+      "layers": 32,
+      "batch": 1,
+      "backend": "cuda:1",
+      "kernel": "native",
+      "threads": 1,
+      "nfft": 2048,
+      "error": 4.1716186361416197e-16,
+      "compute_device": "cuda:1",
+      "peak_torch_bytes": 9451520,
+      "seconds": 0.0019345800392329693,
+      "trials": [
+        0.00230389297939837,
+        0.0019082801882177591,
+        0.0019345800392329693
+      ],
+      "models_per_second": 516.9080522491508
+    },
+    {
+      "family": "rf",
+      "operation": "forward_vjp",
+      "layers": 32,
+      "batch": 1,
+      "backend": "cuda:1",
+      "kernel": "native",
+      "threads": 1,
+      "nfft": 2048,
+      "error": 2.740056413143931e-15,
+      "compute_device": "cuda:1",
+      "peak_torch_bytes": 22503936,
+      "seconds": 0.012094581965357065,
+      "trials": [
+        0.01224543689750135,
+        0.012094581965357065,
+        0.011992723913863301
+      ],
+      "models_per_second": 82.68165058241244
+    },
+    {
+      "family": "rf",
+      "operation": "forward",
+      "layers": 32,
+      "batch": 16,
+      "backend": "cpu",
+      "kernel": "torch",
+      "threads": 4,
+      "nfft": 2048,
+      "error": 0.0,
+      "compute_device": "cpu",
+      "peak_torch_bytes": null,
+      "seconds": 0.09219831111840904,
+      "trials": [
+        0.0932199980597943,
+        0.09194390987977386,
+        0.09219831111840904
+      ],
+      "models_per_second": 173.53897057237216
+    },
+    {
+      "family": "rf",
+      "operation": "forward_vjp",
+      "layers": 32,
+      "batch": 16,
+      "backend": "cpu",
+      "kernel": "torch",
+      "threads": 4,
+      "nfft": 2048,
+      "error": 0.0,
+      "compute_device": "cpu",
+      "peak_torch_bytes": null,
+      "seconds": 0.27968776086345315,
+      "trials": [
+        0.2785288521554321,
+        0.27968776086345315,
+        0.28162848693318665
+      ],
+      "models_per_second": 57.206650554192066
+    },
+    {
+      "family": "rf",
+      "operation": "forward",
+      "layers": 32,
+      "batch": 16,
+      "backend": "cpu",
+      "kernel": "native",
+      "threads": 4,
+      "nfft": 2048,
+      "error": 7.465354211104936e-16,
+      "compute_device": "cpu",
+      "peak_torch_bytes": null,
+      "seconds": 0.03668850497342646,
+      "trials": [
+        0.03430721792392433,
+        0.03668850497342646,
+        0.03700435790233314
+      ],
+      "models_per_second": 436.10389716312574
+    },
+    {
+      "family": "rf",
+      "operation": "forward_vjp",
+      "layers": 32,
+      "batch": 16,
+      "backend": "cpu",
+      "kernel": "native",
+      "threads": 4,
+      "nfft": 2048,
+      "error": 2.266637212597693e-15,
+      "compute_device": "cpu",
+      "peak_torch_bytes": null,
+      "seconds": 0.11374308285303414,
+      "trials": [
+        0.09928606799803674,
+        0.11843554000370204,
+        0.11374308285303414
+      ],
+      "models_per_second": 140.66789468572236
+    },
+    {
+      "family": "rf",
+      "operation": "forward",
+      "layers": 32,
+      "batch": 16,
+      "backend": "cuda:1",
+      "kernel": "native",
+      "threads": 1,
+      "nfft": 2048,
+      "error": 8.037304855052754e-16,
+      "compute_device": "cuda:1",
+      "peak_torch_bytes": 30190592,
+      "seconds": 0.0019745249301195145,
+      "trials": [
+        0.0020710809621959925,
+        0.0019709181506186724,
+        0.0019745249301195145
+      ],
+      "models_per_second": 8103.214983986831
+    },
+    {
+      "family": "rf",
+      "operation": "forward_vjp",
+      "layers": 32,
+      "batch": 16,
+      "backend": "cuda:1",
+      "kernel": "native",
+      "threads": 1,
+      "nfft": 2048,
+      "error": 2.773736212350516e-15,
+      "compute_device": "cuda:1",
+      "peak_torch_bytes": 103031808,
+      "seconds": 0.012233514804393053,
+      "trials": [
+        0.012233514804393053,
+        0.012130443938076496,
+        0.012313614832237363
+      ],
+      "models_per_second": 1307.882506036156
+    },
+    {
+      "family": "rf",
+      "operation": "forward",
+      "layers": 32,
+      "batch": 64,
+      "backend": "cpu",
+      "kernel": "torch",
+      "threads": 4,
+      "nfft": 2048,
+      "error": 0.0,
+      "compute_device": "cpu",
+      "peak_torch_bytes": null,
+      "seconds": 0.29726254288107157,
+      "trials": [
+        0.29660165309906006,
+        0.29726254288107157,
+        0.3094084339682013
+      ],
+      "models_per_second": 215.29789585903205
+    },
+    {
+      "family": "rf",
+      "operation": "forward_vjp",
+      "layers": 32,
+      "batch": 64,
+      "backend": "cpu",
+      "kernel": "torch",
+      "threads": 4,
+      "nfft": 2048,
+      "error": 0.0,
+      "compute_device": "cpu",
+      "peak_torch_bytes": null,
+      "seconds": 0.9714846520218998,
+      "trials": [
+        0.8919182340614498,
+        0.9714846520218998,
+        1.0531841579359025
+      ],
+      "models_per_second": 65.87854977101303
+    },
+    {
+      "family": "rf",
+      "operation": "forward",
+      "layers": 32,
+      "batch": 64,
+      "backend": "cpu",
+      "kernel": "native",
+      "threads": 4,
+      "nfft": 2048,
+      "error": 7.225570450188539e-16,
+      "compute_device": "cpu",
+      "peak_torch_bytes": null,
+      "seconds": 0.1483796969987452,
+      "trials": [
+        0.13345017610117793,
+        0.1483796969987452,
+        0.15342952078208327
+      ],
+      "models_per_second": 431.32585720633483
+    },
+    {
+      "family": "rf",
+      "operation": "forward_vjp",
+      "layers": 32,
+      "batch": 64,
+      "backend": "cpu",
+      "kernel": "native",
+      "threads": 4,
+      "nfft": 2048,
+      "error": 2.4726153928274045e-15,
+      "compute_device": "cpu",
+      "peak_torch_bytes": null,
+      "seconds": 0.4367572779301554,
+      "trials": [
+        0.38771044882014394,
+        0.4367572779301554,
+        0.45290855085477233
+      ],
+      "models_per_second": 146.5344786085846
+    },
+    {
+      "family": "rf",
+      "operation": "forward",
+      "layers": 32,
+      "batch": 64,
+      "backend": "cuda:1",
+      "kernel": "native",
+      "threads": 1,
+      "nfft": 2048,
+      "error": 8.683346140700549e-16,
+      "compute_device": "cuda:1",
+      "peak_torch_bytes": 70344704,
+      "seconds": 0.0032533882185816765,
+      "trials": [
+        0.0032533882185816765,
+        0.0031155140604823828,
+        0.003273119917139411
+      ],
+      "models_per_second": 19671.799275126465
+    },
+    {
+      "family": "rf",
+      "operation": "forward_vjp",
+      "layers": 32,
+      "batch": 64,
+      "backend": "cuda:1",
+      "kernel": "native",
+      "threads": 1,
+      "nfft": 2048,
+      "error": 2.8756462679469066e-15,
+      "compute_device": "cuda:1",
+      "peak_torch_bytes": 359716352,
+      "seconds": 0.029757505981251597,
+      "trials": [
+        0.03672173898667097,
+        0.028466761112213135,
+        0.029757505981251597
+      ],
+      "models_per_second": 2150.7178740154677
+    },
+    {
+      "family": "rf",
+      "operation": "forward",
+      "layers": 32,
+      "batch": 256,
+      "backend": "cpu",
+      "kernel": "torch",
+      "threads": 4,
+      "nfft": 2048,
+      "error": 0.0,
+      "compute_device": "cpu",
+      "peak_torch_bytes": null,
+      "seconds": 1.2059447620995343,
+      "trials": [
+        1.1810869630426168,
+        1.2059447620995343,
+        1.2559381739702076
+      ],
+      "models_per_second": 212.28169651345166
+    },
+    {
+      "family": "rf",
+      "operation": "forward_vjp",
+      "layers": 32,
+      "batch": 256,
+      "backend": "cpu",
+      "kernel": "torch",
+      "threads": 4,
+      "nfft": 2048,
+      "error": 0.0,
+      "compute_device": "cpu",
+      "peak_torch_bytes": null,
+      "seconds": 3.5045370110310614,
+      "trials": [
+        3.5180209029931575,
+        3.4865283770486712,
+        3.5045370110310614
+      ],
+      "models_per_second": 73.04816561908213
+    },
+    {
+      "family": "rf",
+      "operation": "forward",
+      "layers": 32,
+      "batch": 256,
+      "backend": "cpu",
+      "kernel": "native",
+      "threads": 4,
+      "nfft": 2048,
+      "error": 7.186183141542458e-16,
+      "compute_device": "cpu",
+      "peak_torch_bytes": null,
+      "seconds": 0.6122801008168608,
+      "trials": [
+        0.6225999111775309,
+        0.5866917059756815,
+        0.6122801008168608
+      ],
+      "models_per_second": 418.1092928848462
+    },
+    {
+      "family": "rf",
+      "operation": "forward_vjp",
+      "layers": 32,
+      "batch": 256,
+      "backend": "cpu",
+      "kernel": "native",
+      "threads": 4,
+      "nfft": 2048,
+      "error": 2.4738985678532414e-15,
+      "compute_device": "cpu",
+      "peak_torch_bytes": null,
+      "seconds": 1.643763482104987,
+      "trials": [
+        1.679248970001936,
+        1.4852939688134938,
+        1.643763482104987
+      ],
+      "models_per_second": 155.74016747967232
+    },
+    {
+      "family": "rf",
+      "operation": "forward",
+      "layers": 32,
+      "batch": 256,
+      "backend": "cuda:1",
+      "kernel": "native",
+      "threads": 1,
+      "nfft": 2048,
+      "error": 8.142116140426774e-16,
+      "compute_device": "cuda:1",
+      "peak_torch_bytes": 225773568,
+      "seconds": 0.01681682001799345,
+      "trials": [
+        0.01681682001799345,
+        0.018155992962419987,
+        0.016297930851578712
+      ],
+      "models_per_second": 15222.854245100341
+    },
+    {
+      "family": "rf",
+      "operation": "forward_vjp",
+      "layers": 32,
+      "batch": 256,
+      "backend": "cuda:1",
+      "kernel": "native",
+      "threads": 1,
+      "nfft": 2048,
+      "error": 2.7906065561280794e-15,
+      "compute_device": "cuda:1",
+      "peak_torch_bytes": 1383934976,
+      "seconds": 0.04601253708824515,
+      "trials": [
+        0.04601253708824515,
+        0.04623016412369907,
+        0.034376661060377955
+      ],
+      "models_per_second": 5563.70103020032
+    },
+    {
+      "family": "surface",
+      "operation": "phase_forward",
+      "layers": 32,
+      "batch": 1,
+      "backend": "cpu",
+      "threads": 16,
+      "error": 0.0,
+      "compute_device": "cpu",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.003789809998124838,
+      "trials": [
+        0.004100433085113764,
+        0.003789809998124838,
+        0.0032977070659399033
+      ],
+      "models_per_second": 263.86547095891103
+    },
+    {
+      "family": "surface",
+      "operation": "phase_forward_vs_kernel",
+      "layers": 32,
+      "batch": 1,
+      "backend": "cpu",
+      "threads": 16,
+      "error": 0.0,
+      "compute_device": "cpu",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.008985253050923347,
+      "trials": [
+        0.02166468999348581,
+        0.008985253050923347,
+        0.00728814210742712
+      ],
+      "models_per_second": 111.29347101662735
+    },
+    {
+      "family": "surface",
+      "operation": "group_forward",
+      "layers": 32,
+      "batch": 1,
+      "backend": "cpu",
+      "threads": 16,
+      "error": 0.0,
+      "compute_device": "cpu",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.0038835559971630573,
+      "trials": [
+        0.002739810151979327,
+        0.0038835559971630573,
+        0.003981007961556315
+      ],
+      "models_per_second": 257.49596522632896
+    },
+    {
+      "family": "surface",
+      "operation": "group_forward_vs_kernel",
+      "layers": 32,
+      "batch": 1,
+      "backend": "cpu",
+      "threads": 16,
+      "error": 0.0,
+      "compute_device": "cpu",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.028896127128973603,
+      "trials": [
+        0.028772915014997125,
+        0.028896127128973603,
+        0.029664256144315004
+      ],
+      "models_per_second": 34.6067137487542
+    },
+    {
+      "family": "surface",
+      "operation": "phase_forward",
+      "layers": 32,
+      "batch": 1,
+      "backend": "cuda:1",
+      "threads": 1,
+      "error": 5.193795887215011e-13,
+      "compute_device": "cuda:1",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.01175814401358366,
+      "trials": [
+        0.011865659849718213,
+        0.01175814401358366,
+        0.011611704947426915
+      ],
+      "models_per_second": 85.04743595968417
+    },
+    {
+      "family": "surface",
+      "operation": "phase_forward_vs_kernel",
+      "layers": 32,
+      "batch": 1,
+      "backend": "cuda:1",
+      "threads": 1,
+      "error": 8.840081359393198e-12,
+      "compute_device": "cuda:1",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.01895509590394795,
+      "trials": [
+        0.01914264797233045,
+        0.01889556902460754,
+        0.01895509590394795
+      ],
+      "models_per_second": 52.75626169697833
+    },
+    {
+      "family": "surface",
+      "operation": "group_forward",
+      "layers": 32,
+      "batch": 1,
+      "backend": "cuda:1",
+      "threads": 1,
+      "error": 1.5456891523871148e-12,
+      "compute_device": "cuda:1",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.013337488984689116,
+      "trials": [
+        0.01333616697229445,
+        0.013337488984689116,
+        0.013370675034821033
+      ],
+      "models_per_second": 74.97663174439795
+    },
+    {
+      "family": "surface",
+      "operation": "group_forward_vs_kernel",
+      "layers": 32,
+      "batch": 1,
+      "backend": "cuda:1",
+      "threads": 1,
+      "error": 2.0336465268082392e-11,
+      "compute_device": "cuda:1",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.051974439062178135,
+      "trials": [
+        0.05173114687204361,
+        0.05205558496527374,
+        0.051974439062178135
+      ],
+      "models_per_second": 19.240226889292227
+    },
+    {
+      "family": "surface",
+      "operation": "phase_forward",
+      "layers": 32,
+      "batch": 1,
+      "backend": "disba-cpu",
+      "threads": 1,
+      "version": "0.7.0",
+      "error_vs_grtm": 4.0486087815199365e-07,
+      "algorithm": "unchanged default Dunkin; dc=.005, group dt=.025, kernel dp=.025",
+      "seconds": 0.0014966567978262901,
+      "trials": [
+        0.0014824001118540764,
+        0.0015088000800460577,
+        0.0014966567978262901
+      ],
+      "models_per_second": 668.1558534009781
+    },
+    {
+      "family": "surface",
+      "operation": "phase_forward_vs_kernel",
+      "layers": 32,
+      "batch": 1,
+      "backend": "disba-cpu",
+      "threads": 1,
+      "version": "0.7.0",
+      "error_vs_grtm": 0.0190661542473473,
+      "algorithm": "unchanged default Dunkin; dc=.005, group dt=.025, kernel dp=.025",
+      "seconds": 0.22788050188682973,
+      "trials": [
+        0.22788050188682973,
+        0.22735495609231293,
+        0.22993353591300547
+      ],
+      "models_per_second": 4.388264865664642
+    },
+    {
+      "family": "surface",
+      "operation": "group_forward",
+      "layers": 32,
+      "batch": 1,
+      "backend": "disba-cpu",
+      "threads": 1,
+      "version": "0.7.0",
+      "error_vs_grtm": 6.468967414007424e-05,
+      "algorithm": "unchanged default Dunkin; dc=.005, group dt=.025, kernel dp=.025",
+      "seconds": 0.0029493130277842283,
+      "trials": [
+        0.0029493130277842283,
+        0.0029459469951689243,
+        0.0029539321549236774
+      ],
+      "models_per_second": 339.0620088744137
+    },
+    {
+      "family": "surface",
+      "operation": "group_forward_vs_kernel",
+      "layers": 32,
+      "batch": 1,
+      "backend": "disba-cpu",
+      "threads": 1,
+      "version": "0.7.0",
+      "error_vs_grtm": 0.022005017997962315,
+      "algorithm": "unchanged default Dunkin; dc=.005, group dt=.025, kernel dp=.025",
+      "seconds": 0.4571749269962311,
+      "trials": [
+        0.458196695195511,
+        0.4571749269962311,
+        0.4550404518377036
+      ],
+      "models_per_second": 2.1873465515055335
+    },
+    {
+      "family": "surface",
+      "operation": "phase_forward",
+      "layers": 32,
+      "batch": 16,
+      "backend": "cpu",
+      "threads": 16,
+      "error": 0.0,
+      "compute_device": "cpu",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.004535499028861523,
+      "trials": [
+        0.004874093923717737,
+        0.004535499028861523,
+        0.004109760979190469
+      ],
+      "models_per_second": 3527.726474679951
+    },
+    {
+      "family": "surface",
+      "operation": "phase_forward_vs_kernel",
+      "layers": 32,
+      "batch": 16,
+      "backend": "cpu",
+      "threads": 16,
+      "error": 0.0,
+      "compute_device": "cpu",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.056154733058065176,
+      "trials": [
+        0.05646378407254815,
+        0.04475590004585683,
+        0.056154733058065176
+      ],
+      "models_per_second": 284.92700665953953
+    },
+    {
+      "family": "surface",
+      "operation": "group_forward",
+      "layers": 32,
+      "batch": 16,
+      "backend": "cpu",
+      "threads": 16,
+      "error": 0.0,
+      "compute_device": "cpu",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.005703541217371821,
+      "trials": [
+        0.005576081108301878,
+        0.0066282551269978285,
+        0.005703541217371821
+      ],
+      "models_per_second": 2805.2747214778196
+    },
+    {
+      "family": "surface",
+      "operation": "group_forward_vs_kernel",
+      "layers": 32,
+      "batch": 16,
+      "backend": "cpu",
+      "threads": 16,
+      "error": 0.0,
+      "compute_device": "cpu",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.3272537139710039,
+      "trials": [
+        0.32809925195761025,
+        0.3267762379255146,
+        0.3272537139710039
+      ],
+      "models_per_second": 48.891729312559214
+    },
+    {
+      "family": "surface",
+      "operation": "phase_forward",
+      "layers": 32,
+      "batch": 16,
+      "backend": "cuda:1",
+      "threads": 1,
+      "error": 4.1716539694625173e-13,
+      "compute_device": "cuda:1",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.01262043509632349,
+      "trials": [
+        0.01262043509632349,
+        0.012593653984367847,
+        0.01275373692624271
+      ],
+      "models_per_second": 1267.7851340213322
+    },
+    {
+      "family": "surface",
+      "operation": "phase_forward_vs_kernel",
+      "layers": 32,
+      "batch": 16,
+      "backend": "cuda:1",
+      "threads": 1,
+      "error": 2.9183720643198614e-11,
+      "compute_device": "cuda:1",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.02276882086880505,
+      "trials": [
+        0.022771322866901755,
+        0.0227304520085454,
+        0.02276882086880505
+      ],
+      "models_per_second": 702.7153532540268
+    },
+    {
+      "family": "surface",
+      "operation": "group_forward",
+      "layers": 32,
+      "batch": 16,
+      "backend": "cuda:1",
+      "threads": 1,
+      "error": 1.770144008647422e-11,
+      "compute_device": "cuda:1",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.014606168027967215,
+      "trials": [
+        0.014504991937428713,
+        0.014606168027967215,
+        0.014773807022720575
+      ],
+      "models_per_second": 1095.4276282022731
+    },
+    {
+      "family": "surface",
+      "operation": "group_forward_vs_kernel",
+      "layers": 32,
+      "batch": 16,
+      "backend": "cuda:1",
+      "threads": 1,
+      "error": 1.4366719091530924e-09,
+      "compute_device": "cuda:1",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.06622877181507647,
+      "trials": [
+        0.06626581191085279,
+        0.06622877181507647,
+        0.06615907000377774
+      ],
+      "models_per_second": 241.58684453148388
+    },
+    {
+      "family": "surface",
+      "operation": "phase_forward",
+      "layers": 32,
+      "batch": 16,
+      "backend": "disba-cpu",
+      "threads": 1,
+      "version": "0.7.0",
+      "error_vs_grtm": 4.022762876789222e-07,
+      "algorithm": "unchanged default Dunkin; dc=.005, group dt=.025, kernel dp=.025",
+      "seconds": 0.0236904239282012,
+      "trials": [
+        0.023686778033152223,
+        0.023858866188675165,
+        0.0236904239282012
+      ],
+      "models_per_second": 675.3783743377222
+    },
+    {
+      "family": "surface",
+      "operation": "phase_forward_vs_kernel",
+      "layers": 32,
+      "batch": 16,
+      "backend": "disba-cpu",
+      "threads": 1,
+      "version": "0.7.0",
+      "error_vs_grtm": 0.01901171569765947,
+      "algorithm": "unchanged default Dunkin; dc=.005, group dt=.025, kernel dp=.025",
+      "seconds": 3.633698478806764,
+      "trials": [
+        3.638112145010382,
+        3.633698478806764,
+        3.6304241779726
+      ],
+      "models_per_second": 4.403227205922184
+    },
+    {
+      "family": "surface",
+      "operation": "group_forward",
+      "layers": 32,
+      "batch": 16,
+      "backend": "disba-cpu",
+      "threads": 1,
+      "version": "0.7.0",
+      "error_vs_grtm": 6.642410601375776e-05,
+      "algorithm": "unchanged default Dunkin; dc=.005, group dt=.025, kernel dp=.025",
+      "seconds": 0.04712342889979482,
+      "trials": [
+        0.04712342889979482,
+        0.047103923978284,
+        0.04717189306393266
+      ],
+      "models_per_second": 339.53386613743777
+    },
+    {
+      "family": "surface",
+      "operation": "group_forward_vs_kernel",
+      "layers": 32,
+      "batch": 16,
+      "backend": "disba-cpu",
+      "threads": 1,
+      "version": "0.7.0",
+      "error_vs_grtm": 0.0225406114436733,
+      "algorithm": "unchanged default Dunkin; dc=.005, group dt=.025, kernel dp=.025",
+      "seconds": 7.265710704959929,
+      "trials": [
+        7.272404463030398,
+        7.265710704959929,
+        7.265434568049386
+      ],
+      "models_per_second": 2.2021245614799416
+    },
+    {
+      "family": "surface",
+      "operation": "phase_forward",
+      "layers": 32,
+      "batch": 64,
+      "backend": "cpu",
+      "threads": 16,
+      "error": 0.0,
+      "compute_device": "cpu",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.01624518702737987,
+      "trials": [
+        0.016272361157462,
+        0.014952730154618621,
+        0.01624518702737987
+      ],
+      "models_per_second": 3939.6283891427956
+    },
+    {
+      "family": "surface",
+      "operation": "phase_forward_vs_kernel",
+      "layers": 32,
+      "batch": 64,
+      "backend": "cpu",
+      "threads": 16,
+      "error": 0.0,
+      "compute_device": "cpu",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.19195478013716638,
+      "trials": [
+        0.18633216596208513,
+        0.215466374065727,
+        0.19195478013716638
+      ],
+      "models_per_second": 333.4118585339063
+    },
+    {
+      "family": "surface",
+      "operation": "group_forward",
+      "layers": 32,
+      "batch": 64,
+      "backend": "cpu",
+      "threads": 16,
+      "error": 0.0,
+      "compute_device": "cpu",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.0177146689966321,
+      "trials": [
+        0.02289445698261261,
+        0.0177146689966321,
+        0.017064519925042987
+      ],
+      "models_per_second": 3612.8250554479814
+    },
+    {
+      "family": "surface",
+      "operation": "group_forward_vs_kernel",
+      "layers": 32,
+      "batch": 64,
+      "backend": "cpu",
+      "threads": 16,
+      "error": 0.0,
+      "compute_device": "cpu",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 1.281482782913372,
+      "trials": [
+        1.281482782913372,
+        1.256559506058693,
+        1.283903299830854
+      ],
+      "models_per_second": 49.942145812134875
+    },
+    {
+      "family": "surface",
+      "operation": "phase_forward",
+      "layers": 32,
+      "batch": 64,
+      "backend": "cuda:1",
+      "threads": 1,
+      "error": 4.4727421574349426e-13,
+      "compute_device": "cuda:1",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.01957480306737125,
+      "trials": [
+        0.019611146999523044,
+        0.01957480306737125,
+        0.01914001419208944
+      ],
+      "models_per_second": 3269.509265545563
+    },
+    {
+      "family": "surface",
+      "operation": "phase_forward_vs_kernel",
+      "layers": 32,
+      "batch": 64,
+      "backend": "cuda:1",
+      "threads": 1,
+      "error": 2.342033779587051e-11,
+      "compute_device": "cuda:1",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.043251567985862494,
+      "trials": [
+        0.07992210099473596,
+        0.04320865706540644,
+        0.043251567985862494
+      ],
+      "models_per_second": 1479.7151405220611
+    },
+    {
+      "family": "surface",
+      "operation": "group_forward",
+      "layers": 32,
+      "batch": 64,
+      "backend": "cuda:1",
+      "threads": 1,
+      "error": 1.4180338784699617e-11,
+      "compute_device": "cuda:1",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.02092114696279168,
+      "trials": [
+        0.02110393112525344,
+        0.02092114696279168,
+        0.020913691027089953
+      ],
+      "models_per_second": 3059.1057036129127
+    },
+    {
+      "family": "surface",
+      "operation": "group_forward_vs_kernel",
+      "layers": 32,
+      "batch": 64,
+      "backend": "cuda:1",
+      "threads": 1,
+      "error": 2.740293531597851e-09,
+      "compute_device": "cuda:1",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.1493314690887928,
+      "trials": [
+        0.14901582500897348,
+        0.14934719703160226,
+        0.1493314690887928
+      ],
+      "models_per_second": 428.57677882982233
+    },
+    {
+      "family": "surface",
+      "operation": "phase_forward",
+      "layers": 32,
+      "batch": 64,
+      "backend": "disba-cpu",
+      "threads": 1,
+      "version": "0.7.0",
+      "error_vs_grtm": 4.000257067743012e-07,
+      "algorithm": "unchanged default Dunkin; dc=.005, group dt=.025, kernel dp=.025",
+      "seconds": 0.09479737794026732,
+      "trials": [
+        0.09495073487050831,
+        0.09473497606813908,
+        0.09479737794026732
+      ],
+      "models_per_second": 675.1241583952561
+    },
+    {
+      "family": "surface",
+      "operation": "phase_forward_vs_kernel",
+      "layers": 32,
+      "batch": 64,
+      "backend": "disba-cpu",
+      "threads": 1,
+      "version": "0.7.0",
+      "error_vs_grtm": 0.019083531225675358,
+      "algorithm": "unchanged default Dunkin; dc=.005, group dt=.025, kernel dp=.025",
+      "seconds": 14.565363405970857,
+      "trials": [
+        14.554819040000439,
+        14.615301897050813,
+        14.565363405970857
+      ],
+      "models_per_second": 4.393985801532706
+    },
+    {
+      "family": "surface",
+      "operation": "group_forward",
+      "layers": 32,
+      "batch": 64,
+      "backend": "disba-cpu",
+      "threads": 1,
+      "version": "0.7.0",
+      "error_vs_grtm": 6.657430187461609e-05,
+      "algorithm": "unchanged default Dunkin; dc=.005, group dt=.025, kernel dp=.025",
+      "seconds": 0.1891280789859593,
+      "trials": [
+        0.18943944806233048,
+        0.1891280789859593,
+        0.1887842200230807
+      ],
+      "models_per_second": 338.39501962451226
+    },
+    {
+      "family": "surface",
+      "operation": "group_forward_vs_kernel",
+      "layers": 32,
+      "batch": 64,
+      "backend": "disba-cpu",
+      "threads": 1,
+      "version": "0.7.0",
+      "error_vs_grtm": 0.022693997562739477,
+      "algorithm": "unchanged default Dunkin; dc=.005, group dt=.025, kernel dp=.025",
+      "seconds": 29.143323600059375,
+      "trials": [
+        29.10200622305274,
+        29.179273071000353,
+        29.143323600059375
+      ],
+      "models_per_second": 2.196043281757665
+    },
+    {
+      "family": "surface",
+      "operation": "phase_forward",
+      "layers": 32,
+      "batch": 256,
+      "backend": "cpu",
+      "threads": 16,
+      "error": 0.0,
+      "compute_device": "cpu",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.061884454218670726,
+      "trials": [
+        0.061959625920280814,
+        0.06187566393055022,
+        0.061884454218670726
+      ],
+      "models_per_second": 4136.741662056446
+    },
+    {
+      "family": "surface",
+      "operation": "phase_forward_vs_kernel",
+      "layers": 32,
+      "batch": 256,
+      "backend": "cpu",
+      "threads": 16,
+      "error": 0.0,
+      "compute_device": "cpu",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.7284453969914466,
+      "trials": [
+        0.7387302671559155,
+        0.7214219199959189,
+        0.7284453969914466
+      ],
+      "models_per_second": 351.43334154805007
+    },
+    {
+      "family": "surface",
+      "operation": "group_forward",
+      "layers": 32,
+      "batch": 256,
+      "backend": "cpu",
+      "threads": 16,
+      "error": 0.0,
+      "compute_device": "cpu",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.06632679584436119,
+      "trials": [
+        0.05747269792482257,
+        0.06723957997746766,
+        0.06632679584436119
+      ],
+      "models_per_second": 3859.6768732913847
+    },
+    {
+      "family": "surface",
+      "operation": "group_forward_vs_kernel",
+      "layers": 32,
+      "batch": 256,
+      "backend": "cpu",
+      "threads": 16,
+      "error": 0.0,
+      "compute_device": "cpu",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 5.0418467100244015,
+      "trials": [
+        5.036608853144571,
+        5.0536097378935665,
+        5.0418467100244015
+      ],
+      "models_per_second": 50.77504627243239
+    },
+    {
+      "family": "surface",
+      "operation": "phase_forward",
+      "layers": 32,
+      "batch": 256,
+      "backend": "cuda:1",
+      "threads": 1,
+      "error": 4.192042365774584e-13,
+      "compute_device": "cuda:1",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.03929096786305308,
+      "trials": [
+        0.041539757046848536,
+        0.03929096786305308,
+        0.03918658196926117
+      ],
+      "models_per_second": 6515.492336362815
+    },
+    {
+      "family": "surface",
+      "operation": "phase_forward_vs_kernel",
+      "layers": 32,
+      "batch": 256,
+      "backend": "cuda:1",
+      "threads": 1,
+      "error": 3.1676209481752066e-11,
+      "compute_device": "cuda:1",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.1196347598452121,
+      "trials": [
+        0.11964187189005315,
+        0.11962719704024494,
+        0.1196347598452121
+      ],
+      "models_per_second": 2139.8463149942568
+    },
+    {
+      "family": "surface",
+      "operation": "group_forward",
+      "layers": 32,
+      "batch": 256,
+      "backend": "cuda:1",
+      "threads": 1,
+      "error": 1.8077621922727192e-11,
+      "compute_device": "cuda:1",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.040960920974612236,
+      "trials": [
+        0.04104401101358235,
+        0.040960920974612236,
+        0.040948818204924464
+      ],
+      "models_per_second": 6249.859473586298
+    },
+    {
+      "family": "surface",
+      "operation": "group_forward_vs_kernel",
+      "layers": 32,
+      "batch": 256,
+      "backend": "cuda:1",
+      "threads": 1,
+      "error": 2.205290845768616e-09,
+      "compute_device": "cuda:1",
+      "root_tolerance_km_s": 1e-10,
+      "seconds": 0.47312781400978565,
+      "trials": [
+        0.4727753889746964,
+        0.47417121403850615,
+        0.47312781400978565
+      ],
+      "models_per_second": 541.0800050632939
+    },
+    {
+      "family": "surface",
+      "operation": "phase_forward",
+      "layers": 32,
+      "batch": 256,
+      "backend": "disba-cpu",
+      "threads": 1,
+      "version": "0.7.0",
+      "error_vs_grtm": 3.9625630240956474e-07,
+      "algorithm": "unchanged default Dunkin; dc=.005, group dt=.025, kernel dp=.025",
+      "seconds": 0.38020507991313934,
+      "trials": [
+        0.38020507991313934,
+        0.38023417396470904,
+        0.37984812003560364
+      ],
+      "models_per_second": 673.3208300596223
+    },
+    {
+      "family": "surface",
+      "operation": "phase_forward_vs_kernel",
+      "layers": 32,
+      "batch": 256,
+      "backend": "disba-cpu",
+      "threads": 1,
+      "version": "0.7.0",
+      "error_vs_grtm": 0.019437482200904934,
+      "algorithm": "unchanged default Dunkin; dc=.005, group dt=.025, kernel dp=.025",
+      "seconds": 58.549993238877505,
+      "trials": [
+        58.549993238877505,
+        58.517719329101965,
+        58.562356563983485
+      ],
+      "models_per_second": 4.372331845634008
+    },
+    {
+      "family": "surface",
+      "operation": "group_forward",
+      "layers": 32,
+      "batch": 256,
+      "backend": "disba-cpu",
+      "threads": 1,
+      "version": "0.7.0",
+      "error_vs_grtm": 6.597544440392531e-05,
+      "algorithm": "unchanged default Dunkin; dc=.005, group dt=.025, kernel dp=.025",
+      "seconds": 0.7560458639636636,
+      "trials": [
+        0.7554947349708527,
+        0.7560458639636636,
+        0.7561567511875182
+      ],
+      "models_per_second": 338.6037966769482
+    },
+    {
+      "family": "surface",
+      "operation": "group_forward_vs_kernel",
+      "layers": 32,
+      "batch": 256,
+      "backend": "disba-cpu",
+      "threads": 1,
+      "version": "0.7.0",
+      "error_vs_grtm": 0.022748319887329012,
+      "algorithm": "unchanged default Dunkin; dc=.005, group dt=.025, kernel dp=.025",
+      "seconds": 117.15708609111607,
+      "trials": [
+        117.30619598296471,
+        117.15708609111607,
+        116.99236721894704
+      ],
+      "models_per_second": 2.1851004368690274
+    },
+    {
+      "family": "green",
+      "operation": "forward",
+      "layers": 8,
+      "batch": 1,
+      "backend": "cpu",
+      "workers": 1,
+      "threads_per_worker": 16,
+      "error": 0.0,
+      "model_batch": "host workers",
+      "derivative": "CPU adjoint",
+      "wavenumber_nodes": 10903,
+      "seconds": 0.015102942008525133,
+      "trials": [
+        0.02293897303752601,
+        0.015102942008525133,
+        0.00818300200626254
+      ],
+      "models_per_second": 66.21226509613369
+    },
+    {
+      "family": "green",
+      "operation": "forward_vjp",
+      "layers": 8,
+      "batch": 1,
+      "backend": "cpu",
+      "workers": 1,
+      "threads_per_worker": 16,
+      "error": 0.0,
+      "model_batch": "host workers",
+      "derivative": "CPU adjoint",
+      "wavenumber_nodes": 10903,
+      "seconds": 0.0829665909986943,
+      "trials": [
+        0.0829665909986943,
+        0.07423411007039249,
+        0.08725878316909075
+      ],
+      "models_per_second": 12.053044339446677
+    },
+    {
+      "family": "green",
+      "operation": "forward",
+      "layers": 8,
+      "batch": 1,
+      "backend": "cuda:1",
+      "workers": 1,
+      "threads_per_worker": 16,
+      "error": 1.0785270974314788e-12,
+      "model_batch": "host workers",
+      "derivative": "CUDA analytic directional contractions; CPU precision exceptions",
+      "wavenumber_nodes": 10903,
+      "seconds": 0.01020024111494422,
+      "trials": [
+        0.010273023042827845,
+        0.01020024111494422,
+        0.009935285896062851
+      ],
+      "models_per_second": 98.03689821948572
+    },
+    {
+      "family": "green",
+      "operation": "forward_vjp",
+      "layers": 8,
+      "batch": 1,
+      "backend": "cuda:1",
+      "workers": 1,
+      "threads_per_worker": 16,
+      "error": 2.9066721776920623e-09,
+      "model_batch": "host workers",
+      "derivative": "CUDA analytic directional contractions; CPU precision exceptions",
+      "wavenumber_nodes": 10903,
+      "seconds": 0.24370255507528782,
+      "trials": [
+        0.2434413901064545,
+        0.243848348967731,
+        0.24370255507528782
+      ],
+      "models_per_second": 4.103362805084529
+    },
+    {
+      "family": "green",
+      "operation": "forward",
+      "layers": 8,
+      "batch": 16,
+      "backend": "cpu",
+      "workers": 4,
+      "threads_per_worker": 4,
+      "error": 0.0,
+      "model_batch": "host workers",
+      "derivative": "CPU adjoint",
+      "wavenumber_nodes": 10903,
+      "seconds": 0.10173255298286676,
+      "trials": [
+        0.10223872307687998,
+        0.10173255298286676,
+        0.10133030894212425
+      ],
+      "models_per_second": 157.2751251282825
+    },
+    {
+      "family": "green",
+      "operation": "forward_vjp",
+      "layers": 8,
+      "batch": 16,
+      "backend": "cpu",
+      "workers": 4,
+      "threads_per_worker": 4,
+      "error": 0.0,
+      "model_batch": "host workers",
+      "derivative": "CPU adjoint",
+      "wavenumber_nodes": 10903,
+      "seconds": 1.1912029939703643,
+      "trials": [
+        1.1912029939703643,
+        1.2182034829165787,
+        1.1780835089739412
+      ],
+      "models_per_second": 13.431799685686535
+    },
+    {
+      "family": "green",
+      "operation": "forward",
+      "layers": 8,
+      "batch": 16,
+      "backend": "cuda:1",
+      "workers": 4,
+      "threads_per_worker": 4,
+      "error": 8.016814544290817e-13,
+      "model_batch": "host workers",
+      "derivative": "CUDA analytic directional contractions; CPU precision exceptions",
+      "wavenumber_nodes": 10903,
+      "seconds": 0.0778622052166611,
+      "trials": [
+        0.0794316150713712,
+        0.0778622052166611,
+        0.05087096313945949
+      ],
+      "models_per_second": 205.49122588395804
+    },
+    {
+      "family": "green",
+      "operation": "forward_vjp",
+      "layers": 8,
+      "batch": 16,
+      "backend": "cuda:1",
+      "workers": 4,
+      "threads_per_worker": 4,
+      "error": 2.828004760908506e-09,
+      "model_batch": "host workers",
+      "derivative": "CUDA analytic directional contractions; CPU precision exceptions",
+      "wavenumber_nodes": 10903,
+      "seconds": 1.1160476501099765,
+      "trials": [
+        1.1119066989049315,
+        1.1664522259961814,
+        1.1160476501099765
+      ],
+      "models_per_second": 14.336305442176544
+    }
+  ],
+  "start": "2026-10-21T11:41:15.090751+00:00",
+  "completed": true,
+  "end": "2026-10-21T11:58:14.284770+00:00"
+}

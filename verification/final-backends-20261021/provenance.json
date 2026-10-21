@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-21",
+  "source_binary_commit": "44e0ef80746088bf77f95a753c00989c3e61e51c",
+  "version": "0.6.0.dev5",
+  "binary_build_run": 39592914605,
+  "hosts": {
+    "apple": {
+      "cpu": "Apple M4 Max",
+      "physical_cores": 16,
+      "logical_cores": 16,
+      "ram_bytes": 137438953472,
+      "os": "macOS 27.0.1 26A434",
+      "torch": "2.8.0"
+    },
+    "cuda": {
+      "cpu": "AMD Ryzen Threadripper PRO 3955WX",
+      "physical_cores": 16,
+      "logical_cores": 32,
+      "gpu": "NVIDIA GeForce RTX 5090",
+      "gpu_index": 1,
+      "driver": "576.88",
+      "gpu_memory_MiB": 32607,
+      "torch": "2.8.0+cu128",
+      "os": "Linux x86_64 under WSL2"
+    }
+  },
+  "timing_protocol": {
+    "warmup": 1,
+    "repetitions": 3,
+    "statistic": "median synchronized wall time",
+    "backend_order": "sequential, not randomized/rotated",
+    "cpu_budgets": "RF: native4/Torch4; surface16; Green16 total split among up to4 model workers; external disba/pyfk original serial",
+    "cohort": "fixed prefix of max-batch cohort",
+    "same_host_only": true,
+    "process_isolation": "campaign jobs serialized on each host; unrelated user workloads not stopped"
+  },
+  "runtime": {
+    "three_family": "installed source-built wheel, matching source/native revision; compiled release wheel validated independently",
+    "pyfk": "unchanged upstream source built with Cython0.29; GRTM native libraries from matching source build, Python source wrapper; Apple Python3.9.6, remote Python3.8.10",
+    "pyfk_commit": "810e77dee6e7fe12ebac41832dfc17e6b7bab29f",
+    "disba": "0.7.0 unchanged defaults",
+    "pyfk_cuda": "Original Numba0.58.1/CuPy12.3.0 path; CUDA_VISIBLE_DEVICES=1, so benchmark device0 maps physical RTX5090 card1"
+  },
+  "claims_excluded": [
+    "native RF/surface MPS acceleration",
+    "all-device-resident Green pipeline",
+    "CUDA reverse-mode Green tape",
+    "disba default kernels are derivative ground truth",
+    "universal speed or inverse/geological accuracy improvement"
+  ]
+}

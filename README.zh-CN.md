@@ -6,7 +6,16 @@
 程序用于层状介质格林函数计算，支持 CPU、CUDA 和 Apple Metal/MPS。
 仓库中的代码片段是公开接口的使用示例，不包含求解器实现源码或开发历史。
 
-## CPU/CUDA 寻根与微分预览版 0.6.0.dev4
+## 设备与结构微分预览 0.6.0.dev5
+
+[Compiled wheels](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev5) · [接口 / APIs](docs/DEVICE_EXECUTION.zh-CN.md) · [速度与精度 / Evidence](docs/PERFORMANCE_0.6.0.dev5.zh-CN.md) · [Install](docs/PREVIEW_0.6.0.dev5.zh-CN.md)
+
+新增原生 CPU RF 正演/微分、CUDA Green 解析结构积分和 VJP 收缩、有序批量 backward、
+CUDA 缓冲区复用与 RF 梯度临时量压缩。CPU、CUDA、MPS 接口和实际计算位置有明确区分：
+RF/面波 CUDA 正演及微分在 GPU；Green 保留低频扩展精度与主机FFT；MPS RF/面波为
+显式 CPU FP64 桥接，不宣称原生 GPU 加速。包括原始 pyfk、disba 和同机多核 CPU 对照。
+
+## CPU/CUDA 寻根与微分预览版 0.6.0.dev4（历史）
 
 [编译包下载](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev4) · [安装与调用](docs/PREVIEW_0.6.0.dev4.zh-CN.md) · [三类正演与微分测试报告](docs/PERFORMANCE_0.6.0.dev4.zh-CN.md)
 
@@ -24,7 +33,7 @@
 
 新增基于 GRTM 的 Rayleigh/Love 频散、半解析 CPU/CUDA 敏感核及模型自动微分，并整合可微 RF 与 HMC/DRAM。
 提供 CPython 3.10–3.14 的 Apple Silicon 和 Linux/WSL x86_64 编译包。
-该版速度报告为寻根优化前的数据，最新结果见上方 dev4 报告。
+该版速度报告为寻根优化前的数据，最新结果见上方 dev5 报告。
 稳定 PyPI 仍为 0.5.1，请显式安装匹配的预览 wheel。
 
 
@@ -50,7 +59,7 @@ python -m pip install 'seismicx-grtm[rf]'         # 接收函数反演依赖
 python -m pip install 'seismicx-grtm[torch,jax]'  # 可选框架接口
 ```
 
-当前版本 **0.5.1**，导入方式为 `import grtm`，命令行入口为 `grtm`。
+当前稳定版本 **0.5.1**，导入方式为 `import grtm`，命令行入口为 `grtm`。
 支持 Python 3.10–3.14：Apple Silicon macOS 11+ 的 wheel 包含 CPU + Metal，
 Linux/WSL x86_64、glibc 2.28+ 的 wheel 包含 CPU + CUDA。
 CUDA 仅针对计算能力 12.0，已验证 RTX 5090；CPU 使用不需要 NVIDIA 显卡。

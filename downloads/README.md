@@ -1,5 +1,7 @@
 # Binary downloads
 
+Latest research preview: [0.6.0.dev5](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev5), with [installation/device boundaries](../docs/PREVIEW_0.6.0.dev5.md), [checksums](SHA256SUMS-0.6.0.dev5) and [verification](../verification/performance-0.6.0.dev5/verification.json). Stable PyPI files below remain0.5.1.
+
 The files below are the **same ten wheels published on PyPI**, with identical
 SHA-256 hashes. Select the Python version and operating system matching your
 interpreter. The simple installation path is `python -m pip install seismicx-grtm`.

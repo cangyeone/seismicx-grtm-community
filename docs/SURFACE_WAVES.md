@@ -1,5 +1,7 @@
 # GRTM surface waves and semi-analytic sensitivity kernels
 
+> dev5: see the [device guide](DEVICE_EXECUTION.md) for native CPU/CUDA and explicit MPS CPU-FP64 compatibility, and the [current measurements](PERFORMANCE_0.6.0.dev5.md). Older tables below retain their original version/date.
+
 English | [简体中文](SURFACE_WAVES.zh-CN.md)
 
 `SurfaceWave` extends this project's GRTM eigenmatrices, interface continuity and decaying half-space conditions. Native CPU and CUDA implementations share FP64/complex128 mathematics. Production calculations do not import disba or perturb/re-solve the model once per parameter.

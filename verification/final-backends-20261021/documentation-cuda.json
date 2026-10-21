@@ -1,0 +1,37 @@
+{
+  "device": "cuda:0",
+  "version": "0.6.0.dev5",
+  "module": "/home/yuzy/grtm-final-20261021/binary-env/lib/python3.13/site-packages/grtm/__init__.py",
+  "torch": "2.8.0+cu128",
+  "seconds": 2.5021061608567834,
+  "bilingual_ast_match": true,
+  "finite": {
+    "g_rf": true,
+    "g_sw": true,
+    "g_green": true
+  },
+  "shapes": {
+    "c": [
+      16,
+      3
+    ],
+    "k": [
+      16,
+      3,
+      3
+    ],
+    "y": [
+      16,
+      2,
+      64,
+      3
+    ]
+  },
+  "green_single_model_derivative_execution": {
+    "kind": "last_structural_derivative",
+    "cuda_frequencies": 32,
+    "cpu_frequencies": 0,
+    "directions": 8,
+    "method": "FP64 CUDA forward AD; device VJP contraction; long-double CPU quasistatic exception"
+  }
+}

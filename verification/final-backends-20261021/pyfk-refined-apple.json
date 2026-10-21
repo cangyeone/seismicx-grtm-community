@@ -1,0 +1,366 @@
+{
+  "grtm_version": "0.6.0.dev5",
+  "pyfk_commit": "810e77dee6e7fe12ebac41832dfc17e6b7bab29f",
+  "python": "3.9.6",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "arguments": {
+    "output": "optimization/final-backends-20261021/pyfk-refined-apple.json",
+    "backend": "metal",
+    "device": 0,
+    "threads": 16,
+    "repeat": 3,
+    "pyfk_cuda": false,
+    "profile": "refined"
+  },
+  "records": [
+    {
+      "family": "green",
+      "implementation": "pyfk-cpu",
+      "layers": 4,
+      "batch": 1,
+      "receivers": 4,
+      "threads": 1,
+      "models_per_second": 1.9567140607271098,
+      "seconds": 0.5110608750000001,
+      "trials": [
+        0.5110608750000001,
+        0.5074005000000001,
+        0.5160620420000002
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cpu",
+      "layers": 4,
+      "batch": 1,
+      "receivers": 4,
+      "workers": 1,
+      "threads_per_worker": 1,
+      "models_per_second": 7.418636145171016,
+      "pyfk_relative_error": 4.757913952977875e-05,
+      "seconds": 0.13479566600000004,
+      "trials": [
+        0.1337642080000001,
+        0.14213766700000008,
+        0.13479566600000004
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cpu",
+      "layers": 4,
+      "batch": 1,
+      "receivers": 4,
+      "workers": 1,
+      "threads_per_worker": 16,
+      "models_per_second": 74.91408291116187,
+      "pyfk_relative_error": 4.757913952977875e-05,
+      "seconds": 0.013348624999999892,
+      "trials": [
+        0.012745959000000084,
+        0.013713541999999634,
+        0.013348624999999892
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-metal",
+      "layers": 4,
+      "batch": 1,
+      "receivers": 4,
+      "workers": 1,
+      "threads_per_worker": 16,
+      "models_per_second": 66.04710955392719,
+      "pyfk_relative_error": 4.7579139528910025e-05,
+      "seconds": 0.01514070799999967,
+      "trials": [
+        0.01514070799999967,
+        0.015591915999999983,
+        0.015106791000000008
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "pyfk-cpu",
+      "layers": 4,
+      "batch": 16,
+      "receivers": 4,
+      "threads": 1,
+      "models_per_second": 1.9416235704606855,
+      "seconds": 8.240526249999998,
+      "trials": [
+        8.221716584,
+        8.240526249999998,
+        8.242259500000003
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cpu",
+      "layers": 4,
+      "batch": 16,
+      "receivers": 4,
+      "workers": 1,
+      "threads_per_worker": 1,
+      "models_per_second": 7.570848801573063,
+      "pyfk_relative_error": 4.770531919122905e-05,
+      "seconds": 2.113369375000005,
+      "trials": [
+        2.135758291000002,
+        2.100937000000002,
+        2.113369375000005
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cpu",
+      "layers": 4,
+      "batch": 16,
+      "receivers": 4,
+      "workers": 4,
+      "threads_per_worker": 4,
+      "models_per_second": 84.56149390055869,
+      "pyfk_relative_error": 4.770531919122905e-05,
+      "seconds": 0.18921141599999913,
+      "trials": [
+        0.1891565419999992,
+        0.18921141599999913,
+        0.20203941700000172
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-metal",
+      "layers": 4,
+      "batch": 16,
+      "receivers": 4,
+      "workers": 4,
+      "threads_per_worker": 4,
+      "models_per_second": 80.70704414864478,
+      "pyfk_relative_error": 4.770531919117451e-05,
+      "seconds": 0.19824787499999985,
+      "trials": [
+        0.19462491699999873,
+        0.19824787499999985,
+        0.20000675
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "pyfk-cpu",
+      "layers": 32,
+      "batch": 1,
+      "receivers": 4,
+      "threads": 1,
+      "models_per_second": 0.975627008038562,
+      "seconds": 1.0249818749999946,
+      "trials": [
+        1.0350935830000054,
+        1.0021336669999954,
+        1.0249818749999946
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cpu",
+      "layers": 32,
+      "batch": 1,
+      "receivers": 4,
+      "workers": 1,
+      "threads_per_worker": 1,
+      "models_per_second": 1.164587061028523,
+      "pyfk_relative_error": 4.6581559576117065e-05,
+      "seconds": 0.8586734589999949,
+      "trials": [
+        0.8871476669999936,
+        0.8586734589999949,
+        0.8561476250000055
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cpu",
+      "layers": 32,
+      "batch": 1,
+      "receivers": 4,
+      "workers": 1,
+      "threads_per_worker": 16,
+      "models_per_second": 11.078813292914782,
+      "pyfk_relative_error": 4.6581559576117065e-05,
+      "seconds": 0.09026237499999468,
+      "trials": [
+        0.09164574999999786,
+        0.09026237499999468,
+        0.08388870800000348
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-metal",
+      "layers": 32,
+      "batch": 1,
+      "receivers": 4,
+      "workers": 1,
+      "threads_per_worker": 16,
+      "models_per_second": 10.798334356925292,
+      "pyfk_relative_error": 4.6581559576082506e-05,
+      "seconds": 0.09260687500000131,
+      "trials": [
+        0.09260687500000131,
+        0.09479120800000373,
+        0.08812783300000149
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "pyfk-cpu",
+      "layers": 32,
+      "batch": 16,
+      "receivers": 4,
+      "threads": 1,
+      "models_per_second": 0.9736420319627528,
+      "seconds": 16.43314429200001,
+      "trials": [
+        16.371069583999997,
+        16.48925887499999,
+        16.43314429200001
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cpu",
+      "layers": 32,
+      "batch": 16,
+      "receivers": 4,
+      "workers": 1,
+      "threads_per_worker": 1,
+      "models_per_second": 1.138677028983467,
+      "pyfk_relative_error": 4.6706909252793584e-05,
+      "seconds": 14.051394375000001,
+      "trials": [
+        13.947692541999999,
+        14.051394375000001,
+        14.061595624999995
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cpu",
+      "layers": 32,
+      "batch": 16,
+      "receivers": 4,
+      "workers": 4,
+      "threads_per_worker": 4,
+      "models_per_second": 12.113597908176851,
+      "pyfk_relative_error": 4.6706909252793584e-05,
+      "seconds": 1.3208297089999803,
+      "trials": [
+        1.286404833000006,
+        1.3350785410000015,
+        1.3208297089999803
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-metal",
+      "layers": 32,
+      "batch": 16,
+      "receivers": 4,
+      "workers": 4,
+      "threads_per_worker": 4,
+      "models_per_second": 11.67688774451325,
+      "pyfk_relative_error": 4.6706909252908056e-05,
+      "seconds": 1.3702281250000112,
+      "trials": [
+        1.3479747920000023,
+        1.3702281250000112,
+        1.4453391250000038
+      ]
+    }
+  ],
+  "accuracy": [
+    {
+      "layers": 4,
+      "spacing": 0.0125,
+      "pyfk_vs_grtm_relative": 4.5880510586689066e-05,
+      "channel_relative": [
+        8.719300781449204e-05,
+        7.8890793631907e-08,
+        4.324600797926962e-05,
+        6.284147516013328e-08,
+        3.901180883941965e-05
+      ]
+    },
+    {
+      "layers": 4,
+      "spacing": 0.00625,
+      "pyfk_vs_grtm_relative": 1.1489380846750132e-05,
+      "channel_relative": [
+        2.182589224904633e-05,
+        4.707996077164491e-08,
+        1.0831489308408131e-05,
+        3.4919203024469106e-08,
+        9.77497698894053e-06
+      ],
+      "pyfk_refinement": 1.1464556108372753e-05,
+      "grtm_refinement": 2.2926690212680464e-05
+    },
+    {
+      "layers": 4,
+      "spacing": 0.003125,
+      "pyfk_vs_grtm_relative": 2.8931939646958916e-06,
+      "channel_relative": [
+        5.488668445907035e-06,
+        3.205178048586826e-08,
+        2.7293424069586792e-06,
+        2.014389226562925e-08,
+        2.4654437360115294e-06
+      ],
+      "pyfk_refinement": 2.865598563867575e-06,
+      "grtm_refinement": 5.730829032632187e-06
+    },
+    {
+      "layers": 32,
+      "spacing": 0.0125,
+      "pyfk_vs_grtm_relative": 4.469704729628518e-05,
+      "channel_relative": [
+        8.409505497496402e-05,
+        7.945493211564988e-08,
+        4.176669801654285e-05,
+        6.604741614625417e-08,
+        3.840468820529945e-05
+      ]
+    },
+    {
+      "layers": 32,
+      "spacing": 0.00625,
+      "pyfk_vs_grtm_relative": 1.1192570064425646e-05,
+      "channel_relative": [
+        2.1049801747547493e-05,
+        4.48964839234606e-08,
+        1.0460501605522057e-05,
+        3.3806650216233476e-08,
+        9.622364441808273e-06
+      ],
+      "pyfk_refinement": 1.1168953148951419e-05,
+      "grtm_refinement": 2.2335640888073892e-05
+    },
+    {
+      "layers": 32,
+      "spacing": 0.003125,
+      "pyfk_vs_grtm_relative": 2.817940491279753e-06,
+      "channel_relative": [
+        5.292036104317923e-06,
+        3.356679746237872e-08,
+        2.635524622325231e-06,
+        2.239655576729161e-08,
+        2.426734106346225e-06
+      ],
+      "pyfk_refinement": 2.7917618416182863e-06,
+      "grtm_refinement": 5.58311330403838e-06
+    }
+  ],
+  "completed": true,
+  "start": "2026-10-21T11:46:10.041942+00:00",
+  "end": "2026-10-21T11:49:53.246506+00:00"
+}

@@ -32,3 +32,6 @@ __pycache__/
 *.pem
 build/
 dist/
+
+!benchmarks/forward-derivatives/benchmark_backends.py
+!benchmarks/forward-derivatives/benchmark_pyfk.py

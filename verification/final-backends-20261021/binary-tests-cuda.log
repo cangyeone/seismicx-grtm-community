@@ -1,0 +1,130 @@
+test_cpu_native_rf_forward_vjp_vs_tensor_oracle (test_backend_execution.BackendExecutionTests.test_cpu_native_rf_forward_vjp_vs_tensor_oracle) ... ok
+test_cuda_green_all_parameters_and_device_recovery (test_backend_execution.BackendExecutionTests.test_cuda_green_all_parameters_and_device_recovery) ... ok
+test_green_ordered_batch_gradient_shared_and_per_model_source (test_backend_execution.BackendExecutionTests.test_green_ordered_batch_gradient_shared_and_per_model_source) ... ok
+test_mps_rf_bridge_retains_gradient_and_declares_host_physics (test_backend_execution.BackendExecutionTests.test_mps_rf_bridge_retains_gradient_and_declares_host_physics) ... skipped 'requires MPS'
+test_mps_surface_graph_and_model_mutation (test_backend_execution.BackendExecutionTests.test_mps_surface_graph_and_model_mutation) ... skipped 'requires MPS'
+test_surface_period_parallelism_preserves_all_kernels (test_backend_execution.BackendExecutionTests.test_surface_period_parallelism_preserves_all_kernels) ... ok
+test_coefficient_contraction_and_scattered_reference (test_continuous_jvp.ContinuousJVPTests.test_coefficient_contraction_and_scattered_reference) ... ok
+test_comparator_shanks_uses_derivative_of_the_transform (test_continuous_jvp.ContinuousJVPTests.test_comparator_shanks_uses_derivative_of_the_transform) ... ok
+test_density_scaling_integral_and_depth_guard (test_continuous_jvp.ContinuousJVPTests.test_density_scaling_integral_and_depth_guard) ... ok
+test_direct_cartesian_tensor_all_channels_and_material_derivative (test_continuous_jvp.ContinuousJVPTests.test_direct_cartesian_tensor_all_channels_and_material_derivative) ... ok
+test_independent_boundary_system_field_and_mixed_direction (test_continuous_jvp.ContinuousJVPTests.test_independent_boundary_system_field_and_mixed_direction) ... ok
+test_regularized_quasistatic_scattered_tail_and_buried_layer (test_continuous_jvp.ContinuousJVPTests.test_regularized_quasistatic_scattered_tail_and_buried_layer) ... ok
+test_zero_direction_derivatives_disabled_and_closed (test_continuous_jvp.ContinuousJVPTests.test_zero_direction_derivatives_disabled_and_closed) ... ok
+test_configured_grid_defines_one_differentiable_forward_map (test_differentiable.DifferentialTests.test_configured_grid_defines_one_differentiable_forward_map) ... ok
+test_gpu_forward_and_structural_vjp (test_differentiable.DifferentialTests.test_gpu_forward_and_structural_vjp) ... ok
+test_jax_matrix_free_reverse_mode (test_differentiable.DifferentialTests.test_jax_matrix_free_reverse_mode) ... skipped 'JAX optional'
+test_linearization_snapshot_and_reuse (test_differentiable.DifferentialTests.test_linearization_snapshot_and_reuse) ... ok
+test_native_units_and_nonzero_time_origins (test_differentiable.DifferentialTests.test_native_units_and_nonzero_time_origins) ... ok
+test_original_layers_and_fictitious_interfaces (test_differentiable.DifferentialTests.test_original_layers_and_fictitious_interfaces) ... ok
+test_parameter_mask_and_taylor_remainder (test_differentiable.DifferentialTests.test_parameter_mask_and_taylor_remainder) ... ok
+test_ptam_and_topology_guards (test_differentiable.DifferentialTests.test_ptam_and_topology_guards) ... ok
+test_source_history_and_material_conventions (test_differentiable.DifferentialTests.test_source_history_and_material_conventions) ... ok
+test_torch_adjoint_backward (test_differentiable.DifferentialTests.test_torch_adjoint_backward) ... ok
+test_waveform_and_spectral_fields (test_differentiable.DifferentialTests.test_waveform_and_spectral_fields) ... ok
+test_cartesian_receiver_gradient (test_forward.ForwardTests.test_cartesian_receiver_gradient) ... ok
+test_causal_history_and_metadata (test_forward.ForwardTests.test_causal_history_and_metadata) ... ok
+test_cross_layer_receiver_stress_sensitivity (test_forward.ForwardTests.test_cross_layer_receiver_stress_sensitivity) ... ok
+test_cuda_fields_and_structure (test_forward.ForwardTests.test_cuda_fields_and_structure) ... ok
+test_free_surface_traction (test_forward.ForwardTests.test_free_surface_traction) ... ok
+test_moment_as_independent_force_dipoles (test_forward.ForwardTests.test_moment_as_independent_force_dipoles) ... ok
+test_ordered_batch_and_errors (test_forward.ForwardTests.test_ordered_batch_and_errors) ... ok
+test_source_conventions_and_units (test_forward.ForwardTests.test_source_conventions_and_units) ... ok
+test_structure_chain_rule_and_vjp (test_forward.ForwardTests.test_structure_chain_rule_and_vjp) ... ok
+test_jax_jit_grad_jvp_jacfwd_vmap_and_batch (test_forward.FrameworkTests.test_jax_jit_grad_jvp_jacfwd_vmap_and_batch) ... skipped 'optional jax dependency'
+test_torch_backward_batch_sdr_and_complex (test_forward.FrameworkTests.test_torch_backward_batch_sdr_and_complex) ... ok
+test_error_cli_and_all_host_quasistatic_case (test_metal.MetalTests.test_error_cli_and_all_host_quasistatic_case) ... skipped 'set GRTM_TEST_METAL=1 with a Metal wheel and GPU'
+test_fields_sensitivity_and_concurrent_models (test_metal.MetalTests.test_fields_sensitivity_and_concurrent_models) ... skipped 'set GRTM_TEST_METAL=1 with a Metal wheel and GPU'
+test_jax_metal_callback_jit_grad (test_metal.MetalTests.test_jax_metal_callback_jit_grad) ... skipped 'set GRTM_TEST_METAL=1 with a Metal wheel and GPU'
+test_raw_sources_derivatives_fixed_grid_and_ptam (test_metal.MetalTests.test_raw_sources_derivatives_fixed_grid_and_ptam) ... skipped 'set GRTM_TEST_METAL=1 with a Metal wheel and GPU'
+test_torch_mps_real_tensor_backward_and_sdr (test_metal.MetalTests.test_torch_mps_real_tensor_backward_and_sdr) ... skipped 'set GRTM_TEST_METAL=1 with a Metal wheel and GPU'
+test_arrays_fft_threads_and_external_library (test_package.PackageTests.test_arrays_fft_threads_and_external_library) ... ok
+test_cli_and_npz (test_package.PackageTests.test_cli_and_npz) ... ok
+test_cuda_real_device_and_no_fallback (test_package.PackageTests.test_cuda_real_device_and_no_fallback) ... ok
+test_distribution_identity_and_entry_point (test_package.PackageTests.test_distribution_identity_and_entry_point) ... ok
+test_errors_and_displacement (test_package.PackageTests.test_errors_and_displacement) ... ok
+test_installed_backend_and_aliases (test_package.PackageTests.test_installed_backend_and_aliases) ... ok
+test_json_numeric_numpy_inputs_and_one_shot (test_package.PackageTests.test_json_numeric_numpy_inputs_and_one_shot) ... ok
+test_moved_native_compatibility_cli (test_package.PackageTests.test_moved_native_compatibility_cli) ... ok
+test_certified_infinite_hankel_and_derivative_reference (test_quadrature.QuadratureTests.test_certified_infinite_hankel_and_derivative_reference) ... skipped 'python-flint optional'
+test_finite_sampling_cannot_certify (test_quadrature.QuadratureTests.test_finite_sampling_cannot_certify) ... ok
+test_gauss_vector_reference_and_exhaustion (test_quadrature.QuadratureTests.test_gauss_vector_reference_and_exhaustion) ... ok
+test_levin_known_primitive (test_quadrature.QuadratureTests.test_levin_known_primitive) ... ok
+test_native_bessel_coefficients_and_independent_integrators (test_quadrature.QuadratureTests.test_native_bessel_coefficients_and_independent_integrators) ... ok
+test_native_same_depth_direct_counterexample (test_quadrature.QuadratureTests.test_native_same_depth_direct_counterexample) ... ok
+test_psv_uniform_matrix_certificate_and_invalid_class (test_quadrature.QuadratureTests.test_psv_uniform_matrix_certificate_and_invalid_class) ... skipped 'python-flint optional'
+test_ptam_exact_identity_and_rate (test_quadrature.QuadratureTests.test_ptam_exact_identity_and_rate) ... ok
+test_shanks_batched_panels_preserve_result (test_quadrature.QuadratureTests.test_shanks_batched_panels_preserve_result) ... ok
+test_shanks_finite_perturbation_bound (test_quadrature.QuadratureTests.test_shanks_finite_perturbation_bound) ... ok
+test_shanks_geometric_complex_and_singular_guard (test_quadrature.QuadratureTests.test_shanks_geometric_complex_and_singular_guard) ... ok
+test_shanks_integral_is_labeled_estimate (test_quadrature.QuadratureTests.test_shanks_integral_is_labeled_estimate) ... ok
+test_waveform_and_physical_interface (test_quadrature.QuadratureTests.test_waveform_and_physical_interface) ... ok
+test_deconvolution_cancels_source_and_reference_normalization (test_receiver.ReceiverTests.test_deconvolution_cancels_source_and_reference_normalization) ... ok
+test_errors_and_window_coverage (test_receiver.ReceiverTests.test_errors_and_window_coverage) ... ok
+test_hk_on_independent_arrival_pulses_and_bootstrap (test_receiver.ReceiverTests.test_hk_on_independent_arrival_pulses_and_bootstrap) ... ok
+test_hk_to_waveform_recovery_and_failure_reporting (test_receiver.ReceiverTests.test_hk_to_waveform_recovery_and_failure_reporting) ... ok
+test_homogeneous_halfspace_and_vertical_incidence (test_receiver.ReceiverTests.test_homogeneous_halfspace_and_vertical_incidence) ... ok
+test_identical_layer_split_and_native_units (test_receiver.ReceiverTests.test_identical_layer_split_and_native_units) ... ok
+test_multilayer_thickness_parameterization (test_receiver.ReceiverTests.test_multilayer_thickness_parameterization) ... ok
+test_prior_does_not_hide_uninformative_vertical_ray (test_receiver.ReceiverTests.test_prior_does_not_hide_uninformative_vertical_ray) ... ok
+test_ps_and_multiples_times_polarities_and_padding (test_receiver.ReceiverTests.test_ps_and_multiples_times_polarities_and_padding) ... ok
+test_scattering_against_independent_elastic_ode (test_receiver.ReceiverTests.test_scattering_against_independent_elastic_ode) ... ok
+test_batched_models_and_units (test_rf_bayes.JointForwardTests.test_batched_models_and_units) ... ok
+test_cpu_matches_independent_numpy_rf_all_bands (test_rf_bayes.JointForwardTests.test_cpu_matches_independent_numpy_rf_all_bands) ... ok
+test_cuda_halfspace_and_eighty_one_layers (test_rf_bayes.JointForwardTests.test_cuda_halfspace_and_eighty_one_layers) ... ok
+test_homogeneous_polarization_recovers_true_vs (test_rf_bayes.JointForwardTests.test_homogeneous_polarization_recovers_true_vs) ... ok
+test_invalid_inputs_and_device (test_rf_bayes.JointForwardTests.test_invalid_inputs_and_device) ... ok
+test_native_cuda_matches_cpu_elastic_and_dissipative (test_rf_bayes.JointForwardTests.test_native_cuda_matches_cpu_elastic_and_dissipative) ... ok
+test_nondefault_stream_and_device (test_rf_bayes.JointForwardTests.test_nondefault_stream_and_device) ... ok
+test_split_layer_invariance_and_q_limit (test_rf_bayes.JointForwardTests.test_split_layer_invariance_and_q_limit) ... ok
+test_zero_period_and_subsampled_window (test_rf_bayes.JointForwardTests.test_zero_period_and_subsampled_window) ... ok
+test_full_covariance_reduces_to_diagonal_case (test_rf_bayes.JointProblemTests.test_full_covariance_reduces_to_diagonal_case) ... ok
+test_gpu_joint_log_probability_and_sampler (test_rf_bayes.JointProblemTests.test_gpu_joint_log_probability_and_sampler) ... ok
+test_invalid_batch_does_not_poison_valid_chain_and_short_run (test_rf_bayes.JointProblemTests.test_invalid_batch_does_not_poison_valid_chain_and_short_run) ... ok
+test_paper_frequency_average_and_low_velocity_penalty (test_rf_bayes.JointProblemTests.test_paper_frequency_average_and_low_velocity_penalty) ... ok
+test_truth_and_infeasible_depth_order (test_rf_bayes.JointProblemTests.test_truth_and_infeasible_depth_order) ... ok
+test_bounded_uniform_stationary_distribution (test_rf_bayes.SamplerTests.test_bounded_uniform_stationary_distribution) ... ok
+test_cuda_sampler_known_normal (test_rf_bayes.SamplerTests.test_cuda_sampler_known_normal) ... ok
+test_delayed_rejection_known_correlated_gaussian (test_rf_bayes.SamplerTests.test_delayed_rejection_known_correlated_gaussian) ... ok
+test_paper_schedule_known_bounded_target (test_rf_bayes.SamplerTests.test_paper_schedule_known_bounded_target) ... ok
+test_reproducibility_and_stuck_chain_diagnostic (test_rf_bayes.SamplerTests.test_reproducibility_and_stuck_chain_diagnostic) ... ok
+test_control_basis_and_interface_preserving_prior (test_rf_hmc.HMCTests.test_control_basis_and_interface_preserving_prior) ... /home/yuzy/.venvs/srl-cu128/lib/python3.13/site-packages/numpy/testing/_private/utils.py:390: DeprecationWarning: __array_wrap__ must accept context and return_scalar arguments (positionally) in the future. (Deprecated NumPy 2.0)
+  isdesnan = isnan(desired)
+/home/yuzy/.venvs/srl-cu128/lib/python3.13/site-packages/numpy/testing/_private/utils.py:391: DeprecationWarning: __array_wrap__ must accept context and return_scalar arguments (positionally) in the future. (Deprecated NumPy 2.0)
+  isactnan = isnan(actual)
+ok
+test_correlated_gaussian_and_frozen_kernel (test_rf_hmc.HMCTests.test_correlated_gaussian_and_frozen_kernel) ... ok
+test_cuda_graph_samplers_preserve_trajectories (test_rf_hmc.HMCTests.test_cuda_graph_samplers_preserve_trajectories) ... ok
+test_native_gradient_reference_fd_and_stream (test_rf_hmc.HMCTests.test_native_gradient_reference_fd_and_stream) ... ok
+test_rank_diagnostics_detect_scale_mismatch (test_rf_hmc.HMCTests.test_rank_diagnostics_detect_scale_mismatch) ... ok
+test_uniform_prior_requires_box_jacobian_and_reproducibility (test_rf_hmc.HMCTests.test_uniform_prior_requires_box_jacobian_and_reproducibility) ... ok
+test_all_semianalytic_kernels_against_independent_resolved_models (test_surface_wave.SurfaceWaveTests.test_all_semianalytic_kernels_against_independent_resolved_models) ... ok
+test_autograd_matches_kernels_and_repeated_calls (test_surface_wave.SurfaceWaveTests.test_autograd_matches_kernels_and_repeated_calls) ... ok
+test_batch_and_depth_parameterization (test_surface_wave.SurfaceWaveTests.test_batch_and_depth_parameterization) ... ok
+test_cuda_cpu_parity_devices_streams_and_autograd (test_surface_wave.SurfaceWaveTests.test_cuda_cpu_parity_devices_streams_and_autograd) ... ok
+test_disba_fundamental_and_higher_modes (test_surface_wave.SurfaceWaveTests.test_disba_fundamental_and_higher_modes) ... /home/yuzy/.venvs/srl-cu128/lib/python3.13/site-packages/matplotlib/_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+/home/yuzy/.venvs/srl-cu128/lib/python3.13/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  parse = parser.parseString(pattern)
+/home/yuzy/.venvs/srl-cu128/lib/python3.13/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  parser.resetCache()
+/home/yuzy/.venvs/srl-cu128/lib/python3.13/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+  ParserElement.enablePackrat()
+In /home/yuzy/.venvs/srl-cu128/lib/python3.13/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'parseString' deprecated - use 'parse_string'
+In /home/yuzy/.venvs/srl-cu128/lib/python3.13/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'resetCache' deprecated - use 'reset_cache'
+ok
+test_fast_roots_preserve_scan_modes_and_group_precision (test_surface_wave.SurfaceWaveTests.test_fast_roots_preserve_scan_modes_and_group_precision) ... ok
+test_halfspace_rayleigh_and_density (test_surface_wave.SurfaceWaveTests.test_halfspace_rayleigh_and_density) ... ok
+test_inference_mode_and_no_partial_second_derivative_graph (test_surface_wave.SurfaceWaveTests.test_inference_mode_and_no_partial_second_derivative_graph) ... ok
+test_large_cuda_batch_both_root_selection_paths (test_surface_wave.SurfaceWaveTests.test_large_cuda_batch_both_root_selection_paths) ... ok
+test_love_two_layer_independent_equation (test_surface_wave.SurfaceWaveTests.test_love_two_layer_independent_equation) ... ok
+test_missing_modes_are_explicit_and_inputs_checked (test_surface_wave.SurfaceWaveTests.test_missing_modes_are_explicit_and_inputs_checked) ... ok
+test_native_cpu_threads_preserve_results (test_surface_wave.SurfaceWaveTests.test_native_cpu_threads_preserve_results) ... ok
+test_period_order_is_preserved (test_surface_wave.SurfaceWaveTests.test_period_order_is_preserved) ... ok
+test_physical_scaling_and_period_derivative (test_surface_wave.SurfaceWaveTests.test_physical_scaling_and_period_derivative) ... ok
+test_thick_layer_short_period_does_not_skip_love_fundamental (test_surface_wave.SurfaceWaveTests.test_thick_layer_short_period_does_not_skip_love_fundamental) ... ok
+
+----------------------------------------------------------------------
+Ran 111 tests in 46.961s
+
+OK (skipped=11)

@@ -1,0 +1,610 @@
+{
+  "grtm_version": "0.6.0.dev5",
+  "pyfk_commit": "810e77dee6e7fe12ebac41832dfc17e6b7bab29f",
+  "python": "3.8.10",
+  "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.29",
+  "arguments": {
+    "output": "pyfk-cuda.json",
+    "backend": "cuda",
+    "device": 0,
+    "threads": 16,
+    "repeat": 3,
+    "pyfk_cuda": true,
+    "profile": "throughput"
+  },
+  "records": [
+    {
+      "family": "green",
+      "implementation": "pyfk-cpu",
+      "layers": 4,
+      "batch": 1,
+      "receivers": 4,
+      "threads": 1,
+      "models_per_second": 9.109357112311553,
+      "seconds": 0.10977723100222647,
+      "trials": [
+        0.10977723100222647,
+        0.12193489400669932,
+        0.10957738594152033
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cpu",
+      "layers": 4,
+      "batch": 1,
+      "receivers": 4,
+      "workers": 1,
+      "threads_per_worker": 1,
+      "models_per_second": 20.17635791258049,
+      "pyfk_relative_error": 0.003069006504645529,
+      "seconds": 0.049562959000468254,
+      "trials": [
+        0.0464139508549124,
+        0.0648663048632443,
+        0.049562959000468254
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cpu",
+      "layers": 4,
+      "batch": 1,
+      "receivers": 4,
+      "workers": 1,
+      "threads_per_worker": 16,
+      "models_per_second": 163.00130906797799,
+      "pyfk_relative_error": 0.003069006504645529,
+      "seconds": 0.006134920055046678,
+      "trials": [
+        0.006134920055046678,
+        0.006395388161763549,
+        0.005831670947372913
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cuda",
+      "layers": 4,
+      "batch": 1,
+      "receivers": 4,
+      "workers": 1,
+      "threads_per_worker": 16,
+      "models_per_second": 264.1846587938424,
+      "pyfk_relative_error": 0.0030690065044667605,
+      "seconds": 0.003785231150686741,
+      "trials": [
+        0.003785231150686741,
+        0.0039143129251897335,
+        0.003736268961802125
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "pyfk-cuda",
+      "layers": 4,
+      "batch": 1,
+      "receivers": 4,
+      "error": 2.8111767685621267e-13,
+      "seconds": 0.007995510939508677,
+      "trials": [
+        0.007995510939508677,
+        0.007876733085140586,
+        0.008102359948679805
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "pyfk-cpu",
+      "layers": 4,
+      "batch": 16,
+      "receivers": 4,
+      "threads": 1,
+      "models_per_second": 9.288213630634253,
+      "seconds": 1.7226132641080767,
+      "trials": [
+        1.725802147993818,
+        1.7226132641080767,
+        1.7168564801104367
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cpu",
+      "layers": 4,
+      "batch": 16,
+      "receivers": 4,
+      "workers": 1,
+      "threads_per_worker": 1,
+      "models_per_second": 21.891818610015708,
+      "pyfk_relative_error": 0.003077167656392231,
+      "seconds": 0.7308666440658271,
+      "trials": [
+        0.7387844838667661,
+        0.7308666440658271,
+        0.7162202580366284
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cpu",
+      "layers": 4,
+      "batch": 16,
+      "receivers": 4,
+      "workers": 4,
+      "threads_per_worker": 4,
+      "models_per_second": 239.5648944633827,
+      "pyfk_relative_error": 0.003077167656392231,
+      "seconds": 0.06678774883039296,
+      "trials": [
+        0.06678774883039296,
+        0.06756055494770408,
+        0.06524873105809093
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cuda",
+      "layers": 4,
+      "batch": 16,
+      "receivers": 4,
+      "workers": 4,
+      "threads_per_worker": 4,
+      "models_per_second": 202.47073792654584,
+      "pyfk_relative_error": 0.003077167656418488,
+      "seconds": 0.07902376493439078,
+      "trials": [
+        0.10001198016107082,
+        0.07902376493439078,
+        0.02756511908955872
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "pyfk-cuda",
+      "layers": 4,
+      "batch": 16,
+      "receivers": 4,
+      "error": 2.7263152096876143e-13,
+      "seconds": 0.11696604290045798,
+      "trials": [
+        0.11793514085002244,
+        0.11509853904135525,
+        0.11696604290045798
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "pyfk-cpu",
+      "layers": 4,
+      "batch": 64,
+      "receivers": 4,
+      "threads": 1,
+      "models_per_second": 9.333482194996517,
+      "seconds": 6.8570334911346436,
+      "trials": [
+        6.8539891440887,
+        6.870399692095816,
+        6.8570334911346436
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cpu",
+      "layers": 4,
+      "batch": 64,
+      "receivers": 4,
+      "workers": 1,
+      "threads_per_worker": 1,
+      "models_per_second": 21.392300996767137,
+      "pyfk_relative_error": 0.0031025985217826364,
+      "seconds": 2.991730530047789,
+      "trials": [
+        2.991730530047789,
+        2.9950697880703956,
+        2.9734946431126446
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cpu",
+      "layers": 4,
+      "batch": 64,
+      "receivers": 4,
+      "workers": 4,
+      "threads_per_worker": 4,
+      "models_per_second": 248.56569812424266,
+      "pyfk_relative_error": 0.0031025985217826364,
+      "seconds": 0.2574772001244128,
+      "trials": [
+        0.25710611790418625,
+        0.2595269219018519,
+        0.2574772001244128
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cuda",
+      "layers": 4,
+      "batch": 64,
+      "receivers": 4,
+      "workers": 4,
+      "threads_per_worker": 4,
+      "models_per_second": 801.6186396557001,
+      "pyfk_relative_error": 0.0031025985217967875,
+      "seconds": 0.07983846287243068,
+      "trials": [
+        0.08092069299891591,
+        0.07732912199571729,
+        0.07983846287243068
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "pyfk-cuda",
+      "layers": 4,
+      "batch": 64,
+      "receivers": 4,
+      "error": 2.680028987669672e-13,
+      "seconds": 0.4692016600165516,
+      "trials": [
+        0.47096720105037093,
+        0.4656358410138637,
+        0.4692016600165516
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "pyfk-cpu",
+      "layers": 4,
+      "batch": 1,
+      "receivers": 64,
+      "threads": 1,
+      "models_per_second": 0.9157786374979296,
+      "seconds": 1.0919669438153505,
+      "trials": [
+        1.0919669438153505,
+        1.0975480789784342,
+        1.0906291778665036
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cpu",
+      "layers": 4,
+      "batch": 1,
+      "receivers": 64,
+      "workers": 1,
+      "threads_per_worker": 1,
+      "models_per_second": 5.0340908603425945,
+      "pyfk_relative_error": 0.0033061640690151377,
+      "seconds": 0.19864560011774302,
+      "trials": [
+        0.21178006986156106,
+        0.17247075797058642,
+        0.19864560011774302
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cpu",
+      "layers": 4,
+      "batch": 1,
+      "receivers": 64,
+      "workers": 1,
+      "threads_per_worker": 16,
+      "models_per_second": 54.138328756351314,
+      "pyfk_relative_error": 0.0033061640690151377,
+      "seconds": 0.01847120188176632,
+      "trials": [
+        0.025082723004743457,
+        0.01847120188176632,
+        0.0181845729239285
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cuda",
+      "layers": 4,
+      "batch": 1,
+      "receivers": 64,
+      "workers": 1,
+      "threads_per_worker": 16,
+      "models_per_second": 79.04172389490547,
+      "pyfk_relative_error": 0.0033061640690190807,
+      "seconds": 0.01265154592692852,
+      "trials": [
+        0.01265154592692852,
+        0.012527833925560117,
+        0.012932705925777555
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "pyfk-cuda",
+      "layers": 4,
+      "batch": 1,
+      "receivers": 64,
+      "error": 3.275633434969768e-13,
+      "seconds": 0.05537715996615589,
+      "trials": [
+        0.05537715996615589,
+        0.05477137002162635,
+        0.05575398891232908
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "pyfk-cpu",
+      "layers": 32,
+      "batch": 1,
+      "receivers": 4,
+      "threads": 1,
+      "models_per_second": 3.226492829631884,
+      "seconds": 0.30993405310437083,
+      "trials": [
+        0.3120799600146711,
+        0.30993405310437083,
+        0.30786124197766185
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cpu",
+      "layers": 32,
+      "batch": 1,
+      "receivers": 4,
+      "workers": 1,
+      "threads_per_worker": 1,
+      "models_per_second": 4.264580873636497,
+      "pyfk_relative_error": 0.003006595400613564,
+      "seconds": 0.2344896320719272,
+      "trials": [
+        0.2344896320719272,
+        0.24009477207437158,
+        0.21913548605516553
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cpu",
+      "layers": 32,
+      "batch": 1,
+      "receivers": 4,
+      "workers": 1,
+      "threads_per_worker": 16,
+      "models_per_second": 43.002416283620185,
+      "pyfk_relative_error": 0.003006595400613564,
+      "seconds": 0.02325450722128153,
+      "trials": [
+        0.02278999099507928,
+        0.024918484035879374,
+        0.02325450722128153
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cuda",
+      "layers": 32,
+      "batch": 1,
+      "receivers": 4,
+      "workers": 1,
+      "threads_per_worker": 16,
+      "models_per_second": 38.933740551028755,
+      "pyfk_relative_error": 0.003006595400352811,
+      "seconds": 0.02568466286174953,
+      "trials": [
+        0.02568466286174953,
+        0.02555338595993817,
+        0.02575877495110035
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "pyfk-cuda",
+      "layers": 32,
+      "batch": 1,
+      "receivers": 4,
+      "error": 4.1697273392955936e-13,
+      "seconds": 0.014654390048235655,
+      "trials": [
+        0.015053055947646499,
+        0.012105219066143036,
+        0.014654390048235655
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "pyfk-cpu",
+      "layers": 32,
+      "batch": 16,
+      "receivers": 4,
+      "threads": 1,
+      "models_per_second": 3.231621221794546,
+      "seconds": 4.951075296849012,
+      "trials": [
+        4.936174493050203,
+        5.006647559814155,
+        4.951075296849012
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cpu",
+      "layers": 32,
+      "batch": 16,
+      "receivers": 4,
+      "workers": 1,
+      "threads_per_worker": 1,
+      "models_per_second": 4.17598626310186,
+      "pyfk_relative_error": 0.0030147216164393494,
+      "seconds": 3.831430227961391,
+      "trials": [
+        3.7692737041506916,
+        3.831430227961391,
+        3.9554712229873985
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cpu",
+      "layers": 32,
+      "batch": 16,
+      "receivers": 4,
+      "workers": 4,
+      "threads_per_worker": 4,
+      "models_per_second": 51.344768915586414,
+      "pyfk_relative_error": 0.0030147216164393494,
+      "seconds": 0.31161889201030135,
+      "trials": [
+        0.31161889201030135,
+        0.3141148849390447,
+        0.3100045481696725
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "grtm-cuda",
+      "layers": 32,
+      "batch": 16,
+      "receivers": 4,
+      "workers": 4,
+      "threads_per_worker": 4,
+      "models_per_second": 161.58193705600135,
+      "pyfk_relative_error": 0.003014721616403654,
+      "seconds": 0.09902096912264824,
+      "trials": [
+        0.099932876881212,
+        0.09687010082416236,
+        0.09902096912264824
+      ]
+    },
+    {
+      "family": "green",
+      "implementation": "pyfk-cuda",
+      "layers": 32,
+      "batch": 16,
+      "receivers": 4,
+      "error": 4.569102641807199e-13,
+      "seconds": 0.19145261612720788,
+      "trials": [
+        0.19145261612720788,
+        0.19249434093944728,
+        0.19117995793931186
+      ]
+    }
+  ],
+  "accuracy": [
+    {
+      "layers": 4,
+      "spacing": 0.1,
+      "pyfk_vs_grtm_relative": 0.002959853006311008,
+      "channel_relative": [
+        0.0056312383321426235,
+        5.3803635582503824e-06,
+        0.002792853056226018,
+        1.6345963346855847e-06,
+        0.0025028372369431677
+      ]
+    },
+    {
+      "layers": 4,
+      "spacing": 0.05,
+      "pyfk_vs_grtm_relative": 0.0007350698112606476,
+      "channel_relative": [
+        0.0013973983129960072,
+        3.67281977679312e-07,
+        0.0006929783922055044,
+        2.574412685723889e-07,
+        0.0006242487296970098
+      ],
+      "pyfk_refinement": 0.0007449109127865072,
+      "grtm_refinement": 0.0014800925270083984
+    },
+    {
+      "layers": 4,
+      "spacing": 0.025,
+      "pyfk_vs_grtm_relative": 0.00018351049078344598,
+      "channel_relative": [
+        0.0003487909014016076,
+        1.317442930891798e-07,
+        0.0001729745820244902,
+        1.1031750458687235e-07,
+        0.00015598830534907144
+      ],
+      "pyfk_refinement": 0.0001840400218897739,
+      "grtm_refinement": 0.00036753216340050613
+    },
+    {
+      "layers": 4,
+      "spacing": 0.0125,
+      "pyfk_vs_grtm_relative": 4.5880510600216474e-05,
+      "channel_relative": [
+        8.719300769759196e-05,
+        7.889076173227657e-08,
+        4.3246007981274217e-05,
+        6.28413541913609e-08,
+        3.901180902924258e-05
+      ],
+      "pyfk_refinement": 4.588770574585556e-05,
+      "grtm_refinement": 9.174309329364727e-05
+    },
+    {
+      "layers": 32,
+      "spacing": 0.1,
+      "pyfk_vs_grtm_relative": 0.002885415734364448,
+      "channel_relative": [
+        0.005435493823179866,
+        5.490326436136285e-06,
+        0.0026994532460090912,
+        1.882650936334942e-06,
+        0.002463912566429037
+      ]
+    },
+    {
+      "layers": 32,
+      "spacing": 0.05,
+      "pyfk_vs_grtm_relative": 0.0007162095472697803,
+      "channel_relative": [
+        0.001347990759048041,
+        3.885609415933124e-07,
+        0.0006693822848387039,
+        2.8609869695528353e-07,
+        0.0006145287538473038
+      ],
+      "pyfk_refinement": 0.0007265552450187631,
+      "grtm_refinement": 0.0014428714197514533
+    },
+    {
+      "layers": 32,
+      "spacing": 0.025,
+      "pyfk_vs_grtm_relative": 0.00017878381735141698,
+      "channel_relative": [
+        0.00033642037992677557,
+        1.5978508996933556e-07,
+        0.00016706357124317858,
+        1.4087289028348583e-07,
+        0.00015355778866157587
+      ],
+      "pyfk_refinement": 0.00017933591415434213,
+      "grtm_refinement": 0.000358102477637135
+    },
+    {
+      "layers": 32,
+      "spacing": 0.0125,
+      "pyfk_vs_grtm_relative": 4.4697047151947964e-05,
+      "channel_relative": [
+        8.409505312497458e-05,
+        7.945585566274718e-08,
+        4.1766697975030596e-05,
+        6.604826654359231e-08,
+        3.8404689622711706e-05
+      ],
+      "pyfk_refinement": 4.470718241059165e-05,
+      "grtm_refinement": 8.938039190049734e-05
+    }
+  ],
+  "completed": true,
+  "start": "2026-10-21T11:59:06.674639+00:00",
+  "end": "2026-10-21T12:01:15.499497+00:00"
+}

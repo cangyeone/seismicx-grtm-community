@@ -12,7 +12,18 @@ data; solver implementation source and development history are not distributed h
 [FK comparison](benchmarks/fk/README.md) ·
 [Report a problem](https://github.com/cangyeone/seismicx-grtm-community/issues)
 
-## CPU/CUDA search and derivative preview 0.6.0.dev4
+## Device execution and structural derivatives preview 0.6.0.dev5
+
+[Compiled wheels](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev5) · [接口 / APIs](docs/DEVICE_EXECUTION.md) · [速度与精度 / Evidence](docs/PERFORMANCE_0.6.0.dev5.md) · [Install](docs/PREVIEW_0.6.0.dev5.md)
+
+Adds native CPU RF forward/VJP,CUDA analytic Green structural integrals and VJP contractions,
+ordered batched backward,reusable CUDA workspaces and reduced RF gradient temporaries.
+The execution matrix distinguishes interfaces from actual computation:RF/surface CUDA
+forward/derivatives stay on GPU;Green retains low-frequency host precision and FFT;
+MPS RF/surface explicitly bridge to CPU FP64,without claiming native GPU acceleration.
+Includes unchanged pyfk/disba and same-host multicore CPU comparisons.
+
+## CPU/CUDA search and derivative preview 0.6.0.dev4 (historical)
 
 [Compiled wheels](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev4) · [Install/API](docs/PREVIEW_0.6.0.dev4.md) · [CPU/CUDA performance and accuracy](docs/PERFORMANCE_0.6.0.dev4.md) · [中文](docs/PERFORMANCE_0.6.0.dev4.zh-CN.md)
 

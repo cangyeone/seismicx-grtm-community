@@ -1,0 +1,30 @@
+{
+  "device": "cpu",
+  "version": "0.6.0.dev5",
+  "module": "/Users/yuziye/\u540c\u6b65/\u9879\u76ee\u76f8\u5173/\u683c\u6797\u51fd\u6570\u52a0\u901f/seismicx-grtm/build-release-check/dev5-binary/.venv/lib/python3.12/site-packages/grtm/__init__.py",
+  "torch": "2.8.0",
+  "seconds": 1.409530833014287,
+  "bilingual_ast_match": true,
+  "finite": {
+    "g_rf": true,
+    "g_sw": true,
+    "g_green": true
+  },
+  "shapes": {
+    "c": [
+      16,
+      3
+    ],
+    "k": [
+      16,
+      3,
+      3
+    ],
+    "y": [
+      16,
+      2,
+      64,
+      3
+    ]
+  }
+}

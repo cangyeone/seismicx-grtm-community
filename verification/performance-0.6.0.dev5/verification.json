@@ -1,0 +1,234 @@
+{
+  "version": "0.6.0.dev5",
+  "date": "2026-10-21",
+  "source_commit": "44e0ef80746088bf77f95a753c00989c3e61e51c",
+  "build_run": 39592914605,
+  "license": "LicenseRef-SeismicX-Research-NonCommercial",
+  "distribution": "compiled implementation modules; no solver implementation source archive",
+  "audit": {
+    "wheels": 10,
+    "source_audit_errors": 0,
+    "required_new_library": "rf_cpu on both platforms",
+    "checks": [
+      "exact Python/platform set",
+      "RECORD integrity",
+      "implementation source/private build-path marker scan",
+      "license/notices",
+      "native CPU/CUDA/Metal libraries",
+      "package metadata"
+    ]
+  },
+  "ci_jobs": [
+    {
+      "name": "macos (3.10)",
+      "conclusion": "success",
+      "url": "https://github.com/cangyeone/seismicx-grtm/actions/runs/39592914605/job/119198071160"
+    },
+    {
+      "name": "linux (cp313-cp313)",
+      "conclusion": "success",
+      "url": "https://github.com/cangyeone/seismicx-grtm/actions/runs/39592914605/job/119198071400"
+    },
+    {
+      "name": "macos (3.14)",
+      "conclusion": "success",
+      "url": "https://github.com/cangyeone/seismicx-grtm/actions/runs/39592914605/job/119198071401"
+    },
+    {
+      "name": "linux (cp314-cp314)",
+      "conclusion": "success",
+      "url": "https://github.com/cangyeone/seismicx-grtm/actions/runs/39592914605/job/119198071437"
+    },
+    {
+      "name": "linux (cp312-cp312)",
+      "conclusion": "success",
+      "url": "https://github.com/cangyeone/seismicx-grtm/actions/runs/39592914605/job/119198071462"
+    },
+    {
+      "name": "macos (3.13)",
+      "conclusion": "success",
+      "url": "https://github.com/cangyeone/seismicx-grtm/actions/runs/39592914605/job/119198071495"
+    },
+    {
+      "name": "linux (cp311-cp311)",
+      "conclusion": "success",
+      "url": "https://github.com/cangyeone/seismicx-grtm/actions/runs/39592914605/job/119198071541"
+    },
+    {
+      "name": "macos (3.12)",
+      "conclusion": "success",
+      "url": "https://github.com/cangyeone/seismicx-grtm/actions/runs/39592914605/job/119198071593"
+    },
+    {
+      "name": "macos (3.11)",
+      "conclusion": "success",
+      "url": "https://github.com/cangyeone/seismicx-grtm/actions/runs/39592914605/job/119198071749"
+    },
+    {
+      "name": "linux (cp310-cp310)",
+      "conclusion": "success",
+      "url": "https://github.com/cangyeone/seismicx-grtm/actions/runs/39592914605/job/119198071953"
+    }
+  ],
+  "device_tests": [
+    {
+      "platform": "Apple M4 Max; CPython3.12; CPU/Metal/MPS; GRTM_TEST_METAL=1",
+      "tests": 111,
+      "passed": 94,
+      "skipped": 17,
+      "seconds": 14.101,
+      "status": "passed",
+      "log": "binary-tests-apple-metal.log",
+      "sha256": "c00c1901c4fff5072d5624a6de0c8f90e3f3b8f6a909386ea904352f6562857a"
+    },
+    {
+      "platform": "Threadripper PRO3955WX / RTX5090; CPython3.13; Torch2.8.0+cu128; GRTM_TEST_CUDA=1",
+      "tests": 111,
+      "passed": 100,
+      "skipped": 11,
+      "seconds": 46.961,
+      "status": "passed",
+      "log": "binary-tests-cuda.log",
+      "sha256": "23fc9b2cdf03c4333478e255e741879f6207b64678104108b6c8cd28cda5a2b5"
+    }
+  ],
+  "documentation_examples": [
+    {
+      "device": "cpu",
+      "version": "0.6.0.dev5",
+      "module": "/Users/yuziye/\u540c\u6b65/\u9879\u76ee\u76f8\u5173/\u683c\u6797\u51fd\u6570\u52a0\u901f/seismicx-grtm/build-release-check/dev5-binary/.venv/lib/python3.12/site-packages/grtm/__init__.py",
+      "torch": "2.8.0",
+      "seconds": 1.409530833014287,
+      "bilingual_ast_match": true,
+      "finite": {
+        "g_rf": true,
+        "g_sw": true,
+        "g_green": true
+      },
+      "shapes": {
+        "c": [
+          16,
+          3
+        ],
+        "k": [
+          16,
+          3,
+          3
+        ],
+        "y": [
+          16,
+          2,
+          64,
+          3
+        ]
+      }
+    },
+    {
+      "device": "mps",
+      "version": "0.6.0.dev5",
+      "module": "/Users/yuziye/\u540c\u6b65/\u9879\u76ee\u76f8\u5173/\u683c\u6797\u51fd\u6570\u52a0\u901f/seismicx-grtm/build-release-check/dev5-binary/.venv/lib/python3.12/site-packages/grtm/__init__.py",
+      "torch": "2.8.0",
+      "seconds": 1.2819195829797536,
+      "bilingual_ast_match": true,
+      "finite": {
+        "g_rf": true,
+        "g_sw": true,
+        "g_green": true
+      },
+      "shapes": {
+        "c": [
+          16,
+          3
+        ],
+        "k": [
+          16,
+          3,
+          3
+        ],
+        "y": [
+          16,
+          2,
+          64,
+          3
+        ]
+      }
+    },
+    {
+      "device": "cuda:0",
+      "version": "0.6.0.dev5",
+      "module": "/home/yuzy/grtm-final-20261021/binary-env/lib/python3.13/site-packages/grtm/__init__.py",
+      "torch": "2.8.0+cu128",
+      "seconds": 2.5021061608567834,
+      "bilingual_ast_match": true,
+      "finite": {
+        "g_rf": true,
+        "g_sw": true,
+        "g_green": true
+      },
+      "shapes": {
+        "c": [
+          16,
+          3
+        ],
+        "k": [
+          16,
+          3,
+          3
+        ],
+        "y": [
+          16,
+          2,
+          64,
+          3
+        ]
+      },
+      "green_single_model_derivative_execution": {
+        "kind": "last_structural_derivative",
+        "cuda_frequencies": 32,
+        "cpu_frequencies": 0,
+        "directions": 8,
+        "method": "FP64 CUDA forward AD; device VJP contraction; long-double CPU quasistatic exception"
+      }
+    }
+  ],
+  "benchmarks": {
+    "backends-apple": {
+      "completed": true,
+      "records": 80,
+      "sha256": "3db484aef44bd70cdc7d47b3a3eb0a0c1ba3a986a7969eac109c34ba5fb27531"
+    },
+    "backends-cuda": {
+      "completed": true,
+      "records": 80,
+      "sha256": "d73c79e130def84ff1516bbbbc13a82fb79746c18c6010753a3970eb3fc004e5"
+    },
+    "pyfk-apple": {
+      "completed": true,
+      "records": 24,
+      "sha256": "b437978be66bad3fbaceb26ff3c1d8f41183860e3e3276aec29385398bfb8e94"
+    },
+    "pyfk-cuda": {
+      "completed": true,
+      "records": 30,
+      "sha256": "aa6292f308bc7c64bc9322ce673356e1703864215c92bf504aa501155ef79bae"
+    },
+    "pyfk-refined-apple": {
+      "completed": true,
+      "records": 16,
+      "sha256": "6d3e2bd6d7abb44e52c9cdfa5e3504d6cf3e61825801af7dce58b924928878df"
+    },
+    "pyfk-refined-cuda": {
+      "completed": true,
+      "records": 16,
+      "sha256": "cd0f5301b8cb94f7e6f5f4a4e58c41df67922addc64ce4c7d818244b2fc9cd73"
+    }
+  },
+  "limitations": [
+    "MPS RF/surface is explicit CPU FP64 bridge, with float32 tensor boundaries",
+    "Green CUDA VJP is analytic directional contraction, not a reverse tape",
+    "Green host low-frequency precision, FFT and physical synthesis remain",
+    "disba default finite-difference kernels are not derivative ground truth",
+    "Original pyfk midpoint and GRTM trapezoid quadrature differ; refinement recorded",
+    "First-order custom backward only; no inverse/geological accuracy claim"
+  ]
+}
