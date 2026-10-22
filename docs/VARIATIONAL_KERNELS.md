@@ -1,5 +1,7 @@
 # Eigenfunction and forced-response kernels
 
+> This page describes dev8. dev9 adds an explicit continuous-depth Green wavefield integral backend; see [the current method guide](GREEN_WAVEFIELD_KERNELS.md). The dev8 reverse-AD description below is historical.
+
 [中文：完整推导与接口](VARIATIONAL_KERNELS.zh-CN.md)
 
 dev8 adds `SurfaceWave(differentiation='eigenfunction')`: FP64 GRTM mode reconstruction, closed-form exponential energy integrals, interface shape derivatives and an analytic root-path period derivative for group kernels. It also adds `JointRFForward.sensitivity` and `grtm.torch.Forward.sensitivity` for scalar-observable adjoint kernels.

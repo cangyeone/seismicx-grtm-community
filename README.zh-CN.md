@@ -7,6 +7,15 @@
 仓库中的代码片段是公开接口的使用示例，不包含求解器实现源码或开发历史。
 
 
+
+## 格林函数显式波场积分核预览 0.6.0.dev9
+
+[下载](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev9) · [理论与接口](docs/GREEN_WAVEFIELD_KERNELS.zh-CN.md) · [单模型/batch 精度与速度](docs/PERFORMANCE_0.6.0.dev9.zh-CN.md) · [ABI 与安装限制](docs/PREVIEW_0.6.0.dev9.zh-CN.md)
+
+新增 FP64 CPU/CUDA 层内闭式波场重叠积分，包含材料、界面、震源和接收端项。使用 `vjp_method='wavefield'`；原有伴随、默认策略及低频精度保护保留。CUDA 常规频率的传播、合成、FFT、梯度在同一设备完成，batch 仍逐模型调用。报告保留 CPU 变慢及低频保护的结果，并与 QEDispInv 在相同已知根上比较。两个实际安装 wheel 各运行 143 项测试（Apple/CUDA 分别跳过 26/9 项）。
+
+发布 Mac CPython 3.12 和 Linux CPython 3.13（glibc≥2.31、CUDA sm120）两个 ABI。全部 host 库重新编译，仅复用已校验且未变化的编译 Metal shader。研究/非商业许可不变。
+
 ## 特征函数与受迫伴随核预览版 0.6.0.dev8
 
 [下载](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev8) · [公式与接口](docs/VARIATIONAL_KERNELS.zh-CN.md) · [完整实测](docs/PERFORMANCE_0.6.0.dev8.zh-CN.md) · [安装范围](docs/PREVIEW_0.6.0.dev8.zh-CN.md)

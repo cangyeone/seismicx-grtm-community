@@ -1,0 +1,826 @@
+{
+  "version": "0.6.0.dev9",
+  "device": "cpu",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "native_threads": 4,
+  "torch_threads": 1,
+  "warmups": 2,
+  "repeats": 3,
+  "dtype": "float64",
+  "numpy": "1.26.4",
+  "torch": "2.8.0",
+  "gpu": null,
+  "complete": true,
+  "records": [
+    {
+      "layers": 8,
+      "n_samples": 16,
+      "k_steps": 32,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 1,
+      "selected_parameters": 47,
+      "method": "adjoint",
+      "relative_error": 0.0,
+      "scope": "forward_and_vjp",
+      "seconds": 0.004591582999637467,
+      "samples": [
+        0.0044450829991546925,
+        0.004591582999637467,
+        0.004669416999604437
+      ],
+      "execution": {}
+    },
+    {
+      "layers": 8,
+      "n_samples": 16,
+      "k_steps": 32,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 1,
+      "selected_parameters": 47,
+      "method": "adjoint",
+      "relative_error": 0.0,
+      "scope": "vjp_only",
+      "seconds": 0.003787457999351318,
+      "samples": [
+        0.0037908340000285534,
+        0.003754917001060676,
+        0.003787457999351318
+      ],
+      "execution": {}
+    },
+    {
+      "layers": 8,
+      "n_samples": 16,
+      "k_steps": 32,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 1,
+      "selected_parameters": 47,
+      "method": "wavefield",
+      "relative_error": 4.641738636367373e-15,
+      "scope": "forward_and_vjp",
+      "seconds": 0.0033018329995684326,
+      "samples": [
+        0.0033235419996344717,
+        0.003207540999937919,
+        0.0033018329995684326
+      ],
+      "execution": {
+        "kind": "last_structural_derivative",
+        "method": "CPU explicit wavefield overlap with protected reverse AD",
+        "wavefield_frequencies": 8,
+        "protected_ad_frequencies": 0,
+        "fallback_ad_frequencies": 0,
+        "scope": "most recent model backward"
+      }
+    },
+    {
+      "layers": 8,
+      "n_samples": 16,
+      "k_steps": 32,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 1,
+      "selected_parameters": 47,
+      "method": "wavefield",
+      "relative_error": 4.641738636367373e-15,
+      "scope": "vjp_only",
+      "seconds": 0.0026218750008411007,
+      "samples": [
+        0.0026218750008411007,
+        0.002609249999295571,
+        0.002622374999191379
+      ],
+      "execution": {
+        "kind": "last_structural_derivative",
+        "method": "CPU explicit wavefield overlap with protected reverse AD",
+        "wavefield_frequencies": 8,
+        "protected_ad_frequencies": 0,
+        "fallback_ad_frequencies": 0,
+        "scope": "most recent model backward"
+      }
+    },
+    {
+      "layers": 8,
+      "n_samples": 16,
+      "k_steps": 32,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 4,
+      "selected_parameters": 47,
+      "method": "adjoint",
+      "relative_error": 0.0,
+      "scope": "forward_and_vjp",
+      "seconds": 0.01747708299990336,
+      "samples": [
+        0.01747708299990336,
+        0.017650333000347018,
+        0.017350709000311326
+      ],
+      "execution": {}
+    },
+    {
+      "layers": 8,
+      "n_samples": 16,
+      "k_steps": 32,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 4,
+      "selected_parameters": 47,
+      "method": "adjoint",
+      "relative_error": 0.0,
+      "scope": "vjp_only",
+      "seconds": 0.015028708001409541,
+      "samples": [
+        0.015037374998428277,
+        0.014965000000302098,
+        0.015028708001409541
+      ],
+      "execution": {}
+    },
+    {
+      "layers": 8,
+      "n_samples": 16,
+      "k_steps": 32,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 4,
+      "selected_parameters": 47,
+      "method": "wavefield",
+      "relative_error": 3.2142928166866737e-15,
+      "scope": "forward_and_vjp",
+      "seconds": 0.012767374999384629,
+      "samples": [
+        0.01304829100081406,
+        0.012767374999384629,
+        0.012661875000048894
+      ],
+      "execution": {
+        "kind": "last_structural_derivative",
+        "method": "CPU explicit wavefield overlap with protected reverse AD",
+        "wavefield_frequencies": 8,
+        "protected_ad_frequencies": 0,
+        "fallback_ad_frequencies": 0,
+        "scope": "most recent model backward"
+      }
+    },
+    {
+      "layers": 8,
+      "n_samples": 16,
+      "k_steps": 32,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 4,
+      "selected_parameters": 47,
+      "method": "wavefield",
+      "relative_error": 3.2142928166866737e-15,
+      "scope": "vjp_only",
+      "seconds": 0.01038450000123703,
+      "samples": [
+        0.010404874999949243,
+        0.01038450000123703,
+        0.010292000000845292
+      ],
+      "execution": {
+        "kind": "last_structural_derivative",
+        "method": "CPU explicit wavefield overlap with protected reverse AD",
+        "wavefield_frequencies": 8,
+        "protected_ad_frequencies": 0,
+        "fallback_ad_frequencies": 0,
+        "scope": "most recent model backward"
+      }
+    },
+    {
+      "layers": 8,
+      "n_samples": 16,
+      "k_steps": 32,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 16,
+      "selected_parameters": 47,
+      "method": "adjoint",
+      "relative_error": 0.0,
+      "scope": "forward_and_vjp",
+      "seconds": 0.06935408399840526,
+      "samples": [
+        0.06935408399840526,
+        0.06965887499973178,
+        0.06866454199916916
+      ],
+      "execution": {}
+    },
+    {
+      "layers": 8,
+      "n_samples": 16,
+      "k_steps": 32,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 16,
+      "selected_parameters": 47,
+      "method": "adjoint",
+      "relative_error": 0.0,
+      "scope": "vjp_only",
+      "seconds": 0.05966104100116354,
+      "samples": [
+        0.05966104100116354,
+        0.05965937500150176,
+        0.060371832998498576
+      ],
+      "execution": {}
+    },
+    {
+      "layers": 8,
+      "n_samples": 16,
+      "k_steps": 32,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 16,
+      "selected_parameters": 47,
+      "method": "wavefield",
+      "relative_error": 4.5748708726539355e-15,
+      "scope": "forward_and_vjp",
+      "seconds": 0.05212208400007512,
+      "samples": [
+        0.05349795800066204,
+        0.05212208400007512,
+        0.05176891699920816
+      ],
+      "execution": {
+        "kind": "last_structural_derivative",
+        "method": "CPU explicit wavefield overlap with protected reverse AD",
+        "wavefield_frequencies": 8,
+        "protected_ad_frequencies": 0,
+        "fallback_ad_frequencies": 0,
+        "scope": "most recent model backward"
+      }
+    },
+    {
+      "layers": 8,
+      "n_samples": 16,
+      "k_steps": 32,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 16,
+      "selected_parameters": 47,
+      "method": "wavefield",
+      "relative_error": 4.5748708726539355e-15,
+      "scope": "vjp_only",
+      "seconds": 0.04179258299882349,
+      "samples": [
+        0.041479875000732136,
+        0.04179258299882349,
+        0.0425695829999313
+      ],
+      "execution": {
+        "kind": "last_structural_derivative",
+        "method": "CPU explicit wavefield overlap with protected reverse AD",
+        "wavefield_frequencies": 8,
+        "protected_ad_frequencies": 0,
+        "fallback_ad_frequencies": 0,
+        "scope": "most recent model backward"
+      }
+    },
+    {
+      "layers": 32,
+      "n_samples": 16,
+      "k_steps": 32,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 1,
+      "selected_parameters": 191,
+      "method": "adjoint",
+      "relative_error": 0.0,
+      "scope": "forward_and_vjp",
+      "seconds": 0.013808499999868218,
+      "samples": [
+        0.013808499999868218,
+        0.01377899999897636,
+        0.013902250000683125
+      ],
+      "execution": {}
+    },
+    {
+      "layers": 32,
+      "n_samples": 16,
+      "k_steps": 32,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 1,
+      "selected_parameters": 191,
+      "method": "adjoint",
+      "relative_error": 0.0,
+      "scope": "vjp_only",
+      "seconds": 0.01263620799909404,
+      "samples": [
+        0.012663916999372304,
+        0.01260016600099334,
+        0.01263620799909404
+      ],
+      "execution": {}
+    },
+    {
+      "layers": 32,
+      "n_samples": 16,
+      "k_steps": 32,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 1,
+      "selected_parameters": 191,
+      "method": "wavefield",
+      "relative_error": 6.951694035147324e-15,
+      "scope": "forward_and_vjp",
+      "seconds": 0.009148709001237876,
+      "samples": [
+        0.009148709001237876,
+        0.009181208999507362,
+        0.009147166998445755
+      ],
+      "execution": {
+        "kind": "last_structural_derivative",
+        "method": "CPU explicit wavefield overlap with protected reverse AD",
+        "wavefield_frequencies": 8,
+        "protected_ad_frequencies": 0,
+        "fallback_ad_frequencies": 0,
+        "scope": "most recent model backward"
+      }
+    },
+    {
+      "layers": 32,
+      "n_samples": 16,
+      "k_steps": 32,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 1,
+      "selected_parameters": 191,
+      "method": "wavefield",
+      "relative_error": 6.951694035147324e-15,
+      "scope": "vjp_only",
+      "seconds": 0.007976582999617676,
+      "samples": [
+        0.007975417000125162,
+        0.007994333000169718,
+        0.007976582999617676
+      ],
+      "execution": {
+        "kind": "last_structural_derivative",
+        "method": "CPU explicit wavefield overlap with protected reverse AD",
+        "wavefield_frequencies": 8,
+        "protected_ad_frequencies": 0,
+        "fallback_ad_frequencies": 0,
+        "scope": "most recent model backward"
+      }
+    },
+    {
+      "layers": 32,
+      "n_samples": 16,
+      "k_steps": 32,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 4,
+      "selected_parameters": 191,
+      "method": "adjoint",
+      "relative_error": 0.0,
+      "scope": "forward_and_vjp",
+      "seconds": 0.05499829200016393,
+      "samples": [
+        0.05475708399899304,
+        0.05502691699985007,
+        0.05499829200016393
+      ],
+      "execution": {}
+    },
+    {
+      "layers": 32,
+      "n_samples": 16,
+      "k_steps": 32,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 4,
+      "selected_parameters": 191,
+      "method": "adjoint",
+      "relative_error": 0.0,
+      "scope": "vjp_only",
+      "seconds": 0.050375459000861156,
+      "samples": [
+        0.050375459000861156,
+        0.05064899999888439,
+        0.050323833000220475
+      ],
+      "execution": {}
+    },
+    {
+      "layers": 32,
+      "n_samples": 16,
+      "k_steps": 32,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 4,
+      "selected_parameters": 191,
+      "method": "wavefield",
+      "relative_error": 1.5465801796363848e-14,
+      "scope": "forward_and_vjp",
+      "seconds": 0.03630545799933316,
+      "samples": [
+        0.036311249999926076,
+        0.036190875000102096,
+        0.03630545799933316
+      ],
+      "execution": {
+        "kind": "last_structural_derivative",
+        "method": "CPU explicit wavefield overlap with protected reverse AD",
+        "wavefield_frequencies": 8,
+        "protected_ad_frequencies": 0,
+        "fallback_ad_frequencies": 0,
+        "scope": "most recent model backward"
+      }
+    },
+    {
+      "layers": 32,
+      "n_samples": 16,
+      "k_steps": 32,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 4,
+      "selected_parameters": 191,
+      "method": "wavefield",
+      "relative_error": 1.5465801796363848e-14,
+      "scope": "vjp_only",
+      "seconds": 0.03178533299978881,
+      "samples": [
+        0.03184708399930969,
+        0.03178533299978881,
+        0.031776791998709086
+      ],
+      "execution": {
+        "kind": "last_structural_derivative",
+        "method": "CPU explicit wavefield overlap with protected reverse AD",
+        "wavefield_frequencies": 8,
+        "protected_ad_frequencies": 0,
+        "fallback_ad_frequencies": 0,
+        "scope": "most recent model backward"
+      }
+    },
+    {
+      "layers": 32,
+      "n_samples": 16,
+      "k_steps": 32,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 16,
+      "selected_parameters": 191,
+      "method": "adjoint",
+      "relative_error": 0.0,
+      "scope": "forward_and_vjp",
+      "seconds": 0.21791570899949875,
+      "samples": [
+        0.21791570899949875,
+        0.21784762499919452,
+        0.2195313329993951
+      ],
+      "execution": {}
+    },
+    {
+      "layers": 32,
+      "n_samples": 16,
+      "k_steps": 32,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 16,
+      "selected_parameters": 191,
+      "method": "adjoint",
+      "relative_error": 0.0,
+      "scope": "vjp_only",
+      "seconds": 0.20101037499989616,
+      "samples": [
+        0.20118995800112316,
+        0.20101037499989616,
+        0.20096799999919313
+      ],
+      "execution": {}
+    },
+    {
+      "layers": 32,
+      "n_samples": 16,
+      "k_steps": 32,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 16,
+      "selected_parameters": 191,
+      "method": "wavefield",
+      "relative_error": 1.1334649125954718e-14,
+      "scope": "forward_and_vjp",
+      "seconds": 0.1465407089999644,
+      "samples": [
+        0.1465407089999644,
+        0.14866583299954073,
+        0.14493566700002702
+      ],
+      "execution": {
+        "kind": "last_structural_derivative",
+        "method": "CPU explicit wavefield overlap with protected reverse AD",
+        "wavefield_frequencies": 8,
+        "protected_ad_frequencies": 0,
+        "fallback_ad_frequencies": 0,
+        "scope": "most recent model backward"
+      }
+    },
+    {
+      "layers": 32,
+      "n_samples": 16,
+      "k_steps": 32,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 16,
+      "selected_parameters": 191,
+      "method": "wavefield",
+      "relative_error": 1.1334649125954718e-14,
+      "scope": "vjp_only",
+      "seconds": 0.12847583399889118,
+      "samples": [
+        0.12766283299970382,
+        0.1285672499998327,
+        0.12847583399889118
+      ],
+      "execution": {
+        "kind": "last_structural_derivative",
+        "method": "CPU explicit wavefield overlap with protected reverse AD",
+        "wavefield_frequencies": 8,
+        "protected_ad_frequencies": 0,
+        "fallback_ad_frequencies": 0,
+        "scope": "most recent model backward"
+      }
+    },
+    {
+      "layers": 8,
+      "n_samples": 128,
+      "k_steps": 512,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 1,
+      "selected_parameters": 47,
+      "method": "adjoint",
+      "relative_error": 0.0,
+      "scope": "forward_and_vjp",
+      "seconds": 0.4117736660009541,
+      "samples": [
+        0.4117736660009541,
+        0.4101856670004054,
+        0.4130997079992085
+      ],
+      "execution": {}
+    },
+    {
+      "layers": 8,
+      "n_samples": 128,
+      "k_steps": 512,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 1,
+      "selected_parameters": 47,
+      "method": "adjoint",
+      "relative_error": 0.0,
+      "scope": "vjp_only",
+      "seconds": 0.3899016670002311,
+      "samples": [
+        0.3899016670002311,
+        0.3924175419997482,
+        0.3898687079999945
+      ],
+      "execution": {}
+    },
+    {
+      "layers": 8,
+      "n_samples": 128,
+      "k_steps": 512,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 1,
+      "selected_parameters": 47,
+      "method": "wavefield",
+      "relative_error": 3.2979167799858044e-15,
+      "scope": "forward_and_vjp",
+      "seconds": 0.2834943329999078,
+      "samples": [
+        0.2821478339992609,
+        0.2834943329999078,
+        0.2852659999989555
+      ],
+      "execution": {
+        "kind": "last_structural_derivative",
+        "method": "CPU explicit wavefield overlap with protected reverse AD",
+        "wavefield_frequencies": 61,
+        "protected_ad_frequencies": 3,
+        "fallback_ad_frequencies": 0,
+        "scope": "most recent model backward"
+      }
+    },
+    {
+      "layers": 8,
+      "n_samples": 128,
+      "k_steps": 512,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 1,
+      "selected_parameters": 47,
+      "method": "wavefield",
+      "relative_error": 3.2979167799858044e-15,
+      "scope": "vjp_only",
+      "seconds": 0.25932729199848836,
+      "samples": [
+        0.25894029200026125,
+        0.25932729199848836,
+        0.2639865830005874
+      ],
+      "execution": {
+        "kind": "last_structural_derivative",
+        "method": "CPU explicit wavefield overlap with protected reverse AD",
+        "wavefield_frequencies": 61,
+        "protected_ad_frequencies": 3,
+        "fallback_ad_frequencies": 0,
+        "scope": "most recent model backward"
+      }
+    },
+    {
+      "layers": 8,
+      "n_samples": 128,
+      "k_steps": 512,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 4,
+      "selected_parameters": 47,
+      "method": "adjoint",
+      "relative_error": 0.0,
+      "scope": "forward_and_vjp",
+      "seconds": 1.6511720420003257,
+      "samples": [
+        1.6511720420003257,
+        1.658951250001337,
+        1.650319958000182
+      ],
+      "execution": {}
+    },
+    {
+      "layers": 8,
+      "n_samples": 128,
+      "k_steps": 512,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 4,
+      "selected_parameters": 47,
+      "method": "adjoint",
+      "relative_error": 0.0,
+      "scope": "vjp_only",
+      "seconds": 1.5699299999996583,
+      "samples": [
+        1.574092582999583,
+        1.5661826670002483,
+        1.5699299999996583
+      ],
+      "execution": {}
+    },
+    {
+      "layers": 8,
+      "n_samples": 128,
+      "k_steps": 512,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 4,
+      "selected_parameters": 47,
+      "method": "wavefield",
+      "relative_error": 3.560339681571218e-15,
+      "scope": "forward_and_vjp",
+      "seconds": 1.1311176670005807,
+      "samples": [
+        1.1294894580005348,
+        1.132230208000692,
+        1.1311176670005807
+      ],
+      "execution": {
+        "kind": "last_structural_derivative",
+        "method": "CPU explicit wavefield overlap with protected reverse AD",
+        "wavefield_frequencies": 61,
+        "protected_ad_frequencies": 3,
+        "fallback_ad_frequencies": 0,
+        "scope": "most recent model backward"
+      }
+    },
+    {
+      "layers": 8,
+      "n_samples": 128,
+      "k_steps": 512,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 4,
+      "selected_parameters": 47,
+      "method": "wavefield",
+      "relative_error": 3.560339681571218e-15,
+      "scope": "vjp_only",
+      "seconds": 1.0473365830002876,
+      "samples": [
+        1.0473365830002876,
+        1.0460583750009391,
+        1.0502105409996148
+      ],
+      "execution": {
+        "kind": "last_structural_derivative",
+        "method": "CPU explicit wavefield overlap with protected reverse AD",
+        "wavefield_frequencies": 61,
+        "protected_ad_frequencies": 3,
+        "fallback_ad_frequencies": 0,
+        "scope": "most recent model backward"
+      }
+    },
+    {
+      "layers": 32,
+      "n_samples": 128,
+      "k_steps": 512,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 1,
+      "selected_parameters": 191,
+      "method": "adjoint",
+      "relative_error": 0.0,
+      "scope": "forward_and_vjp",
+      "seconds": 1.574905707999278,
+      "samples": [
+        1.5740329580003163,
+        1.574905707999278,
+        1.5836332090002543
+      ],
+      "execution": {}
+    },
+    {
+      "layers": 32,
+      "n_samples": 128,
+      "k_steps": 512,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 1,
+      "selected_parameters": 191,
+      "method": "adjoint",
+      "relative_error": 0.0,
+      "scope": "vjp_only",
+      "seconds": 1.496129375000237,
+      "samples": [
+        1.4938324999984616,
+        1.496129375000237,
+        1.4965903329994035
+      ],
+      "execution": {}
+    },
+    {
+      "layers": 32,
+      "n_samples": 128,
+      "k_steps": 512,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 1,
+      "selected_parameters": 191,
+      "method": "wavefield",
+      "relative_error": 2.4777005325933186e-15,
+      "scope": "forward_and_vjp",
+      "seconds": 1.0551638750002894,
+      "samples": [
+        1.057074250000369,
+        1.0533306669985905,
+        1.0551638750002894
+      ],
+      "execution": {
+        "kind": "last_structural_derivative",
+        "method": "CPU explicit wavefield overlap with protected reverse AD",
+        "wavefield_frequencies": 61,
+        "protected_ad_frequencies": 3,
+        "fallback_ad_frequencies": 0,
+        "scope": "most recent model backward"
+      }
+    },
+    {
+      "layers": 32,
+      "n_samples": 128,
+      "k_steps": 512,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "batch": 1,
+      "selected_parameters": 191,
+      "method": "wavefield",
+      "relative_error": 2.4777005325933186e-15,
+      "scope": "vjp_only",
+      "seconds": 0.9691010000005917,
+      "samples": [
+        0.9686815839995688,
+        0.9691010000005917,
+        0.9745381669999915
+      ],
+      "execution": {
+        "kind": "last_structural_derivative",
+        "method": "CPU explicit wavefield overlap with protected reverse AD",
+        "wavefield_frequencies": 61,
+        "protected_ad_frequencies": 3,
+        "fallback_ad_frequencies": 0,
+        "scope": "most recent model backward"
+      }
+    }
+  ]
+}

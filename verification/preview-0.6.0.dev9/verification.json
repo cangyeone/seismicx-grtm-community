@@ -1,0 +1,98 @@
+{
+  "version": "0.6.0.dev9",
+  "date": "2026-10-22",
+  "source_commit": "f3d8106fc059ab75ba5580fbaa3fadcaeb908917",
+  "build_method": "local Apple CPython 3.12 and remote Linux CPython 3.13; installed final wheels; Linux auditwheel glibc 2.31",
+  "license": "LicenseRef-SeismicX-Research-NonCommercial",
+  "distribution": "compiled implementation modules; no solver source archive",
+  "audit": {
+    "wheels": 2,
+    "source_audit_errors": 0
+  },
+  "device_tests": [
+    {
+      "platform": "Apple M4 Max; CPU/Metal/MPS; CPython 3.12",
+      "tests": 143,
+      "passed": 117,
+      "skipped": 26,
+      "seconds": 13.038,
+      "log": "binary-tests-apple.log",
+      "sha256": "196ff2dc7633215b89916e0aad24886cebd4be50b74932ca8ab50718deadfe85",
+      "unredacted_sha256": "196ff2dc7633215b89916e0aad24886cebd4be50b74932ca8ab50718deadfe85"
+    },
+    {
+      "platform": "Threadripper PRO 3955WX / RTX 5090; CPython 3.13",
+      "tests": 143,
+      "passed": 134,
+      "skipped": 9,
+      "seconds": 55.942,
+      "log": "binary-tests-cuda.log",
+      "sha256": "4627864fe5902301432a7c825568661e02451ffb84e67e3b329ce16573da07d4",
+      "unredacted_sha256": "8c3ab471333ba3c2e5b2929d739073fb2d9fcabd204bd408e3b188bcef7ae878"
+    }
+  ],
+  "reused_compiled_shader": {
+    "binary_sha256": "35d34e86ab2f41d811027df1d0e863218d02a1ae07958254723fbc4f27aa4912",
+    "shader_sha256": "1cfc6a81a9e96cf8b4330b06c8c925be1ef151a3c0928801e45f1700ec09b69d",
+    "reference_wheel": "seismicx_grtm-0.6.0.dev7-cp312-cp312-macosx_11_0_arm64.whl",
+    "reference_wheel_sha256": "2e2c7f9dcc354c26a1f3c3695f8fc5d78e4fdc4af08b13693fed76704310ec54",
+    "source_commit": "4a3ac138bd0fbf0b05e5b841effd524654bfbeda",
+    "bytes": 5310
+  },
+  "metal_host_libraries": "all rebuilt from dev9; only unchanged compiled MTLB reused",
+  "path_redaction": "Personal host prefixes removed from logs only; original log hashes retained; numeric records unchanged",
+  "benchmarks": [
+    {
+      "file": "apple-final.json",
+      "sha256": "39100bf11ea4435ed6069b85a0f1253528f3606d2f0f33753b6ceff8aed6277a",
+      "records": 36
+    },
+    {
+      "file": "apple-regular-final.json",
+      "sha256": "85405f1b01d392e7b43255f8967f2241998232a86837023fc5c928838a00500f",
+      "records": 12
+    },
+    {
+      "file": "cpu-final.json",
+      "sha256": "ddf6014bb7af6d3876a4358edd757d6ebf2963e1ce3deb70c59a549fbffeca0c",
+      "records": 36
+    },
+    {
+      "file": "cpu-regular-final.json",
+      "sha256": "c24bdc813899490d199dc2afa5aa89bec88a8e87ab70dddc12a2b514c80dc9ee",
+      "records": 12
+    },
+    {
+      "file": "cuda-final.json",
+      "sha256": "0aabeff6ba67a145c82ff93089fb5ad0f504235230aafb13590e9f1c92e4735b",
+      "records": 36
+    },
+    {
+      "file": "cuda-regular-final.json",
+      "sha256": "84ccb5565026509213616c6f01ae08433c7e4038b5d14bebd3fbfc528abd3300",
+      "records": 12
+    },
+    {
+      "file": "qe-known-root-apple.json",
+      "sha256": "b6f7437c86a8fe2d2bbc6c3ea1d5dd479fb291d66069b4f3a914cfb2579092f2",
+      "records": 6
+    },
+    {
+      "file": "cuda-profile.json",
+      "sha256": "d60d105c10f72a930ab4ae835e8d52d7e5bb0027efec56b650fdafa953124991",
+      "records": null
+    },
+    {
+      "file": "summary.json",
+      "sha256": "d07a917667275eba2335a3e650746936110ff410fefc288588783f6e301ffe3a",
+      "records": null
+    }
+  ],
+  "benchmark_summary": {
+    "records": 144,
+    "max_gradient_relative_error": 2.0671421016852286e-14
+  },
+  "benchmark_driver_sha256": "9447e9f5cf2c7e1e6cff5899eaf66dbf6ed3f9b06272b92cdb22595075cd78a3",
+  "report_generator_sha256": "aaf7a1b494a59295c3978f27e3120ea81a463dd20e58080f38c52f3295d931af",
+  "qe_reference_build_script_sha256": "86856bc5ce8c06731ad4f60fb24207b4b095b57daccdc06543543daa656765a9"
+}

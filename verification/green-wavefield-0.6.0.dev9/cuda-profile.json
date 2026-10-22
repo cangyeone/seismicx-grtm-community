@@ -1,0 +1,644 @@
+[
+  {
+    "layers": 32,
+    "n_samples": 16,
+    "k_steps": 32,
+    "dt": 0.4,
+    "period_length": 500.0,
+    "method": "adjoint",
+    "profiled_wall_seconds": 0.9057765230536461,
+    "execution": {
+      "kind": "last_structural_derivative",
+      "cuda_frequencies": 8,
+      "cpu_frequencies": 0,
+      "directions": 0,
+      "parameters": 191,
+      "maximum_tape_nodes": 12774,
+      "wavefield_ad_fallback": 0,
+      "method": "FP64 CUDA analytic reverse AD; device tape and ordered VJP reduction; long-double CPU quasistatic exception",
+      "fft_device": "cuda:1",
+      "synthesis_device": "cuda:1",
+      "gradient_device": "cuda:1",
+      "scope": "most recent model backward"
+    },
+    "cuda_events": {
+      "void at::native::vectorized_elementwise_kernel<2, at::native::FillFunctor<double>, std::array<char*, 1ul> >(int, at::native::FillFunctor<double>, std::array<char*, 1ul>)": {
+        "calls": 2,
+        "microseconds": 1.9839999999999236
+      },
+      "Memcpy DtoD (Device -> Device)": {
+        "calls": 4,
+        "microseconds": 3.616000000000895
+      },
+      "void at::native::vectorized_elementwise_kernel<2, at::native::AUnaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> >, std::array<char*, 2ul> >(int, at::native::AUnaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> >, std::array<char*, 2ul>)": {
+        "calls": 1,
+        "microseconds": 1.1200000000003456
+      },
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > const&)::{lambda(int)#1})": {
+        "calls": 2,
+        "microseconds": 2.593000000000302
+      },
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1} const&)::{lambda(int)#1})": {
+        "calls": 1,
+        "microseconds": 1.1199999999998909
+      },
+      "void regular_fft<16u, EPT<4u>, 64u, 4u, (padding_t)14, (twiddle_t)0, (loadstore_modifier_t)2, (layout_t)1, unsigned int, double, HostConfigPlaceholder>(kernel_arguments_t<unsigned int>)": {
+        "calls": 1,
+        "microseconds": 3.680000000000291
+      },
+      "void at::native::unrolled_elementwise_kernel<at::native::AUnaryFunctor<c10::complex<double>, c10::complex<double>, c10::complex<double>, at::native::binary_internal::MulFunctor<c10::complex<double> > >, std::array<char*, 2ul>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, at::native::AUnaryFunctor<c10::complex<double>, c10::complex<double>, c10::complex<double>, at::native::binary_internal::MulFunctor<c10::complex<double> > >, std::array<char*, 2ul>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast)": {
+        "calls": 2,
+        "microseconds": 2.337000000000444
+      },
+      "void cutlass::Kernel2<cutlass_80_tensorop_z884gemm_32x16_16x3_nh_align1>(cutlass_80_tensorop_z884gemm_32x16_16x3_nh_align1::Params)": {
+        "calls": 2,
+        "microseconds": 31.329999999999927
+      },
+      "void at::native::unrolled_elementwise_kernel<at::native::FillFunctor<c10::complex<double> >, std::array<char*, 1ul>, 4, TrivialOffsetCalculator<0, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, at::native::FillFunctor<c10::complex<double> >, std::array<char*, 1ul>, TrivialOffsetCalculator<0, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast)": {
+        "calls": 3,
+        "microseconds": 2.144000000000233
+      },
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::complex<double>)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::complex<double>)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::complex<double>)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::complex<double>)#1} const&)::{lambda(int)#1})": {
+        "calls": 1,
+        "microseconds": 1.4400000000005093
+      },
+      "void at::native::unrolled_elementwise_kernel<at::native::conj_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#11}::operator()() const::{lambda(c10::complex<double>)#1}, std::array<char*, 2ul>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, at::native::conj_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#11}::operator()() const::{lambda(c10::complex<double>)#1}, std::array<char*, 2ul>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast)": {
+        "calls": 1,
+        "microseconds": 0.9279999999998836
+      },
+      "void at::native::index_elementwise_kernel<128, 4, at::native::flip_kernel_impl<at::native::OpaqueType<16> >(at::TensorIterator&)::{lambda(int)#1}>(long, at::native::flip_kernel_impl<at::native::OpaqueType<16> >(at::TensorIterator&)::{lambda(int)#1})": {
+        "calls": 1,
+        "microseconds": 1.4400000000005093
+      },
+      "void at::native::unrolled_elementwise_kernel<at::native::CUDAFunctor_add<c10::complex<double> >, std::array<char*, 3ul>, 4, TrivialOffsetCalculator<2, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, at::native::CUDAFunctor_add<c10::complex<double> >, std::array<char*, 3ul>, TrivialOffsetCalculator<2, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast)": {
+        "calls": 1,
+        "microseconds": 1.5679999999993015
+      },
+      "Memcpy HtoD (Pageable -> Device)": {
+        "calls": 10,
+        "microseconds": 3.038999999997941
+      },
+      "Memset (Device)": {
+        "calls": 3,
+        "microseconds": 3.7119999999995343
+      },
+      "reverse_nodes(double const*, double const*, int const*, int const*, double const*, double const*, int const*, thrust::THRUST_200700_1200_NS::complex<double> const*, int, int, int, int, int, uint2*, thrust::THRUST_200700_1200_NS::complex<double>*, thrust::THRUST_200700_1200_NS::complex<double>*, thrust::THRUST_200700_1200_NS::complex<double>*, gpu_reverse::layer_parameter*, gpu_reverse::parameter*, gpu_reverse::mrtc*, gpu_reverse::grtc*, unsigned int*, double*, int*)": {
+        "calls": 1,
+        "microseconds": 51299.927
+      },
+      "reverse_reduce(double const*, double*, int, int)": {
+        "calls": 1,
+        "microseconds": 3.3280000000013388
+      },
+      "Memcpy DtoH (Device -> Pageable)": {
+        "calls": 1,
+        "microseconds": 0.9919999999983702
+      },
+      "original_gradient(double const*, double const*, int const*, int const*, unsigned char const*, double*, int, int, int, int)": {
+        "calls": 1,
+        "microseconds": 9.985000000000582
+      }
+    }
+  },
+  {
+    "layers": 32,
+    "n_samples": 16,
+    "k_steps": 32,
+    "dt": 0.4,
+    "period_length": 500.0,
+    "method": "wavefield",
+    "profiled_wall_seconds": 0.011593270115554333,
+    "execution": {
+      "kind": "last_structural_derivative",
+      "cuda_frequencies": 8,
+      "cpu_frequencies": 0,
+      "directions": 0,
+      "parameters": 191,
+      "maximum_tape_nodes": 0,
+      "wavefield_ad_fallback": 0,
+      "method": "FP64 CUDA explicit wavefield overlap; exact layer exponential integrals; CPU extended precision quasistatic exception",
+      "fft_device": "cuda:1",
+      "synthesis_device": "cuda:1",
+      "gradient_device": "cuda:1",
+      "scope": "most recent model backward"
+    },
+    "cuda_events": {
+      "void at::native::vectorized_elementwise_kernel<2, at::native::FillFunctor<double>, std::array<char*, 1ul> >(int, at::native::FillFunctor<double>, std::array<char*, 1ul>)": {
+        "calls": 2,
+        "microseconds": 1.4730000000001837
+      },
+      "Memcpy DtoD (Device -> Device)": {
+        "calls": 4,
+        "microseconds": 3.2969999999995707
+      },
+      "void at::native::vectorized_elementwise_kernel<2, at::native::AUnaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> >, std::array<char*, 2ul> >(int, at::native::AUnaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> >, std::array<char*, 2ul>)": {
+        "calls": 1,
+        "microseconds": 1.1519999999998163
+      },
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > const&)::{lambda(int)#1})": {
+        "calls": 2,
+        "microseconds": 2.20900000000006
+      },
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1} const&)::{lambda(int)#1})": {
+        "calls": 1,
+        "microseconds": 1.1209999999998672
+      },
+      "void regular_fft<16u, EPT<4u>, 64u, 4u, (padding_t)14, (twiddle_t)0, (loadstore_modifier_t)2, (layout_t)1, unsigned int, double, HostConfigPlaceholder>(kernel_arguments_t<unsigned int>)": {
+        "calls": 1,
+        "microseconds": 3.2660000000000764
+      },
+      "void at::native::unrolled_elementwise_kernel<at::native::AUnaryFunctor<c10::complex<double>, c10::complex<double>, c10::complex<double>, at::native::binary_internal::MulFunctor<c10::complex<double> > >, std::array<char*, 2ul>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, at::native::AUnaryFunctor<c10::complex<double>, c10::complex<double>, c10::complex<double>, at::native::binary_internal::MulFunctor<c10::complex<double> > >, std::array<char*, 2ul>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast)": {
+        "calls": 2,
+        "microseconds": 2.400000000000091
+      },
+      "void cutlass::Kernel2<cutlass_80_tensorop_z884gemm_32x16_16x3_nh_align1>(cutlass_80_tensorop_z884gemm_32x16_16x3_nh_align1::Params)": {
+        "calls": 2,
+        "microseconds": 30.44399999999996
+      },
+      "void at::native::unrolled_elementwise_kernel<at::native::FillFunctor<c10::complex<double> >, std::array<char*, 1ul>, 4, TrivialOffsetCalculator<0, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, at::native::FillFunctor<c10::complex<double> >, std::array<char*, 1ul>, TrivialOffsetCalculator<0, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast)": {
+        "calls": 3,
+        "microseconds": 2.210000000000491
+      },
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::complex<double>)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::complex<double>)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::complex<double>)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::complex<double>)#1} const&)::{lambda(int)#1})": {
+        "calls": 1,
+        "microseconds": 1.4720000000002074
+      },
+      "void at::native::unrolled_elementwise_kernel<at::native::conj_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#11}::operator()() const::{lambda(c10::complex<double>)#1}, std::array<char*, 2ul>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, at::native::conj_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#11}::operator()() const::{lambda(c10::complex<double>)#1}, std::array<char*, 2ul>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast)": {
+        "calls": 1,
+        "microseconds": 0.8969999999999345
+      },
+      "void at::native::index_elementwise_kernel<128, 4, at::native::flip_kernel_impl<at::native::OpaqueType<16> >(at::TensorIterator&)::{lambda(int)#1}>(long, at::native::flip_kernel_impl<at::native::OpaqueType<16> >(at::TensorIterator&)::{lambda(int)#1})": {
+        "calls": 1,
+        "microseconds": 1.4729999999999563
+      },
+      "void at::native::unrolled_elementwise_kernel<at::native::CUDAFunctor_add<c10::complex<double> >, std::array<char*, 3ul>, 4, TrivialOffsetCalculator<2, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, at::native::CUDAFunctor_add<c10::complex<double> >, std::array<char*, 3ul>, TrivialOffsetCalculator<2, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast)": {
+        "calls": 1,
+        "microseconds": 1.5360000000000582
+      },
+      "Memcpy HtoD (Pageable -> Device)": {
+        "calls": 12,
+        "microseconds": 3.808999999999287
+      },
+      "Memset (Device)": {
+        "calls": 2,
+        "microseconds": 0.5759999999995671
+      },
+      "overlap_elements(double const*, double const*, int const*, int const*, double const*, int const*, green_overlap::Mesh, int, int, int, int, green_overlap::Element<2, double>*, green_overlap::Element<1, double>*, int*)": {
+        "calls": 1,
+        "microseconds": 271.01700000000073
+      },
+      "overlap_solve(double const*, double const*, int const*, double const*, double const*, int const*, double const*, green_overlap::Mesh, int, int, int, int, green_overlap::Element<2, double>*, green_overlap::Node<2, double>*, green_overlap::Element<1, double>*, green_overlap::Node<1, double>*, thrust::THRUST_200700_1200_NS::complex<double>*, int*)": {
+        "calls": 1,
+        "microseconds": 1456.5640000000003
+      },
+      "overlap_layers(double const*, double const*, int const*, int const*, green_overlap::Mesh, int, int, int, int, green_overlap::Element<2, double> const*, green_overlap::Node<2, double> const*, green_overlap::Element<1, double> const*, green_overlap::Node<1, double> const*, thrust::THRUST_200700_1200_NS::complex<double> const*, thrust::THRUST_200700_1200_NS::complex<double>*, double*)": {
+        "calls": 1,
+        "microseconds": 649.2430000000004
+      },
+      "overlap_chain(double const*, double const*, int const*, int const*, int const*, int const*, green_overlap::Mesh, int, int, int, int, thrust::THRUST_200700_1200_NS::complex<double> const*, double const*, thrust::THRUST_200700_1200_NS::complex<double>*, double*, double*, int*)": {
+        "calls": 1,
+        "microseconds": 642.3609999999999
+      },
+      "overlap_reduce(double const*, double*, int, int)": {
+        "calls": 1,
+        "microseconds": 2.2719999999999345
+      },
+      "Memcpy DtoH (Device -> Pageable)": {
+        "calls": 1,
+        "microseconds": 0.35199999999986176
+      },
+      "overlap_original(double const*, double const*, int const*, int const*, unsigned char const*, double*, int, int, int, int)": {
+        "calls": 1,
+        "microseconds": 9.892000000000735
+      }
+    }
+  },
+  {
+    "layers": 8,
+    "n_samples": 128,
+    "k_steps": 512,
+    "dt": 0.4,
+    "period_length": 500.0,
+    "method": "adjoint",
+    "profiled_wall_seconds": 0.3944512919988483,
+    "execution": {
+      "kind": "last_structural_derivative",
+      "cuda_frequencies": 61,
+      "cpu_frequencies": 3,
+      "directions": 0,
+      "parameters": 47,
+      "maximum_tape_nodes": 4078,
+      "wavefield_ad_fallback": 0,
+      "method": "FP64 CUDA analytic reverse AD; device tape and ordered VJP reduction; long-double CPU quasistatic exception",
+      "fft_device": "cuda:1",
+      "synthesis_device": "cuda:1",
+      "gradient_device": "cuda:1",
+      "scope": "most recent model backward"
+    },
+    "cuda_events": {
+      "void at::native::vectorized_elementwise_kernel<2, at::native::FillFunctor<double>, std::array<char*, 1ul> >(int, at::native::FillFunctor<double>, std::array<char*, 1ul>)": {
+        "calls": 2,
+        "microseconds": 1.7919999999999163
+      },
+      "Memcpy DtoD (Device -> Device)": {
+        "calls": 4,
+        "microseconds": 3.8719999999948413
+      },
+      "void at::native::vectorized_elementwise_kernel<2, at::native::AUnaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> >, std::array<char*, 2ul> >(int, at::native::AUnaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> >, std::array<char*, 2ul>)": {
+        "calls": 1,
+        "microseconds": 1.1520000000000437
+      },
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > const&)::{lambda(int)#1})": {
+        "calls": 2,
+        "microseconds": 3.008000000000038
+      },
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1} const&)::{lambda(int)#1})": {
+        "calls": 1,
+        "microseconds": 1.3759999999999764
+      },
+      "void regular_fft<128u, EPT<8u>, 16u, 4u, (padding_t)6, (twiddle_t)0, (loadstore_modifier_t)2, (layout_t)1, unsigned int, double, HostConfigPlaceholder>(kernel_arguments_t<unsigned int>)": {
+        "calls": 1,
+        "microseconds": 13.376000000000204
+      },
+      "void at::native::unrolled_elementwise_kernel<at::native::AUnaryFunctor<c10::complex<double>, c10::complex<double>, c10::complex<double>, at::native::binary_internal::MulFunctor<c10::complex<double> > >, std::array<char*, 2ul>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, at::native::AUnaryFunctor<c10::complex<double>, c10::complex<double>, c10::complex<double>, at::native::binary_internal::MulFunctor<c10::complex<double> > >, std::array<char*, 2ul>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast)": {
+        "calls": 2,
+        "microseconds": 2.463999999999942
+      },
+      "void cutlass::Kernel2<cutlass_80_tensorop_z884gemm_32x16_16x3_nh_align1>(cutlass_80_tensorop_z884gemm_32x16_16x3_nh_align1::Params)": {
+        "calls": 2,
+        "microseconds": 31.519999999999982
+      },
+      "void at::native::unrolled_elementwise_kernel<at::native::FillFunctor<c10::complex<double> >, std::array<char*, 1ul>, 4, TrivialOffsetCalculator<0, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, at::native::FillFunctor<c10::complex<double> >, std::array<char*, 1ul>, TrivialOffsetCalculator<0, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast)": {
+        "calls": 3,
+        "microseconds": 2.463999999999942
+      },
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::complex<double>)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::complex<double>)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::complex<double>)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::complex<double>)#1} const&)::{lambda(int)#1})": {
+        "calls": 1,
+        "microseconds": 1.4720000000002074
+      },
+      "void at::native::unrolled_elementwise_kernel<at::native::conj_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#11}::operator()() const::{lambda(c10::complex<double>)#1}, std::array<char*, 2ul>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, at::native::conj_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#11}::operator()() const::{lambda(c10::complex<double>)#1}, std::array<char*, 2ul>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast)": {
+        "calls": 1,
+        "microseconds": 1.0239999999998872
+      },
+      "void at::native::index_elementwise_kernel<128, 4, at::native::flip_kernel_impl<at::native::OpaqueType<16> >(at::TensorIterator&)::{lambda(int)#1}>(long, at::native::flip_kernel_impl<at::native::OpaqueType<16> >(at::TensorIterator&)::{lambda(int)#1})": {
+        "calls": 1,
+        "microseconds": 1.9839999999999236
+      },
+      "void at::native::unrolled_elementwise_kernel<at::native::CUDAFunctor_add<c10::complex<double> >, std::array<char*, 3ul>, 4, TrivialOffsetCalculator<2, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, at::native::CUDAFunctor_add<c10::complex<double> >, std::array<char*, 3ul>, TrivialOffsetCalculator<2, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast)": {
+        "calls": 1,
+        "microseconds": 1.6000000000003638
+      },
+      "Memcpy DtoH (Device -> Pageable)": {
+        "calls": 4,
+        "microseconds": 3.168000000046959
+      },
+      "Memcpy HtoD (Pageable -> Device)": {
+        "calls": 11,
+        "microseconds": 3.007999999943422
+      },
+      "Memset (Device)": {
+        "calls": 34,
+        "microseconds": 91.23099999997066
+      },
+      "reverse_nodes(double const*, double const*, int const*, int const*, double const*, double const*, int const*, thrust::THRUST_200700_1200_NS::complex<double> const*, int, int, int, int, int, uint2*, thrust::THRUST_200700_1200_NS::complex<double>*, thrust::THRUST_200700_1200_NS::complex<double>*, thrust::THRUST_200700_1200_NS::complex<double>*, gpu_reverse::layer_parameter*, gpu_reverse::parameter*, gpu_reverse::mrtc*, gpu_reverse::grtc*, unsigned int*, double*, int*)": {
+        "calls": 32,
+        "microseconds": 247319.55200000017
+      },
+      "reverse_reduce(double const*, double*, int, int)": {
+        "calls": 32,
+        "microseconds": 192.31899999975576
+      },
+      "original_gradient(double const*, double const*, int const*, int const*, unsigned char const*, double*, int, int, int, int)": {
+        "calls": 1,
+        "microseconds": 4.320000000006985
+      }
+    }
+  },
+  {
+    "layers": 8,
+    "n_samples": 128,
+    "k_steps": 512,
+    "dt": 0.4,
+    "period_length": 500.0,
+    "method": "wavefield",
+    "profiled_wall_seconds": 0.16651483485475183,
+    "execution": {
+      "kind": "last_structural_derivative",
+      "cuda_frequencies": 61,
+      "cpu_frequencies": 3,
+      "directions": 0,
+      "parameters": 47,
+      "maximum_tape_nodes": 0,
+      "wavefield_ad_fallback": 0,
+      "method": "FP64 CUDA explicit wavefield overlap; exact layer exponential integrals; CPU extended precision quasistatic exception",
+      "fft_device": "cuda:1",
+      "synthesis_device": "cuda:1",
+      "gradient_device": "cuda:1",
+      "scope": "most recent model backward"
+    },
+    "cuda_events": {
+      "void at::native::vectorized_elementwise_kernel<2, at::native::FillFunctor<double>, std::array<char*, 1ul> >(int, at::native::FillFunctor<double>, std::array<char*, 1ul>)": {
+        "calls": 2,
+        "microseconds": 1.8239999999998417
+      },
+      "Memcpy DtoD (Device -> Device)": {
+        "calls": 4,
+        "microseconds": 3.9039999999947668
+      },
+      "void at::native::vectorized_elementwise_kernel<2, at::native::AUnaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> >, std::array<char*, 2ul> >(int, at::native::AUnaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> >, std::array<char*, 2ul>)": {
+        "calls": 1,
+        "microseconds": 1.183999999999969
+      },
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > const&)::{lambda(int)#1})": {
+        "calls": 2,
+        "microseconds": 3.071999999999889
+      },
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1} const&)::{lambda(int)#1})": {
+        "calls": 1,
+        "microseconds": 1.3759999999999764
+      },
+      "void regular_fft<128u, EPT<8u>, 16u, 4u, (padding_t)6, (twiddle_t)0, (loadstore_modifier_t)2, (layout_t)1, unsigned int, double, HostConfigPlaceholder>(kernel_arguments_t<unsigned int>)": {
+        "calls": 1,
+        "microseconds": 13.344000000000051
+      },
+      "void at::native::unrolled_elementwise_kernel<at::native::AUnaryFunctor<c10::complex<double>, c10::complex<double>, c10::complex<double>, at::native::binary_internal::MulFunctor<c10::complex<double> > >, std::array<char*, 2ul>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, at::native::AUnaryFunctor<c10::complex<double>, c10::complex<double>, c10::complex<double>, at::native::binary_internal::MulFunctor<c10::complex<double> > >, std::array<char*, 2ul>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast)": {
+        "calls": 2,
+        "microseconds": 2.4640000000003965
+      },
+      "void cutlass::Kernel2<cutlass_80_tensorop_z884gemm_32x16_16x3_nh_align1>(cutlass_80_tensorop_z884gemm_32x16_16x3_nh_align1::Params)": {
+        "calls": 2,
+        "microseconds": 31.26400000000035
+      },
+      "void at::native::unrolled_elementwise_kernel<at::native::FillFunctor<c10::complex<double> >, std::array<char*, 1ul>, 4, TrivialOffsetCalculator<0, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, at::native::FillFunctor<c10::complex<double> >, std::array<char*, 1ul>, TrivialOffsetCalculator<0, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast)": {
+        "calls": 3,
+        "microseconds": 2.463999999999942
+      },
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::complex<double>)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::complex<double>)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::complex<double>)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::complex<double>)#1} const&)::{lambda(int)#1})": {
+        "calls": 1,
+        "microseconds": 1.5039999999999054
+      },
+      "void at::native::unrolled_elementwise_kernel<at::native::conj_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#11}::operator()() const::{lambda(c10::complex<double>)#1}, std::array<char*, 2ul>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, at::native::conj_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#11}::operator()() const::{lambda(c10::complex<double>)#1}, std::array<char*, 2ul>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast)": {
+        "calls": 1,
+        "microseconds": 1.05600000000004
+      },
+      "void at::native::index_elementwise_kernel<128, 4, at::native::flip_kernel_impl<at::native::OpaqueType<16> >(at::TensorIterator&)::{lambda(int)#1}>(long, at::native::flip_kernel_impl<at::native::OpaqueType<16> >(at::TensorIterator&)::{lambda(int)#1})": {
+        "calls": 1,
+        "microseconds": 1.9839999999999236
+      },
+      "void at::native::unrolled_elementwise_kernel<at::native::CUDAFunctor_add<c10::complex<double> >, std::array<char*, 3ul>, 4, TrivialOffsetCalculator<2, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, at::native::CUDAFunctor_add<c10::complex<double> >, std::array<char*, 3ul>, TrivialOffsetCalculator<2, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast)": {
+        "calls": 1,
+        "microseconds": 1.568000000000211
+      },
+      "Memcpy DtoH (Device -> Pageable)": {
+        "calls": 4,
+        "microseconds": 2.591999999988275
+      },
+      "Memcpy HtoD (Pageable -> Device)": {
+        "calls": 13,
+        "microseconds": 3.9679999999934807
+      },
+      "Memset (Device)": {
+        "calls": 2,
+        "microseconds": 0.5439999999944121
+      },
+      "overlap_elements(double const*, double const*, int const*, int const*, double const*, int const*, green_overlap::Mesh, int, int, int, int, green_overlap::Element<2, double>*, green_overlap::Element<1, double>*, int*)": {
+        "calls": 9,
+        "microseconds": 4108.4619999999995
+      },
+      "overlap_solve(double const*, double const*, int const*, double const*, double const*, int const*, double const*, green_overlap::Mesh, int, int, int, int, green_overlap::Element<2, double>*, green_overlap::Node<2, double>*, green_overlap::Element<1, double>*, green_overlap::Node<1, double>*, thrust::THRUST_200700_1200_NS::complex<double>*, int*)": {
+        "calls": 9,
+        "microseconds": 3642.904999999999
+      },
+      "overlap_layers(double const*, double const*, int const*, int const*, green_overlap::Mesh, int, int, int, int, green_overlap::Element<2, double> const*, green_overlap::Node<2, double> const*, green_overlap::Element<1, double> const*, green_overlap::Node<1, double> const*, thrust::THRUST_200700_1200_NS::complex<double> const*, thrust::THRUST_200700_1200_NS::complex<double>*, double*)": {
+        "calls": 9,
+        "microseconds": 9488.647000000026
+      },
+      "overlap_chain(double const*, double const*, int const*, int const*, int const*, int const*, green_overlap::Mesh, int, int, int, int, thrust::THRUST_200700_1200_NS::complex<double> const*, double const*, thrust::THRUST_200700_1200_NS::complex<double>*, double*, double*, int*)": {
+        "calls": 9,
+        "microseconds": 1613.889000000083
+      },
+      "overlap_reduce(double const*, double*, int, int)": {
+        "calls": 9,
+        "microseconds": 71.87099999995553
+      },
+      "overlap_original(double const*, double const*, int const*, int const*, unsigned char const*, double*, int, int, int, int)": {
+        "calls": 1,
+        "microseconds": 4.350999999995111
+      }
+    }
+  },
+  {
+    "layers": 8,
+    "n_samples": 128,
+    "k_steps": 512,
+    "dt": 0.1,
+    "period_length": 1000.0,
+    "method": "adjoint",
+    "profiled_wall_seconds": 0.25538805802352726,
+    "execution": {
+      "kind": "last_structural_derivative",
+      "cuda_frequencies": 64,
+      "cpu_frequencies": 0,
+      "directions": 0,
+      "parameters": 47,
+      "maximum_tape_nodes": 4085,
+      "wavefield_ad_fallback": 0,
+      "method": "FP64 CUDA analytic reverse AD; device tape and ordered VJP reduction; long-double CPU quasistatic exception",
+      "fft_device": "cuda:1",
+      "synthesis_device": "cuda:1",
+      "gradient_device": "cuda:1",
+      "scope": "most recent model backward"
+    },
+    "cuda_events": {
+      "void at::native::vectorized_elementwise_kernel<2, at::native::FillFunctor<double>, std::array<char*, 1ul> >(int, at::native::FillFunctor<double>, std::array<char*, 1ul>)": {
+        "calls": 2,
+        "microseconds": 1.7919999999999163
+      },
+      "Memcpy DtoD (Device -> Device)": {
+        "calls": 4,
+        "microseconds": 3.9360000000003765
+      },
+      "void at::native::vectorized_elementwise_kernel<2, at::native::AUnaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> >, std::array<char*, 2ul> >(int, at::native::AUnaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> >, std::array<char*, 2ul>)": {
+        "calls": 1,
+        "microseconds": 1.183999999999969
+      },
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > const&)::{lambda(int)#1})": {
+        "calls": 2,
+        "microseconds": 3.007999999999811
+      },
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1} const&)::{lambda(int)#1})": {
+        "calls": 1,
+        "microseconds": 1.3439999999998236
+      },
+      "void regular_fft<128u, EPT<8u>, 16u, 4u, (padding_t)6, (twiddle_t)0, (loadstore_modifier_t)2, (layout_t)1, unsigned int, double, HostConfigPlaceholder>(kernel_arguments_t<unsigned int>)": {
+        "calls": 1,
+        "microseconds": 13.376000000000204
+      },
+      "void at::native::unrolled_elementwise_kernel<at::native::AUnaryFunctor<c10::complex<double>, c10::complex<double>, c10::complex<double>, at::native::binary_internal::MulFunctor<c10::complex<double> > >, std::array<char*, 2ul>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, at::native::AUnaryFunctor<c10::complex<double>, c10::complex<double>, c10::complex<double>, at::native::binary_internal::MulFunctor<c10::complex<double> > >, std::array<char*, 2ul>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast)": {
+        "calls": 2,
+        "microseconds": 2.431999999999789
+      },
+      "void cutlass::Kernel2<cutlass_80_tensorop_z884gemm_32x16_16x3_nh_align1>(cutlass_80_tensorop_z884gemm_32x16_16x3_nh_align1::Params)": {
+        "calls": 2,
+        "microseconds": 31.39200000000028
+      },
+      "void at::native::unrolled_elementwise_kernel<at::native::FillFunctor<c10::complex<double> >, std::array<char*, 1ul>, 4, TrivialOffsetCalculator<0, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, at::native::FillFunctor<c10::complex<double> >, std::array<char*, 1ul>, TrivialOffsetCalculator<0, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast)": {
+        "calls": 3,
+        "microseconds": 2.463999999999942
+      },
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::complex<double>)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::complex<double>)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::complex<double>)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::complex<double>)#1} const&)::{lambda(int)#1})": {
+        "calls": 1,
+        "microseconds": 1.5040000000003602
+      },
+      "void at::native::unrolled_elementwise_kernel<at::native::conj_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#11}::operator()() const::{lambda(c10::complex<double>)#1}, std::array<char*, 2ul>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, at::native::conj_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#11}::operator()() const::{lambda(c10::complex<double>)#1}, std::array<char*, 2ul>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast)": {
+        "calls": 1,
+        "microseconds": 1.05600000000004
+      },
+      "void at::native::index_elementwise_kernel<128, 4, at::native::flip_kernel_impl<at::native::OpaqueType<16> >(at::TensorIterator&)::{lambda(int)#1}>(long, at::native::flip_kernel_impl<at::native::OpaqueType<16> >(at::TensorIterator&)::{lambda(int)#1})": {
+        "calls": 1,
+        "microseconds": 1.9839999999999236
+      },
+      "void at::native::unrolled_elementwise_kernel<at::native::CUDAFunctor_add<c10::complex<double> >, std::array<char*, 3ul>, 4, TrivialOffsetCalculator<2, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, at::native::CUDAFunctor_add<c10::complex<double> >, std::array<char*, 3ul>, TrivialOffsetCalculator<2, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast)": {
+        "calls": 1,
+        "microseconds": 1.599999999999909
+      },
+      "Memcpy HtoD (Pageable -> Device)": {
+        "calls": 10,
+        "microseconds": 2.6879999999955544
+      },
+      "Memset (Device)": {
+        "calls": 34,
+        "microseconds": 91.35899999996491
+      },
+      "reverse_nodes(double const*, double const*, int const*, int const*, double const*, double const*, int const*, thrust::THRUST_200700_1200_NS::complex<double> const*, int, int, int, int, int, uint2*, thrust::THRUST_200700_1200_NS::complex<double>*, thrust::THRUST_200700_1200_NS::complex<double>*, thrust::THRUST_200700_1200_NS::complex<double>*, gpu_reverse::layer_parameter*, gpu_reverse::parameter*, gpu_reverse::mrtc*, gpu_reverse::grtc*, unsigned int*, double*, int*)": {
+        "calls": 32,
+        "microseconds": 244580.195
+      },
+      "reverse_reduce(double const*, double*, int, int)": {
+        "calls": 32,
+        "microseconds": 192.21900000002643
+      },
+      "Memcpy DtoH (Device -> Pageable)": {
+        "calls": 1,
+        "microseconds": 1.0560000000114087
+      },
+      "original_gradient(double const*, double const*, int const*, int const*, unsigned char const*, double*, int, int, int, int)": {
+        "calls": 1,
+        "microseconds": 4.224000000016531
+      }
+    }
+  },
+  {
+    "layers": 8,
+    "n_samples": 128,
+    "k_steps": 512,
+    "dt": 0.1,
+    "period_length": 1000.0,
+    "method": "wavefield",
+    "profiled_wall_seconds": 0.030068926978856325,
+    "execution": {
+      "kind": "last_structural_derivative",
+      "cuda_frequencies": 64,
+      "cpu_frequencies": 0,
+      "directions": 0,
+      "parameters": 47,
+      "maximum_tape_nodes": 0,
+      "wavefield_ad_fallback": 0,
+      "method": "FP64 CUDA explicit wavefield overlap; exact layer exponential integrals; CPU extended precision quasistatic exception",
+      "fft_device": "cuda:1",
+      "synthesis_device": "cuda:1",
+      "gradient_device": "cuda:1",
+      "scope": "most recent model backward"
+    },
+    "cuda_events": {
+      "void at::native::vectorized_elementwise_kernel<2, at::native::FillFunctor<double>, std::array<char*, 1ul> >(int, at::native::FillFunctor<double>, std::array<char*, 1ul>)": {
+        "calls": 2,
+        "microseconds": 1.791999999999689
+      },
+      "Memcpy DtoD (Device -> Device)": {
+        "calls": 4,
+        "microseconds": 3.8400000000001455
+      },
+      "void at::native::vectorized_elementwise_kernel<2, at::native::AUnaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> >, std::array<char*, 2ul> >(int, at::native::AUnaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> >, std::array<char*, 2ul>)": {
+        "calls": 1,
+        "microseconds": 1.2480000000000473
+      },
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > const&)::{lambda(int)#1})": {
+        "calls": 2,
+        "microseconds": 2.9439999999997326
+      },
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1} const&)::{lambda(int)#1})": {
+        "calls": 1,
+        "microseconds": 1.344000000000051
+      },
+      "void regular_fft<128u, EPT<8u>, 16u, 4u, (padding_t)6, (twiddle_t)0, (loadstore_modifier_t)2, (layout_t)1, unsigned int, double, HostConfigPlaceholder>(kernel_arguments_t<unsigned int>)": {
+        "calls": 1,
+        "microseconds": 13.344000000000051
+      },
+      "void at::native::unrolled_elementwise_kernel<at::native::AUnaryFunctor<c10::complex<double>, c10::complex<double>, c10::complex<double>, at::native::binary_internal::MulFunctor<c10::complex<double> > >, std::array<char*, 2ul>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, at::native::AUnaryFunctor<c10::complex<double>, c10::complex<double>, c10::complex<double>, at::native::binary_internal::MulFunctor<c10::complex<double> > >, std::array<char*, 2ul>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast)": {
+        "calls": 2,
+        "microseconds": 2.43100000000004
+      },
+      "void cutlass::Kernel2<cutlass_80_tensorop_z884gemm_32x16_16x3_nh_align1>(cutlass_80_tensorop_z884gemm_32x16_16x3_nh_align1::Params)": {
+        "calls": 2,
+        "microseconds": 31.29599999999982
+      },
+      "void at::native::unrolled_elementwise_kernel<at::native::FillFunctor<c10::complex<double> >, std::array<char*, 1ul>, 4, TrivialOffsetCalculator<0, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, at::native::FillFunctor<c10::complex<double> >, std::array<char*, 1ul>, TrivialOffsetCalculator<0, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast)": {
+        "calls": 3,
+        "microseconds": 2.463999999999942
+      },
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::complex<double>)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::complex<double>)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::complex<double>)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::complex<double>)#1} const&)::{lambda(int)#1})": {
+        "calls": 1,
+        "microseconds": 1.4719999999997526
+      },
+      "void at::native::unrolled_elementwise_kernel<at::native::conj_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#11}::operator()() const::{lambda(c10::complex<double>)#1}, std::array<char*, 2ul>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, at::native::conj_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#11}::operator()() const::{lambda(c10::complex<double>)#1}, std::array<char*, 2ul>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast)": {
+        "calls": 1,
+        "microseconds": 1.05600000000004
+      },
+      "void at::native::index_elementwise_kernel<128, 4, at::native::flip_kernel_impl<at::native::OpaqueType<16> >(at::TensorIterator&)::{lambda(int)#1}>(long, at::native::flip_kernel_impl<at::native::OpaqueType<16> >(at::TensorIterator&)::{lambda(int)#1})": {
+        "calls": 1,
+        "microseconds": 2.0159999999996217
+      },
+      "void at::native::unrolled_elementwise_kernel<at::native::CUDAFunctor_add<c10::complex<double> >, std::array<char*, 3ul>, 4, TrivialOffsetCalculator<2, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, at::native::CUDAFunctor_add<c10::complex<double> >, std::array<char*, 3ul>, TrivialOffsetCalculator<2, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast)": {
+        "calls": 1,
+        "microseconds": 1.5989999999997053
+      },
+      "Memcpy HtoD (Pageable -> Device)": {
+        "calls": 12,
+        "microseconds": 4.161999999998443
+      },
+      "Memset (Device)": {
+        "calls": 2,
+        "microseconds": 0.5450000000000728
+      },
+      "overlap_elements(double const*, double const*, int const*, int const*, double const*, int const*, green_overlap::Mesh, int, int, int, int, green_overlap::Element<2, double>*, green_overlap::Element<1, double>*, int*)": {
+        "calls": 9,
+        "microseconds": 4139.620000000008
+      },
+      "overlap_solve(double const*, double const*, int const*, double const*, double const*, int const*, double const*, green_overlap::Mesh, int, int, int, int, green_overlap::Element<2, double>*, green_overlap::Node<2, double>*, green_overlap::Element<1, double>*, green_overlap::Node<1, double>*, thrust::THRUST_200700_1200_NS::complex<double>*, int*)": {
+        "calls": 9,
+        "microseconds": 3664.6890000000003
+      },
+      "overlap_layers(double const*, double const*, int const*, int const*, green_overlap::Mesh, int, int, int, int, green_overlap::Element<2, double> const*, green_overlap::Node<2, double> const*, green_overlap::Element<1, double> const*, green_overlap::Node<1, double> const*, thrust::THRUST_200700_1200_NS::complex<double> const*, thrust::THRUST_200700_1200_NS::complex<double>*, double*)": {
+        "calls": 9,
+        "microseconds": 9834.234999999997
+      },
+      "overlap_chain(double const*, double const*, int const*, int const*, int const*, int const*, green_overlap::Mesh, int, int, int, int, thrust::THRUST_200700_1200_NS::complex<double> const*, double const*, thrust::THRUST_200700_1200_NS::complex<double>*, double*, double*, int*)": {
+        "calls": 9,
+        "microseconds": 1603.0899999999956
+      },
+      "overlap_reduce(double const*, double*, int, int)": {
+        "calls": 9,
+        "microseconds": 71.64700000000175
+      },
+      "Memcpy DtoH (Device -> Pageable)": {
+        "calls": 1,
+        "microseconds": 0.864000000001397
+      },
+      "overlap_original(double const*, double const*, int const*, int const*, unsigned char const*, double*, int, int, int, int)": {
+        "calls": 1,
+        "microseconds": 4.255999999997584
+      }
+    }
+  }
+]

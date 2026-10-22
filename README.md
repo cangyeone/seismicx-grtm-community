@@ -13,6 +13,15 @@ data; solver implementation source and development history are not distributed h
 [Report a problem](https://github.com/cangyeone/seismicx-grtm-community/issues)
 
 
+
+## Explicit Green wavefield integral preview 0.6.0.dev9
+
+[Download](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev9) · [Methods/API](docs/GREEN_WAVEFIELD_KERNELS.md) · [Single/batch accuracy and speed](docs/PERFORMANCE_0.6.0.dev9.md) · [ABI/install limits](docs/PREVIEW_0.6.0.dev9.md)
+
+Adds FP64 CPU/CUDA closed-form layer overlap kernels with material, interface, source and receiver terms. Set `vjp_method='wavefield'`; the existing adjoint/default and low-frequency precision safeguards remain. CUDA regular-bin propagation, synthesis, FFT and gradients stay on device. Batch remains per-model native calls. The report includes CPU slowdowns and protected-frequency cases, plus a matched known-root QEDispInv comparison. Both installed wheels run 143 tests (Apple/CUDA skip 26/9).
+
+Two ABIs: Mac CPython 3.12 and Linux CPython 3.13 (glibc≥2.31, CUDA sm120). All host libraries are rebuilt; only the unchanged verified compiled Metal shader is reused. Research/noncommercial licensing is unchanged.
+
 ## Eigenfunction and forced-adjoint kernel preview 0.6.0.dev8
 
 [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev8) · [Methods/API](docs/VARIATIONAL_KERNELS.md) · [Measured performance](docs/PERFORMANCE_0.6.0.dev8.md) · [ABI/install limits](docs/PREVIEW_0.6.0.dev8.md)
