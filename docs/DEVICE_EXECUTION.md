@@ -1,5 +1,7 @@
 # Device execution and batch interfaces — 0.6.0.dev7
 
+dev10 adds [fused CUDA Green batches and an explicit fast precision policy](CUDA_GREEN_BATCH.md). The table below retains the dev7 baseline; RF, dispersion and MPS boundaries are unchanged.
+
 English | [简体中文](DEVICE_EXECUTION.zh-CN.md)
 
 Select one compute device for both forward and structural derivatives. RF and

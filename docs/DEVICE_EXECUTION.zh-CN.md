@@ -1,5 +1,7 @@
 # 计算设备与批量接口 — 0.6.0.dev7
 
+dev10 新增[格林函数跨模型 CUDA 融合与显式快速精度策略](CUDA_GREEN_BATCH.zh-CN.md)。下表保留 dev7 基线；RF、频散和 MPS 的设备边界未改变。
+
 [English](DEVICE_EXECUTION.md) | 简体中文
 
 正演和结构微分优先在选定的同一设备执行。RF、面波的 CUDA 路径将数值传播、寻根、

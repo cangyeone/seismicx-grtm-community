@@ -8,6 +8,14 @@
 
 
 
+## 跨模型 CUDA 融合预览 0.6.0.dev10
+
+[下载](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev10) · [接口与精度策略](docs/CUDA_GREEN_BATCH.zh-CN.md) · [完整实测](docs/PERFORMANCE_0.6.0.dev10.zh-CN.md) · [安装范围](docs/PREVIEW_0.6.0.dev10.zh-CN.md)
+
+格林函数正演、显式微分、物理合成和 FFT 支持跨模型 CUDA 融合。默认 strict 保留低频保护；显式设置 `cuda_precision="fast"` 将符合条件的低频显式积分放到 GPU。32 层单模型与 B=16 的端到端正演+梯度，相对 dev9 wavefield 分别提速 12.2×、13.9×；相对旧反向 AD 为 44.7×、55.8×。单独融合的 B=16 收益为 1.22–1.36×，其余主要来自低频路径优化。极低频仍保留保护。
+
+本轮最大波形相对误差 1.27e-8，最大参数列梯度相对误差 1.64e-7；48 条跨模型族精度记录全部达标。两平台安装包各运行 149 项测试。CPU/MPS、RF、频散算法无新增提速声明。面波文档已加入缺模掩码、训练/推理预处理一致性、固定归一化、跨模型族留出和分块存储约定。
+
 ## 格林函数显式波场积分核预览 0.6.0.dev9
 
 [下载](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev9) · [理论与接口](docs/GREEN_WAVEFIELD_KERNELS.zh-CN.md) · [单模型/batch 精度与速度](docs/PERFORMANCE_0.6.0.dev9.zh-CN.md) · [ABI 与安装限制](docs/PREVIEW_0.6.0.dev9.zh-CN.md)

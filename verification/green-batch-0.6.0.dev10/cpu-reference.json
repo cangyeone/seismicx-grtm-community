@@ -1,0 +1,301 @@
+{
+  "version": "0.6.0.dev9",
+  "variant": "legacy",
+  "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.31",
+  "device": "cpu",
+  "gpu": null,
+  "native_threads": 4,
+  "torch_threads": 1,
+  "repeats": 3,
+  "warmups": 1,
+  "dtype": "float64",
+  "torch": "2.8.0+cu128",
+  "numpy": "2.1.3",
+  "complete": true,
+  "records": [
+    {
+      "key": "L8-B1-N128-K512-protected",
+      "layers": 8,
+      "batch": 1,
+      "n_samples": 128,
+      "k_steps": 512,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "method": "adjoint",
+      "errors": {
+        "waveform": 0.0,
+        "gradient": 0.0,
+        "source": 0.0,
+        "parameter_columns": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "execution": {},
+      "selected_parameters": 47,
+      "scope": "forward_and_vjp",
+      "seconds": 0.7840952780097723,
+      "samples": [
+        0.7587746689096093,
+        0.7840952780097723,
+        0.8588519250042737
+      ]
+    },
+    {
+      "key": "L8-B1-N128-K512-protected",
+      "layers": 8,
+      "batch": 1,
+      "n_samples": 128,
+      "k_steps": 512,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "method": "adjoint",
+      "errors": {
+        "waveform": 0.0,
+        "gradient": 0.0,
+        "source": 0.0,
+        "parameter_columns": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "execution": {},
+      "selected_parameters": 47,
+      "scope": "forward",
+      "seconds": 0.06993032991886139,
+      "samples": [
+        0.06953087006695569,
+        0.09550552093423903,
+        0.06993032991886139
+      ]
+    },
+    {
+      "key": "L8-B1-N128-K512-protected",
+      "layers": 8,
+      "batch": 1,
+      "n_samples": 128,
+      "k_steps": 512,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "method": "wavefield",
+      "errors": {
+        "waveform": 0.0,
+        "gradient": 3.1605219931971735e-15,
+        "source": 0.0,
+        "parameter_columns": [
+          4.582185281599097e-15,
+          4.7142044875105395e-15,
+          3.3980375657305195e-15,
+          1.329778293091623e-16,
+          3.47130117911306e-15,
+          1.802225811536824e-16
+        ]
+      },
+      "execution": {
+        "kind": "last_structural_derivative",
+        "method": "CPU explicit wavefield overlap with protected reverse AD",
+        "wavefield_frequencies": 61,
+        "protected_ad_frequencies": 3,
+        "fallback_ad_frequencies": 0,
+        "scope": "most recent model backward"
+      },
+      "selected_parameters": 47,
+      "scope": "forward_and_vjp",
+      "seconds": 0.8230149368755519,
+      "samples": [
+        1.046302730916068,
+        0.8230149368755519,
+        0.7549080068711191
+      ]
+    },
+    {
+      "key": "L8-B1-N128-K512-protected",
+      "layers": 8,
+      "batch": 1,
+      "n_samples": 128,
+      "k_steps": 512,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "method": "wavefield",
+      "errors": {
+        "waveform": 0.0,
+        "gradient": 3.1605219931971735e-15,
+        "source": 0.0,
+        "parameter_columns": [
+          4.582185281599097e-15,
+          4.7142044875105395e-15,
+          3.3980375657305195e-15,
+          1.329778293091623e-16,
+          3.47130117911306e-15,
+          1.802225811536824e-16
+        ]
+      },
+      "execution": {
+        "kind": "last_structural_derivative",
+        "method": "CPU explicit wavefield overlap with protected reverse AD",
+        "wavefield_frequencies": 61,
+        "protected_ad_frequencies": 3,
+        "fallback_ad_frequencies": 0,
+        "scope": "most recent model backward"
+      },
+      "selected_parameters": 47,
+      "scope": "forward",
+      "seconds": 0.06966572999954224,
+      "samples": [
+        0.06966572999954224,
+        0.07770356815308332,
+        0.06845201691612601
+      ]
+    },
+    {
+      "key": "L32-B1-N128-K512-protected",
+      "layers": 32,
+      "batch": 1,
+      "n_samples": 128,
+      "k_steps": 512,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "method": "adjoint",
+      "errors": {
+        "waveform": 0.0,
+        "gradient": 0.0,
+        "source": 0.0,
+        "parameter_columns": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "execution": {},
+      "selected_parameters": 191,
+      "scope": "forward_and_vjp",
+      "seconds": 2.90566217713058,
+      "samples": [
+        2.928790610982105,
+        2.883045095950365,
+        2.90566217713058
+      ]
+    },
+    {
+      "key": "L32-B1-N128-K512-protected",
+      "layers": 32,
+      "batch": 1,
+      "n_samples": 128,
+      "k_steps": 512,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "method": "adjoint",
+      "errors": {
+        "waveform": 0.0,
+        "gradient": 0.0,
+        "source": 0.0,
+        "parameter_columns": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "execution": {},
+      "selected_parameters": 191,
+      "scope": "forward",
+      "seconds": 0.31708044302649796,
+      "samples": [
+        0.3507031169719994,
+        0.31708044302649796,
+        0.28922039084136486
+      ]
+    },
+    {
+      "key": "L32-B1-N128-K512-protected",
+      "layers": 32,
+      "batch": 1,
+      "n_samples": 128,
+      "k_steps": 512,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "method": "wavefield",
+      "errors": {
+        "waveform": 0.0,
+        "gradient": 1.1916355965326985e-15,
+        "source": 0.0,
+        "parameter_columns": [
+          4.339080045592079e-14,
+          2.4459384450917184e-15,
+          1.0512842753471422e-15,
+          4.481141732274073e-16,
+          3.503072494864932e-15,
+          7.799334657989291e-16
+        ]
+      },
+      "execution": {
+        "kind": "last_structural_derivative",
+        "method": "CPU explicit wavefield overlap with protected reverse AD",
+        "wavefield_frequencies": 61,
+        "protected_ad_frequencies": 3,
+        "fallback_ad_frequencies": 0,
+        "scope": "most recent model backward"
+      },
+      "selected_parameters": 191,
+      "scope": "forward_and_vjp",
+      "seconds": 2.8513627380598336,
+      "samples": [
+        2.8513627380598336,
+        2.8304486309643835,
+        3.245588500984013
+      ]
+    },
+    {
+      "key": "L32-B1-N128-K512-protected",
+      "layers": 32,
+      "batch": 1,
+      "n_samples": 128,
+      "k_steps": 512,
+      "dt": 0.4,
+      "period_length": 500.0,
+      "method": "wavefield",
+      "errors": {
+        "waveform": 0.0,
+        "gradient": 1.1916355965326985e-15,
+        "source": 0.0,
+        "parameter_columns": [
+          4.339080045592079e-14,
+          2.4459384450917184e-15,
+          1.0512842753471422e-15,
+          4.481141732274073e-16,
+          3.503072494864932e-15,
+          7.799334657989291e-16
+        ]
+      },
+      "execution": {
+        "kind": "last_structural_derivative",
+        "method": "CPU explicit wavefield overlap with protected reverse AD",
+        "wavefield_frequencies": 61,
+        "protected_ad_frequencies": 3,
+        "fallback_ad_frequencies": 0,
+        "scope": "most recent model backward"
+      },
+      "selected_parameters": 191,
+      "scope": "forward",
+      "seconds": 0.2469357110094279,
+      "samples": [
+        0.2445034480188042,
+        0.2469357110094279,
+        0.24763144203461707
+      ]
+    }
+  ]
+}

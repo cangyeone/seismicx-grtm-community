@@ -1,0 +1,7 @@
+INFO:auditwheel.main_repair:Repairing seismicx_grtm-0.6.0.dev10-cp313-cp313-linux_x86_64.whl
+INFO:auditwheel.wheeltools:Previous filename tags: linux_x86_64
+INFO:auditwheel.wheeltools:New filename tags: manylinux_2_31_x86_64
+INFO:auditwheel.wheeltools:Previous WHEEL info tags: cp313-cp313-linux_x86_64
+INFO:auditwheel.wheeltools:New WHEEL info tags: cp313-cp313-manylinux_2_31_x86_64
+INFO:auditwheel.main_repair:
+Fixed-up wheel written to <builder>/grtm-dev10-source/dist/repaired/seismicx_grtm-0.6.0.dev10-cp313-cp313-manylinux_2_31_x86_64.whl

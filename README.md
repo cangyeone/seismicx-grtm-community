@@ -14,6 +14,14 @@ data; solver implementation source and development history are not distributed h
 
 
 
+## Fused CUDA Earth-model preview 0.6.0.dev10
+
+[Download](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev10) · [API/precision policy](docs/CUDA_GREEN_BATCH.md) · [Full measurements](docs/PERFORMANCE_0.6.0.dev10.md) · [ABI/install](docs/PREVIEW_0.6.0.dev10.md)
+
+Green propagation, explicit VJPs, synthesis and FFT support fused model batches. Strict preserves existing protection by default; explicit `cuda_precision="fast"` admits validated low-frequency overlaps to GPU. For 32 layers, single-model and B=16 forward+gradient calls improve by 12.2× and 13.9× over dev9 wavefield, or 44.7× and 55.8× over legacy reverse AD. Fusion alone at B=16 contributes 1.22–1.36×; the remaining gain mainly comes from the low-frequency path. Extreme frequencies retain protection.
+
+Maximum audited waveform relative error is 1.27e-8 and parameter-column gradient error 1.64e-7; all 48 family accuracy records pass. Both installed wheels run 149 tests. No new CPU/MPS, RF or dispersion speedup is claimed. Surface-wave docs add missing-mode masks, shared train/inference preprocessing, fixed normalization, family holdouts and chunked storage.
+
 ## Explicit Green wavefield integral preview 0.6.0.dev9
 
 [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev9) · [Methods/API](docs/GREEN_WAVEFIELD_KERNELS.md) · [Single/batch accuracy and speed](docs/PERFORMANCE_0.6.0.dev9.md) · [ABI/install limits](docs/PREVIEW_0.6.0.dev9.md)

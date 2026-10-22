@@ -91,6 +91,38 @@ Halve dc to inspect close higher modes and check continuity under model changes.
 
 ## Reproduction
 
+### Training data and inference contract
+
+Use `missing="nan"` and the returned `valid` mask when generating multimode
+labels. Filter invalid entries **before** normalization and loss evaluation;
+`NaN * 0` is still NaN. Never replace absent modes with zero or a mean velocity.
+For aligned arrays retain NaNs and store the mask separately. Distinguish an
+unresolved search from a confirmed cutoff when auditing labels.
+
+Training and observed-data inference must call the same preprocessing routine:
+identical periods in seconds, wave/mode selection, phase versus group channels,
+and velocity units. Explicitly record `units="native"` (km, km/s, g/cm³) or
+`units="si"` (m, m/s, kg/m³); converting storage dtype does not convert units.
+Use `log(period / 1 second)` and fixed velocity mean/standard deviation. Fit
+statistics on valid **training** data only, save them with the period grid and
+channel schema, and reuse them unchanged for validation and inference. Do not
+normalize each individual curve or recompute statistics on observations.
+
+Split by Earth-model identity and family before generating variations. Reserve
+low-velocity layers, strong gradients, thin layers and shallow half-spaces as
+held-out families, and report each family separately from an in-distribution
+validation set. Nearby perturbations of the same parent model must not cross
+the split. This is a validation requirement, not a claim that a trained model
+has already passed these tests.
+
+For million-model datasets, stream bounded batches into chunked HDF5, Zarr or
+Parquet row groups. Store model parameters separately from curves, joined by a
+stable `model_id`; keep period, wave, mode, kind, units, `valid`, split/family,
+normalization metadata and solver version. Compute internally in FP64; curves
+may be cast to float32 **when writing**, retaining NaNs and masks. Audit that
+cast against FP64 labels on representative held-out cases. No million-model
+training set or trained network is distributed with this package.
+
 ```sh
 python -m pip install disba==0.7.0 pytest  # validation/benchmark only
 python -m pytest tests/test_surface_wave.py -q
