@@ -12,6 +12,15 @@ data; solver implementation source and development history are not distributed h
 [FK comparison](benchmarks/fk/README.md) ·
 [Report a problem](https://github.com/cangyeone/seismicx-grtm-community/issues)
 
+
+## Eigenfunction and forced-adjoint kernel preview 0.6.0.dev8
+
+[Download](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev8) · [Methods/API](docs/VARIATIONAL_KERNELS.md) · [Measured performance](docs/PERFORMANCE_0.6.0.dev8.md) · [ABI/install limits](docs/PREVIEW_0.6.0.dev8.md)
+
+Adds FP64 Rayleigh/Love energy-integral kernels, analytical group kernels and scalar-observable RF/Green sensitivity interfaces. Parameter counts do not require repeated full propagation; layer/output costs remain. Green retains analytic reverse operators, not a new continuous-volume integral backend. Both installed-wheel suites run 133 tests (Apple/CUDA skip 23/9). Reports retain CUDA phase and single-parameter adjoint slowdowns.
+
+This release contains Mac CPython 3.12 and Linux CPython 3.13 (glibc≥2.31, CUDA sm120) wheels. Other ABIs remain on dev7. Unchanged Metal is reused from the verified dev7 compiled component. Research/noncommercial licensing remains in force.
+
 ## Analytic adjoints and CUDA reverse AD preview 0.6.0.dev7
 
 [Compiled wheels](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev7) · [Install](docs/PREVIEW_0.6.0.dev7.md) · [Methods](docs/ANALYTIC_METHODS.md) · [Performance](docs/PERFORMANCE_0.6.0.dev7.md)

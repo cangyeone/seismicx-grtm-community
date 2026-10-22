@@ -1,0 +1,950 @@
+{
+  "version": "0.6.0.dev7",
+  "module": "installed-wheel/grtm/__init__.py",
+  "device": "cpu",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "native_threads": 4,
+  "torch_threads": 1,
+  "warmups": 2,
+  "repeats": 3,
+  "dtype": "float64",
+  "numpy": "1.26.4",
+  "torch": "2.8.0",
+  "gpu": null,
+  "complete": true,
+  "records": [
+    {
+      "task": "surface",
+      "layers": 8,
+      "batch": 1,
+      "kind": "phase",
+      "method": "forward",
+      "error_vs_forward": 0.0,
+      "fallback_count": null,
+      "scope": "end_to_end",
+      "seconds": 0.0009827079998103727,
+      "samples": [
+        0.0009864999997262203,
+        0.0009827079998103727,
+        0.0009822500001064327
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 8,
+      "batch": 1,
+      "kind": "phase",
+      "method": "forward",
+      "error_vs_forward": 0.0,
+      "fallback_count": null,
+      "scope": "known_roots",
+      "seconds": 0.0006238330001906434,
+      "samples": [
+        0.0006544580000991118,
+        0.0006238330001906434,
+        0.0006228749998626881
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 8,
+      "batch": 1,
+      "kind": "phase",
+      "method": "adjoint",
+      "error_vs_forward": 5.506359257445581e-14,
+      "fallback_count": null,
+      "scope": "end_to_end",
+      "seconds": 0.0006320829998003319,
+      "samples": [
+        0.0006616250002480228,
+        0.0006320829998003319,
+        0.0005727919997298159
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 8,
+      "batch": 1,
+      "kind": "phase",
+      "method": "adjoint",
+      "error_vs_forward": 5.506359257445581e-14,
+      "fallback_count": null,
+      "scope": "known_roots",
+      "seconds": 0.0002769579996311222,
+      "samples": [
+        0.00027908299989576335,
+        0.0002769579996311222,
+        0.0002760420002232422
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 8,
+      "batch": 1,
+      "kind": "group",
+      "method": "forward",
+      "error_vs_forward": 0.0,
+      "fallback_count": null,
+      "scope": "end_to_end",
+      "seconds": 0.0032219170002463215,
+      "samples": [
+        0.003316625000024942,
+        0.0032219170002463215,
+        0.003129791999981535
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 8,
+      "batch": 1,
+      "kind": "group",
+      "method": "forward",
+      "error_vs_forward": 0.0,
+      "fallback_count": null,
+      "scope": "known_roots",
+      "seconds": 0.0027306250003675814,
+      "samples": [
+        0.0027214169999751903,
+        0.0028086659999644326,
+        0.0027306250003675814
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 8,
+      "batch": 1,
+      "kind": "group",
+      "method": "adjoint",
+      "error_vs_forward": 4.606315329169774e-13,
+      "fallback_count": null,
+      "scope": "end_to_end",
+      "seconds": 0.001925625000239961,
+      "samples": [
+        0.0019340839999131276,
+        0.001908791999994719,
+        0.001925625000239961
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 8,
+      "batch": 1,
+      "kind": "group",
+      "method": "adjoint",
+      "error_vs_forward": 4.606315329169774e-13,
+      "fallback_count": null,
+      "scope": "known_roots",
+      "seconds": 0.0016709999999875436,
+      "samples": [
+        0.0016709999999875436,
+        0.0016420840001956094,
+        0.00175112499982788
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 8,
+      "batch": 32,
+      "kind": "phase",
+      "method": "forward",
+      "error_vs_forward": 0.0,
+      "fallback_count": null,
+      "scope": "end_to_end",
+      "seconds": 0.01984654199986835,
+      "samples": [
+        0.01984654199986835,
+        0.019719208999958937,
+        0.01997762499968303
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 8,
+      "batch": 32,
+      "kind": "phase",
+      "method": "forward",
+      "error_vs_forward": 0.0,
+      "fallback_count": null,
+      "scope": "known_roots",
+      "seconds": 0.017727874999764026,
+      "samples": [
+        0.017727874999764026,
+        0.017786541999612382,
+        0.017715040999974008
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 8,
+      "batch": 32,
+      "kind": "phase",
+      "method": "adjoint",
+      "error_vs_forward": 5.506359257445581e-14,
+      "fallback_count": null,
+      "scope": "end_to_end",
+      "seconds": 0.008598542000072484,
+      "samples": [
+        0.008616874999916035,
+        0.00859291699998721,
+        0.008598542000072484
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 8,
+      "batch": 32,
+      "kind": "phase",
+      "method": "adjoint",
+      "error_vs_forward": 5.506359257445581e-14,
+      "fallback_count": null,
+      "scope": "known_roots",
+      "seconds": 0.006628874999933032,
+      "samples": [
+        0.0067089999997733685,
+        0.006567041999915091,
+        0.006628874999933032
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 8,
+      "batch": 32,
+      "kind": "group",
+      "method": "forward",
+      "error_vs_forward": 0.0,
+      "fallback_count": null,
+      "scope": "end_to_end",
+      "seconds": 0.0863085409996529,
+      "samples": [
+        0.0863085409996529,
+        0.08615499999996246,
+        0.08657145899996976
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 8,
+      "batch": 32,
+      "kind": "group",
+      "method": "forward",
+      "error_vs_forward": 0.0,
+      "fallback_count": null,
+      "scope": "known_roots",
+      "seconds": 0.08441537499993501,
+      "samples": [
+        0.08441537499993501,
+        0.0840932910000447,
+        0.08589525000024878
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 8,
+      "batch": 32,
+      "kind": "group",
+      "method": "adjoint",
+      "error_vs_forward": 4.606315329169774e-13,
+      "fallback_count": null,
+      "scope": "end_to_end",
+      "seconds": 0.05298704100005125,
+      "samples": [
+        0.05319729199982248,
+        0.05298704100005125,
+        0.05228912499978833
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 8,
+      "batch": 32,
+      "kind": "group",
+      "method": "adjoint",
+      "error_vs_forward": 4.606315329169774e-13,
+      "fallback_count": null,
+      "scope": "known_roots",
+      "seconds": 0.05059616700009428,
+      "samples": [
+        0.05059616700009428,
+        0.050673250000272674,
+        0.05052770900010728
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 32,
+      "batch": 1,
+      "kind": "phase",
+      "method": "forward",
+      "error_vs_forward": 0.0,
+      "fallback_count": null,
+      "scope": "end_to_end",
+      "seconds": 0.01035504099991158,
+      "samples": [
+        0.010221333999652416,
+        0.010458834000019124,
+        0.01035504099991158
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 32,
+      "batch": 1,
+      "kind": "phase",
+      "method": "forward",
+      "error_vs_forward": 0.0,
+      "fallback_count": null,
+      "scope": "known_roots",
+      "seconds": 0.009225125000284606,
+      "samples": [
+        0.009225125000284606,
+        0.009286417000112124,
+        0.009217167000315385
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 32,
+      "batch": 1,
+      "kind": "phase",
+      "method": "adjoint",
+      "error_vs_forward": 1.6665488433709186e-13,
+      "fallback_count": null,
+      "scope": "end_to_end",
+      "seconds": 0.002021541999965848,
+      "samples": [
+        0.002021541999965848,
+        0.002005207999900449,
+        0.0020227079999131092
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 32,
+      "batch": 1,
+      "kind": "phase",
+      "method": "adjoint",
+      "error_vs_forward": 1.6665488433709186e-13,
+      "fallback_count": null,
+      "scope": "known_roots",
+      "seconds": 0.000973499999872729,
+      "samples": [
+        0.0009789589998945303,
+        0.000973499999872729,
+        0.000961834000008821
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 32,
+      "batch": 1,
+      "kind": "group",
+      "method": "forward",
+      "error_vs_forward": 0.0,
+      "fallback_count": null,
+      "scope": "end_to_end",
+      "seconds": 0.04455287500013583,
+      "samples": [
+        0.04455287500013583,
+        0.044408583999938855,
+        0.04464858400024241
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 32,
+      "batch": 1,
+      "kind": "group",
+      "method": "forward",
+      "error_vs_forward": 0.0,
+      "fallback_count": null,
+      "scope": "known_roots",
+      "seconds": 0.04347595800027193,
+      "samples": [
+        0.04363254100007907,
+        0.04347595800027193,
+        0.04319520800027021
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 32,
+      "batch": 1,
+      "kind": "group",
+      "method": "adjoint",
+      "error_vs_forward": 9.534630029950364e-13,
+      "fallback_count": null,
+      "scope": "end_to_end",
+      "seconds": 0.024189792000015586,
+      "samples": [
+        0.024189792000015586,
+        0.023736207999718317,
+        0.02467845799992574
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 32,
+      "batch": 1,
+      "kind": "group",
+      "method": "adjoint",
+      "error_vs_forward": 9.534630029950364e-13,
+      "fallback_count": null,
+      "scope": "known_roots",
+      "seconds": 0.022450832999766135,
+      "samples": [
+        0.022450832999766135,
+        0.02247816699991745,
+        0.022315291999802866
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 32,
+      "batch": 32,
+      "kind": "phase",
+      "method": "forward",
+      "error_vs_forward": 0.0,
+      "fallback_count": null,
+      "scope": "end_to_end",
+      "seconds": 0.29592037500015067,
+      "samples": [
+        0.29592037500015067,
+        0.2940438750001704,
+        0.29758016699997825
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 32,
+      "batch": 32,
+      "kind": "phase",
+      "method": "forward",
+      "error_vs_forward": 0.0,
+      "fallback_count": null,
+      "scope": "known_roots",
+      "seconds": 0.286628415999985,
+      "samples": [
+        0.286628415999985,
+        0.28664754200008247,
+        0.28625512500002515
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 32,
+      "batch": 32,
+      "kind": "phase",
+      "method": "adjoint",
+      "error_vs_forward": 1.6665488433709186e-13,
+      "fallback_count": null,
+      "scope": "end_to_end",
+      "seconds": 0.03659454199987522,
+      "samples": [
+        0.03661512499957098,
+        0.0365764590001163,
+        0.03659454199987522
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 32,
+      "batch": 32,
+      "kind": "phase",
+      "method": "adjoint",
+      "error_vs_forward": 1.6665488433709186e-13,
+      "fallback_count": null,
+      "scope": "known_roots",
+      "seconds": 0.028198791000249912,
+      "samples": [
+        0.028198791000249912,
+        0.028214500000103726,
+        0.02810941699999603
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 32,
+      "batch": 32,
+      "kind": "group",
+      "method": "forward",
+      "error_vs_forward": 0.0,
+      "fallback_count": null,
+      "scope": "end_to_end",
+      "seconds": 1.4199270829999477,
+      "samples": [
+        1.414700792000076,
+        1.4199270829999477,
+        1.4222605420000036
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 32,
+      "batch": 32,
+      "kind": "group",
+      "method": "forward",
+      "error_vs_forward": 0.0,
+      "fallback_count": null,
+      "scope": "known_roots",
+      "seconds": 1.4351760419999664,
+      "samples": [
+        1.4264776659997551,
+        1.4351760419999664,
+        1.442982457999733
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 32,
+      "batch": 32,
+      "kind": "group",
+      "method": "adjoint",
+      "error_vs_forward": 9.534630029950364e-13,
+      "fallback_count": null,
+      "scope": "end_to_end",
+      "seconds": 0.7311115000002246,
+      "samples": [
+        0.7311115000002246,
+        0.7281618750002963,
+        0.7329724999999598
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 32,
+      "batch": 32,
+      "kind": "group",
+      "method": "adjoint",
+      "error_vs_forward": 9.534630029950364e-13,
+      "fallback_count": null,
+      "scope": "known_roots",
+      "seconds": 0.7322712079999292,
+      "samples": [
+        0.7322712079999292,
+        0.7274885830001949,
+        0.7329810830001406
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 96,
+      "batch": 1,
+      "kind": "phase",
+      "method": "forward",
+      "error_vs_forward": 0.0,
+      "fallback_count": null,
+      "scope": "end_to_end",
+      "seconds": 0.08492370900012247,
+      "samples": [
+        0.08495637499981967,
+        0.08444354199991722,
+        0.08492370900012247
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 96,
+      "batch": 1,
+      "kind": "phase",
+      "method": "forward",
+      "error_vs_forward": 0.0,
+      "fallback_count": null,
+      "scope": "known_roots",
+      "seconds": 0.08124016700003267,
+      "samples": [
+        0.08124016700003267,
+        0.08106512500035024,
+        0.08338050000020303
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 96,
+      "batch": 1,
+      "kind": "phase",
+      "method": "adjoint",
+      "error_vs_forward": 6.766427695925614e-13,
+      "fallback_count": null,
+      "scope": "end_to_end",
+      "seconds": 0.0064067500002238376,
+      "samples": [
+        0.0063511250000374275,
+        0.006415709000066272,
+        0.0064067500002238376
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 96,
+      "batch": 1,
+      "kind": "phase",
+      "method": "adjoint",
+      "error_vs_forward": 6.766427695925614e-13,
+      "fallback_count": null,
+      "scope": "known_roots",
+      "seconds": 0.0027980419999948936,
+      "samples": [
+        0.0027980419999948936,
+        0.0027591670000219892,
+        0.0028717919999508013
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 96,
+      "batch": 1,
+      "kind": "group",
+      "method": "forward",
+      "error_vs_forward": 0.0,
+      "fallback_count": null,
+      "scope": "end_to_end",
+      "seconds": 0.4045901669996965,
+      "samples": [
+        0.40545525000015914,
+        0.4045901669996965,
+        0.4029580830001578
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 96,
+      "batch": 1,
+      "kind": "group",
+      "method": "forward",
+      "error_vs_forward": 0.0,
+      "fallback_count": null,
+      "scope": "known_roots",
+      "seconds": 0.40229408300001523,
+      "samples": [
+        0.40229408300001523,
+        0.4026370830001724,
+        0.40069820799999434
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 96,
+      "batch": 1,
+      "kind": "group",
+      "method": "adjoint",
+      "error_vs_forward": 8.757022884609e-12,
+      "fallback_count": null,
+      "scope": "end_to_end",
+      "seconds": 0.20640000000003056,
+      "samples": [
+        0.2115460410000196,
+        0.20439816699990843,
+        0.20640000000003056
+      ]
+    },
+    {
+      "task": "surface",
+      "layers": 96,
+      "batch": 1,
+      "kind": "group",
+      "method": "adjoint",
+      "error_vs_forward": 8.757022884609e-12,
+      "fallback_count": null,
+      "scope": "known_roots",
+      "seconds": 0.20225750000008702,
+      "samples": [
+        0.20657637499971315,
+        0.20225750000008702,
+        0.20173008300025685
+      ]
+    },
+    {
+      "task": "rf",
+      "layers": 8,
+      "batch": 1,
+      "scope": "forward_and_adjoint",
+      "method": "native",
+      "seconds": 0.0007384169998658763,
+      "samples": [
+        0.0007384169998658763,
+        0.0007147080000322603,
+        0.0008704159999979311
+      ]
+    },
+    {
+      "task": "rf",
+      "layers": 8,
+      "batch": 32,
+      "scope": "forward_and_adjoint",
+      "method": "native",
+      "seconds": 0.0073158750001312,
+      "samples": [
+        0.007244916999752604,
+        0.008257499999672291,
+        0.0073158750001312
+      ]
+    },
+    {
+      "task": "rf",
+      "layers": 32,
+      "batch": 1,
+      "scope": "forward_and_adjoint",
+      "method": "native",
+      "seconds": 0.0013810000000376021,
+      "samples": [
+        0.001475749999826803,
+        0.0013027499999225256,
+        0.0013810000000376021
+      ]
+    },
+    {
+      "task": "rf",
+      "layers": 32,
+      "batch": 32,
+      "scope": "forward_and_adjoint",
+      "method": "native",
+      "seconds": 0.026275790999989113,
+      "samples": [
+        0.026275790999989113,
+        0.026112000000011903,
+        0.026364666000063153
+      ]
+    },
+    {
+      "task": "green",
+      "layers": 8,
+      "batch": 1,
+      "parameters": 1,
+      "scope": "forward_and_vjp",
+      "method": "tangent",
+      "relative_error": 0.0,
+      "seconds": 0.0018942920000881713,
+      "samples": [
+        0.0018942920000881713,
+        0.0018570829997770488,
+        0.001987582999845472
+      ]
+    },
+    {
+      "task": "green",
+      "layers": 8,
+      "batch": 1,
+      "parameters": 1,
+      "scope": "forward_and_vjp",
+      "method": "adjoint",
+      "relative_error": 3.517029043166166e-14,
+      "seconds": 0.004719333000139159,
+      "samples": [
+        0.004642416000024241,
+        0.004719333000139159,
+        0.004853375000038795
+      ]
+    },
+    {
+      "task": "green",
+      "layers": 8,
+      "batch": 1,
+      "parameters": 24,
+      "scope": "forward_and_vjp",
+      "method": "tangent",
+      "relative_error": 0.0,
+      "seconds": 0.027010458999939146,
+      "samples": [
+        0.027010458999939146,
+        0.02898208299984617,
+        0.026267917000041052
+      ]
+    },
+    {
+      "task": "green",
+      "layers": 8,
+      "batch": 1,
+      "parameters": 24,
+      "scope": "forward_and_vjp",
+      "method": "adjoint",
+      "relative_error": 2.6040795390518653e-15,
+      "seconds": 0.004453417000149784,
+      "samples": [
+        0.004464667000320333,
+        0.004453417000149784,
+        0.004311374999815598
+      ]
+    },
+    {
+      "task": "green",
+      "layers": 8,
+      "batch": 4,
+      "parameters": 1,
+      "scope": "forward_and_vjp",
+      "method": "tangent",
+      "relative_error": 0.0,
+      "seconds": 0.006925583999873197,
+      "samples": [
+        0.006925583999873197,
+        0.006908875000135595,
+        0.006977832999837119
+      ]
+    },
+    {
+      "task": "green",
+      "layers": 8,
+      "batch": 4,
+      "parameters": 1,
+      "scope": "forward_and_vjp",
+      "method": "adjoint",
+      "relative_error": 3.517029043166166e-14,
+      "seconds": 0.018571583999801078,
+      "samples": [
+        0.018004792000283487,
+        0.018803583000135404,
+        0.018571583999801078
+      ]
+    },
+    {
+      "task": "green",
+      "layers": 8,
+      "batch": 4,
+      "parameters": 24,
+      "scope": "forward_and_vjp",
+      "method": "tangent",
+      "relative_error": 0.0,
+      "seconds": 0.10713199999963763,
+      "samples": [
+        0.10626458300021113,
+        0.10713199999963763,
+        0.107195665999825
+      ]
+    },
+    {
+      "task": "green",
+      "layers": 8,
+      "batch": 4,
+      "parameters": 24,
+      "scope": "forward_and_vjp",
+      "method": "adjoint",
+      "relative_error": 2.6040795390518653e-15,
+      "seconds": 0.017356290999941848,
+      "samples": [
+        0.017356290999941848,
+        0.01693729099997654,
+        0.018441749999965396
+      ]
+    },
+    {
+      "task": "green",
+      "layers": 32,
+      "batch": 1,
+      "parameters": 1,
+      "scope": "forward_and_vjp",
+      "method": "tangent",
+      "relative_error": 0.0,
+      "seconds": 0.0041198330000042915,
+      "samples": [
+        0.004369417000361864,
+        0.0041198330000042915,
+        0.003899708000062674
+      ]
+    },
+    {
+      "task": "green",
+      "layers": 32,
+      "batch": 1,
+      "parameters": 1,
+      "scope": "forward_and_vjp",
+      "method": "adjoint",
+      "relative_error": 3.058455896484941e-14,
+      "seconds": 0.014120416999958252,
+      "samples": [
+        0.013810458000079961,
+        0.014120416999958252,
+        0.014489916999991692
+      ]
+    },
+    {
+      "task": "green",
+      "layers": 32,
+      "batch": 1,
+      "parameters": 96,
+      "scope": "forward_and_vjp",
+      "method": "tangent",
+      "relative_error": 0.0,
+      "seconds": 0.2656724580001537,
+      "samples": [
+        0.2656724580001537,
+        0.2694937920000484,
+        0.26531124999974054
+      ]
+    },
+    {
+      "task": "green",
+      "layers": 32,
+      "batch": 1,
+      "parameters": 96,
+      "scope": "forward_and_vjp",
+      "method": "adjoint",
+      "relative_error": 1.2528206906466167e-14,
+      "seconds": 0.013932875000136846,
+      "samples": [
+        0.014086124999721505,
+        0.013932875000136846,
+        0.01392079199968066
+      ]
+    },
+    {
+      "task": "green",
+      "layers": 32,
+      "batch": 4,
+      "parameters": 1,
+      "scope": "forward_and_vjp",
+      "method": "tangent",
+      "relative_error": 0.0,
+      "seconds": 0.016861874999904103,
+      "samples": [
+        0.016861874999904103,
+        0.016957457999978942,
+        0.015793624999787426
+      ]
+    },
+    {
+      "task": "green",
+      "layers": 32,
+      "batch": 4,
+      "parameters": 1,
+      "scope": "forward_and_vjp",
+      "method": "adjoint",
+      "relative_error": 3.058455896484941e-14,
+      "seconds": 0.05568924999988667,
+      "samples": [
+        0.0551612499998555,
+        0.05569808399968679,
+        0.05568924999988667
+      ]
+    },
+    {
+      "task": "green",
+      "layers": 32,
+      "batch": 4,
+      "parameters": 96,
+      "scope": "forward_and_vjp",
+      "method": "tangent",
+      "relative_error": 0.0,
+      "seconds": 1.0714557920000516,
+      "samples": [
+        1.0714557920000516,
+        1.0792905829998745,
+        1.06816925000021
+      ]
+    },
+    {
+      "task": "green",
+      "layers": 32,
+      "batch": 4,
+      "parameters": 96,
+      "scope": "forward_and_vjp",
+      "method": "adjoint",
+      "relative_error": 1.2528206906466167e-14,
+      "seconds": 0.05582433400013542,
+      "samples": [
+        0.05626204100008181,
+        0.05582433400013542,
+        0.05509920800022883
+      ]
+    }
+  ],
+  "host_path_redacted": true
+}

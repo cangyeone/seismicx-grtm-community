@@ -6,6 +6,15 @@
 程序用于层状介质格林函数计算，支持 CPU、CUDA 和 Apple Metal/MPS。
 仓库中的代码片段是公开接口的使用示例，不包含求解器实现源码或开发历史。
 
+
+## 特征函数与受迫伴随核预览版 0.6.0.dev8
+
+[下载](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev8) · [公式与接口](docs/VARIATIONAL_KERNELS.zh-CN.md) · [完整实测](docs/PERFORMANCE_0.6.0.dev8.zh-CN.md) · [安装范围](docs/PREVIEW_0.6.0.dev8.zh-CN.md)
+
+新增 FP64 Rayleigh/Love 特征函数能量积分核、解析群速度核，以及 RF/Green 的标量目标敏感核接口。参数数目不增加完整传播次数，但层数和输出仍有成本。Green 保留解析反向算子，并未新增连续体积积分后端。实际安装包通过 Apple/CUDA 各 133 项完整测试（分别跳过 23/9 项）；报告保留 CUDA 相速度略慢和单参数伴随更慢的结果。
+
+本次二进制仅含 Mac CPython 3.12、Linux CPython 3.13（glibc≥2.31，CUDA sm120）。其他 ABI 保留 dev7。Metal 复用已核验且源代码未改动的 dev7 预编译组件；许可仍为研究/非商业。
+
 ## 解析伴随与 CUDA 反向 AD 预览版 0.6.0.dev7
 
 [Compiled wheels](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev7) · [Install](docs/PREVIEW_0.6.0.dev7.zh-CN.md) · [Methods](docs/ANALYTIC_METHODS.zh-CN.md) · [Performance](docs/PERFORMANCE_0.6.0.dev7.zh-CN.md)
