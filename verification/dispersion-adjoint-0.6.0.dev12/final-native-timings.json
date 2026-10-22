@@ -1,0 +1,318 @@
+{
+  "version": "0.6.0.dev12",
+  "cpu": "x86_64",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "grid": [
+    64,
+    256
+  ],
+  "damping": 0.002,
+  "records": [
+    {
+      "layers": 8,
+      "batch": 1,
+      "wave": "rayleigh",
+      "cpu_s": 0.16919605107977986,
+      "cuda_s": 0.004051280906423926,
+      "speedup_vs_cpu": 41.76359403059255,
+      "cpu_samples": [
+        0.1082794910762459,
+        0.17147640301845968,
+        0.16919605107977986
+      ],
+      "cuda_samples": [
+        0.004375818884000182,
+        0.004051280906423926,
+        0.004021465079858899
+      ],
+      "response_relative_l2": 1.0579510290601059e-13,
+      "gradient_relative_l2": 1.622228297060001e-12
+    },
+    {
+      "layers": 8,
+      "batch": 1,
+      "wave": "love",
+      "cpu_s": 0.013481491943821311,
+      "cuda_s": 0.0030880721751600504,
+      "speedup_vs_cpu": 4.3656660787478465,
+      "cpu_samples": [
+        0.019210322061553597,
+        0.013481491943821311,
+        0.012978177983313799
+      ],
+      "cuda_samples": [
+        0.0031002250034362078,
+        0.0030880721751600504,
+        0.00298836687579751
+      ],
+      "response_relative_l2": 3.169998499308475e-14,
+      "gradient_relative_l2": 1.3751172804072837e-13
+    },
+    {
+      "layers": 8,
+      "batch": 16,
+      "wave": "rayleigh",
+      "cpu_s": 1.8440335930790752,
+      "cuda_s": 0.02234096289612353,
+      "speedup_vs_cpu": 82.54047068844294,
+      "cpu_samples": [
+        1.9787842649966478,
+        1.8440335930790752,
+        1.7092613040003926
+      ],
+      "cuda_samples": [
+        0.02269862894900143,
+        0.02234096289612353,
+        0.022304158890619874
+      ],
+      "response_relative_l2": 1.0701564157895184e-13,
+      "gradient_relative_l2": 2.4337090084329068e-12
+    },
+    {
+      "layers": 8,
+      "batch": 16,
+      "wave": "love",
+      "cpu_s": 0.19628662918694317,
+      "cuda_s": 0.0050888750702142715,
+      "speedup_vs_cpu": 38.571713095459884,
+      "cpu_samples": [
+        0.19628662918694317,
+        0.24134048400446773,
+        0.19501798902638257
+      ],
+      "cuda_samples": [
+        0.004976967116817832,
+        0.005108423065394163,
+        0.0050888750702142715
+      ],
+      "response_relative_l2": 2.8441486674301806e-14,
+      "gradient_relative_l2": 3.296308095880255e-13
+    },
+    {
+      "layers": 32,
+      "batch": 1,
+      "wave": "rayleigh",
+      "cpu_s": 0.4422439350746572,
+      "cuda_s": 0.008655627956613898,
+      "speedup_vs_cpu": 51.09322365649182,
+      "cpu_samples": [
+        0.4432246698997915,
+        0.4422439350746572,
+        0.44120219605974853
+      ],
+      "cuda_samples": [
+        0.009888455970212817,
+        0.008655627956613898,
+        0.008186558960005641
+      ],
+      "response_relative_l2": 2.041057071972288e-13,
+      "gradient_relative_l2": 3.0930408462627382e-12
+    },
+    {
+      "layers": 32,
+      "batch": 1,
+      "wave": "love",
+      "cpu_s": 0.05228186910971999,
+      "cuda_s": 0.0036378230433911085,
+      "speedup_vs_cpu": 14.371746092680704,
+      "cpu_samples": [
+        0.05228186910971999,
+        0.05239356984384358,
+        0.048455120995640755
+      ],
+      "cuda_samples": [
+        0.003637694986537099,
+        0.0037015939597040415,
+        0.0036378230433911085
+      ],
+      "response_relative_l2": 4.55408679603489e-14,
+      "gradient_relative_l2": 6.23403590079132e-13
+    },
+    {
+      "layers": 32,
+      "batch": 16,
+      "wave": "rayleigh",
+      "cpu_s": 7.1532783408183604,
+      "cuda_s": 0.07927563297562301,
+      "speedup_vs_cpu": 90.23300189880501,
+      "cpu_samples": [
+        7.480674938997254,
+        7.1532783408183604,
+        7.058703055838123
+      ],
+      "cuda_samples": [
+        0.08578215399757028,
+        0.07927563297562301,
+        0.07926208293065429
+      ],
+      "response_relative_l2": 2.1413677519788495e-13,
+      "gradient_relative_l2": 3.4581102632140057e-12
+    },
+    {
+      "layers": 32,
+      "batch": 16,
+      "wave": "love",
+      "cpu_s": 0.7629334130324423,
+      "cuda_s": 0.014398201834410429,
+      "speedup_vs_cpu": 52.98810377898016,
+      "cpu_samples": [
+        0.7652338831685483,
+        0.7629334130324423,
+        0.7605996550992131
+      ],
+      "cuda_samples": [
+        0.014244648860767484,
+        0.014398201834410429,
+        0.014517555944621563
+      ],
+      "response_relative_l2": 4.581748507836541e-14,
+      "gradient_relative_l2": 8.670382034978332e-13
+    },
+    {
+      "layers": 32,
+      "batch": 1,
+      "wave": "rayleigh",
+      "array_method": "fk",
+      "array_field": "coherent",
+      "cpu_s": 1.0827190920244902,
+      "cuda_s": 0.017407495994120836,
+      "speedup_vs_cpu": 62.19843982099235,
+      "cpu_samples": [
+        1.1601980689447373,
+        1.0827190920244902,
+        0.8999311339575797
+      ],
+      "cuda_samples": [
+        0.017407495994120836,
+        0.018270935164764524,
+        0.017308016074821353
+      ],
+      "power_relative_l2": 6.257682995334804e-14,
+      "gradient_relative_l2": 9.23491227561489e-13
+    },
+    {
+      "layers": 32,
+      "batch": 1,
+      "wave": "rayleigh",
+      "array_method": "fj",
+      "array_field": "coherent",
+      "cpu_s": 0.532645549857989,
+      "cuda_s": 0.01128596207126975,
+      "speedup_vs_cpu": 47.19540491934885,
+      "cpu_samples": [
+        0.45427108695730567,
+        0.532645549857989,
+        0.715878059156239
+      ],
+      "cuda_samples": [
+        0.011739545036107302,
+        0.01128596207126975,
+        0.011191311990842223
+      ],
+      "power_relative_l2": 6.339536960938844e-14,
+      "gradient_relative_l2": 5.878994612746228e-13
+    },
+    {
+      "layers": 32,
+      "batch": 1,
+      "wave": "rayleigh",
+      "array_method": "fj",
+      "array_field": "noise",
+      "cpu_s": 0.44540583598427474,
+      "cuda_s": 0.01017188304103911,
+      "speedup_vs_cpu": 43.787943116063815,
+      "cpu_samples": [
+        0.4442281068768352,
+        0.46276599494740367,
+        0.44540583598427474
+      ],
+      "cuda_samples": [
+        0.01030224491842091,
+        0.009958618087694049,
+        0.01017188304103911
+      ],
+      "power_relative_l2": 1.0058509530578192e-13,
+      "gradient_relative_l2": 2.937923318712937e-12
+    },
+    {
+      "layers": 32,
+      "batch": 16,
+      "wave": "rayleigh",
+      "array_method": "fk",
+      "array_field": "coherent",
+      "cpu_s": 15.038915913086385,
+      "cuda_s": 0.15870988299138844,
+      "speedup_vs_cpu": 94.75727427700512,
+      "cpu_samples": [
+        15.187153006903827,
+        14.298126759007573,
+        15.038915913086385
+      ],
+      "cuda_samples": [
+        0.1626445148140192,
+        0.15870988299138844,
+        0.1586387890856713
+      ],
+      "power_relative_l2": 7.758024847769371e-14,
+      "gradient_relative_l2": 7.096694241899267e-13
+    },
+    {
+      "layers": 32,
+      "batch": 16,
+      "wave": "rayleigh",
+      "array_method": "fj",
+      "array_field": "coherent",
+      "cpu_s": 7.0779705019667745,
+      "cuda_s": 0.08190571190789342,
+      "speedup_vs_cpu": 86.41607938071846,
+      "cpu_samples": [
+        7.076057828962803,
+        7.0779705019667745,
+        7.409176125889644
+      ],
+      "cuda_samples": [
+        0.08293276815675199,
+        0.08181243692524731,
+        0.08190571190789342
+      ],
+      "power_relative_l2": 8.104406264700942e-14,
+      "gradient_relative_l2": 7.922971895614172e-13
+    },
+    {
+      "layers": 32,
+      "batch": 16,
+      "wave": "rayleigh",
+      "array_method": "fj",
+      "array_field": "noise",
+      "cpu_s": 7.208355039125308,
+      "cuda_s": 0.08102256082929671,
+      "speedup_vs_cpu": 88.96725758042025,
+      "cpu_samples": [
+        7.109777358127758,
+        7.208355039125308,
+        7.306079196045175
+      ],
+      "cuda_samples": [
+        0.08339017489925027,
+        0.08102256082929671,
+        0.08098044386133552
+      ],
+      "power_relative_l2": 1.0274281748105618e-13,
+      "gradient_relative_l2": 2.9287867792984124e-12
+    }
+  ],
+  "reference_records": [],
+  "cpu_native_threads": 4,
+  "torch_threads": 1,
+  "protocol": "Median of 3 synchronized full forward + mean(power) + all-model-parameter VJP wall times; one warmup; constructors and host output copies excluded. CPU native threads reported separately; torch threads=1. Reference comparison uses one CPU thread for both implementations. Array basis warm cache. Native production uses explicit Hermitian adjoint; torch generic-solve reverse AD is a private reference, not the former production algorithm.",
+  "input_archive": "benchmark-inputs.npz",
+  "parameterization": "thickness; native km, km/s, g/cm3",
+  "objective": "mean selected-component raw displacement power; no source PSD; source amplitude one, vertical Rayleigh or transverse Love",
+  "array_geometry": {
+    "length_km": 4,
+    "n_receivers": 32,
+    "offset_km": 0.2,
+    "window": "rectangular",
+    "integration_mesh": "display grid"
+  }
+}

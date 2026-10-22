@@ -1,0 +1,77 @@
+{
+  "version": "0.6.0.dev12",
+  "torch": "2.8.0+cu128",
+  "numpy": "2.1.3",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "cpu": "Architecture:                         x86_64\nCPU op-mode(s):                       32-bit, 64-bit\nByte Order:                           Little Endian\nAddress sizes:                        48 bits physical, 48 bits virtual\nCPU(s):                               32\nOn-line CPU(s) list:                  0-31\nThread(s) per core:                   2\nCore(s) per socket:                   16\nSocket(s):                            1\nVendor ID:                            AuthenticAMD\nCPU family:                           23\nModel:                                49\nModel name:                           AMD Ryzen Threadripper PRO 3955WX 16-Cores\nStepping:                             0\nCPU MHz:                              3892.683\nBogoMIPS:                             7785.36\nHypervisor vendor:                    Microsoft\nVirtualization type:                  full\nL1d cache:                            512 KiB\nL1i cache:                            512 KiB\nL2 cache:                             8 MiB\nL3 cache:                             16 MiB\nVulnerability Gather data sampling:   Not affected\nVulnerability Itlb multihit:          Not affected\nVulnerability L1tf:                   Not affected\nVulnerability Mds:                    Not affected\nVulnerability Meltdown:               Not affected\nVulnerability Mmio stale data:        Not affected\nVulnerability Reg file data sampling: Not affected\nVulnerability Retbleed:               Mitigation; untrained return thunk; SMT enabled with STIBP protection\nVulnerability Spec rstack overflow:   Mitigation; safe RET\nVulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl and seccomp\nVulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:             Mitigation; Retpolines; IBPB conditional; STIBP always-on; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected\nVulnerability Srbds:                  Not affected\nVulnerability Tsx async abort:        Not affected\nFlags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr virt_ssbd arat umip rdpid\n",
+  "records": [
+    {
+      "wave": "rayleigh",
+      "array": null,
+      "source_gradient": 6.768861025839411e-14,
+      "source_psd_gradient": 3.556122288370813e-14,
+      "model_gradient": 2.0844351262743133e-13
+    },
+    {
+      "wave": "rayleigh",
+      "array": {
+        "method": "fk",
+        "length": 2,
+        "n_receivers": 12
+      },
+      "source_gradient": 4.2783769750127795e-14,
+      "source_psd_gradient": 2.8020056681784112e-14,
+      "model_gradient": 1.153549229966856e-13
+    },
+    {
+      "wave": "rayleigh",
+      "array": {
+        "method": "fj",
+        "field": "noise",
+        "radii": [
+          0.1,
+          0.5,
+          1.0,
+          2.0
+        ]
+      },
+      "source_gradient": 6.655647207578202e-14,
+      "source_psd_gradient": 1.822855465852645e-14,
+      "model_gradient": 3.280248967138328e-13
+    },
+    {
+      "wave": "love",
+      "array": null,
+      "source_gradient": 1.4220597288020997e-14,
+      "source_psd_gradient": 1.4419224461629712e-14,
+      "model_gradient": 6.492177716291196e-14
+    },
+    {
+      "wave": "love",
+      "array": {
+        "method": "fk",
+        "length": 2,
+        "n_receivers": 12
+      },
+      "source_gradient": 5.010711862363597e-15,
+      "source_psd_gradient": 7.584158643621201e-15,
+      "model_gradient": 1.571394955199696e-14
+    },
+    {
+      "wave": "love",
+      "array": {
+        "method": "fj",
+        "field": "noise",
+        "radii": [
+          0.1,
+          0.5,
+          1.0,
+          2.0
+        ]
+      },
+      "source_gradient": 1.2393257138303205e-14,
+      "source_psd_gradient": 1.1456541363093618e-14,
+      "model_gradient": 5.4248578733849096e-14
+    }
+  ]
+}

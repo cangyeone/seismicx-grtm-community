@@ -1,0 +1,132 @@
+{
+  "version": "0.6.0.dev12",
+  "global_equation": [
+    {
+      "layers": 1,
+      "response_relative_l2": 2.8620971834347e-16,
+      "adjoint_direction": 0.08850570458466893,
+      "independent_global_fd": [
+        {
+          "step": 0.0001,
+          "directional_derivative": 0.08850570403274444,
+          "relative_error": 6.236032974488139e-09
+        },
+        {
+          "step": 1e-05,
+          "directional_derivative": 0.08850570458913963,
+          "relative_error": 5.0513146103875346e-11
+        },
+        {
+          "step": 1e-06,
+          "directional_derivative": 0.08850570455340434,
+          "relative_error": 3.53249412423053e-10
+        }
+      ]
+    },
+    {
+      "layers": 3,
+      "response_relative_l2": 4.861580131236037e-15,
+      "adjoint_direction": -1.041937231433835,
+      "independent_global_fd": [
+        {
+          "step": 0.0001,
+          "directional_derivative": -1.041937295372386,
+          "relative_error": 6.136506976554592e-08
+        },
+        {
+          "step": 1e-05,
+          "directional_derivative": -1.041937232076906,
+          "relative_error": 6.171877829483117e-10
+        },
+        {
+          "step": 1e-06,
+          "directional_derivative": -1.0419372308279051,
+          "relative_error": 5.815417230359602e-10
+        }
+      ]
+    },
+    {
+      "layers": 8,
+      "response_relative_l2": 4.510299159450599e-15,
+      "adjoint_direction": 1.5623307230255392,
+      "independent_global_fd": [
+        {
+          "step": 0.0001,
+          "directional_derivative": 1.5623310198645268,
+          "relative_error": 1.8999753588504086e-07
+        },
+        {
+          "step": 1e-05,
+          "directional_derivative": 1.5623307262790929,
+          "relative_error": 2.082499947525922e-09
+        },
+        {
+          "step": 1e-06,
+          "directional_derivative": 1.5623307246248608,
+          "relative_error": 1.0236767033389504e-09
+        }
+      ]
+    },
+    {
+      "layers": 32,
+      "response_relative_l2": 2.6920003297565933e-15,
+      "adjoint_direction": -0.005165016552506787,
+      "independent_global_fd": [
+        {
+          "step": 0.0001,
+          "directional_derivative": -0.005165016014399559,
+          "relative_error": 1.0418305973986421e-07
+        },
+        {
+          "step": 1e-05,
+          "directional_derivative": -0.0051650165630579,
+          "relative_error": 2.042803314855119e-09
+        },
+        {
+          "step": 1e-06,
+          "directional_derivative": -0.005165016699060221,
+          "relative_error": 2.837424274665604e-08
+        }
+      ]
+    }
+  ],
+  "inversion_smoke": [
+    {
+      "field": "coherent",
+      "initial_relative_scales": [
+        1.0618365465453596,
+        0.9607894391523232
+      ],
+      "recovered_relative_scales": [
+        0.9999974116476051,
+        0.9999873437330357
+      ],
+      "parameters": [
+        "surface Vs",
+        "first interface depth"
+      ],
+      "initial_loss": 6.275468477926311e-06,
+      "final_loss": 3.778457384145846e-16,
+      "evaluations": 32
+    },
+    {
+      "field": "noise",
+      "initial_relative_scales": [
+        1.0618365465453596,
+        0.9607894391523232
+      ],
+      "recovered_relative_scales": [
+        1.0000000701975629,
+        0.9999987472585807
+      ],
+      "parameters": [
+        "surface Vs",
+        "first interface depth"
+      ],
+      "initial_loss": 7.467513362049889e-07,
+      "final_loss": 5.616511760417183e-17,
+      "evaluations": 17
+    }
+  ],
+  "interpretation": "Independent global-system directional central differences are validation only, never production derivatives. Local noiseless two-parameter inversion with known source/other properties demonstrates usability, not global convergence or superiority over another inversion method."
+}

@@ -14,6 +14,16 @@ data; solver implementation source and development history are not distributed h
 
 
 
+## Analytic dispersion-image inversion and finite arrays: 0.6.0.dev12
+
+[Download](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev12) · [API and physical definitions](docs/DISPERSION_IMAGE.md) · [Single/batch accuracy and timing](docs/PERFORMANCE_0.6.0.dev12.md)
+
+CPU/CUDA analytic adjoints support image inversion and first derivatives of the model, complex source and source PSD. Separate direct spectra, coherent line-source FK, vertical point-source FJ, and isotropic-noise covariance FJ; finite apertures, geometry, windows and model batches. CUDA solves, observation transforms and backward stay on the selected device.
+
+Active FJ currently requires a vertical point force and vertical Rayleigh records. Noise uses the documented band-limited isotropic Fourier forcing ensemble. Spatial quadrature needs spacing/endpoint convergence; no VTI, fluids or material-Q attenuation. MPS explicitly bridges to CPU FP64. The illustration below is isotropic synthetic data, not a reproduced SPECFEM/SASEM experiment from the supplied reference slide.
+
+![Finite-aperture active and noise FJ comparison](verification/dispersion-adjoint-0.6.0.dev12/example/comparison.png)
+
 ## Dispersion energy image preview 0.6.0.dev11
 
 [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev11) · [API and physics](docs/DISPERSION_IMAGE.md) · [Accuracy and timing](docs/PERFORMANCE_0.6.0.dev11.md)

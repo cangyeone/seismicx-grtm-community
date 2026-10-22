@@ -1,0 +1,66 @@
+{
+  "version": "0.6.0.dev12",
+  "device": "cpu",
+  "model_units": "km, km/s, g/cm3",
+  "damping": 0.02,
+  "source_psd": "(f/8)^2 exp(-(f/8)^2)",
+  "records": [
+    {
+      "aperture_km": 0.27,
+      "title": "Direct surface spectrum",
+      "integration_phase_step_max": null,
+      "source_units": "GPa",
+      "power_units": "km^2/Hz"
+    },
+    {
+      "aperture_km": 0.27,
+      "title": "Line-source FK",
+      "integration_phase_step_max": 0.09873576911290913,
+      "source_units": "GPa*km",
+      "power_units": "km^2/Hz"
+    },
+    {
+      "aperture_km": 0.27,
+      "title": "Point-source FJ",
+      "integration_phase_step_max": 0.09873576911290913,
+      "source_units": "GPa*km^2",
+      "power_units": "km^2/Hz"
+    },
+    {
+      "aperture_km": 0.27,
+      "title": "Isotropic-noise FJ",
+      "integration_phase_step_max": 0.0888621922016182,
+      "source_units": "GPa",
+      "power_units": "km^2/Hz"
+    },
+    {
+      "aperture_km": 1.07,
+      "title": "Direct surface spectrum",
+      "integration_phase_step_max": null,
+      "source_units": "GPa",
+      "power_units": "km^2/Hz"
+    },
+    {
+      "aperture_km": 1.07,
+      "title": "Line-source FK",
+      "integration_phase_step_max": 0.3620311534140001,
+      "source_units": "GPa*km",
+      "power_units": "km^2/Hz"
+    },
+    {
+      "aperture_km": 1.07,
+      "title": "Point-source FJ",
+      "integration_phase_step_max": 0.3620311534140001,
+      "source_units": "GPa*km^2",
+      "power_units": "km^2/Hz"
+    },
+    {
+      "aperture_km": 1.07,
+      "title": "Isotropic-noise FJ",
+      "integration_phase_step_max": 0.3521575765027092,
+      "source_units": "GPa",
+      "power_units": "km^2/Hz"
+    }
+  ],
+  "interpretation": "Band-limited synthetic illustration. Each column is its documented observation model, not an accuracy comparison between interchangeable methods. No independent SPECFEM/SASEM/VTI data used."
+}

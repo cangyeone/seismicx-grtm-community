@@ -8,6 +8,16 @@
 
 
 
+## 解析频散图反演与有限阵列预览 0.6.0.dev12
+
+[下载](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev12) · [接口与物理定义](docs/DISPERSION_IMAGE.zh-CN.md) · [单模型/batch 精度与速度](docs/PERFORMANCE_0.6.0.dev12.zh-CN.md)
+
+CPU/CUDA 解析伴随可直接反演频散图，支持模型、复震源和 source PSD 一阶导数。分别输出 direct response、主动线源 FK、垂直点源 F–J、各向同性随机源互谱 F–J；支持有限孔径、台站几何、窗函数和批量模型，CUDA 数值计算与反传保持同一设备。
+
+F–J 主动源当前限定垂直点力/垂直 Rayleigh 记录；随机源采用文档中定义的有限波数带各向同性 Fourier 载荷模型。空间积分需要检查采样和端点收敛，不支持 VTI/流体/Q 衰减。MPS 仍明确桥接 CPU FP64。下面是各向同性合成示例，不是对参考幻灯片中 SPECFEM/SASEM 的独立复现。
+
+![有限孔径、主动与随机 F–J 对比](verification/dispersion-adjoint-0.6.0.dev12/example/comparison.png)
+
 ## 频散能量图预览 0.6.0.dev11
 
 [下载](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev11) · [接口与物理含义](docs/DISPERSION_IMAGE.zh-CN.md) · [精度与速度](docs/PERFORMANCE_0.6.0.dev11.zh-CN.md)
