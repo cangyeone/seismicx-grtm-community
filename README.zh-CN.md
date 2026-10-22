@@ -8,6 +8,16 @@
 
 
 
+## 频散能量图预览 0.6.0.dev11
+
+[下载](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev11) · [接口与物理含义](docs/DISPERSION_IMAGE.zh-CN.md) · [精度与速度](docs/PERFORMANCE_0.6.0.dev11.zh-CN.md)
+
+用 GRTM 受迫波动方程计算地表垂直、径向或横向载荷下的复位移与原始/归一化幅值平方。支持 FP64 CPU/CUDA、融合模型 batch。64×256 网格、32 层、B=16，RTX 5090 的 Rayleigh / Love 耗时分别为 14.4 / 5.5 ms，相对同机四线程 CPU 提速 71.7× / 64.5×。实测 CPU/CUDA 复响应最大相对 L2 差异 2.25e-13。两个安装包各运行 158 项回归测试，无失败。
+
+新图像接口本次仅正演；能量定义为位移幅值平方，正的复频率偏移用于展宽极点。震源和接收点位于地表。MPS 明确采用 CPU FP64 桥接。
+
+![频散能量图与相速度根](verification/dispersion-image-0.6.0.dev11/example/dispersion-image.png)
+
 ## 跨模型 CUDA 融合预览 0.6.0.dev10
 
 [下载](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev10) · [接口与精度策略](docs/CUDA_GREEN_BATCH.zh-CN.md) · [完整实测](docs/PERFORMANCE_0.6.0.dev10.zh-CN.md) · [安装范围](docs/PREVIEW_0.6.0.dev10.zh-CN.md)

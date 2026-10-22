@@ -1,0 +1,43 @@
+{
+  "rayleigh": {
+    "components": [
+      "radial",
+      "vertical"
+    ],
+    "component": "vertical",
+    "wave": "rayleigh",
+    "damping": 0.002,
+    "normalization": "frequency",
+    "units": "native",
+    "source_units": "GPa",
+    "response_units": "km",
+    "power_units": "km^2",
+    "backend": "cpu",
+    "compute_device": "cpu",
+    "response_device": "cpu",
+    "derivative_backend": null,
+    "source_depth": 0.0,
+    "receiver_depth": 0.0,
+    "method": "GRTM forced surface traction solve; elastic FP64; exp(i*k*x+i*w*t)"
+  },
+  "love": {
+    "components": [
+      "transverse"
+    ],
+    "component": "transverse",
+    "wave": "love",
+    "damping": 0.002,
+    "normalization": "frequency",
+    "units": "native",
+    "source_units": "GPa",
+    "response_units": "km",
+    "power_units": "km^2",
+    "backend": "cpu",
+    "compute_device": "cpu",
+    "response_device": "cpu",
+    "derivative_backend": null,
+    "source_depth": 0.0,
+    "receiver_depth": 0.0,
+    "method": "GRTM forced surface traction solve; elastic FP64; exp(i*k*x+i*w*t)"
+  }
+}

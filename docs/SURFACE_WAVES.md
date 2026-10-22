@@ -1,5 +1,7 @@
 # GRTM surface waves and semi-analytic sensitivity kernels
 
+**dev11:** [Forced-response dispersion images](DISPERSION_IMAGE.md) add `SurfaceWave.dispersion_image(frequencies, velocities)`, with surface-load response, CPU/CUDA and fused model batches.
+
 For dev7 analytic adjoints, CUDA reverse AD/FFT and joint Levin waveform/JVP updates, see [methods](ANALYTIC_METHODS.md) and [device boundaries](DEVICE_EXECUTION.md). Historical timing reports below describe their original versions.
 
 

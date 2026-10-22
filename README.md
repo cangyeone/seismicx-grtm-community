@@ -14,6 +14,16 @@ data; solver implementation source and development history are not distributed h
 
 
 
+## Dispersion energy image preview 0.6.0.dev11
+
+[Download](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev11) · [API and physics](docs/DISPERSION_IMAGE.md) · [Accuracy and timing](docs/PERFORMANCE_0.6.0.dev11.md)
+
+Compute complex surface displacements and raw/normalized power from vertical, radial or transverse surface loads, using the forced GRTM wave equation. Native FP64 CPU/CUDA, fused model batches. On a 64×256 grid with 32 layers and B=16, RTX 5090 takes 14.4 ms for Rayleigh and 5.5 ms for Love, 71.7× / 64.5× faster than the same machine's four-thread CPU. Maximum CPU/CUDA response relative L2 difference is 2.25e-13 in the measured cases. Both installed wheels run 158 regression tests with no failures.
+
+The new image API is forward-only; power is squared displacement amplitude, and positive complex-frequency damping broadens poles. Source and receiver are at the surface. MPS remains an explicit CPU FP64 bridge.
+
+![Forced GRTM images with phase roots](verification/dispersion-image-0.6.0.dev11/example/dispersion-image.png)
+
 ## Fused CUDA Earth-model preview 0.6.0.dev10
 
 [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev10) · [API/precision policy](docs/CUDA_GREEN_BATCH.md) · [Full measurements](docs/PERFORMANCE_0.6.0.dev10.md) · [ABI/install](docs/PREVIEW_0.6.0.dev10.md)

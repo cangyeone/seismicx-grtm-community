@@ -1,6 +1,6 @@
 # Binary downloads
 
-Latest research preview: [0.6.0.dev10](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev10), with [installation/device boundaries](../docs/PREVIEW_0.6.0.dev10.md), [checksums](SHA256SUMS-0.6.0.dev10), [performance](../docs/PERFORMANCE_0.6.0.dev10.md) and [verification](../verification/preview-0.6.0.dev10/verification.json). This preview has Mac CPython 3.12 and Linux CPython 3.13 (glibc≥2.31) only; other preview ABIs remain on dev7. Stable PyPI remains 0.5.1.
+Latest research preview: [0.6.0.dev11](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev11), with [installation/device boundaries](../docs/PREVIEW_0.6.0.dev11.md), [checksums](SHA256SUMS-0.6.0.dev11), [performance](../docs/PERFORMANCE_0.6.0.dev11.md) and [verification](../verification/preview-0.6.0.dev11/verification.json). This preview has Mac CPython 3.12 and Linux CPython 3.13 (glibc≥2.31) only; other preview ABIs remain on dev7. Stable PyPI remains 0.5.1.
 
 The files below are the **same ten wheels published on PyPI**, with identical
 SHA-256 hashes. Select the Python version and operating system matching your

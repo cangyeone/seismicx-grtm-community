@@ -1,0 +1,130 @@
+{
+  "version": "0.6.0.dev11",
+  "installed_module": "grtm",
+  "global_wave_equation": [
+    {
+      "layers": 1,
+      "relative_l2": 2.6666055479877233e-15,
+      "max_scaled": 3.682498339621439e-15,
+      "all_valid": true
+    },
+    {
+      "layers": 3,
+      "relative_l2": 4.6335958860360225e-14,
+      "max_scaled": 4.806608940424781e-14,
+      "all_valid": true
+    },
+    {
+      "layers": 8,
+      "relative_l2": 9.938225710049686e-15,
+      "max_scaled": 9.69080056572871e-15,
+      "all_valid": true
+    },
+    {
+      "layers": 32,
+      "relative_l2": 1.9875760621516357e-14,
+      "max_scaled": 2.3601441018457554e-14,
+      "all_valid": true
+    }
+  ],
+  "peaks": [
+    {
+      "wave": "rayleigh",
+      "mode": 0,
+      "frequency": 0.08,
+      "phase_root": 3.694049755163536,
+      "image_peak": 3.694064555163536,
+      "error_km_s": 1.480000000020354e-05
+    },
+    {
+      "wave": "rayleigh",
+      "mode": 0,
+      "frequency": 0.2,
+      "phase_root": 2.6931143233676784,
+      "image_peak": 2.6931291233676786,
+      "error_km_s": 1.480000000020354e-05
+    },
+    {
+      "wave": "rayleigh",
+      "mode": 0,
+      "frequency": 0.4,
+      "phase_root": 2.243575981196231,
+      "image_peak": 2.243590781196231,
+      "error_km_s": 1.480000000020354e-05
+    },
+    {
+      "wave": "rayleigh",
+      "mode": 1,
+      "frequency": 0.2,
+      "phase_root": 4.295676384460203,
+      "image_peak": 4.295691184460202,
+      "error_km_s": 1.479999999975945e-05
+    },
+    {
+      "wave": "rayleigh",
+      "mode": 1,
+      "frequency": 0.4,
+      "phase_root": 3.351693145588471,
+      "image_peak": 3.3517079455884713,
+      "error_km_s": 1.480000000020354e-05
+    },
+    {
+      "wave": "rayleigh",
+      "mode": 2,
+      "frequency": 0.4,
+      "phase_root": 3.9294153813295787,
+      "image_peak": 3.929430181329579,
+      "error_km_s": 1.480000000020354e-05
+    },
+    {
+      "wave": "love",
+      "mode": 0,
+      "frequency": 0.08,
+      "phase_root": 3.760042706982272,
+      "image_peak": 3.7600575069822724,
+      "error_km_s": 1.480000000020354e-05
+    },
+    {
+      "wave": "love",
+      "mode": 0,
+      "frequency": 0.2,
+      "phase_root": 2.799337883365449,
+      "image_peak": 2.7993526833654494,
+      "error_km_s": 1.480000000020354e-05
+    },
+    {
+      "wave": "love",
+      "mode": 0,
+      "frequency": 0.4,
+      "phase_root": 2.3060484946436763,
+      "image_peak": 2.3060632946436765,
+      "error_km_s": 1.480000000020354e-05
+    },
+    {
+      "wave": "love",
+      "mode": 1,
+      "frequency": 0.2,
+      "phase_root": 4.484897561650818,
+      "image_peak": 4.484912361650818,
+      "error_km_s": 1.479999999975945e-05
+    },
+    {
+      "wave": "love",
+      "mode": 1,
+      "frequency": 0.4,
+      "phase_root": 3.365632971772637,
+      "image_peak": 3.3656477717726374,
+      "error_km_s": 1.480000000020354e-05
+    },
+    {
+      "wave": "love",
+      "mode": 2,
+      "frequency": 0.4,
+      "phase_root": 4.334322271803781,
+      "image_peak": 4.33433707180378,
+      "error_km_s": 1.479999999975945e-05
+    }
+  ],
+  "peak_grid_spacing_km_s": 4e-05,
+  "peak_damping": 2e-05
+}

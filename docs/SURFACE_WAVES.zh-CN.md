@@ -1,5 +1,7 @@
 # GRTM 面波频散与半解析敏感核
 
+**dev11：**新增[频散能量图](DISPERSION_IMAGE.zh-CN.md)，调用 `SurfaceWave.dispersion_image(frequencies, velocities)`，支持地表力激发、CPU/CUDA 和融合 batch。
+
 dev7 的解析伴随、CUDA 反向 AD/FFT 和 Levin 联合波形/JVP 更新见[算法说明](ANALYTIC_METHODS.zh-CN.md)与[设备边界](DEVICE_EXECUTION.zh-CN.md)。下述历史报告中的旧性能不代表 dev7。
 
 
