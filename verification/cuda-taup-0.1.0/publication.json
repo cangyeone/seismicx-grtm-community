@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-25",
+  "url": "https://github.com/cangyeone/seismicx-grtm-community/releases/tag/cuda-taup-v0.1.0",
+  "tag": "cuda-taup-v0.1.0",
+  "target": "9b3780009a52941ada09d2b6b251b237026be792",
+  "published_at": "2026-10-25T13:06:31Z",
+  "asset_count": 3,
+  "sizes_and_digests_match": true,
+  "current_github_branches_exclude_withdrawn_mlp_component": true,
+  "assets": [
+    {
+      "name": "cuda-taup-0.1.0-verification.json",
+      "size": 4572,
+      "digest": "sha256:2b86f20f3ddf678606f645e94cf0e9894aa5853f30bb737dfb5bf02c1122354f",
+      "browser_download_url": "https://github.com/cangyeone/seismicx-grtm-community/releases/download/cuda-taup-v0.1.0/cuda-taup-0.1.0-verification.json"
+    },
+    {
+      "name": "seismicx_cuda_taup-0.1.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_31_x86_64.whl",
+      "size": 736600,
+      "digest": "sha256:023cafd86d78e5b69b53888fc82bf8f5f7789ddbaa3c0307d6b8855bc8da9f1f",
+      "browser_download_url": "https://github.com/cangyeone/seismicx-grtm-community/releases/download/cuda-taup-v0.1.0/seismicx_cuda_taup-0.1.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_31_x86_64.whl"
+    },
+    {
+      "name": "SHA256SUMS",
+      "size": 272,
+      "digest": "sha256:49fb9a55cb08564f0dd0c4c7b6b60a2d8d19876d36c65ea15aad2bb877c9f0be",
+      "browser_download_url": "https://github.com/cangyeone/seismicx-grtm-community/releases/download/cuda-taup-v0.1.0/SHA256SUMS"
+    }
+  ]
+}
