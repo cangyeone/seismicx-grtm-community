@@ -1,0 +1,101 @@
+{
+  "component": "seismicx-cuda-taup",
+  "version": "0.1.0",
+  "date": "2026-10-25",
+  "source_repository": "https://github.com/cangyeone/seismicx-grtm",
+  "source_commit": "c6bff32fe4bc448467d632b05de6b440b748652a",
+  "source_sha256": {
+    "model.py": "c93aec27bbba6b5288f51cab039c7ae95cdabbce6a5799b807b9121c41ce1b16",
+    "src/taup.cu": "2f6001028d22d1039c6c02153c42df630176a96dda575f88deefb10a7eccab88",
+    "build.sh": "5af32442e896bd4e974418771ffac3659b9a7cc80b8cc54d10c34b5f403466bc",
+    "scripts/validate.py": "e088d10b4f5554950b2df3684093acd7dc66471e5a0a850ff13d8e5b0de3728d",
+    "scripts/validate_extra.py": "2c8bd2ac1e85265434d5dc6a04f34b7896da73fa9bc796e545dc2c8e050363b2",
+    "tests/test_api.py": "65c23389b8a4705102e2c2fe1828ba46b32baf9c0006dcb413693f1f26f146af"
+  },
+  "wheel": {
+    "wheel": "seismicx_cuda_taup-0.1.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_31_x86_64.whl",
+    "bytes": 736600,
+    "sha256": "023cafd86d78e5b69b53888fc82bf8f5f7789ddbaa3c0307d6b8855bc8da9f1f",
+    "members": [
+      "seismicx_cuda_taup/__init__.py",
+      "seismicx_cuda_taup/model.cpython-313-x86_64-linux-gnu.so",
+      "seismicx_cuda_taup/build/libcuda_taup.so",
+      "seismicx_cuda_taup.libs/libcudart-c3a75b33.so.12.8.90",
+      "seismicx_cuda_taup-0.1.0.dist-info/METADATA",
+      "seismicx_cuda_taup-0.1.0.dist-info/WHEEL",
+      "seismicx_cuda_taup-0.1.0.dist-info/top_level.txt",
+      "seismicx_cuda_taup-0.1.0.dist-info/RECORD",
+      "seismicx_cuda_taup-0.1.0.dist-info/licenses/Cython.txt",
+      "seismicx_cuda_taup-0.1.0.dist-info/licenses/LICENSE",
+      "seismicx_cuda_taup-0.1.0.dist-info/licenses/NOTICE.md",
+      "seismicx_cuda_taup-0.1.0.dist-info/licenses/NVIDIA-CUDA.txt"
+    ],
+    "source_or_neural_content_errors": []
+  },
+  "neural_model_or_weights_included": false,
+  "installed_tests": {
+    "total": 8,
+    "passed": 8,
+    "failed": 0,
+    "skipped": 0,
+    "geographic_coordinates_checked": true
+  },
+  "accuracy": {
+    "cases": 342,
+    "matched_arrivals": 8447,
+    "max_time": 7.321432349272072e-11,
+    "max_takeoff": 0.00025001139852065535,
+    "max_incident": 0.00025001139852065535,
+    "geometry_cases": 36,
+    "failures": 0
+  },
+  "additional_built_in_models": {
+    "models": 7,
+    "cases": 21,
+    "matched_arrivals": 629
+  },
+  "custom_lvz": {
+    "raw_reference_conformance_failures": 6,
+    "nonclosing_original_candidates_audited": 11,
+    "unexplained_failures": 0,
+    "note": "Original shoot_ray parameters fail endpoint closure; filtered CUDA candidates are explicitly diagnosed. Raw original API differences retained."
+  },
+  "execution": {
+    "preprocessing": "ObsPy CPU model loading, depth splitting, phase parsing and caching",
+    "numerical": "CUDA FP64 integrals, distance search, roots, angles, ray paths and pierce accumulation",
+    "tensor_outputs": "selected CUDA device",
+    "compatibility_objects_geography_and_plotting": "CPU",
+    "batch": "shared source depth/receiver depth/phase set",
+    "tested_gpu": "RTX5090",
+    "tested_cuda": "12.8",
+    "compiled_architecture": "sm120",
+    "wheel_python": "CPython3.13 Linux x86_64",
+    "root_parameter_stop_tolerance_s": "min(requested,1e-11), also distance or FP64 convergence",
+    "no_universal_root_completeness_claim": true
+  },
+  "performance_scope": {
+    "shared_host": true,
+    "observed_after_measurement": {
+      "load_average": [
+        28.83,
+        27.68,
+        16.9
+      ],
+      "other_cpu_workers": 24,
+      "gpu_utilization_percent": [
+        81,
+        78
+      ]
+    },
+    "note": "Other project CPU label generation and GPU jobs were active. These are shared-host source-interface measurements, not dedicated-machine performance guarantees. Other jobs were not interrupted. CPU batches measured once; GPU median of five synchronized runs. Installed wheel numerical tests are separate."
+  },
+  "evidence_sha256": {
+    "additional-models.json": "8740aa711a9ec88ced81e9f972abeb0a1a88a458148f136624837da906ebb14a",
+    "custom_lvz.tvel": "92596f3a6cb8430744b516b2fcbadd7232930386772cd4df3035ebcf658d3a02",
+    "extra-compatibility.json": "228d11740b62b255552895051e1b9d9a542d26bc648b63874bfb7971e1034784",
+    "installed-accuracy.json": "873e4134620fe1d24e0f6494da2f308193c3a16b75a1f4e1a0c3222a934ecbee",
+    "installed-tests.log": "1767b4f77d4b089dbb4a34ab5df2181decf52efd43eb9d81278e8c9e145233d3",
+    "performance.json": "e1710f7f48bf4e511bd61516bf65f68a56a887b3ad93bca5495f385637329abf",
+    "wheel-audit.json": "9d9c6d1b9e97310837799afb3122b0b8f3516618584f4e07dd1dc2ccf33ab546"
+  }
+}

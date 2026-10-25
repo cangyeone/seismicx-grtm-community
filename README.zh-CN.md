@@ -8,6 +8,14 @@
 
 
 
+## 物理 CUDA TauP：0.1.0
+
+[下载](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/cuda-taup-v0.1.0) · [接口、设备边界与验收](docs/CUDA_TAUP.zh-CN.md) · [English](docs/CUDA_TAUP.md)
+
+支持 ObsPy 兼容的 P/S、核内及转换震相、全部到达、离源角/入射角、详细路径和 pierce。模型加载、深度分层及震相解析由 CPU 预处理并缓存；数值查询与张量输出在所选 GPU 上完成。地理坐标与绘图沿用 ObsPy。组件直接进行 FP64 物理求解，不含训练模型或权重。
+
+三个模型的 342 组查询、8447 条到达数量一致，另含 36 组路径/pierce。自定义低速层中的原始 PS/SP 不闭合候选会被过滤并明确诊断，报告保留该差异。共享服务器下，源码接口的批量全震相走时、路径和 pierce 相对原始 8 进程 ObsPy 分别提速约 20.8、25.4、17.1 倍；负载、冷启动和限制见报告。独立组件 `seismicx-cuda-taup` 不改变 GRTM 包版本。
+
 ## 解析频散图反演与有限阵列预览 0.6.0.dev12
 
 [下载](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev12) · [接口与物理定义](docs/DISPERSION_IMAGE.zh-CN.md) · [单模型/batch 精度与速度](docs/PERFORMANCE_0.6.0.dev12.zh-CN.md)

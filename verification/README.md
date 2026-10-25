@@ -1,5 +1,7 @@
 # Release verification
 
+Physical CUDA TauP 0.1.0: [binary and numerical verification](cuda-taup-0.1.0/) · [report](../docs/CUDA_TAUP.md). This is separate from the GRTM Green/RF/dispersion releases.
+
 Latest measurements (2026-10-21): [batch latency/throughput report](../docs/BATCH_SCALING_20261021.md),
 [raw results and representative batch-versus-single checks](batch-scaling-20261021/),
 and [executed English/Chinese batch-guide examples](batch-scaling-20261021/documentation-examples-20261021.json).

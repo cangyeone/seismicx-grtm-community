@@ -1,0 +1,13 @@
+test_all_phase_metadata_and_receiver (test_api.TauPTests.test_all_phase_metadata_and_receiver) ... ok
+test_core_diffraction_reflection_and_surface (test_api.TauPTests.test_core_diffraction_reflection_and_surface) ... ok
+test_domain_empty_and_serialized_model (test_api.TauPTests.test_domain_empty_and_serialized_model) ... ok
+test_geographic_interface_and_plotting (test_api.TauPTests.test_geographic_interface_and_plotting) ... ok
+test_nearby_upgoing_and_batch (test_api.TauPTests.test_nearby_upgoing_and_batch) ... ok
+test_no_cpu_solver_in_hot_time_path_or_pierce (test_api.TauPTests.test_no_cpu_solver_in_hot_time_path_or_pierce) ... ok
+test_paths_and_added_pierce_depths (test_api.TauPTests.test_paths_and_added_pierce_depths) ... ok
+test_streams_and_gpu_path_buffers (test_api.TauPTests.test_streams_and_gpu_path_buffers) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 2.838s
+
+OK

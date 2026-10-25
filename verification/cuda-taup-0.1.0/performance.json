@@ -1,0 +1,276 @@
+{
+  "model": "iasp91",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "cpu": "x86_64",
+  "torch": "2.8.0+cu128",
+  "obspy": "1.4.2",
+  "workers": 8,
+  "cpu_model_load_seconds": 0.0909833100013202,
+  "scope": "warm physical time/angles/all arrivals; scalar source depth=10 km; resident distance input; CPU 8-process and single use same points; one CPU batch run per configuration",
+  "records": [
+    {
+      "phases": [
+        "P",
+        "p",
+        "Pn"
+      ],
+      "output": "time",
+      "n": 1024,
+      "cpu_preprocess_seconds": 0.4003246950014727,
+      "cuda_single": {
+        "seconds": 0.03187543099920731,
+        "samples": [
+          0.03247181000187993,
+          0.027691245999449166,
+          0.022302680001303088,
+          0.03272861500227009,
+          0.03187543099920731
+        ],
+        "arrivals": 1
+      },
+      "cuda_batch": {
+        "seconds": 0.08190852899861056,
+        "samples": [
+          0.06725650800217409,
+          0.08640503599963267,
+          0.08190852899861056,
+          0.07690270299644908,
+          0.098789283001679
+        ],
+        "arrivals": 1158
+      },
+      "cuda_batch_obspy_objects_seconds": 0.09618328799842857,
+      "cpu8_original_api": {
+        "seconds": 2.961392191999039,
+        "arrivals": 1158
+      },
+      "cpu1_original_api_single": {
+        "seconds": 0.013359018001210643,
+        "samples": [
+          0.013359018001210643,
+          0.011174691000633175,
+          0.013751951002632268,
+          0.014147881000099005,
+          0.01062947299942607
+        ]
+      },
+      "cpu8_prepared_phases": {
+        "seconds": 2.670280177000677,
+        "arrivals": 1158
+      },
+      "cpu1_prepared_phases_single": {
+        "seconds": 0.011060904998885235,
+        "samples": [
+          0.01146272199912346,
+          0.01071358599801897,
+          0.011034565999580082,
+          0.011060904998885235,
+          0.01150297800268163
+        ]
+      },
+      "speedup_vs_cpu8_original_api": 36.1548696845633,
+      "speedup_vs_cpu8_prepared_phases": 32.60075854916127
+    },
+    {
+      "phases": [
+        "ttall"
+      ],
+      "output": "time",
+      "n": 1024,
+      "cpu_preprocess_seconds": 0.06084699300117791,
+      "cuda_single": {
+        "seconds": 0.19193290899784188,
+        "samples": [
+          0.19766762099970947,
+          0.18709174700052245,
+          0.20068867599911755,
+          0.18689062699922943,
+          0.19193290899784188
+        ],
+        "arrivals": 33
+      },
+      "cuda_batch": {
+        "seconds": 3.7347016700005042,
+        "samples": [
+          3.790137895000953,
+          3.763614740997582,
+          3.7335772569967958,
+          3.7313481570017757,
+          3.7347016700005042
+        ],
+        "arrivals": 33965
+      },
+      "cuda_batch_obspy_objects_seconds": 3.9258881409987225,
+      "cpu8_original_api": {
+        "seconds": 77.74486454599901,
+        "arrivals": 33965
+      },
+      "cpu1_original_api_single": {
+        "seconds": 0.5118168369990599,
+        "samples": [
+          0.48067095299848006,
+          0.5140066940002725,
+          0.692095035003149,
+          0.4829674350003188,
+          0.5118168369990599
+        ]
+      },
+      "cpu8_prepared_phases": {
+        "seconds": 75.52722025999901,
+        "arrivals": 33965
+      },
+      "cpu1_prepared_phases_single": {
+        "seconds": 0.48951717000090866,
+        "samples": [
+          0.44429787999979453,
+          0.47496332099763094,
+          0.5556064370030072,
+          0.48951717000090866,
+          0.5191366029976052
+        ]
+      },
+      "speedup_vs_cpu8_original_api": 20.816887509515187,
+      "speedup_vs_cpu8_prepared_phases": 20.223093283911165
+    },
+    {
+      "phases": [
+        "ttall"
+      ],
+      "output": "path",
+      "n": 32,
+      "cpu_preprocess_seconds": 0.06084699300117791,
+      "cuda_single": {
+        "seconds": 0.21579114100313745,
+        "samples": [
+          0.21957125399785582,
+          0.21579114100313745,
+          0.20729459900030633,
+          0.2051043440005742,
+          0.21871070700217388
+        ],
+        "arrivals": 33
+      },
+      "cuda_batch": {
+        "seconds": 0.2996733609979856,
+        "samples": [
+          0.2692761039979814,
+          0.2996733609979856,
+          0.2955387929978315,
+          0.30744934500035015,
+          0.29997132099742885
+        ],
+        "arrivals": 1146
+      },
+      "cuda_batch_obspy_objects_seconds": 0.308549157998641,
+      "cpu8_original_api": {
+        "seconds": 7.621875977001764,
+        "arrivals": 1146
+      },
+      "cpu1_original_api_single": {
+        "seconds": 0.7511918869968213,
+        "samples": [
+          0.7511918869968213,
+          0.7201007699986803,
+          0.7837370630004443,
+          0.7707652989993221,
+          0.7477686340025684
+        ]
+      },
+      "cpu8_prepared_phases": {
+        "seconds": 7.492116985999019,
+        "arrivals": 1146
+      },
+      "cpu1_prepared_phases_single": {
+        "seconds": 0.744182696002099,
+        "samples": [
+          0.744182696002099,
+          0.7670002029990428,
+          0.7845212279971747,
+          0.6808013730005769,
+          0.7438881750022119
+        ]
+      },
+      "speedup_vs_cpu8_original_api": 25.433945652089506,
+      "speedup_vs_cpu8_prepared_phases": 25.000944231574127
+    },
+    {
+      "phases": [
+        "ttall"
+      ],
+      "output": "pierce",
+      "n": 32,
+      "cpu_preprocess_seconds": 0.06084699300117791,
+      "cuda_single": {
+        "seconds": 0.18728327499775332,
+        "samples": [
+          0.20028533000004245,
+          0.17886764300055802,
+          0.18728327499775332,
+          0.20152038200103561,
+          0.1862659469989012
+        ],
+        "arrivals": 33
+      },
+      "cuda_batch": {
+        "seconds": 0.2774249320027593,
+        "samples": [
+          0.31011626300096395,
+          0.3193797240019194,
+          0.2774249320027593,
+          0.27221838100012974,
+          0.25939275400014594
+        ],
+        "arrivals": 1008
+      },
+      "cuda_batch_obspy_objects_seconds": 0.2907312399984221,
+      "cpu8_original_api": {
+        "seconds": 4.750214694999158,
+        "arrivals": 1008
+      },
+      "cpu1_original_api_single": {
+        "seconds": 0.5362241889997676,
+        "samples": [
+          0.5112275639985455,
+          0.5427123920017038,
+          0.5362241889997676,
+          0.5423591939979815,
+          0.5158725699984643
+        ]
+      },
+      "cpu8_prepared_phases": {
+        "seconds": 4.646524929001316,
+        "arrivals": 1008
+      },
+      "cpu1_prepared_phases_single": {
+        "seconds": 0.5258374529985304,
+        "samples": [
+          0.5090831060006167,
+          0.5183234989999619,
+          0.5738427440010128,
+          0.5513580850019935,
+          0.5258374529985304
+        ]
+      },
+      "speedup_vs_cpu8_original_api": 17.12252269724594,
+      "speedup_vs_cpu8_prepared_phases": 16.748764775600996
+    }
+  ],
+  "neural_network_used": false,
+  "resource_context": {
+    "shared_host": true,
+    "observed_after_measurement": {
+      "load_average": [
+        28.83,
+        27.68,
+        16.9
+      ],
+      "other_cpu_workers": 24,
+      "gpu_utilization_percent": [
+        81,
+        78
+      ]
+    },
+    "note": "Other project CPU label generation and GPU jobs were active. These are shared-host source-interface measurements, not dedicated-machine performance guarantees. Other jobs were not interrupted. CPU batches measured once; GPU median of five synchronized runs. Installed wheel numerical tests are separate."
+  },
+  "timing_revision_note": "Source-interface timings preceded diagnostic-counter additions. The integrals and root algorithm are unchanged. Final installed wheel is separately accuracy-tested; these are not final-wheel benchmark timings."
+}

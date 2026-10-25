@@ -14,6 +14,14 @@ data; solver implementation source and development history are not distributed h
 
 
 
+## Physical CUDA TauP: 0.1.0
+
+[Download](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/cuda-taup-v0.1.0) · [API, device boundaries and evidence](docs/CUDA_TAUP.md) · [中文](docs/CUDA_TAUP.zh-CN.md)
+
+FP64 CUDA travel times, P/S and core phases, all arrivals, angles, ray paths and pierce points with ObsPy-compatible interfaces. Geographic and plotting helpers are retained. Model loading/depth splitting and phase parsing use cached CPU preprocessing; numerical queries and tensor outputs run on the selected GPU. This physical solver has no learned model or training weights.
+
+The three-model regression matches 8447 arrivals in 342 queries, plus 36 path/pierce cases. A custom low-velocity model also documents original API non-closing PS/SP candidates that CUDA filters with diagnostics. Shared-host source-interface batch timings improve over eight-process ObsPy by 20.8× for all-phase time, 25.4× for paths and 17.1× for pierce; see the report for loads, cold costs and limits. The independent `seismicx-cuda-taup` component leaves the GRTM package version unchanged.
+
 ## Analytic dispersion-image inversion and finite arrays: 0.6.0.dev12
 
 [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev12) · [API and physical definitions](docs/DISPERSION_IMAGE.md) · [Single/batch accuracy and timing](docs/PERFORMANCE_0.6.0.dev12.md)

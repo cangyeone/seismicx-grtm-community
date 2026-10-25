@@ -1,0 +1,20 @@
+{
+  "wheel": "seismicx_cuda_taup-0.1.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_31_x86_64.whl",
+  "bytes": 736600,
+  "sha256": "023cafd86d78e5b69b53888fc82bf8f5f7789ddbaa3c0307d6b8855bc8da9f1f",
+  "members": [
+    "seismicx_cuda_taup/__init__.py",
+    "seismicx_cuda_taup/model.cpython-313-x86_64-linux-gnu.so",
+    "seismicx_cuda_taup/build/libcuda_taup.so",
+    "seismicx_cuda_taup.libs/libcudart-c3a75b33.so.12.8.90",
+    "seismicx_cuda_taup-0.1.0.dist-info/METADATA",
+    "seismicx_cuda_taup-0.1.0.dist-info/WHEEL",
+    "seismicx_cuda_taup-0.1.0.dist-info/top_level.txt",
+    "seismicx_cuda_taup-0.1.0.dist-info/RECORD",
+    "seismicx_cuda_taup-0.1.0.dist-info/licenses/Cython.txt",
+    "seismicx_cuda_taup-0.1.0.dist-info/licenses/LICENSE",
+    "seismicx_cuda_taup-0.1.0.dist-info/licenses/NOTICE.md",
+    "seismicx_cuda_taup-0.1.0.dist-info/licenses/NVIDIA-CUDA.txt"
+  ],
+  "source_or_neural_content_errors": []
+}

@@ -1,0 +1,578 @@
+{
+  "cases": [
+    {
+      "cuda_count": 0,
+      "obspy_count": 0,
+      "count_differences": [],
+      "matched": 0,
+      "time_max": 0.0,
+      "takeoff_max": 0.0,
+      "incident_max": 0.0,
+      "model": "iasp91",
+      "phases": [
+        "Ped",
+        "Sed"
+      ],
+      "depth": 10.0,
+      "receiver": 100.0,
+      "distance": 0.1
+    },
+    {
+      "cuda_count": 0,
+      "obspy_count": 0,
+      "count_differences": [],
+      "matched": 0,
+      "time_max": 0.0,
+      "takeoff_max": 0.0,
+      "incident_max": 0.0,
+      "model": "iasp91",
+      "phases": [
+        "Ped",
+        "Sed"
+      ],
+      "depth": 10.0,
+      "receiver": 100.0,
+      "distance": 1.0
+    },
+    {
+      "cuda_count": 0,
+      "obspy_count": 0,
+      "count_differences": [],
+      "matched": 0,
+      "time_max": 0.0,
+      "takeoff_max": 0.0,
+      "incident_max": 0.0,
+      "model": "iasp91",
+      "phases": [
+        "Ped",
+        "Sed"
+      ],
+      "depth": 10.0,
+      "receiver": 100.0,
+      "distance": 5.0
+    },
+    {
+      "cuda_count": 2,
+      "obspy_count": 2,
+      "count_differences": [],
+      "matched": 2,
+      "time_max": 3.410605131648481e-13,
+      "takeoff_max": 3.247997426569782e-10,
+      "incident_max": 3.241602541947941e-10,
+      "model": "iasp91",
+      "phases": [
+        "ttp"
+      ],
+      "depth": 10.0,
+      "receiver": 0.0,
+      "distance": 35.0
+    },
+    {
+      "cuda_count": 1,
+      "obspy_count": 1,
+      "count_differences": [],
+      "matched": 1,
+      "time_max": 2.2737367544323206e-13,
+      "takeoff_max": 2.2737367544323206e-13,
+      "incident_max": 2.2382096176443156e-13,
+      "model": "iasp91",
+      "phases": [
+        "tts"
+      ],
+      "depth": 10.0,
+      "receiver": 0.0,
+      "distance": 35.0
+    },
+    {
+      "cuda_count": 21,
+      "obspy_count": 21,
+      "count_differences": [],
+      "matched": 21,
+      "time_max": 1.5916157281026244e-12,
+      "takeoff_max": 1.434109719866683e-09,
+      "incident_max": 1.4295835626398912e-09,
+      "model": "iasp91",
+      "phases": [
+        "ttbasic"
+      ],
+      "depth": 10.0,
+      "receiver": 0.0,
+      "distance": 35.0
+    },
+    {
+      "cuda_count": 3,
+      "obspy_count": 3,
+      "count_differences": [],
+      "matched": 3,
+      "time_max": 0.0,
+      "takeoff_max": 0.0,
+      "incident_max": 0.0,
+      "model": "iasp91",
+      "phases": [
+        "4kmps"
+      ],
+      "depth": 10.0,
+      "receiver": 0.0,
+      "distance": 0.0
+    },
+    {
+      "cuda_count": 2,
+      "obspy_count": 2,
+      "count_differences": [],
+      "matched": 2,
+      "time_max": 0.0,
+      "takeoff_max": 0.0,
+      "incident_max": 0.0,
+      "model": "iasp91",
+      "phases": [
+        "4kmps"
+      ],
+      "depth": 10.0,
+      "receiver": 0.0,
+      "distance": 35.0
+    },
+    {
+      "cuda_count": 1,
+      "obspy_count": 1,
+      "count_differences": [],
+      "matched": 1,
+      "time_max": 0.0,
+      "takeoff_max": 0.0,
+      "incident_max": 0.0,
+      "model": "iasp91",
+      "phases": [
+        "4kmps"
+      ],
+      "depth": 10.0,
+      "receiver": 0.0,
+      "distance": 180.0
+    },
+    {
+      "cuda_count": 3,
+      "obspy_count": 3,
+      "count_differences": [],
+      "matched": 3,
+      "time_max": 0.0,
+      "takeoff_max": 0.0,
+      "incident_max": 0.0,
+      "model": "iasp91",
+      "phases": [
+        "4kmps"
+      ],
+      "depth": 10.0,
+      "receiver": 0.0,
+      "distance": 360.0
+    },
+    {
+      "cuda_count": 32,
+      "obspy_count": 33,
+      "count_differences": [
+        [
+          "PS",
+          0,
+          1
+        ]
+      ],
+      "matched": 32,
+      "time_max": 4.092726157978177e-12,
+      "takeoff_max": 5.6958384675454e-09,
+      "incident_max": 6.39630428622695e-08,
+      "model": "custom_lvz",
+      "depth": 10.0,
+      "receiver": 0.0,
+      "distance": 1.0
+    },
+    {
+      "cuda_count": 38,
+      "obspy_count": 40,
+      "count_differences": [
+        [
+          "PS",
+          0,
+          1
+        ],
+        [
+          "SP",
+          0,
+          1
+        ]
+      ],
+      "matched": 38,
+      "time_max": 2.2737367544323206e-12,
+      "takeoff_max": 5.626617394227651e-09,
+      "incident_max": 5.450772277981741e-09,
+      "model": "custom_lvz",
+      "depth": 10.0,
+      "receiver": 0.0,
+      "distance": 2.0
+    },
+    {
+      "cuda_count": 38,
+      "obspy_count": 40,
+      "count_differences": [
+        [
+          "PS",
+          0,
+          1
+        ],
+        [
+          "SP",
+          0,
+          1
+        ]
+      ],
+      "matched": 38,
+      "time_max": 1.1368683772161603e-12,
+      "takeoff_max": 9.953694757314224e-09,
+      "incident_max": 8.439201337751001e-09,
+      "model": "custom_lvz",
+      "depth": 10.0,
+      "receiver": 0.0,
+      "distance": 5.0
+    },
+    {
+      "cuda_count": 34,
+      "obspy_count": 36,
+      "count_differences": [
+        [
+          "PS",
+          0,
+          1
+        ],
+        [
+          "SP",
+          0,
+          1
+        ]
+      ],
+      "matched": 34,
+      "time_max": 1.3073986337985843e-12,
+      "takeoff_max": 8.900869374883769e-09,
+      "incident_max": 5.558931093219144e-09,
+      "model": "custom_lvz",
+      "depth": 10.0,
+      "receiver": 0.0,
+      "distance": 10.0
+    },
+    {
+      "cuda_count": 53,
+      "obspy_count": 55,
+      "count_differences": [
+        [
+          "PS",
+          4,
+          5
+        ],
+        [
+          "SP",
+          4,
+          5
+        ]
+      ],
+      "matched": 45,
+      "time_max": 1.8189894035458565e-12,
+      "takeoff_max": 8.421663366675602e-10,
+      "incident_max": 9.204370599036338e-10,
+      "model": "custom_lvz",
+      "depth": 10.0,
+      "receiver": 0.0,
+      "distance": 20.0
+    },
+    {
+      "cuda_count": 33,
+      "obspy_count": 35,
+      "count_differences": [
+        [
+          "PS",
+          1,
+          2
+        ],
+        [
+          "SP",
+          1,
+          2
+        ]
+      ],
+      "matched": 31,
+      "time_max": 2.7284841053187847e-12,
+      "takeoff_max": 1.3049898939243576e-09,
+      "incident_max": 1.301778240758722e-09,
+      "model": "custom_lvz",
+      "depth": 10.0,
+      "receiver": 0.0,
+      "distance": 35.0
+    },
+    {
+      "cuda_count": 35,
+      "obspy_count": 35,
+      "count_differences": [],
+      "matched": 35,
+      "time_max": 2.0463630789890885e-12,
+      "takeoff_max": 8.353575609021391e-10,
+      "incident_max": 8.340350632352056e-10,
+      "model": "custom_lvz",
+      "depth": 10.0,
+      "receiver": 0.0,
+      "distance": 90.0
+    },
+    {
+      "cuda_count": 38,
+      "obspy_count": 38,
+      "count_differences": [],
+      "matched": 38,
+      "time_max": 1.5916157281026244e-12,
+      "takeoff_max": 7.192113571363734e-10,
+      "incident_max": 7.193730056087588e-10,
+      "model": "custom_lvz",
+      "depth": 10.0,
+      "receiver": 0.0,
+      "distance": 120.0
+    },
+    {
+      "cuda_count": 18,
+      "obspy_count": 18,
+      "count_differences": [],
+      "matched": 18,
+      "time_max": 2.7284841053187847e-12,
+      "takeoff_max": 5.532534430585656e-10,
+      "incident_max": 5.523617119251867e-10,
+      "model": "custom_lvz",
+      "depth": 10.0,
+      "receiver": 0.0,
+      "distance": 160.0
+    }
+  ],
+  "reference_conformance_failures": [
+    {
+      "cuda_count": 32,
+      "obspy_count": 33,
+      "count_differences": [
+        [
+          "PS",
+          0,
+          1
+        ]
+      ],
+      "matched": 32,
+      "time_max": 4.092726157978177e-12,
+      "takeoff_max": 5.6958384675454e-09,
+      "incident_max": 6.39630428622695e-08,
+      "model": "custom_lvz",
+      "depth": 10.0,
+      "receiver": 0.0,
+      "distance": 1.0
+    },
+    {
+      "cuda_count": 38,
+      "obspy_count": 40,
+      "count_differences": [
+        [
+          "PS",
+          0,
+          1
+        ],
+        [
+          "SP",
+          0,
+          1
+        ]
+      ],
+      "matched": 38,
+      "time_max": 2.2737367544323206e-12,
+      "takeoff_max": 5.626617394227651e-09,
+      "incident_max": 5.450772277981741e-09,
+      "model": "custom_lvz",
+      "depth": 10.0,
+      "receiver": 0.0,
+      "distance": 2.0
+    },
+    {
+      "cuda_count": 38,
+      "obspy_count": 40,
+      "count_differences": [
+        [
+          "PS",
+          0,
+          1
+        ],
+        [
+          "SP",
+          0,
+          1
+        ]
+      ],
+      "matched": 38,
+      "time_max": 1.1368683772161603e-12,
+      "takeoff_max": 9.953694757314224e-09,
+      "incident_max": 8.439201337751001e-09,
+      "model": "custom_lvz",
+      "depth": 10.0,
+      "receiver": 0.0,
+      "distance": 5.0
+    },
+    {
+      "cuda_count": 34,
+      "obspy_count": 36,
+      "count_differences": [
+        [
+          "PS",
+          0,
+          1
+        ],
+        [
+          "SP",
+          0,
+          1
+        ]
+      ],
+      "matched": 34,
+      "time_max": 1.3073986337985843e-12,
+      "takeoff_max": 8.900869374883769e-09,
+      "incident_max": 5.558931093219144e-09,
+      "model": "custom_lvz",
+      "depth": 10.0,
+      "receiver": 0.0,
+      "distance": 10.0
+    },
+    {
+      "cuda_count": 53,
+      "obspy_count": 55,
+      "count_differences": [
+        [
+          "PS",
+          4,
+          5
+        ],
+        [
+          "SP",
+          4,
+          5
+        ]
+      ],
+      "matched": 45,
+      "time_max": 1.8189894035458565e-12,
+      "takeoff_max": 8.421663366675602e-10,
+      "incident_max": 9.204370599036338e-10,
+      "model": "custom_lvz",
+      "depth": 10.0,
+      "receiver": 0.0,
+      "distance": 20.0
+    },
+    {
+      "cuda_count": 33,
+      "obspy_count": 35,
+      "count_differences": [
+        [
+          "PS",
+          1,
+          2
+        ],
+        [
+          "SP",
+          1,
+          2
+        ]
+      ],
+      "matched": 31,
+      "time_max": 2.7284841053187847e-12,
+      "takeoff_max": 1.3049898939243576e-09,
+      "incident_max": 1.301778240758722e-09,
+      "model": "custom_lvz",
+      "depth": 10.0,
+      "receiver": 0.0,
+      "distance": 35.0
+    }
+  ],
+  "nonclosing_reference_candidates": [
+    {
+      "phase": "PS",
+      "target_degree": 1.0,
+      "time": 309.6169145858697,
+      "ray_param": 788.0597014925374,
+      "original_shoot_end_degree": 61.51955897919982,
+      "original_shoot_residual_degree": 60.51955897919982
+    },
+    {
+      "phase": "SP",
+      "target_degree": 2.0,
+      "time": 321.8647141239421,
+      "ray_param": 788.0597014925374,
+      "original_shoot_end_degree": 61.57123349449573,
+      "original_shoot_residual_degree": 59.57123349449573
+    },
+    {
+      "phase": "PS",
+      "target_degree": 2.0,
+      "time": 323.37115108007083,
+      "ray_param": 788.0597014925374,
+      "original_shoot_end_degree": 61.51955897919982,
+      "original_shoot_residual_degree": 59.51955897919982
+    },
+    {
+      "phase": "SP",
+      "target_degree": 5.0,
+      "time": 363.12742357797015,
+      "ray_param": 788.0597014925374,
+      "original_shoot_end_degree": 61.57123349449573,
+      "original_shoot_residual_degree": 56.57123349449573
+    },
+    {
+      "phase": "PS",
+      "target_degree": 5.0,
+      "time": 364.6338605275415,
+      "ray_param": 788.0597014925374,
+      "original_shoot_end_degree": 61.51955897919982,
+      "original_shoot_residual_degree": 56.51955897919982
+    },
+    {
+      "phase": "SP",
+      "target_degree": 10.0,
+      "time": 431.898606077551,
+      "ray_param": 788.0597014925374,
+      "original_shoot_end_degree": 61.57123349449573,
+      "original_shoot_residual_degree": 51.57123349449573
+    },
+    {
+      "phase": "PS",
+      "target_degree": 10.0,
+      "time": 433.4050430336798,
+      "ray_param": 788.0597014925374,
+      "original_shoot_end_degree": 61.51955897919982,
+      "original_shoot_residual_degree": 51.51955897919982
+    },
+    {
+      "phase": "SP",
+      "target_degree": 20.0,
+      "time": 569.4409710011818,
+      "ray_param": 788.0597014925374,
+      "original_shoot_end_degree": 61.57123349449573,
+      "original_shoot_residual_degree": 41.57123349449573
+    },
+    {
+      "phase": "PS",
+      "target_degree": 20.0,
+      "time": 570.9474079550018,
+      "ray_param": 788.0597014925374,
+      "original_shoot_end_degree": 61.51955897919982,
+      "original_shoot_residual_degree": 41.51955897919982
+    },
+    {
+      "phase": "SP",
+      "target_degree": 35.0,
+      "time": 775.7545184180301,
+      "ray_param": 788.0597015904234,
+      "original_shoot_end_degree": 52.408077949084,
+      "original_shoot_residual_degree": 17.408077949084003
+    },
+    {
+      "phase": "PS",
+      "target_degree": 35.0,
+      "time": 777.2609553741573,
+      "ray_param": 788.0597015905739,
+      "original_shoot_end_degree": 52.356403433747744,
+      "original_shoot_residual_degree": 17.356403433747744
+    }
+  ],
+  "unexplained_failures": [],
+  "matched_arrivals": 342
+}
