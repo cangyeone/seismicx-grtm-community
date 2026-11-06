@@ -3,6 +3,7 @@
 __pycache__/
 *.pyc
 *.py
+!examples/spectral_whitening.py
 !benchmarks/forward-derivatives/benchmark_forward_derivatives.py
 !benchmarks/forward-derivatives/benchmark_batch_scaling.py
 !benchmarks/forward-derivatives/validate_batch_scaling.py

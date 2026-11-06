@@ -14,6 +14,12 @@ data; solver implementation source and development history are not distributed h
 
 
 
+## Spectral whitening preview 0.6.0.dev15
+
+[Compiled wheels](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev15) · [Installation](docs/PREVIEW_0.6.0.dev15.md) · [Processing API](docs/DATA_PROCESSING.md) · [Example](examples/spectral_whitening.py) · [Verification](verification/preview-0.6.0.dev15/verification.json)
+
+Adds smooth (`rma`) and strict (`brutal` / `phase_only`) spectral whitening for NumPy and PyTorch CPU/CUDA batches, with tensor gradients and same-device FFT/normalization. Whitening does not support MPS or half precision. All implementation modules are compiled; only minimal import/CLI shims remain readable. This preview supplies **CPython 3.13** wheels for Apple Silicon and Linux/WSL x86_64 (glibc ≥ 2.31). Use the GitHub wheels while PyPI publication is pending; stable 0.5.1 does not include these APIs.
+
 ## Physical CUDA TauP: 0.1.0
 
 [Download](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/cuda-taup-v0.1.0) · [API, device boundaries and evidence](docs/CUDA_TAUP.md) · [中文](docs/CUDA_TAUP.zh-CN.md)

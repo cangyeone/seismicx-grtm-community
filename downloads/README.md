@@ -2,7 +2,14 @@
 
 Physical CUDA TauP is a separate component: [cuda-taup-v0.1.0](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/cuda-taup-v0.1.0), [API and limits](../docs/CUDA_TAUP.md), [中文](../docs/CUDA_TAUP.zh-CN.md). Linux x86_64 / CPython 3.13, native SM120/CUDA12.8 (tested RTX5090), NumPy/CUDA PyTorch/ObsPy1.4.2 dependencies. No learned models or weights are included. The release contains the compiled wheel, checksums and verification manifest; geographic path coordinates additionally need geographiclib.
 
-Latest research preview: [0.6.0.dev12](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev12), with [installation/device boundaries](../docs/PREVIEW_0.6.0.dev12.md), [checksums](SHA256SUMS-0.6.0.dev12), [performance](../docs/PERFORMANCE_0.6.0.dev12.md) and [verification](../verification/preview-0.6.0.dev12/verification.json). This preview has Mac CPython 3.12 and Linux CPython 3.13 (glibc≥2.31) only; other preview ABIs remain on dev7. Stable PyPI remains 0.5.1.
+Latest research preview: [0.6.0.dev15](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev15), adding [smooth and strict whitening](../docs/DATA_PROCESSING.md). See [installation/device boundaries](../docs/PREVIEW_0.6.0.dev15.md), [checksums](SHA256SUMS-0.6.0.dev15) and [verification](../verification/preview-0.6.0.dev15/verification.json). Both builds require **CPython 3.13**: Apple Silicon macOS 11+ (CPU/Metal) or Linux/WSL x86_64 glibc ≥ 2.31 (CPU/CUDA SM120). PyPI publication is pending authentication; stable PyPI remains 0.5.1.
+
+| Python | Platform | Download |
+|---|---|---|
+| 3.13 | Apple Silicon | [Compiled wheel](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev15/seismicx_grtm-0.6.0.dev15-cp313-cp313-macosx_11_0_arm64.whl) |
+| 3.13 | Linux/WSL x86_64 | [Compiled wheel](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev15/seismicx_grtm-0.6.0.dev15-cp313-cp313-manylinux_2_31_x86_64.whl) |
+
+## Stable 0.5.1
 
 The files below are the **same ten wheels published on PyPI**, with identical
 SHA-256 hashes. Select the Python version and operating system matching your

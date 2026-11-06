@@ -1,0 +1,20 @@
+{
+  "version": "0.6.0.dev15",
+  "source_commit": "4a4f36c993643a6a832018d5ea7d3ff2efaeb286",
+  "implementation_distribution": "compiled extensions; three minimal public Python bootstraps",
+  "sdist": false,
+  "wheels": [
+    {
+      "filename": "seismicx_grtm-0.6.0.dev15-cp313-cp313-macosx_11_0_arm64.whl",
+      "size_bytes": 4030043,
+      "sha256": "b139a96b34d9bd2f4d473e9aa2eb61e157b23eb37ea60e34731c7b94d46d82b1",
+      "download_url": "https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev15/seismicx_grtm-0.6.0.dev15-cp313-cp313-macosx_11_0_arm64.whl"
+    },
+    {
+      "filename": "seismicx_grtm-0.6.0.dev15-cp313-cp313-manylinux_2_31_x86_64.whl",
+      "size_bytes": 18760604,
+      "sha256": "2f08bb6cd473f888fe1da2d59bcdbeb74de09380a57285768c869368640afbc3",
+      "download_url": "https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev15/seismicx_grtm-0.6.0.dev15-cp313-cp313-manylinux_2_31_x86_64.whl"
+    }
+  ]
+}

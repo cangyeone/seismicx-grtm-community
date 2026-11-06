@@ -1,0 +1,17 @@
+[
+  {
+    "device": "numpy",
+    "exit_code": 0,
+    "stdout": "smooth: shape=(4, 4096), dtype=float64, passband amplitude range=[0.0233, 3.473]\nstrict: shape=(4, 4096), dtype=float64, passband amplitude range=[1, 1]"
+  },
+  {
+    "device": "cpu",
+    "exit_code": 0,
+    "stdout": "smooth: shape=(4, 4096), dtype=torch.float64, passband amplitude range=[0.0233, 3.473]\n  forward device=cpu, gradient device=cpu\nstrict: shape=(4, 4096), dtype=torch.float64, passband amplitude range=[1, 1]\n  forward device=cpu, gradient device=cpu"
+  },
+  {
+    "device": "cuda",
+    "exit_code": 0,
+    "stdout": "smooth: shape=(4, 4096), dtype=torch.float64, passband amplitude range=[0.0233, 3.473]\n  forward device=cuda:0, gradient device=cuda:0\nstrict: shape=(4, 4096), dtype=torch.float64, passband amplitude range=[1, 1]\n  forward device=cuda:0, gradient device=cuda:0"
+  }
+]

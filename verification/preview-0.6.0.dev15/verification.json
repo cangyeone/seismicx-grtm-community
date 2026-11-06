@@ -1,0 +1,108 @@
+{
+  "version": "0.6.0.dev15",
+  "verified_at_utc": "2026-11-06T08:37:09.222076+00:00",
+  "source_commit": "4a4f36c993643a6a832018d5ea7d3ff2efaeb286",
+  "whitening_implementation_commit": "9a3f34bb487e6948ec87cee1e138826655c797b0",
+  "installation": "isolated targets installed from the exact final wheels; tests run outside source tree",
+  "platforms": {
+    "macos": {
+      "runtime": {
+        "python": "3.13.4",
+        "machine": "arm64",
+        "system": "Darwin",
+        "os_release": "27.0.1",
+        "numpy": "2.5.4",
+        "torch": "2.15.0",
+        "mps_available": true,
+        "backends": [
+          "cpu",
+          "metal"
+        ],
+        "version": "0.6.0.dev15",
+        "processing_is_extension": true
+      },
+      "tests": {
+        "run": 221,
+        "passed": 176,
+        "skipped": 45,
+        "failed": 0,
+        "seconds": 13.905,
+        "whitening_run": 16,
+        "whitening_skipped": 1
+      },
+      "test_report": "macos-installed-tests.txt",
+      "wheel_audit": "macos-wheel-audit.json",
+      "executed_example_report": "macos-examples.json"
+    },
+    "linux": {
+      "runtime": {
+        "python": "3.13.5",
+        "machine": "x86_64",
+        "system": "Linux",
+        "libc": [
+          "glibc",
+          "2.31"
+        ],
+        "numpy": "2.1.3",
+        "torch": "2.8.0+cu128",
+        "torch_cuda": "12.8",
+        "cuda_available": true,
+        "gpu": "NVIDIA GeForce RTX 5090",
+        "backends": [
+          "cpu",
+          "cuda"
+        ],
+        "version": "0.6.0.dev15",
+        "processing_is_extension": true
+      },
+      "tests": {
+        "run": 221,
+        "passed": 199,
+        "skipped": 22,
+        "failed": 0,
+        "seconds": 81.826,
+        "whitening_run": 16,
+        "whitening_skipped": 0
+      },
+      "test_report": "linux-installed-tests.txt",
+      "wheel_audit": "linux-wheel-audit.json",
+      "executed_example_report": "linux-examples.json"
+    }
+  },
+  "coverage": [
+    "smooth/strict mathematical invariants",
+    "nonzero passband amplitude and phase preservation",
+    "zero/DC/very small amplitudes",
+    "batch axis and dtype preservation",
+    "NumPy / PyTorch CPU / CUDA consistency",
+    "first derivatives checked against finite differences",
+    "CUDA path without host copies/scalar synchronization when check_finite=False",
+    "existing forward/derivative/root/array/DAS regression suite"
+  ],
+  "test_fixture_update": "The trapped-mode regression keeps independent QEDisp/WaveDispX velocities and now requires residual < 1e-8, no conditioning limitation and no unresolved roots on CPU/CUDA; its old assertion required the pre-dev14 conditioning failure to persist.",
+  "binary_policy": {
+    "compiled_implementation_modules": 34,
+    "readable_python_files": [
+      "grtm/__init__.py",
+      "grtm/__main__.py",
+      "grtm/_robust/__init__.py"
+    ],
+    "implementation_sources": false,
+    "source_distribution": false,
+    "additional_private_path_scan": "ELF and native modules checked for local/remote private build paths: none"
+  },
+  "metal_shader_reuse": {
+    "all_host_libraries_rebuilt": true,
+    "unchanged_shader_sha256": "1cfc6a81a9e96cf8b4330b06c8c925be1ef151a3c0928801e45f1700ec09b69d",
+    "binary_sha256": "35d34e86ab2f41d811027df1d0e863218d02a1ae07958254723fbc4f27aa4912",
+    "reference_wheel": "seismicx_grtm-0.6.0.dev12-cp312-cp312-macosx_11_0_arm64.whl",
+    "reference_wheel_sha256": "ab087246912704150ab75079ec9f79cf9939d0fb556294ff4aeff9f5eb9482b8"
+  },
+  "limits": [
+    "CPython 3.13 only for this preview",
+    "Native Linux solver targets SM120; whitening CUDA uses installed PyTorch",
+    "Whitening does not support MPS or half precision",
+    "Tests are finite-case evidence, not universal numerical accuracy or speed guarantees"
+  ],
+  "pypi_publication": "pending authentication; these records do not claim an upload"
+}
