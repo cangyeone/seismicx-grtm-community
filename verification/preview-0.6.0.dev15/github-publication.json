@@ -1,0 +1,40 @@
+{
+  "version": "0.6.0.dev15",
+  "verified_at_utc": "2026-11-06T08:44:47.675Z",
+  "release_url": "https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev15",
+  "draft": false,
+  "prerelease": true,
+  "assets": [
+    {
+      "filename": "seismicx_grtm-0.6.0.dev15-cp313-cp313-macosx_11_0_arm64.whl",
+      "size_bytes": 4030043,
+      "sha256": "b139a96b34d9bd2f4d473e9aa2eb61e157b23eb37ea60e34731c7b94d46d82b1",
+      "url": "https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev15/seismicx_grtm-0.6.0.dev15-cp313-cp313-macosx_11_0_arm64.whl"
+    },
+    {
+      "filename": "seismicx_grtm-0.6.0.dev15-cp313-cp313-manylinux_2_31_x86_64.whl",
+      "size_bytes": 18760604,
+      "sha256": "2f08bb6cd473f888fe1da2d59bcdbeb74de09380a57285768c869368640afbc3",
+      "url": "https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev15/seismicx_grtm-0.6.0.dev15-cp313-cp313-manylinux_2_31_x86_64.whl"
+    },
+    {
+      "filename": "SHA256SUMS",
+      "size_bytes": 256,
+      "sha256": "467c15916725fb8b4d3088c6c887b9bbe3d84b5af4fe3909e2a1437e59b4027e",
+      "url": "https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev15/SHA256SUMS"
+    },
+    {
+      "filename": "verification.json",
+      "size_bytes": 3949,
+      "sha256": "c1713c9e93a35ea75f3d2748faa7f9323cc03144eb836452da4a5f9b65984fd8",
+      "url": "https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev15/verification.json"
+    },
+    {
+      "filename": "wheel-manifest.json",
+      "size_bytes": 985,
+      "sha256": "7d2234149e0275499ff355f16d7d485d85baa6071821e918a8b08a70ed0063e5",
+      "url": "https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev15/wheel-manifest.json"
+    }
+  ],
+  "wheel_digests_match_pypi_and_local": true
+}
