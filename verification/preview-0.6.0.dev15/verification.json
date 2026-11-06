@@ -104,5 +104,6 @@
     "Whitening does not support MPS or half precision",
     "Tests are finite-case evidence, not universal numerical accuracy or speed guarantees"
   ],
-  "pypi_publication": "pending authentication; these records do not claim an upload"
+  "pypi_publication": "published; both wheel hashes and sizes match the tested artifacts; no sdist",
+  "pypi_publication_report": "pypi-publication.json"
 }

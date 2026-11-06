@@ -28,8 +28,13 @@ CUDA 求解器要求兼容的 NVIDIA 驱动及计算能力 12.0，已测 RTX 509
 CPU 使用不需要 GPU。本次不提供其他 Python ABI、Intel Mac、Linux ARM 或原生 Windows 包。
 张量输入额外需要适合目标 CPU/CUDA 设备的 PyTorch；NumPy 输入仅需 NumPy。
 
-PyPI 上传尚待发布认证完成；在确认前请使用上述 GitHub wheel。
-PyPI 稳定版 0.5.1 不包含白化功能。
+同样的两个编译包已[发布到 PyPI](https://pypi.org/project/seismicx-grtm/0.6.0.dev15/)，请显式指定预览版：
+
+```sh
+python -m pip install --only-binary=:all: seismicx-grtm==0.6.0.dev15
+```
+
+不指定版本的稳定安装仍选择 0.5.1，该版不包含白化功能。
 
 ## 设备与数值边界
 

@@ -12,7 +12,7 @@
 
 [编译包](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev15) · [安装](docs/PREVIEW_0.6.0.dev15.zh-CN.md) · [数据处理接口](docs/DATA_PROCESSING.zh-CN.md) · [示例](examples/spectral_whitening.py) · [验证记录](verification/preview-0.6.0.dev15/verification.json)
 
-新增平滑谱白化（`rma`）及严格白化（`brutal` / `phase_only`），支持 NumPy、PyTorch CPU/CUDA 批处理和张量梯度；FFT、归一化与微分在输入设备执行。白化暂不支持 MPS 或半精度。实现模块均编译分发，仅保留最小导入/命令行入口。此次提供 **CPython 3.13** 的 Apple Silicon 和 Linux/WSL x86_64（glibc ≥ 2.31）安装包。PyPI 上传尚待发布认证完成，请先使用 GitHub wheel；稳定版 0.5.1 不含上述接口。
+新增平滑谱白化（`rma`）及严格白化（`brutal` / `phase_only`），支持 NumPy、PyTorch CPU/CUDA 批处理和张量梯度；FFT、归一化与微分在输入设备执行。白化暂不支持 MPS 或半精度。实现模块均编译分发，仅保留最小导入/命令行入口。此次提供 **CPython 3.13** 的 Apple Silicon 和 Linux/WSL x86_64（glibc ≥ 2.31）安装包。相同编译包已[上传 PyPI](https://pypi.org/project/seismicx-grtm/0.6.0.dev15/)：`python -m pip install --only-binary=:all: seismicx-grtm==0.6.0.dev15`。稳定版 0.5.1 不含上述接口。
 
 ## 物理 CUDA TauP：0.1.0
 

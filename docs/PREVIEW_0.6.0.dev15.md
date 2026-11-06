@@ -31,8 +31,13 @@ does not provide other Python ABIs, Intel Mac, Linux ARM or native Windows wheel
 PyTorch is an optional dependency for tensor inputs; install a build appropriate
 for the intended CPU/CUDA device. NumPy inputs only require NumPy.
 
-PyPI upload is pending release authentication. Until it is confirmed, use the
-GitHub wheel above. Stable PyPI 0.5.1 does not contain whitening.
+The same two wheels are also [published on PyPI](https://pypi.org/project/seismicx-grtm/0.6.0.dev15/). Install the preview explicitly:
+
+```sh
+python -m pip install --only-binary=:all: seismicx-grtm==0.6.0.dev15
+```
+
+An unpinned stable install still selects 0.5.1, which does not contain whitening.
 
 ## Device and numerical boundaries
 

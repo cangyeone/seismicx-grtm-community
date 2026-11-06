@@ -1,0 +1,39 @@
+{
+  "verified_at_utc": "2026-11-06T08:42:00.604349+00:00",
+  "version": "0.6.0.dev15",
+  "project_url": "https://pypi.org/project/seismicx-grtm/0.6.0.dev15/",
+  "files": [
+    {
+      "filename": "seismicx_grtm-0.6.0.dev15-cp313-cp313-macosx_11_0_arm64.whl",
+      "sha256": "b139a96b34d9bd2f4d473e9aa2eb61e157b23eb37ea60e34731c7b94d46d82b1",
+      "size_bytes": 4030043,
+      "url": "https://files.pythonhosted.org/packages/2c/44/fa012975d9395b67476ea2f62ef377db59d9c1d2eb437260f66fe74dc745/seismicx_grtm-0.6.0.dev15-cp313-cp313-macosx_11_0_arm64.whl",
+      "package_type": "bdist_wheel"
+    },
+    {
+      "filename": "seismicx_grtm-0.6.0.dev15-cp313-cp313-manylinux_2_31_x86_64.whl",
+      "sha256": "2f08bb6cd473f888fe1da2d59bcdbeb74de09380a57285768c869368640afbc3",
+      "size_bytes": 18760604,
+      "url": "https://files.pythonhosted.org/packages/46/71/d25a044c5eeb72a708e02c4d2f0c78d443ee2980d1ffe6c7794a5c31a39e/seismicx_grtm-0.6.0.dev15-cp313-cp313-manylinux_2_31_x86_64.whl",
+      "package_type": "bdist_wheel"
+    }
+  ],
+  "sdist_present": false,
+  "public_download_install_smoke": {
+    "macos": {
+      "download_source": "https://pypi.org/simple",
+      "wheel_sha256_matches": true,
+      "isolated_target_install": true,
+      "numpy_example": "passed",
+      "torch_cpu_example": "passed"
+    },
+    "linux": {
+      "download_source": "https://pypi.org/simple",
+      "wheel_sha256_matches": true,
+      "isolated_target_install": true,
+      "numpy_example": "passed",
+      "torch_cpu_example": "passed",
+      "torch_cuda_example": "passed"
+    }
+  }
+}
