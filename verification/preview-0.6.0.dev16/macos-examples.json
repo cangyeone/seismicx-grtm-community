@@ -1,0 +1,12 @@
+[
+  {
+    "device": "numpy",
+    "stdout": "CCF shape: (3, 201) device: cpu\nstation 1 delay: 0.14000000059604645 seconds (expected 0.14)\nvalid windows: [7 7 7]",
+    "exit_code": 0
+  },
+  {
+    "device": "cpu",
+    "stdout": "CCF shape: (3, 201) device: cpu\nstation 1 delay: 0.14000000059604645 seconds (expected 0.14)\nvalid windows: tensor([7, 7, 7])",
+    "exit_code": 0
+  }
+]

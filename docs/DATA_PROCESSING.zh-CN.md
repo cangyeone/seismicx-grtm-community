@@ -1,5 +1,7 @@
 # 数据处理：频谱白化
 
+完整 CPU/CUDA 分窗互相关与叠加见[噪声互相关](NOISE_CORRELATION.zh-CN.md)（dev16）。
+
 [English](DATA_PROCESSING.md) | 简体中文
 
 新增 `grtm.processing` 数据处理模块，提供平滑谱白化和严格白化。

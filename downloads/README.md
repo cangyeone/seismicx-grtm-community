@@ -2,7 +2,14 @@
 
 Physical CUDA TauP is a separate component: [cuda-taup-v0.1.0](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/cuda-taup-v0.1.0), [API and limits](../docs/CUDA_TAUP.md), [中文](../docs/CUDA_TAUP.zh-CN.md). Linux x86_64 / CPython 3.13, native SM120/CUDA12.8 (tested RTX5090), NumPy/CUDA PyTorch/ObsPy1.4.2 dependencies. No learned models or weights are included. The release contains the compiled wheel, checksums and verification manifest; geographic path coordinates additionally need geographiclib.
 
-Latest research preview: [0.6.0.dev15](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev15), adding [smooth and strict whitening](../docs/DATA_PROCESSING.md). See [installation/device boundaries](../docs/PREVIEW_0.6.0.dev15.md), [checksums](SHA256SUMS-0.6.0.dev15) and [verification](../verification/preview-0.6.0.dev15/verification.json). Both builds require **CPython 3.13**: Apple Silicon macOS 11+ (CPU/Metal) or Linux/WSL x86_64 glibc ≥ 2.31 (CPU/CUDA SM120). The identical wheels are [on PyPI](https://pypi.org/project/seismicx-grtm/0.6.0.dev15/); install with `python -m pip install --only-binary=:all: seismicx-grtm==0.6.0.dev15`. Stable PyPI remains 0.5.1.
+Latest research preview: [0.6.0.dev16](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev16) adds complete CPU/CUDA noise correlations. [Install](../docs/PREVIEW_0.6.0.dev16.md) · [Performance](../docs/PERFORMANCE_0.6.0.dev16.md) · [Checksums](SHA256SUMS-0.6.0.dev16). Both wheels require CPython 3.13; use `python -m pip install --only-binary=:all: seismicx-grtm==0.6.0.dev16`.
+
+| Python | Platform | Download |
+|---|---|---|
+| 3.13 | Apple Silicon macOS 11+ | [Wheel](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev16/seismicx_grtm-0.6.0.dev16-cp313-cp313-macosx_11_0_arm64.whl) |
+| 3.13 | Linux/WSL x86_64, glibc 2.31+ | [Wheel](https://github.com/cangyeone/seismicx-grtm-community/releases/download/v0.6.0.dev16/seismicx_grtm-0.6.0.dev16-cp313-cp313-manylinux_2_31_x86_64.whl) |
+
+Previous research preview: [0.6.0.dev15](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev15), adding [smooth and strict whitening](../docs/DATA_PROCESSING.md). See [installation/device boundaries](../docs/PREVIEW_0.6.0.dev15.md), [checksums](SHA256SUMS-0.6.0.dev15) and [verification](../verification/preview-0.6.0.dev15/verification.json). Both builds require **CPython 3.13**: Apple Silicon macOS 11+ (CPU/Metal) or Linux/WSL x86_64 glibc ≥ 2.31 (CPU/CUDA SM120). The identical wheels are [on PyPI](https://pypi.org/project/seismicx-grtm/0.6.0.dev15/); install with `python -m pip install --only-binary=:all: seismicx-grtm==0.6.0.dev15`. Stable PyPI remains 0.5.1.
 
 | Python | Platform | Download |
 |---|---|---|

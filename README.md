@@ -14,6 +14,12 @@ data; solver implementation source and development history are not distributed h
 
 
 
+## Complete noise correlations: 0.6.0.dev16
+
+[Install](docs/PREVIEW_0.6.0.dev16.md) · [CPU/CUDA API](docs/NOISE_CORRELATION.md) · [Performance](docs/PERFORMANCE_0.6.0.dev16.md) · [Compiled wheels](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev16)
+
+Adds overlapping-window preprocessing, shared station FFTs, linear pairwise correlations, weighted/PWS stacking, validity masks and gradients on the input CPU/CUDA device. Supports arbitrary leading batches and pair/window blocking. This is the complete record-to-CCF path; dev15 only supplied whitening. CPython 3.13 binary preview: `python -m pip install --only-binary=:all: seismicx-grtm==0.6.0.dev16`.
+
 ## Spectral whitening preview 0.6.0.dev15
 
 [Compiled wheels](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev15) · [Installation](docs/PREVIEW_0.6.0.dev15.md) · [Processing API](docs/DATA_PROCESSING.md) · [Example](examples/spectral_whitening.py) · [Verification](verification/preview-0.6.0.dev15/verification.json)

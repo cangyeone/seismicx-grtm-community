@@ -36,3 +36,6 @@ dist/
 
 !benchmarks/forward-derivatives/benchmark_backends.py
 !benchmarks/forward-derivatives/benchmark_pyfk.py
+
+!examples/noise_cross_correlation.py
+!benchmarks/data-processing/benchmark_noise_correlation.py

@@ -1,5 +1,7 @@
 # Spectral whitening
 
+For complete CPU/CUDA windowed correlations and stacks, see [noise cross-correlation](NOISE_CORRELATION.md) (dev16).
+
 English | [简体中文](DATA_PROCESSING.zh-CN.md)
 
 The `grtm.processing` module provides **smooth spectral whitening** and

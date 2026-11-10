@@ -1,6 +1,8 @@
 # Release verification
 
-Latest binary preview: [0.6.0.dev15 installed-wheel validation](preview-0.6.0.dev15/verification.json), [artifact manifest](preview-0.6.0.dev15/wheel-manifest.json), [processing guide](../docs/DATA_PROCESSING.md). Both builds use CPython 3.13. The stable and earlier-preview results below remain historical.
+Latest preview: [dev16 installed-wheel checks](preview-0.6.0.dev16/verification.json), [CCF timings and errors](preview-0.6.0.dev16/performance.json), [report](../docs/PERFORMANCE_0.6.0.dev16.md).
+
+Previous binary preview: [0.6.0.dev15 installed-wheel validation](preview-0.6.0.dev15/verification.json), [artifact manifest](preview-0.6.0.dev15/wheel-manifest.json), [processing guide](../docs/DATA_PROCESSING.md). Both builds use CPython 3.13. The stable and earlier-preview results below remain historical.
 
 Physical CUDA TauP 0.1.0: [binary and numerical verification](cuda-taup-0.1.0/) · [report](../docs/CUDA_TAUP.md). This is separate from the GRTM Green/RF/dispersion releases.
 

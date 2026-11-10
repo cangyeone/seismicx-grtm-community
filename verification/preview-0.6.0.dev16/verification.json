@@ -1,0 +1,82 @@
+{
+  "version": "0.6.0.dev16",
+  "date": "2026-11-10",
+  "source_commit": "fb92745b81022dba27c854bd102f140d9414deb7",
+  "installation": "isolated targets installed from exact final wheels; tests outside source tree; performance measured with the installed Linux wheel",
+  "platforms": {
+    "macos": {
+      "tests_run": 236,
+      "passed": 190,
+      "skipped": 46,
+      "failures": 0,
+      "test_report": "macos-tests.txt",
+      "audit": "macos-audit.json",
+      "correlation_tests": 15,
+      "correlation_skips": 1,
+      "runtime": {
+        "version": "0.6.0.dev16",
+        "python": "3.13.4",
+        "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+        "numpy": "2.5.4",
+        "torch": "2.15.0",
+        "backends": [
+          "cpu",
+          "metal"
+        ],
+        "compiled_correlation": true
+      }
+    },
+    "linux": {
+      "tests_run": 236,
+      "passed": 214,
+      "skipped": 22,
+      "failures": 0,
+      "test_report": "linux-tests.txt",
+      "audit": "linux-audit.json",
+      "correlation_tests": 15,
+      "correlation_skips": 0,
+      "runtime": {
+        "python": "3.13.5",
+        "numpy": "2.1.3",
+        "torch": "2.8.0+cu128",
+        "torch_cuda": "12.8",
+        "cpu": "AMD Ryzen Threadripper PRO 3955WX 16-Cores",
+        "gpu": "NVIDIA GeForce RTX 5090",
+        "logical_cpus": 32
+      }
+    }
+  },
+  "compiled_modules": 35,
+  "public_python_bootstraps": [
+    "grtm/__init__.py",
+    "grtm/__main__.py",
+    "grtm/_robust/__init__.py"
+  ],
+  "source_audit_errors": [],
+  "additional_private_path_scan": "ELF/native binaries: no local/remote build paths found",
+  "metal_shader_reuse": {
+    "all_host_libraries_rebuilt": true,
+    "unchanged_shader_sha256": "1cfc6a81a9e96cf8b4330b06c8c925be1ef151a3c0928801e45f1700ec09b69d",
+    "binary_sha256": "35d34e86ab2f41d811027df1d0e863218d02a1ae07958254723fbc4f27aa4912",
+    "reference_wheel": "seismicx_grtm-0.6.0.dev12-cp312-cp312-macosx_11_0_arm64.whl",
+    "reference_wheel_sha256": "ab087246912704150ab75079ec9f79cf9939d0fb556294ff4aeff9f5eb9482b8"
+  },
+  "performance_report": "performance.json",
+  "coverage": [
+    "independent time-domain linear correlation",
+    "positive lag and reversed pairs",
+    "zero padding vs circular wrap",
+    "window/batch/pair chunk consistency",
+    "weighted stacks and local gap exclusion",
+    "preprocessing against separately processed records",
+    "SciPy Hilbert PWS oracle",
+    "NumPy/PyTorch CPU/CUDA parity",
+    "input and weight gradients against directional finite differences",
+    "no Tensor cpu/numpy/item/bool on validated CUDA forward/backward; nondefault stream"
+  ],
+  "github_actions": {
+    "conclusion": "cancelled",
+    "note": "Validation reported here comes from actual installed-wheel tests on local Apple hardware and the CUDA server, not a passing GitHub Actions run"
+  },
+  "license": "LicenseRef-SeismicX-Research-NonCommercial"
+}

@@ -8,6 +8,12 @@
 
 
 
+## 完整噪声互相关：0.6.0.dev16
+
+[安装](docs/PREVIEW_0.6.0.dev16.zh-CN.md) · [CPU/CUDA 接口](docs/NOISE_CORRELATION.zh-CN.md) · [性能](docs/PERFORMANCE_0.6.0.dev16.zh-CN.md) · [编译包](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev16)
+
+新增重叠分窗预处理、复用台站 FFT、线性台站对互相关、加权/PWS 叠加、有效性掩码及梯度，均保留在输入 CPU/CUDA 上。支持前导 batch 和窗口/台站对分块。这次补齐记录到 CCF 的完整流程，dev15 只有白化。CPython 3.13 编译预览版：`python -m pip install --only-binary=:all: seismicx-grtm==0.6.0.dev16`。
+
 ## 频谱白化预览版 0.6.0.dev15
 
 [编译包](https://github.com/cangyeone/seismicx-grtm-community/releases/tag/v0.6.0.dev15) · [安装](docs/PREVIEW_0.6.0.dev15.zh-CN.md) · [数据处理接口](docs/DATA_PROCESSING.zh-CN.md) · [示例](examples/spectral_whitening.py) · [验证记录](verification/preview-0.6.0.dev15/verification.json)

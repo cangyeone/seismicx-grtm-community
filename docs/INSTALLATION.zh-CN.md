@@ -2,7 +2,7 @@
 
 [English](INSTALLATION.md) | 简体中文 | [首页](../README.zh-CN.md)
 
-频谱白化及当前研究接口见 [0.6.0.dev15 编译预览版](PREVIEW_0.6.0.dev15.zh-CN.md)，本次仅提供 CPython 3.13 包。下述稳定版安装仍对应 0.5.1。
+频谱白化及当前研究接口见 [0.6.0.dev16 编译预览版](PREVIEW_0.6.0.dev16.zh-CN.md)，本次仅提供 CPython 3.13 包。下述稳定版安装仍对应 0.5.1。
 
 使用 Python 3.10–3.14 的虚拟环境：
 
