@@ -1,0 +1,20 @@
+{
+  "hash_verified": true,
+  "results": [
+    {
+      "device": "numpy",
+      "exit_code": 0,
+      "stdout": "CCF shape: (3, 201) device: cpu\nstation 1 delay: 0.14000000059604645 seconds (expected 0.14)\nvalid windows: [7 7 7]"
+    },
+    {
+      "device": "cpu",
+      "exit_code": 0,
+      "stdout": "CCF shape: (3, 201) device: cpu\nstation 1 delay: 0.14000000059604645 seconds (expected 0.14)\nvalid windows: tensor([7, 7, 7])"
+    },
+    {
+      "device": "cuda",
+      "exit_code": 0,
+      "stdout": "CCF shape: (3, 201) device: cuda:0\nstation 1 delay: 0.14000000059604645 seconds (expected 0.14)\nvalid windows: tensor([7, 7, 7], device='cuda:0')"
+    }
+  ]
+}
